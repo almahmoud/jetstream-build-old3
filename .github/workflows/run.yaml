@@ -1,0 +1,31 @@
+name: Dispatch build to Jetstream cluster
+on:
+  push: {}
+  workflow_dispatch: {}
+jobs:
+  jsbuild:
+    env:
+      NAMESPACE: newbuild
+      PVC: rstudio-r-libraries-pvc
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+      - uses: actions/checkout@v2
+        with:
+          #token: ${{ secrets.PAT }}
+          persist-credentials: true
+      - name: save kubeconfig
+        shell: bash
+        run: mkdir -p ~/.kube && echo "${{ secrets.KUBECONFIG}}" > ~/.kube/config
+      - shell: bash
+        run: mkdir -p lists && mkdir -p logs && bash start_loop.sh -n $NAMESPACE -c $PVC -j packages.json -r lists/ready -b lists/built -s lists/skipped -f lists/failed
+        continue-on-error: true
+      - shell: bash
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git commit -m "End of run"
+          git push
