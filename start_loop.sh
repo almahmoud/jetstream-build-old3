@@ -52,13 +52,13 @@ fi
 python generate_ready.py -j $json -r $ready -b $built -f $failed -s $skipped;
 
 # Start dispatch loop
-sleep 10 && bash -c "while true; do bash dispatch_list.sh -n $namespace -c $claim -r $ready; sleep 30; done" &
+sleep 10 && bash -c "while true; do bash dispatch_list.sh -n $namespace -c $claim -r $ready && sleep 30; done" &
 
 # Mark done jobs
-sleep 20 && bash -c "while true; do bash examine_jobs.sh -n $namespace -b $built -f $failed; sleep 30; done" &
+sleep 20 && bash -c "while true; do bash examine_jobs.sh -n $namespace -b $built -f $failed && sleep 30; done" &
 
 # Start ready-list generation loop
-sleep 30 && bash -c "while true; do python generate_ready.py -j $json -r $ready -b $built -f $failed -s $skipped; sleep 30; done" &
+sleep 30 && bash -c "while true; do python generate_ready.py -j $json -r $ready -b $built -f $failed -s $skipped && sleep 30; done" &
 
 sleep 300 && bash commit.sh &
 

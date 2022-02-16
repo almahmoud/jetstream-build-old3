@@ -44,7 +44,7 @@ if os.path.exists(args.failedfile):
     os.remove('tmpupdfailed.txt')
 
 if os.path.exists(args.skippedfile):
-    shutil.copy(args.skippedfile, 'tmpupdskipped.txt')
+    os.rename(args.skippedfile, 'tmpupdskipped.txt')
     with open('tmpupdskipped.txt', 'r') as f:
         skipped = f.read().splitlines()
     os.remove('tmpupdskipped.txt')
@@ -52,15 +52,16 @@ if os.path.exists(args.skippedfile):
 print(f'original %d' % len(deps))
 
 for pkg in deps.keys():
-    for each in built:
-        if each in deps[pkg]:
-            deps[pkg].remove(each)
+    for b in built:
+        if b in deps[pkg]:
+            deps[pkg].remove(b)
     if len(deps[pkg]) == 0:
         ready.append(pkg)
     else:
         skip = False
         for each in failed + skipped:
             if each in deps[pkg]:
+                print(f'skipping {pkg} because of {each}. in failed {each in failed}. in skipped {each in skipped}')
                 skipped.append(pkg)
                 skip = True
         if not skip:
