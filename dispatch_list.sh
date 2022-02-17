@@ -1,10 +1,9 @@
 #!/bin/bash
-while getopts "n:c:r:" flag
+while getopts "n:c:" flag
 do
     case "${flag}" in
         n) namespace=${OPTARG};;
         c) claim=${OPTARG};;
-        r) ready=${OPTARG};;
     esac
 done
 
@@ -16,12 +15,6 @@ fi
 
 if [ -z "$claim" ];
     then echo "Needed: -c my-claim";
-    exit;
-fi
-
-
-if [ -z "$ready" ];
-    then echo "Needed: -r ready.list";
     exit;
 fi
 

@@ -30,14 +30,30 @@ echo "successful deletions:"
 kubectl get jobs -n $namespace --no-headers | grep 1/1 | awk '{print $1}' > tmpexbuiltlist &&\
     grep -q '[^[:space:]]' < tmpexbuiltlist &&\
     cat tmpexbuiltlist | xargs kubectl get -n $namespace --no-headers -o custom-columns=':spec.template.spec.containers[0].args' job |\
-    awk -F'\"' '{print $2}' > tmpblt && cat tmpblt >> $built &&\
+    awk -F'\"' '{print $2}' > tmpblt && cat tmpblt >> lists/cleanup &&\
     cat tmpexbuiltlist | xargs kubectl delete -n $namespace job;
 
 sleep 2;
 
-cat $built | xargs -i sh -c "sed '/        \"{}\(,\)\{0,1\}\"/d' packages.json > tmppkgs.json && mv tmppkgs.json packages.json"
+cat lists/cleanup | xargs -i sh -c "sed '/        \"{}\"\(,\)\{0,1\}/d' packages.json > tmppkgs.json && mv tmppkgs.json packages.json"
 
-sleep 2;
+sleep 1;
+
+# Remove all empty new lines
+sed '/^$/d' packages.json > tmppkgs.json && mv tmppkgs.json packages.json
+
+sleep 1;
+
+# Remove last new line between brackets
+sed ':a;N;$!ba;s/\[\n    \]/\[ \]/g' packages.json > tmppkgs.json && mv tmppkgs.json packages.json
+
+sleep 1;
+
+cat lists/cleanup | xargs -i sh -c "sed '/    \"{}\"\: \[ \]\(,\)\{0,1\}/d' packages.json > tmppkgs.json && mv tmppkgs.json packages.json"
+
+sleep 1;
+
+cat lists/cleanup >> $built
 
 echo "failure deletions:"
 kubectl get jobs -n $namespace -o custom-columns=':metadata.name,:status.conditions[0].type' | grep -w Failed | awk '{print $1}' > tmpexfailist &&\
