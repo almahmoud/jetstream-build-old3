@@ -1,4 +1,8 @@
 #!/bin/bash
+
+set -x
+
+
 while getopts "n:b:f:c:l:" flag
 do
     case "${flag}" in
@@ -9,7 +13,6 @@ do
         l) logs=${OPTARG};;
     esac
 done
-
 
 if [ -z "$namespace" ];
     then echo "Needed: -n myinitials-mynamespace";
