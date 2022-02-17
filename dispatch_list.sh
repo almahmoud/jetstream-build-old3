@@ -42,7 +42,7 @@ function dispatch_job {
 
 export TMPDISPATCH=$(echo "lists/dispatch$(date '+%s')");
 
-grep -v '^$' $ready > $TMPDISPATCH;
+grep -Pzo "(?s)\s*\"\N*\":\s*\[\s*\]" packages.json | awk -F'"' '{print $2}' | grep -v '^$' > $TMPDISPATCH;
 
 while IFS= read -r pkg; do
     dispatch_job;

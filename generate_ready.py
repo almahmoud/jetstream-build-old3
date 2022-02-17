@@ -28,14 +28,11 @@ ready = []
 failed = []
 newdeps = {}
 
-with open(args.inputjson, 'r') as f:
-    deps = json.load(f)
 
-if os.path.exists(args.builtfile):
-    os.rename(args.builtfile, 'tmpupdbuilt.txt')
-    with open('tmpupdbuilt.txt', 'r') as f:
-        built = f.read().splitlines()
-    os.remove('tmpupdbuilt.txt')
+shutil.copy(args.inputjson, 'tmpinputjson.txt')
+with open('tmpinputjson.txt', 'r') as f:
+    deps = json.load(f)
+os.remove('tmpinputjson.txt')
 
 if os.path.exists(args.failedfile):
     shutil.copy(args.failedfile, 'tmpupdfailed.txt')
@@ -51,10 +48,8 @@ if os.path.exists(args.skippedfile):
 
 print(f'original %d' % len(deps))
 
+
 for pkg in deps.keys():
-    for b in built:
-        if b in deps[pkg]:
-            deps[pkg].remove(b)
     if len(deps[pkg]) == 0:
         ready.append(pkg)
     else:
@@ -64,17 +59,9 @@ for pkg in deps.keys():
                 print(f'skipping {pkg} because of {each}. in failed {each in failed}. in skipped {each in skipped}')
                 skipped.append(pkg)
                 skip = True
-        if not skip:
-            newdeps[pkg] = deps[pkg]
-
-
-print(f'new %d' % len(newdeps))
 
 with open(args.skippedfile, 'w') as f:
     f.write("\n".join([each for each in set(skipped) if each]) + "\n")
-
-with open(args.inputjson, 'w') as f:
-    f.writelines(json.dumps(newdeps, indent=4))
 
 with open(args.readyfile, 'w') as f:
     f.write("\n".join([each for each in set(ready) if each]) + "\n")
