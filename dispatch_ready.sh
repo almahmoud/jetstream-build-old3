@@ -1,11 +1,12 @@
 #!/bin/bash
-while getopts "n:b:f:c:" flag
+while getopts "n:b:f:c:l:" flag
 do
     case "${flag}" in
         n) namespace=${OPTARG};;
         b) built=${OPTARG};;
         f) failed=${OPTARG};;
         c) claim=${OPTARG};;
+        l) logs=${OPTARG};;
     esac
 done
 
@@ -23,6 +24,17 @@ fi
 
 if [ -z "$failed" ];
     then echo "Needed: -f failed.list";
+    exit;
+fi
+
+if [ -z "$claim" ];
+    then echo "Needed pvc name: -c my-pvc";
+    exit;
+fi
+
+
+if [ -z "$logs" ];
+    then echo "Needed log-dir: -l logs";
     exit;
 fi
 
@@ -46,6 +58,7 @@ sed -i ':a;N;$!ba;s/\[\n    \]/\[ \]/g' packages.json
 
 cat $TMPCLEANUP | xargs -i sh -c "sed '/    \"{}\"\: \[ \]\(,\)\{0,1\}/d' packages.json > tmppkgs.json && mv tmppkgs.json packages.json"
 
+cat $TMPCLEANUP | xargs -i sh -c "kubectl get -n $namespace -o yaml job/\$(echo {} | tr -cd '[:alnum:]' | tr '[:upper:]' '[:lower:]')-build -o yaml > manifests/{}/job.yaml && kubectl logs -n $namespace job/\$(echo {} | tr -cd '[:alnum:]' | tr '[:upper:]' '[:lower:]')-build > manifests/{}/log"
 
 cat $TMPCLEANUP >> $built && rm $TMPCLEANUP;
 
@@ -54,7 +67,9 @@ kubectl get jobs -n $namespace -o custom-columns=':metadata.name,:status.conditi
     grep -q '[^[:space:]]' < tmpexfailist &&\
     cat tmpexfailist | xargs kubectl get -n $namespace --no-headers -o custom-columns=':spec.template.spec.containers[0].args' job |\
     awk -F'\"' '{print $2}' > tmpfld && cat tmpfld >> $failed &&\
-    cat tmpexfailist | xargs -i kubectl logs -n $namespace job/{} > logs/{} &&\
+    cat tmpexfailist | xargs -i kubectl logs -n $namespace job/{} > $logs/{}.log &&\
+    cat tmpexfailist | xargs -i kubectl get job/{} -n $namespace > $logs/{}.get &&\
+    cat tmpexfailist | xargs -i kubectl get job/{} -n $namespace -o yaml > $logs/{}.yaml &&\
     cat tmpexfailist | xargs kubectl delete -n $namespace job;
 
 function dispatch_job {

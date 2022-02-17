@@ -20,7 +20,7 @@ jobs:
         shell: bash
         run: mkdir -p ~/.kube && echo "${{ secrets.KUBECONFIG}}" > ~/.kube/config
       - shell: bash
-        run: mkdir -p lists && mkdir -p logs && bash start_loop.sh -n $NAMESPACE -c $PVC -j packages.json -b lists/built -f lists/failed
+        run: mkdir -p lists && mkdir -p logs && bash start_loop.sh -n $NAMESPACE -c $PVC -j packages.json -b lists/built -f lists/failed -l logs
         continue-on-error: true
       - shell: bash
         run: |
