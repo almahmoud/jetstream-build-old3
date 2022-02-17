@@ -47,7 +47,7 @@ fi
 bash -c "while true; do bash dispatch_ready.sh -n $namespace -c $claim -b $built -f $failed -l $logs && sleep 30; done" &
 
 # Commit loop for github updates
-#sleep 300 && bash commit.sh &
+sleep 300 && bash commit.sh &
 
 # Loop until no more jobs in the namespace for >20 seconds
 while (( $(kubectl get jobs -n $namespace | grep 'build' | wc -l && sleep 10) + $(kubectl get jobs -n $namespace | grep 'build' | wc -l && sleep 10) + $(kubectl get jobs -n $namespace | grep 'build' | wc -l) > 0 )); do

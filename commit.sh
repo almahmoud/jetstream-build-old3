@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -x
+
 git config --local user.email "action@github.com"
 git config --local user.name "GitHub Action"
 
