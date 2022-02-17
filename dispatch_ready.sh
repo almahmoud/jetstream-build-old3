@@ -50,18 +50,10 @@ kubectl get jobs -n $namespace --no-headers | grep 1/1 | awk '{print $1}' > tmpe
 
 if [ -f $TMPCLEANUP ]
 then
-    cat $TMPCLEANUP | xargs -i sh -c "sed -i '/        \"{}\"\(,\)\{0,1\}/d' packages.json";
-
-    # Remove all empty new lines
-    sed -i '/^$/d' packages.json > tmppkgs.json
-
-    # Remove last new line between brackets
-    sed -i ':a;N;$!ba;s/\[\n    \]/\[ \]/g' packages.json
-
-    cat $TMPCLEANUP | xargs -i sh -c "sed '/    \"{}\"\: \[ \]\(,\)\{0,1\}/d' packages.json > tmppkgs.json && mv tmppkgs.json packages.json"
-
-    cat $TMPCLEANUP | xargs -i sh -c "kubectl get -n $namespace -o yaml job/\$(echo {} | tr -cd '[:alnum:]' | tr '[:upper:]' '[:lower:]')-build -o yaml > manifests/{}/job.yaml && kubectl logs -n $namespace job/\$(echo {} | tr -cd '[:alnum:]' | tr '[:upper:]' '[:lower:]')-build > manifests/{}/log"
-
+    cat $TMPCLEANUP | xargs -i sh -c "sed -i '/        \"{}\"\(,\)\{0,1\}/d' packages.json" &&\
+    sed -i '/^$/d' packages.json &&\
+    sed -i ':a;N;$!ba;s/\[\n    \]/\[ \]/g' packages.json &&\
+    cat $TMPCLEANUP | xargs -i sh -c "kubectl get -n $namespace -o yaml job/\$(echo {} | tr -cd '[:alnum:]' | tr '[:upper:]' '[:lower:]')-build -o yaml > manifests/{}/job.yaml && kubectl logs -n $namespace job/\$(echo {} | tr -cd '[:alnum:]' | tr '[:upper:]' '[:lower:]')-build > manifests/{}/log" &&\
     cat $TMPCLEANUP >> $built && rm $TMPCLEANUP;
 fi
 
@@ -69,21 +61,19 @@ echo "failure deletions:"
 kubectl get jobs -n $namespace -o custom-columns=':metadata.name,:status.conditions[0].type' | grep -w Failed | awk '{print $1}' > tmpexfailist &&\
     cat tmpexfailist | xargs kubectl get -n $namespace --no-headers -o custom-columns=':spec.template.spec.containers[0].args' job |\
     awk -F'\"' '{print $2}' > tmpfld && cat tmpfld >> $failed &&\
-    cat tmpexfailist | xargs -i kubectl logs -n $namespace job/{} > $logs/{}.log &&\
-    cat tmpexfailist | xargs -i kubectl get job/{} -n $namespace > $logs/{}.get &&\
-    cat tmpexfailist | xargs -i kubectl get job/{} -n $namespace -o yaml > $logs/{}.yaml &&\
-    cat tmpexfailist | sort | uniq | xargs kubectl delete -n $namespace job;
+    cat tmpexfailist | sort | uniq |  xargs -i sh -c "kubectl logs -n $namespace job/{} > $logs/{}.log; kubectl get job/{} -n $namespace -o yaml > $logs/{}.yaml && xargs kubectl delete -n $namespace job;"
+
+export WORKERS=$(kubectl get nodes | grep $(kubectl get nodes | grep etcd | awk '{print $1}')- | awk '{print "\""$1"\""}' | paste -sd, -)
 
 function dispatch_job {
     if [ ! -f "manifests/$pkg/$pkg.yaml" ]
     then
-        mkdir -p "manifests/$pkg"
-        cp job-template.yaml manifests/$pkg/$pkg.yaml
-        sed -i """s/PACKAGENAMELOWER/$(echo $pkg | tr -cd '[:alnum:]' | tr '[:upper:]' '[:lower:]')/g
+        mkdir -p "manifests/$pkg";
+        sed """s/PACKAGENAMELOWER/$(echo $pkg | tr -cd '[:alnum:]' | tr '[:upper:]' '[:lower:]')/g
                   s/PACKAGENAME/$pkg/g
                   s/LIBRARIESCLAIM/$claim/g
                   s/NAMESPACE/$namespace/g
-                  s/WORKERNODES/$(kubectl get nodes | grep $(kubectl get nodes | grep etcd | awk '{print $1}')- | awk '{print "\""$1"\""}' | paste -sd, -)/g""" manifests/$pkg/$pkg.yaml
+                  s/WORKERNODES/$WORKERS/g""" job-template.yaml > manifests/$pkg/$pkg.yaml
         kubectl apply -f manifests/$pkg/$pkg.yaml;
         echo "Dispatched pkg: $pkg";
     fi
@@ -91,13 +81,6 @@ function dispatch_job {
 
 export TMPDISPATCH=$(echo "lists/dispatch$(date '+%s')");
 
-grep -Pzo "(?s)\s*\"\N*\":\s*\[\s*\]" packages.json | awk -F'"' '{print $2}' | grep -v '^$' > tmplist;
+grep -Pzo "(?s)\s*\"\N*\":\s*\[\s*\]" packages.json | awk -F'"' '{print $2}' | grep -v '^$' > $TMPDISPATCH;
 
-cat tmplist | awk "{print $(grep ), \$0}" \  
-    | sort -n -k 1 \                                          
-    | awk 'sub(/\S* /,"")' > result.txt
-
-
-while IFS= read -r pkg; do
-    dispatch_job;
-done < $TMPDISPATCH
+sh -c """while IFS= read -r pkg; do dispatch_job; done < $TMPDISPATCH && cat $TMPDISPATCH | xargs -i sh -c "sed -i '/    \"{}\"\: \[ \]\(,\)\{0,1\}/d' packages.json"""" &
