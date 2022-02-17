@@ -6467,6 +6467,7 @@
         "S4Vectors",
         "IRanges",
         "BiocGenerics",
+        "BSgenome",
         "BiocParallel",
         "data.table",
         "dplyr",
@@ -6482,6 +6483,10 @@
         "futile.logger",
         "snow",
         "BH",
+        "Biostrings",
+        "rtracklayer",
+        "matrixStats",
+        "XVector",
         "generics",
         "glue",
         "lifecycle",
@@ -6494,13 +6499,10 @@
         "pillar",
         "RCurl",
         "GenomeInfoDbData",
-        "Biostrings",
         "AnnotationDbi",
         "DBI",
         "RSQLite",
-        "XVector",
         "BiocIO",
-        "rtracklayer",
         "biomaRt",
         "Biobase",
         "zlibbioc",
@@ -6526,7 +6528,6 @@
         "lambda.r",
         "futile.options",
         "lattice",
-        "matrixStats",
         "cli",
         "fansi",
         "utf8",
@@ -55133,6 +55134,7 @@
         "pander",
         "sf",
         "lubridate",
+        "zoo",
         "digest",
         "isoband",
         "mgcv",
@@ -55160,8 +55162,8 @@
         "DBI",
         "s2",
         "units",
-        "KernSmooth",
         "lattice",
+        "KernSmooth",
         "colorspace",
         "wk"
     ],
@@ -145430,8 +145432,7 @@
         "stabledist"
     ],
     "stable": [
-        "rmutil",
-        "stabledist"
+        "rmutil"
     ],
     "stabledist": [
 
@@ -154850,12 +154851,12 @@
     "spatstat.linnet": [
         "spatstat.data",
         "spatstat.geom",
+        "spatstat.random",
         "spatstat.core",
         "spatstat.utils",
         "Matrix",
         "spatstat.sparse",
         "lattice",
-        "spatstat.random",
         "nlme",
         "rpart",
         "mgcv",
@@ -160126,6 +160127,7 @@
         "pander",
         "sf",
         "lubridate",
+        "zoo",
         "generics",
         "cpp11",
         "digest",
@@ -160136,10 +160138,10 @@
         "s2",
         "units",
         "Matrix",
+        "lattice",
         "e1071",
         "class",
         "KernSmooth",
-        "lattice",
         "wk",
         "MASS",
         "proxy"
@@ -161752,6 +161754,7 @@
         "MASS",
         "mgcv",
         "withr",
+        "ff",
         "Matrix",
         "RcppEigen",
         "ellipsis",
@@ -161761,6 +161764,7 @@
         "pillar",
         "pkgconfig",
         "vctrs",
+        "bit",
         "lattice",
         "nlme",
         "cli",
@@ -161801,7 +161805,9 @@
         "codetools"
     ],
     "rmio": [
-
+        "bigassertr",
+        "ff",
+        "bit"
     ],
     "flock": [
         "Rcpp"
