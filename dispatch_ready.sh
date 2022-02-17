@@ -2,11 +2,6 @@
 
 set -x
 
-# alias ggrep=gggrep
-# alias gxargs=ggxargs
-# alias gsed=ggsed
-# alias gawk=ggawk
-
 while getopts "n:b:f:c:l:" flag
 do
     case "${flag}" in
@@ -60,7 +55,7 @@ kubectl get jobs -n $namespace -o custom-columns=':metadata.name,:status.conditi
 
 if [ -s lists/cleanup$UNIQUE ]
 then
-    cat lists/cleanup$UNIQUE | gxargs -i sh -c "gsed -i '/        \"{}\"\(,\)\{0,1\}/d' packages.json" &&\
+    gsed -i "/        \"$(cat lists/cleanup$UNIQUE | gawk '{print $1"\\"}' | paste -sd'|' - | gawk '{print "\\("$0")"}')\"\(,\)\{0,1\}/d' packages.json" &&\
     gsed -i '/^$/d' packages.json &&\
     gsed -i ':a;N;$!ba;s/\[\n    \]/\[ \]/g' packages.json &&\
     cat lists/cleanup$UNIQUE | gxargs -i sh -c "kubectl get -n $namespace -o yaml job/\$(echo {} | tr -cd '[:alnum:]' | tr '[:upper:]' '[:lower:]')-build -o yaml > manifests/{}/job.yaml && kubectl logs -n $namespace job/\$(echo {} | tr -cd '[:alnum:]' | tr '[:upper:]' '[:lower:]')-build > manifests/{}/log" &&\
@@ -114,7 +109,9 @@ else
         dispatch_job;
     done < $TMPDISPATCH &&\
     kubectl apply -f $TMPMANIFEST &&\
-    cat $TMPDISPATCH | gxargs -i sh -c "gsed -i '/    \"{}\"\: \[ \]\(,\)\{0,1\}/d' packages.json"
+    gsed -i '/^$/d' packages.json &&\
+    gsed -i ':a;N;$!ba;s/\[\n    \]/\[ \]/g' packages.json &&\
+    gsed -i "/    \"$(cat $TMPDISPATCH | gawk '{print $1"\\"}' | paste -sd'|' - | gawk '{print "\\("$0")"}')\"\: \[ \]\(,\)\{0,1\}/d" packages.json
 fi
 
 

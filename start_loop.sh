@@ -49,7 +49,7 @@ bash -c "while true; do bash dispatch_ready.sh -n $namespace -c $claim -b $built
 # Commit loop for github updates
 #sleep 300 && bash commit.sh &
 
-# Loop until no more jobs in the namespace for >30 seconds
+# Loop until no more jobs in the namespace for >20 seconds
 while (( $(kubectl get jobs -n $namespace | grep 'build' | wc -l && sleep 10) + $(kubectl get jobs -n $namespace | grep 'build' | wc -l && sleep 10) + $(kubectl get jobs -n $namespace | grep 'build' | wc -l) > 0 )); do
     echo "$(date) pods running: $(($(kubectl get pods -n $namespace | grep "build" | grep -i running | wc -l)))"
     echo "$(date) total jobs: $(($(kubectl get jobs -n $namespace | grep "build" | wc -l)))"
