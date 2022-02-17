@@ -48,13 +48,12 @@ export UNIQUE=$(date '+%s');
 echo "successful deletions:"
 kubectl get jobs -n $namespace -o custom-columns=':metadata.name,:status.conditions[0].type' | grep -w Complete | awk '{print $1}' > lists/tmpbuildlist$UNIQUE &&\
     grep -q '[^[:space:]]' < "lists/tmpbuildlist$UNIQUE" &&\
-    cat lists/tmpbuildlist$UNIQUE | xargs -i sh -c "kubectl get -n $namespace --no-headers -o custom-columns=':spec.template.spec.containers[0].args' job/{} |\
-    awk -F'\"' '{print \$2}'" > lists/cleanup$UNIQUE;
+    cat lists/tmpbuildlist$UNIQUE | xargs -i sh -c "grep -ir {} manifests | gawk -F'/' '{print \$2}'" > lists/cleanup$UNIQUE;
 
 
 if [ -s lists/cleanup$UNIQUE ]
 then
-    sed -i "/        \"$(cat lists/cleanup$UNIQUE | awk '{print $1"\\"}' | paste -sd'|' - | awk '{print "\\("$0")"}')\"\(,\)\{0,1\}/d' packages.json" &&\
+    sed -i "/        \"$(cat lists/cleanup$UNIQUE | sed 's/\./\\\./' | awk '{print $1"\\"}' | paste -sd'|' - | awk '{print "\\("$0")"}')\"\(,\)\{0,1\}/d" packages.json &&\
     sed -i '/^$/d' packages.json &&\
     sed -i ':a;N;$!ba;s/\[\n    \]/\[ \]/g' packages.json &&\
     cat lists/cleanup$UNIQUE | xargs -i sh -c "kubectl get -n $namespace -o yaml job/\$(echo {} | tr -cd '[:alnum:]' | tr '[:upper:]' '[:lower:]')-build -o yaml > manifests/{}/job.yaml && kubectl logs -n $namespace job/\$(echo {} | tr -cd '[:alnum:]' | tr '[:upper:]' '[:lower:]')-build > manifests/{}/log" &&\
@@ -68,8 +67,7 @@ echo "failure deletions:"
 
 kubectl get jobs -n $namespace -o custom-columns=':metadata.name,:status.conditions[0].type' | grep -w Failed | awk '{print $1}' > lists/tmpexfailist$UNIQUE &&\
     grep -q '[^[:space:]]' < "lists/tmpexfailist$UNIQUE" &&\
-    cat lists/tmpexfailist$UNIQUE | xargs -i sh -c "kubectl get -n $namespace --no-headers -o custom-columns=':spec.template.spec.containers[0].args' job/{} |\
-    awk -F'\"' '{print \$2}'" > lists/tmpfld$UNIQUE && cat lists/tmpfld$UNIQUE >> $failed &&\
+    cat lists/tmpexfailist$UNIQUE | xargs -i sh -c "grep -ir {} manifests | gawk -F'/' '{print \$2}'" > lists/tmpfld$UNIQUE && cat lists/tmpfld$UNIQUE >> $failed &&\
     cat lists/tmpexfailist$UNIQUE | xargs -i sh -c "kubectl logs -n $namespace job/{} > $logs/{}.log; kubectl get job/{} -n $namespace -o yaml > $logs/{}.yaml && xargs kubectl delete -n $namespace job;"
 
 rm lists/tmpexfailist$UNIQUE
@@ -90,7 +88,7 @@ function dispatch_job {
                   s/PACKAGENAME/$pkg/g
                   s/LIBRARIESCLAIM/$claim/g
                   s/NAMESPACE/$namespace/g
-                  s/WORKERNODES/$WORKERS/g""" job-template.yaml > manifests/$pkg/$pkg.yaml
+                  s/WORKERNODES/$WORKERS/g""" job-template.yaml > manifests/$pkg/$lowerpkgname-build.yaml
         cat manifests/$pkg/$lowerpkgname-build.yaml >> $TMPMANIFEST;
         echo "Created manifest: $pkg";
     fi
@@ -109,7 +107,7 @@ else
     kubectl apply -f $TMPMANIFEST &&\
     sed -i '/^$/d' packages.json &&\
     sed -i ':a;N;$!ba;s/\[\n    \]/\[ \]/g' packages.json &&\
-    sed -i "/    \"$(cat $TMPDISPATCH | awk '{print $1"\\"}' | paste -sd'|' - | awk '{print "\\("$0")"}')\"\: \[ \]\(,\)\{0,1\}/d" packages.json
+    sed -i "/    \"$(cat $TMPDISPATCH | sed 's/\./\\\./' | awk '{print $1"\\"}' | paste -sd'|' - | awk '{print "\\("$0")"}')\"\: \[ \]\(,\)\{0,1\}/d" packages.json
 fi
 
 
