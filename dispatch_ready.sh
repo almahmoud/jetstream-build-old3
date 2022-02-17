@@ -2,6 +2,10 @@
 
 set -x
 
+# alias ggrep=gggrep
+# alias gxargs=ggxargs
+# alias gsed=ggsed
+# alias gawk=ggawk
 
 while getopts "n:b:f:c:l:" flag
 do
@@ -41,45 +45,44 @@ if [ -z "$logs" ];
     exit;
 fi
 
+mkdir -p lists
 
-export TMPCLEANUP=$(echo "lists/cleanup$(date '+%s')");
+export UNIQUE=$(date '+%s');
+
+
 
 echo "successful deletions:"
-kubectl get jobs -n $namespace -o custom-columns=':metadata.name,:status.conditions[0].type' | grep -w Complete | awk '{print $1}' > tmpexbuiltlist &&\
-    cat tmpexbuiltlist | xargs kubectl get -n $namespace --no-headers -o custom-columns=':spec.template.spec.containers[0].args' job |\
-    awk -F'\"' '{print $2}' > tmpblt && cat tmpblt > $TMPCLEANUP;
+kubectl get jobs -n $namespace -o custom-columns=':metadata.name,:status.conditions[0].type' | ggrep -w Complete | gawk '{print $1}' > lists/tmpbuildlist$UNIQUE &&\
+    ggrep -q '[^[:space:]]' < "lists/tmpbuildlist$UNIQUE" &&\
+    cat lists/tmpbuildlist$UNIQUE | gxargs -i sh -c "kubectl get -n $namespace --no-headers -o custom-columns=':spec.template.spec.containers[0].args' job/{} |\
+    gawk -F'\"' '{print $2}'" > lists/cleanup$UNIQUE;
 
 
-if [ -s $TMPCLEANUP ]
+if [ -s lists/cleanup$UNIQUE ]
 then
-    cat $TMPCLEANUP | xargs -i sh -c "sed -i '/        \"{}\"\(,\)\{0,1\}/d' packages.json" &&\
-    sed -i '/^$/d' packages.json &&\
-    sed -i ':a;N;$!ba;s/\[\n    \]/\[ \]/g' packages.json &&\
-    cat $TMPCLEANUP | xargs -i sh -c "kubectl get -n $namespace -o yaml job/\$(echo {} | tr -cd '[:alnum:]' | tr '[:upper:]' '[:lower:]')-build -o yaml > manifests/{}/job.yaml && kubectl logs -n $namespace job/\$(echo {} | tr -cd '[:alnum:]' | tr '[:upper:]' '[:lower:]')-build > manifests/{}/log" &&\
-    cat $TMPCLEANUP >> $built;
-    cat tmpexbuiltlist | sort | uniq | xargs kubectl delete -n $namespace job;
+    cat lists/cleanup$UNIQUE | gxargs -i sh -c "gsed -i '/        \"{}\"\(,\)\{0,1\}/d' packages.json" &&\
+    gsed -i '/^$/d' packages.json &&\
+    gsed -i ':a;N;$!ba;s/\[\n    \]/\[ \]/g' packages.json &&\
+    cat lists/cleanup$UNIQUE | gxargs -i sh -c "kubectl get -n $namespace -o yaml job/\$(echo {} | tr -cd '[:alnum:]' | tr '[:upper:]' '[:lower:]')-build -o yaml > manifests/{}/job.yaml && kubectl logs -n $namespace job/\$(echo {} | tr -cd '[:alnum:]' | tr '[:upper:]' '[:lower:]')-build > manifests/{}/log" &&\
+    cat lists/cleanup$UNIQUE >> $built;
+    cat lists/tmpbuildlist$UNIQUE | gxargs kubectl delete -n $namespace job;
 else
-    rm $TMPCLEANUP;
+    rm lists/cleanup$UNIQUE;
 fi
 
-rm tmpexbuiltlist;
-rm tmpblt;
+rm lists/tmpbuildlist$UNIQUE;
 
 echo "failure deletions:"
-kubectl get jobs -n $namespace -o custom-columns=':metadata.name,:status.conditions[0].type' | grep -w Failed | awk '{print $1}' > tmpexfailist
 
+kubectl get jobs -n $namespace -o custom-columns=':metadata.name,:status.conditions[0].type' | ggrep -w Failed | gawk '{print $1}' > lists/tmpexfailist$UNIQUE &&\
+    ggrep -q '[^[:space:]]' < "lists/tmpexfailist$UNIQUE" &&\
+    cat lists/tmpexfailist$UNIQUE | gxargs -i sh -c "kubectl get -n $namespace --no-headers -o custom-columns=':spec.template.spec.containers[0].args' job/{}" |\
+    gawk -F'\"' '{print $2}' > lists/tmpfld$UNIQUE && cat lists/tmpfld$UNIQUE >> $failed &&\
+    cat lists/tmpexfailist$UNIQUE | gxargs -i sh -c "kubectl logs -n $namespace job/{} > $logs/{}.log; kubectl get job/{} -n $namespace -o yaml > $logs/{}.yaml && gxargs kubectl delete -n $namespace job;"
 
-if [ -s tmpexfailist ]
-then
-    cat tmpexfailist | xargs kubectl get -n $namespace --no-headers -o custom-columns=':spec.template.spec.containers[0].args' job |\
-    awk -F'\"' '{print $2}' > tmpfld && cat tmpfld >> $failed &&\
-    cat tmpexfailist | sort | uniq | xargs -i sh -c "kubectl logs -n $namespace job/{} > $logs/{}.log; kubectl get job/{} -n $namespace -o yaml > $logs/{}.yaml && xargs kubectl delete -n $namespace job;"
-fi
+rm lists/tmpexfailist$UNIQUE
 
-rm tmpfld;
-rm tmpexfailist
-
-export WORKERS=$(kubectl get nodes | grep $(kubectl get nodes | grep etcd | awk '{print $1}')- | awk '{print "\""$1"\""}' | paste -sd, -)
+export WORKERS=$(kubectl get nodes | ggrep $(kubectl get nodes | ggrep etcd | gawk '{print $1}')- | gawk '{print "\""$1"\""}' | paste -sd, -)
 
 
 export TMPDISPATCH=$(echo "lists/dispatch$(date '+%s')");
@@ -90,7 +93,7 @@ function dispatch_job {
     if [ ! -f "manifests/$pkg/$pkg.yaml" ]
     then
         mkdir -p "manifests/$pkg";
-        sed """s/PACKAGENAMELOWER/$(echo $pkg | tr -cd '[:alnum:]' | tr '[:upper:]' '[:lower:]')/g
+        gsed """s/PACKAGENAMELOWER/$(echo $pkg | tr -cd '[:alnum:]' | tr '[:upper:]' '[:lower:]')/g
                   s/PACKAGENAME/$pkg/g
                   s/LIBRARIESCLAIM/$claim/g
                   s/NAMESPACE/$namespace/g
@@ -100,7 +103,7 @@ function dispatch_job {
     fi
 }
 
-grep -Pzo "(?s)\s*\"\N*\":\s*\[\s*\]" packages.json | awk -F'"' '{print $2}' | grep -v '^$' > $TMPDISPATCH;
+ggrep -Pzo "(?s)\s*\"\N*\":\s*\[\s*\]" packages.json | gawk -F'"' '{print $2}' | ggrep -v '^$' > $TMPDISPATCH;
 
 
 if [ ! -s $TMPDISPATCH ]
@@ -111,7 +114,7 @@ else
         dispatch_job;
     done < $TMPDISPATCH &&\
     kubectl apply -f $TMPMANIFEST &&\
-    cat $TMPDISPATCH | xargs -i sh -c "sed -i '/    \"{}\"\: \[ \]\(,\)\{0,1\}/d' packages.json"
+    cat $TMPDISPATCH | gxargs -i sh -c "gsed -i '/    \"{}\"\: \[ \]\(,\)\{0,1\}/d' packages.json"
 fi
 
 
