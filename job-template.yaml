@@ -28,7 +28,7 @@ spec:
           - /bin/bash
           - -c
         args:
-          - cd /home/rstudio && Rscript -e 'p <- .libPaths(); p <- c(p[2], p[-2]); .libPaths(p); if(BiocManager::install("PACKAGENAME", INSTALL_opts = "--build", update = FALSE, quiet = TRUE, force = TRUE, keep_outputs = FALSE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)' && cp -r /usr/local/lib/R/site-library/PACKAGENAME /mnt/libs/R/PACKAGENAME && cp PACKAGENAME* /mnt/libs/R/
+          - cd /home/rstudio && Rscript -e 'p <- .libPaths(); p <- c(p[2], p[-2]); .libPaths(p); if(BiocManager::install("PACKAGENAME", INSTALL_opts = "--build", update = FALSE, quiet = TRUE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)' && cp -r /usr/local/lib/R/site-library/PACKAGENAME /mnt/libs/R/PACKAGENAME && cp PACKAGENAME* /mnt/libs/R/
         env:
           - name: R_LIBS_USER
             value: "/mnt/libs/R"
@@ -37,8 +37,8 @@ spec:
             mountPath: "/mnt/libs/R"
         resources:
           requests:
-            memory: 700Mi
-            cpu: 300m
+            memory: 500Mi
+            cpu: 250m
           limits:
             memory: 2Gi
             cpu: 1700m

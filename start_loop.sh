@@ -37,14 +37,12 @@ if [ -z "$failed" ];
 fi
 
 # Start dispatch loop
-sleep 10 && bash -c "while true; do bash dispatch_list.sh -n $namespace -c $claim && sleep 30; done" &
+bash -c "while true; do bash dispatch_ready.sh -n $namespace -c $claim -b $built -f $failed && sleep 30; done" &
 
-# Mark done jobs
-sleep 20 && bash -c "while true; do bash examine_jobs.sh -n $namespace -b $built -f $failed && sleep 30; done" &
-
+# Commit loop for github updates
 sleep 300 && bash commit.sh &
 
-# Loop until no more jobs in the namespace for 30 seconds
+# Loop until no more jobs in the namespace for >30 seconds
 while (( $(kubectl get jobs -n $namespace | grep 'build' | wc -l && sleep 10) + $(kubectl get jobs -n $namespace | grep 'build' | wc -l && sleep 10) + $(kubectl get jobs -n $namespace | grep 'build' | wc -l) > 0 )); do
     echo "$(date) pods running: $(($(kubectl get pods -n $namespace | grep "build" | grep -i running | wc -l)))"
     echo "$(date) total jobs: $(($(kubectl get jobs -n $namespace | grep "build" | wc -l)))"
