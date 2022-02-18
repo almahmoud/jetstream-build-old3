@@ -38,9 +38,6 @@
         "OrganismDbi",
         "ensembldb",
     ],
-    "airpart": [
-        "scater",
-    ],
     "AllelicImbalance": [
         "BSgenome",
         "VariantAnnotation",
@@ -92,9 +89,6 @@
         "GenomicFeatures",
         "rtracklayer",
         "OrganismDbi",
-    ],
-    "ArrayExpress": [
-        "oligo",
     ],
     "ArrayExpressHTS": [
         "ShortRead",
@@ -170,7 +164,6 @@
         "scran",
     ],
     "BayesSpace": [
-        "scater",
         "scran",
     ],
     "BBCAnalyzer": [
@@ -223,7 +216,6 @@
         "clusterProfiler",
         "ReactomePA",
         "enrichplot",
-        "GOSemSim",
     ],
     "BiocOncoTK": [
         "GenomicFeatures",
@@ -387,7 +379,6 @@
     "CATALYST": [
         "drc",
         "FlowSOM",
-        "scater",
         "CytoML",
         "ggpubr",
         "openCyto",
@@ -402,23 +393,16 @@
         "rtracklayer",
     ],
     "celda": [
-        "scater",
         "scran",
     ],
     "CellBarcode": [
         "ShortRead",
-    ],
-    "CelliD": [
-        "scater",
     ],
     "cellity": [
         "topGO",
     ],
     "cellmigRation": [
         "FactoMineR",
-    ],
-    "CellMixS": [
-        "scater",
     ],
     "cellTree": [
         "topGO",
@@ -428,7 +412,6 @@
         "clusterProfiler",
         "DOSE",
         "enrichplot",
-        "GOSemSim",
     ],
     "censcyt": [
         "diffcyt",
@@ -445,7 +428,6 @@
         "ggpubr",
         "DOSE",
         "enrichplot",
-        "GOSemSim",
         "rstatix",
     ],
     "CexoR": [
@@ -478,9 +460,6 @@
         "FDb.InfiniumMethylation.hg19",
         "VariantAnnotation",
         "TxDb.Hsapiens.UCSC.hg19.knownGene",
-    ],
-    "ChIC": [
-        "ChIC.data",
     ],
     "chimeraviz": [
         "Gviz",
@@ -543,7 +522,6 @@
         "rtracklayer",
         "TxDb.Hsapiens.UCSC.hg19.knownGene",
         "DOSE",
-        "GOSemSim",
     ],
     "chipseq": [
         "ShortRead",
@@ -556,7 +534,6 @@
     ],
     "ChIPXpress": [
         "frma",
-        "oligo",
     ],
     "ChromHeatMap": [
         "rtracklayer",
@@ -565,7 +542,6 @@
         "rtracklayer",
         "batchelor",
         "scran",
-        "scater",
         "Sushi",
     ],
     "chromswitch": [
@@ -623,10 +599,6 @@
     "clusterProfiler": [
         "DOSE",
         "enrichplot",
-        "GOSemSim",
-    ],
-    "cn.farms": [
-        "oligo",
     ],
     "CNEr": [
         "rtracklayer",
@@ -701,11 +673,9 @@
     "conclus": [
         "factoextra",
         "scran",
-        "scater",
         "clusterProfiler",
         "DOSE",
         "enrichplot",
-        "GOSemSim",
         "FactoMineR",
         "ggpubr",
         "rstatix",
@@ -788,9 +758,6 @@
         "ensembldb",
         "regioneR",
     ],
-    "crossmeta": [
-        "oligo",
-    ],
     "csdR": [
         "WGCNA",
     ],
@@ -812,9 +779,6 @@
         "VariantAnnotation",
         "rtracklayer",
         "BSgenome",
-    ],
-    "cyanoFilter": [
-        "flowDensity",
     ],
     "CyTOFpower": [
         "CytoGLMM",
@@ -877,7 +841,6 @@
         "factoextra",
         "DOSE",
         "enrichplot",
-        "GOSemSim",
         "ggpubr",
         "missMDA",
         "mzR",
@@ -890,15 +853,11 @@
         "rtracklayer",
         "rstatix",
     ],
-    "ddPCRclust": [
-        "flowDensity",
-    ],
     "debrowser": [
         "DOSE",
         "clusterProfiler",
         "enrichplot",
         "pathview",
-        "GOSemSim",
     ],
     "decompTumor2Sig": [
         "GenomicFeatures",
@@ -1003,9 +962,6 @@
     "Dino": [
         "scran",
     ],
-    "distinct": [
-        "scater",
-    ],
     "DMCFB": [
         "rtracklayer",
     ],
@@ -1060,9 +1016,6 @@
     "Doscheda": [
         "drc",
     ],
-    "DOSE": [
-        "GOSemSim",
-    ],
     "dpeak": [
         "BSgenome",
         "rtracklayer",
@@ -1077,7 +1030,6 @@
         "hgu133a.db",
         "hgu133a2.db",
         "hgu133plus2.db",
-        "oligo",
     ],
     "DSS": [
         "bsseq",
@@ -1099,10 +1051,8 @@
         "clusterProfiler",
         "DOSE",
         "enrichplot",
-        "GOSemSim",
     ],
     "EGSEA": [
-        "gage",
         "topGO",
         "pathview",
         "PADOG",
@@ -1146,7 +1096,6 @@
     ],
     "enrichplot": [
         "DOSE",
-        "GOSemSim",
     ],
     "enrichTF": [
         "pipeFrame",
@@ -1158,7 +1107,6 @@
         "clusterProfiler",
         "DOSE",
         "enrichplot",
-        "GOSemSim",
         "rstatix",
         "CNEr",
     ],
@@ -1195,7 +1143,6 @@
         "ReactomePA",
         "DOSE",
         "enrichplot",
-        "GOSemSim",
     ],
     "EpiTxDb": [
         "GenomicFeatures",
@@ -1254,7 +1201,6 @@
         "enrichplot",
         "TxDb.Hsapiens.UCSC.hg19.knownGene",
         "DOSE",
-        "GOSemSim",
         "CNEr",
     ],
     "escape": [
@@ -1288,10 +1234,8 @@
         "clusterProfiler",
         "DOSE",
         "enrichplot",
-        "GOSemSim",
     ],
     "fastLiquidAssociation": [
-        "LiquidAssociation",
         "WGCNA",
     ],
     "FastqCleaner": [
@@ -1306,7 +1250,6 @@
         "clusterProfiler",
         "DOSE",
         "enrichplot",
-        "GOSemSim",
     ],
     "fcScan": [
         "VariantAnnotation",
@@ -1334,12 +1277,6 @@
         "MSnbase",
         "mzR",
     ],
-    "FLAMES": [
-        "scater",
-    ],
-    "flowCut": [
-        "flowDensity",
-    ],
     "FlowSOM": [
         "CytoML",
         "ggpubr",
@@ -1359,9 +1296,6 @@
         "GenomicFeatures",
         "OUTRIDER",
         "rtracklayer",
-    ],
-    "frma": [
-        "oligo",
     ],
     "funtooNorm": [
         "minfi",
@@ -1384,9 +1318,6 @@
         "rtracklayer",
         "BSgenome",
     ],
-    "GAPGOM": [
-        "GOSemSim",
-    ],
     "GARS": [
         "DaMiRseq",
         "EDASeq",
@@ -1405,7 +1336,6 @@
         "survminer",
         "pathview",
         "enrichplot",
-        "GOSemSim",
         "ggpubr",
         "rstatix",
     ],
@@ -1757,11 +1687,9 @@
     "IRISFGM": [
         "clusterProfiler",
         "ggpubr",
-        "scater",
         "scran",
         "DOSE",
         "enrichplot",
-        "GOSemSim",
         "rstatix",
     ],
     "IsoformSwitchAnalyzeR": [
@@ -1776,7 +1704,6 @@
         "DEGreport",
     ],
     "ITALICS": [
-        "oligo",
         "pd.mapping50k.xba240",
     ],
     "IVAS": [
@@ -1871,7 +1798,6 @@
         "clusterProfiler",
         "enrichplot",
         "DOSE",
-        "GOSemSim",
     ],
     "MAIT": [
         "CAMERA",
@@ -1954,7 +1880,6 @@
     "meshes": [
         "DOSE",
         "enrichplot",
-        "GOSemSim",
     ],
     "Metab": [
         "xcms",
@@ -2072,7 +1997,6 @@
         "IlluminaHumanMethylationEPICanno.ilm10b4.hg19",
         "DOSE",
         "enrichplot",
-        "GOSemSim",
         "minfi",
         "IlluminaHumanMethylation450kmanifest",
         "IlluminaHumanMethylationEPICmanifest",
@@ -2117,24 +2041,13 @@
         "rtracklayer",
         "bumphunter",
     ],
-    "mia": [
-        "scater",
-    ],
     "miaViz": [
         "mia",
-        "scater",
-    ],
-    "microbiomeMarker": [
-        "ANCOMBC",
     ],
     "MicrobiomeProfiler": [
         "clusterProfiler",
         "enrichplot",
         "DOSE",
-        "GOSemSim",
-    ],
-    "mimager": [
-        "oligo",
     ],
     "MineICA": [
         "lumi",
@@ -2171,14 +2084,12 @@
         "ReactomePA",
         "DOSE",
         "enrichplot",
-        "GOSemSim",
     ],
     "miRspongeR": [
         "clusterProfiler",
         "ReactomePA",
         "DOSE",
         "enrichplot",
-        "GOSemSim",
     ],
     "missMethyl": [
         "IlluminaHumanMethylation450kanno.ilmn12.hg19",
@@ -2232,7 +2143,6 @@
         "clusterProfiler",
         "DOSE",
         "enrichplot",
-        "GOSemSim",
     ],
     "motifbreakR": [
         "MotifDb",
@@ -2326,15 +2236,11 @@
         "VariantAnnotation",
         "ensembldb",
     ],
-    "multiHiCcompare": [
-        "HiCcompare",
-    ],
     "multiSight": [
         "clusterProfiler",
         "ReactomePA",
         "enrichplot",
         "DOSE",
-        "GOSemSim",
     ],
     "mumosa": [
         "scran",
@@ -2345,9 +2251,6 @@
         "VariantAnnotation",
         "rtracklayer",
         "GenomicFeatures",
-    ],
-    "muscat": [
-        "scater",
     ],
     "musicatk": [
         "VariantAnnotation",
@@ -2420,13 +2323,11 @@
         "clusterProfiler",
         "DOSE",
         "enrichplot",
-        "GOSemSim",
     ],
     "NetSAM": [
         "WGCNA",
     ],
     "netSmooth": [
-        "scater",
         "clusterExperiment",
     ],
     "NoRCE": [
@@ -2496,7 +2397,6 @@
         "BSgenome",
     ],
     "ORFik": [
-        "biomartr",
         "BSgenome",
         "GenomicFeatures",
         "rtracklayer",
@@ -2546,15 +2446,9 @@
         "ggpubr",
         "rstatix",
     ],
-    "pdInfoBuilder": [
-        "oligo",
-    ],
     "peakPantheR": [
         "MSnbase",
         "mzR",
-    ],
-    "peco": [
-        "scater",
     ],
     "periodicDNA": [
         "BSgenome",
@@ -2564,7 +2458,6 @@
         "clusterProfiler",
         "DOSE",
         "enrichplot",
-        "GOSemSim",
     ],
     "phemd": [
         "destiny",
@@ -2587,10 +2480,8 @@
         "ReactomePA",
         "DOSE",
         "enrichplot",
-        "GOSemSim",
     ],
     "PING": [
-        "PICS",
         "Gviz",
         "BSgenome",
         "rtracklayer",
@@ -2601,7 +2492,6 @@
     ],
     "pipeComp": [
         "scran",
-        "scater",
     ],
     "pipeFrame": [
         "BSgenome",
@@ -2683,7 +2573,6 @@
         "chipseq",
         "ShortRead",
         "DOSE",
-        "GOSemSim",
     ],
     "pRoloc": [
         "MSnbase",
@@ -2704,7 +2593,6 @@
         "factoextra",
         "DOSE",
         "enrichplot",
-        "GOSemSim",
         "ggpubr",
         "missMDA",
         "mzR",
@@ -2743,9 +2631,6 @@
         "MSnbase",
         "rstatix",
         "mzR",
-    ],
-    "puma": [
-        "oligo",
     ],
     "PureCN": [
         "VariantAnnotation",
@@ -2843,13 +2728,9 @@
         "GenomicFeatures",
         "rtracklayer",
     ],
-    "Rcpi": [
-        "GOSemSim",
-    ],
     "ReactomePA": [
         "DOSE",
         "enrichplot",
-        "GOSemSim",
     ],
     "recount": [
         "derfinder",
@@ -2885,7 +2766,6 @@
     "RegEnrich": [
         "DOSE",
         "WGCNA",
-        "GOSemSim",
     ],
     "regioneR": [
         "BSgenome",
@@ -2956,7 +2836,6 @@
         "ORFik",
         "GenomicFeatures",
         "rtracklayer",
-        "biomartr",
         "BSgenome",
     ],
     "RiboDiPA": [
@@ -3093,7 +2972,6 @@
         "DOSE",
         "rtracklayer",
         "enrichplot",
-        "GOSemSim",
         "ggpubr",
         "ShortRead",
         "GenomicFeatures",
@@ -3121,9 +2999,6 @@
         "rtracklayer",
         "BSgenome",
     ],
-    "rrvgo": [
-        "GOSemSim",
-    ],
     "RSVSim": [
         "ShortRead",
     ],
@@ -3137,11 +3012,7 @@
         "GenomicFeatures",
         "rtracklayer",
     ],
-    "RTNduals": [
-        "RTN",
-    ],
     "RTNsurvival": [
-        "RTN",
         "RTNduals",
     ],
     "rTRMui": [
@@ -3154,14 +3025,8 @@
         "GenomicFeatures",
         "rtracklayer",
     ],
-    "sampleClassifier": [
-        "MGFR",
-    ],
     "SBGNview": [
         "pathview",
-    ],
-    "SCAN.UPC": [
-        "oligo",
     ],
     "scanMiRApp": [
         "ensembldb",
@@ -3176,13 +3041,9 @@
     ],
     "scDblFinder": [
         "scran",
-        "scater",
     ],
     "scDD": [
         "scran",
-    ],
-    "ScISI": [
-        "apComplex",
     ],
     "scMerge": [
         "M3Drop",
@@ -3217,7 +3078,6 @@
     ],
     "scPipe": [
         "rtracklayer",
-        "scater",
     ],
     "scruff": [
         "GenomicFeatures",
@@ -3231,17 +3091,14 @@
         "ensembldb",
     ],
     "scTensor": [
-        "meshr",
         "ReactomePA",
         "DOSE",
-        "GOSemSim",
         "enrichplot",
     ],
     "scTreeViz": [
         "epivizr",
         "scran",
         "epivizrData",
-        "scater",
         "bumphunter",
         "OrganismDbi",
         "GenomicFeatures",
@@ -3255,7 +3112,6 @@
         "rtracklayer",
         "TxDb.Hsapiens.UCSC.hg19.knownGene",
         "DOSE",
-        "GOSemSim",
     ],
     "segmentSeq": [
         "ShortRead",
@@ -3304,7 +3160,6 @@
         "clusterProfiler",
         "DOSE",
         "enrichplot",
-        "GOSemSim",
     ],
     "signeR": [
         "VariantAnnotation",
@@ -3321,9 +3176,6 @@
     "SIMAT": [
         "mzR",
     ],
-    "simplifyEnrichment": [
-        "GOSemSim",
-    ],
     "SingleCellSignalR": [
         "scran",
     ],
@@ -3331,7 +3183,6 @@
         "batchelor",
         "GSVA",
         "GSVAdata",
-        "scater",
         "scMerge",
         "scran",
         "celda",
@@ -3377,7 +3228,6 @@
     ],
     "SLGI": [
         "ScISI",
-        "apComplex",
     ],
     "SMITE": [
         "goseq",
@@ -3407,7 +3257,6 @@
         "ensembldb",
     ],
     "Spaniel": [
-        "scater",
         "scran",
         "DropletUtils",
     ],
@@ -3425,7 +3274,6 @@
     "spatialHeatmap": [
         "distinct",
         "WGCNA",
-        "scater",
     ],
     "spatzie": [
         "BSgenome",
@@ -3440,22 +3288,15 @@
         "biovizBase",
         "VariantAnnotation",
     ],
-    "SpectralTAD": [
-        "HiCcompare",
-    ],
     "SpidermiR": [
         "MAGeCKFlute",
         "clusterProfiler",
         "enrichplot",
         "DOSE",
-        "GOSemSim",
     ],
     "spiky": [
         "BSgenome",
         "rtracklayer",
-    ],
-    "splatter": [
-        "scater",
     ],
     "SplicingGraphs": [
         "GenomicFeatures",
@@ -3498,7 +3339,6 @@
         "clusterProfiler",
         "enrichplot",
         "DOSE",
-        "GOSemSim",
     ],
     "strandCheckR": [
         "TxDb.Hsapiens.UCSC.hg38.knownGene",
@@ -3537,7 +3377,6 @@
         "ShortRead",
     ],
     "TADCompare": [
-        "HiCcompare",
         "ggpubr",
         "rstatix",
     ],
@@ -3560,7 +3399,6 @@
         "clusterProfiler",
         "DOSE",
         "enrichplot",
-        "GOSemSim",
         "GenomicFeatures",
         "Gviz",
         "ggpubr",
@@ -3591,7 +3429,6 @@
         "clusterProfiler",
         "DOSE",
         "enrichplot",
-        "GOSemSim",
     ],
     "TIN": [
         "WGCNA",
@@ -3637,7 +3474,6 @@
     ],
     "tRanslatome": [
         "topGO",
-        "GOSemSim",
     ],
     "traseR": [
         "BSgenome.Hsapiens.UCSC.hg19",
@@ -3667,9 +3503,6 @@
     "TRESS": [
         "rtracklayer",
         "GenomicFeatures",
-    ],
-    "tricycle": [
-        "scater",
     ],
     "tRNAscanImport": [
         "rtracklayer",
@@ -3735,7 +3568,6 @@
         "GenomicFeatures",
     ],
     "VAExprs": [
-        "scater",
         "DeepPINCS",
     ],
     "VanillaICE": [
@@ -3781,7 +3613,6 @@
         "GenomicFeatures",
     ],
     "ViSEAGO": [
-        "GOSemSim",
         "topGO",
     ],
     "vissE": [
@@ -4060,9 +3891,6 @@
     "TxDb.Dmelanogaster.UCSC.dm6.ensGene": [
         "GenomicFeatures",
         "rtracklayer",
-    ],
-    "pd.mapping50k.xba240": [
-        "oligo",
     ],
     "EnsDb.Hsapiens.v75": [
         "ensembldb",
