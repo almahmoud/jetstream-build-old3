@@ -170,9 +170,7 @@
         "OrganismDbi",
         "ensembldb",
     ],
-    "branchpointer": [
-        "BSgenome.Hsapiens.UCSC.hg38",
-    ],
+    "branchpointer": [ ],
     "BubbleTree": [
         "biovizBase",
         "GenomicFeatures",
@@ -206,7 +204,6 @@
     ],
     "cageminer": [
         "ggbio",
-        "BioNERO",
         "biovizBase",
         "VariantAnnotation",
         "GenomicFeatures",
@@ -217,9 +214,6 @@
         "xcms",
         "MSnbase",
         "mzR",
-    ],
-    "canceR": [
-        "phenoTest",
     ],
     "casper": [
         "GenomicFeatures",
@@ -307,9 +301,6 @@
         "gwascat",
         "GenomicFeatures",
         "VariantAnnotation",
-    ],
-    "cleanUpdTSeq": [
-        "BSgenome.Drerio.UCSC.danRer7",
     ],
     "clipper": [
         "qpgraph",
@@ -761,9 +752,6 @@
         "GenomicFeatures",
         "TxDb.Hsapiens.UCSC.hg19.knownGene",
     ],
-    "GSEABenchmarkeR": [
-        "EnrichmentBrowser",
-    ],
     "GSReg": [
         "Homo.sapiens",
         "GenomicFeatures",
@@ -851,7 +839,6 @@
         "cleanUpdTSeq",
         "plyranges",
         "GenomicFeatures",
-        "BSgenome.Drerio.UCSC.danRer7",
     ],
     "INSPEcT": [
         "GenomicFeatures",
@@ -1203,7 +1190,6 @@
         "GenomicFeatures",
         "TxDb.Hsapiens.UCSC.hg19.knownGene",
         "TxDb.Hsapiens.UCSC.hg38.knownGene",
-        "BSgenome.Hsapiens.UCSC.hg38",
         "deconstructSigs",
         "decompTumor2Sig",
     ],
@@ -1254,17 +1240,12 @@
         "GenomicFiles",
         "VariantAnnotation",
     ],
-    "omicRexposome": [
-        "rexposome",
-    ],
     "OMICsPCA": [
         "HelloRanges",
         "GenomicFeatures",
         "VariantAnnotation",
     ],
-    "ORFhunteR": [
-        "BSgenome.Hsapiens.UCSC.hg38",
-    ],
+    "ORFhunteR": [ ],
     "ORFik": [
         "GenomicFeatures",
     ],
@@ -1307,7 +1288,6 @@
         "GenomicFeatures",
     ],
     "primirTSS": [
-        "BSgenome.Hsapiens.UCSC.hg38",
         "Gviz",
         "TFBSTools",
         "GenomicFeatures",
@@ -1701,7 +1681,6 @@
         "mzR",
     ],
     "singleCellTK": [
-        "GSVAdata",
         "scMerge",
         "celda",
         "scRNAseq",
@@ -1732,9 +1711,6 @@
         "lumi",
         "IlluminaHumanMethylation450kanno.ilmn12.hg19",
         "TxDb.Hsapiens.UCSC.hg19.knownGene",
-    ],
-    "SLGI": [
-        "ScISI",
     ],
     "SMITE": [
         "goseq",
@@ -1865,8 +1841,6 @@
     ],
     "trena": [
         "MotifDb",
-        "BSgenome.Hsapiens.UCSC.hg38",
-        "SNPlocs.Hsapiens.dbSNP150.GRCh38",
     ],
     "TRESS": [
         "GenomicFeatures",
