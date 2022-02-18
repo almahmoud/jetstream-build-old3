@@ -61,7 +61,6 @@
         "biovizBase",
     ],
     "biscuiteer": [
-        "Mus.musculus",
         "Homo.sapiens",
         "dmrseq",
     ],
@@ -97,10 +96,6 @@
     ],
     "cBioPortalData": [
         "RTCGAToolbox",
-        "TCGAutils",
-    ],
-    "censcyt": [
-        "diffcyt",
     ],
     "ChAMP": [
         "DMRcate",
@@ -188,9 +183,6 @@
     "cummeRbund": [
         "Gviz",
         "biovizBase",
-    ],
-    "CyTOFpower": [
-        "diffcyt",
     ],
     "DAPAR": [
         "MSnbase",
@@ -685,9 +677,6 @@
         "biovizBase",
         "GenomicFiles",
     ],
-    "RTCGAToolbox": [
-        "TCGAutils",
-    ],
     "scMerge": [
         "M3Drop",
         "reldist",
@@ -777,9 +766,6 @@
     "trackViewer": [
         "Gviz",
         "biovizBase",
-    ],
-    "treekoR": [
-        "diffcyt",
     ],
     "TVTB": [
         "ensemblVEP",

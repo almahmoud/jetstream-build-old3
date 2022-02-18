@@ -1,0 +1,10 @@
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.rstudio.com/cran/__linux__/focal/latest
+
+Bioconductor version 3.14 (BiocManager 1.30.16), R 4.1.2 (2021-11-01)
+Installing package(s) 'Guitar'
+also installing the dependencies ‘matrixStats’, ‘snow’, ‘BH’, ‘MatrixGenerics’, ‘DelayedArray’, ‘colorspace’, ‘BiocParallel’, ‘Rhtslib’, ‘SummarizedExperiment’, ‘blob’, ‘png’, ‘farver’, ‘labeling’, ‘munsell’, ‘RColorBrewer’, ‘viridisLite’, ‘XML’, ‘BiocGenerics’, ‘S4Vectors’, ‘IRanges’, ‘XVector’, ‘Biostrings’, ‘zlibbioc’, ‘RCurl’, ‘Rsamtools’, ‘GenomicAlignments’, ‘BiocIO’, ‘restfulr’, ‘Biobase’, ‘DBI’, ‘RSQLite’, ‘KEGGREST’, ‘gtable’, ‘isoband’, ‘scales’, ‘rtracklayer’, ‘AnnotationDbi’, ‘GenomicRanges’, ‘ggplot2’
+
