@@ -48,7 +48,7 @@ export UNIQUE=$(date '+%s');
 echo "successful deletions:"
 kubectl get jobs -n $namespace -o custom-columns=':metadata.name,:status.conditions[0].type' | grep -w Complete | awk '{print $1}' > lists/tmpbuildlist$UNIQUE &&\
     grep -q '[^[:space:]]' < "lists/tmpbuildlist$UNIQUE" &&\
-    cat lists/tmpbuildlist$UNIQUE | xargs -i sh -c "grep -ir {} manifests | gawk -F'/' '{print \$2}'" > lists/cleanup$UNIQUE;
+    cat lists/tmpbuildlist$UNIQUE | xargs -i sh -c "find manifests -type f -name {}.yaml -print -quit | awk -F/ '{print \$2}'" > lists/cleanup$UNIQUE;
 
 
 if [ -s lists/cleanup$UNIQUE ]
@@ -65,7 +65,7 @@ echo "failure deletions:"
 
 kubectl get jobs -n $namespace -o custom-columns=':metadata.name,:status.conditions[0].type' | grep -w Failed | awk '{print $1}' > lists/tmpexfailist$UNIQUE &&\
     grep -q '[^[:space:]]' < "lists/tmpexfailist$UNIQUE" &&\
-    cat lists/tmpexfailist$UNIQUE | xargs -i sh -c "grep -ir {} manifests | gawk -F'/' '{print \$2}'" > lists/tmpfld$UNIQUE
+    cat lists/tmpexfailist$UNIQUE | xargs -i sh -c "find manifests -type f -name {}.yaml -print -quit | awk -F/ '{print \$2}'" > lists/tmpfld$UNIQUE
 
 if [ -s lists/tmpfld$UNIQUE ]
 then
