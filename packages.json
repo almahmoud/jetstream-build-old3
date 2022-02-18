@@ -243,9 +243,6 @@
         "MSnbase",
         "mzR",
     ],
-    "BaalChIP": [
-        "doBy",
-    ],
     "BadRegionFinder": [
         "VariantAnnotation",
         "biomaRt",
@@ -454,7 +451,6 @@
         "sva",
     ],
     "bnem": [
-        "epiNEM",
         "sva",
     ],
     "brainflowprobes": [
@@ -611,9 +607,6 @@
         "GenomicFeatures",
         "rtracklayer",
         "biomaRt",
-    ],
-    "CCPROMISE": [
-        "PROMISE",
     ],
     "celda": [
         "scater",
@@ -1275,7 +1268,6 @@
         "car",
     ],
     "dce": [
-        "epiNEM",
         "org.Hs.eg.db",
     ],
     "ddPCRclust": [
@@ -1326,7 +1318,6 @@
     ],
     "DeepPINCS": [
         "ttgsea",
-        "textstem",
     ],
     "deepSNV": [
         "VariantAnnotation",
@@ -1812,7 +1803,6 @@
         "biomaRt",
     ],
     "EWCE": [
-        "ewceData",
         "biomaRt",
     ],
     "ExCluster": [
@@ -3150,7 +3140,6 @@
     ],
     "miRSM": [
         "WGCNA",
-        "BicARE",
         "miRspongeR",
         "org.Hs.eg.db",
         "clusterProfiler",
@@ -3496,9 +3485,6 @@
         "GenomicFeatures",
         "biomaRt",
     ],
-    "nempi": [
-        "epiNEM",
-    ],
     "netboost": [
         "WGCNA",
         "GO.db",
@@ -3514,7 +3500,6 @@
     "netOmics": [
         "GO.db",
         "RandomWalkRestartMH",
-        "dnet",
     ],
     "NetSAM": [
         "WGCNA",
@@ -3734,7 +3719,6 @@
     ],
     "PECA": [
         "aroma.affymetrix",
-        "aroma.core",
     ],
     "peco": [
         "scater",
@@ -3784,7 +3768,6 @@
         "GO.db",
     ],
     "Pi": [
-        "dnet",
         "caret",
         "recipes",
     ],
@@ -4052,9 +4035,6 @@
     "pwOmics": [
         "biomaRt",
     ],
-    "pwrEWAS": [
-        "pwrEWAS.data",
-    ],
     "QDNAseq": [
         "CGHcall",
     ],
@@ -4126,9 +4106,6 @@
     ],
     "ramwas": [
         "biomaRt",
-    ],
-    "RandomWalkRestartMH": [
-        "dnet",
     ],
     "RareVariantVis": [
         "VariantAnnotation",
@@ -4383,7 +4360,6 @@
         "caretEnsemble",
         "GenomicFeatures",
         "rtracklayer",
-        "RLHub",
         "caret",
         "biomaRt",
         "BSgenome",
@@ -4869,7 +4845,6 @@
     ],
     "singleCellTK": [
         "batchelor",
-        "celldex",
         "DESeq2",
         "GSVA",
         "GSVAdata",
@@ -4883,7 +4858,6 @@
         "fishpond",
         "zinbwave",
         "scRNAseq",
-        "TENxPBMCData",
         "scDblFinder",
         "BiocSingular",
         "scuttle",
@@ -5169,9 +5143,6 @@
         "drc",
         "car",
     ],
-    "synlet": [
-        "doBy",
-    ],
     "systemPipeR": [
         "ShortRead",
     ],
@@ -5283,7 +5254,6 @@
     "TIN": [
         "aroma.affymetrix",
         "WGCNA",
-        "aroma.core",
         "GO.db",
     ],
     "TitanCNA": [
@@ -5406,9 +5376,6 @@
     "TSRchitect": [
         "rtracklayer",
     ],
-    "ttgsea": [
-        "textstem",
-    ],
     "TVTB": [
         "ensembldb",
         "ensemblVEP",
@@ -5483,7 +5450,6 @@
         "ttgsea",
         "scuttle",
         "BiocSingular",
-        "textstem",
     ],
     "VanillaICE": [
         "oligoClasses",
@@ -5556,7 +5522,6 @@
     ],
     "vissE": [
         "msigdb",
-        "textstem",
         "org.Mm.eg.db",
         "org.Hs.eg.db",
     ],
@@ -5984,9 +5949,6 @@
     ],
     "biomartr": [
         "biomaRt",
-    ],
-    "aroma.affymetrix": [
-        "aroma.core",
     ],
     "phastCons100way.UCSC.hg38": [
         "BSgenome",
