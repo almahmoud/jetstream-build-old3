@@ -2,15 +2,8 @@
     "adductomicsR": [
         "mzR",
     ],
-    "affycoretools": [
-        "ReportingTools",
-    ],
     "AgiMicroRna": [
         "affycoretools",
-        "ReportingTools",
-    ],
-    "arrayMvout": [
-        "lumi",
     ],
     "Autotuner": [
         "MSnbase",
@@ -18,18 +11,9 @@
     ],
     "benchdamic": [
         "ffpe",
-        "lumi",
     ],
     "bigmelon": [
         "wateRmelon",
-        "lumi",
-    ],
-    "brainflowprobes": [
-        "derfinderPlot",
-        "GenomicState",
-    ],
-    "CAGEfightR": [
-        "GenomicInteractions",
     ],
     "CAMERA": [
         "xcms",
@@ -41,7 +25,6 @@
         "IlluminaHumanMethylationEPICanno.ilm10b4.hg19",
         "wateRmelon",
         "missMethyl",
-        "lumi",
     ],
     "cliqueMS": [
         "xcms",
@@ -51,15 +34,6 @@
     "CluMSID": [
         "mzR",
         "MSnbase",
-    ],
-    "CNVfilteR": [
-        "CopyNumberPlots",
-    ],
-    "CNViz": [
-        "CopyNumberPlots",
-    ],
-    "compEpiTools": [
-        "methylPipe",
     ],
     "conumee": [
         "IlluminaHumanMethylationEPICanno.ilm10b2.hg19",
@@ -86,20 +60,11 @@
         "missMethyl",
         "IlluminaHumanMethylationEPICanno.ilm10b4.hg19",
     ],
-    "ffpe": [
-        "lumi",
-    ],
     "flagme": [
         "xcms",
         "CAMERA",
         "MSnbase",
         "mzR",
-    ],
-    "HiCDCPlus": [
-        "GenomicInteractions",
-    ],
-    "iCheck": [
-        "lumi",
     ],
     "IPO": [
         "xcms",
@@ -117,9 +82,6 @@
         "reldist",
         "densEstBayes",
     ],
-    "MAGAR": [
-        "RnBeads",
-    ],
     "MAIT": [
         "CAMERA",
         "xcms",
@@ -132,7 +94,6 @@
     ],
     "MEAT": [
         "wateRmelon",
-        "lumi",
     ],
     "Metab": [
         "xcms",
@@ -145,9 +106,6 @@
         "MSnbase",
         "mzR",
     ],
-    "metavizr": [
-        "epivizrStandalone",
-    ],
     "MetCirc": [
         "MSnbase",
         "mzR",
@@ -158,9 +116,6 @@
     "methylGSA": [
         "missMethyl",
         "IlluminaHumanMethylationEPICanno.ilm10b4.hg19",
-    ],
-    "MineICA": [
-        "lumi",
     ],
     "missMethyl": [
         "IlluminaHumanMethylationEPICanno.ilm10b4.hg19",
@@ -197,9 +152,6 @@
         "MSstatsQC",
         "MSnbase",
         "mzR",
-    ],
-    "NADfinder": [
-        "trackViewer",
     ],
     "ncGTW": [
         "xcms",
@@ -242,9 +194,6 @@
         "mzR",
         "MSnbase",
     ],
-    "psichomics": [
-        "recount",
-    ],
     "ptairMS": [
         "MSnbase",
         "mzR",
@@ -272,18 +221,6 @@
     "RmiR": [
         "RSVGTipsDevice",
     ],
-    "RNAAgeCalc": [
-        "recount",
-    ],
-    "RNAmodR.AlkAnilineSeq": [
-        "RNAmodR",
-    ],
-    "RNAmodR.ML": [
-        "RNAmodR",
-    ],
-    "RNAmodR.RiboMethSeq": [
-        "RNAmodR",
-    ],
     "scMerge": [
         "M3Drop",
         "reldist",
@@ -300,23 +237,13 @@
     ],
     "skewr": [
         "wateRmelon",
-        "lumi",
-    ],
-    "spatzie": [
-        "GenomicInteractions",
     ],
     "TargetDecoy": [
         "mzR",
     ],
-    "TCGAbiolinksGUI": [
-        "ELMER",
-    ],
     "topdownr": [
         "MSnbase",
         "mzR",
-    ],
-    "wateRmelon": [
-        "lumi",
     ],
     "xcms": [
         "MSnbase",
@@ -324,9 +251,6 @@
     ],
     "yamss": [
         "mzR",
-    ],
-    "YAPSA": [
-        "SomaticSignatures",
     ],
     "faahKO": [
         "xcms",
