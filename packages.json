@@ -501,7 +501,6 @@
         "ggraph",
         "graphite",
         "pbkrtest",
-        "ggtree",
     ],
     "biocGraph": [
         "geneplotter",
@@ -824,7 +823,6 @@
     ],
     "CATALYST": [
         "drc",
-        "flowCore",
         "FlowSOM",
         "scater",
         "car",
@@ -934,11 +932,9 @@
         "Hmisc",
         "DO.db",
         "ggraph",
-        "ggtree",
     ],
     "censcyt": [
         "diffcyt",
-        "flowCore",
         "FlowSOM",
         "CytoML",
         "flowWorkspace",
@@ -975,7 +971,6 @@
         "rstatix",
         "DO.db",
         "ggraph",
-        "ggtree",
         "annotate",
         "car",
         "pbkrtest",
@@ -1133,7 +1128,6 @@
         "DOSE",
         "ggraph",
         "GOSemSim",
-        "ggtree",
         "biomaRt",
         "GenomicAlignments",
         "DO.db",
@@ -1279,10 +1273,6 @@
         "GOSemSim",
         "DO.db",
         "ggraph",
-        "ggtree",
-    ],
-    "cmapR": [
-        "flowCore",
     ],
     "cn.farms": [
         "oligoClasses",
@@ -1415,7 +1405,6 @@
         "BiocSingular",
         "DO.db",
         "ggraph",
-        "ggtree",
         "car",
         "rstatix",
         "pbkrtest",
@@ -1431,7 +1420,6 @@
     ],
     "CONFESS": [
         "contrast",
-        "flowCore",
         "flowClust",
         "flowMeans",
         "flowMerge",
@@ -1640,7 +1628,6 @@
         "BSgenome",
     ],
     "cyanoFilter": [
-        "flowCore",
         "flowDensity",
         "flowClust",
         "flowViz",
@@ -1649,19 +1636,12 @@
         "pbkrtest",
         "ncdfFlow",
     ],
-    "cydar": [
-        "flowCore",
-    ],
-    "CytoDx": [
-        "flowCore",
-    ],
     "CyTOFpower": [
         "CytoGLMM",
         "diffcyt",
         "factoextra",
         "mbest",
         "caret",
-        "flowCore",
         "FlowSOM",
         "recipes",
         "FactoMineR",
@@ -1696,7 +1676,6 @@
         "prodlim",
     ],
     "CytoML": [
-        "flowCore",
         "flowWorkspace",
         "openCyto",
         "ggcyto",
@@ -1711,7 +1690,6 @@
         "FlowSOM",
         "destiny",
         "flowUtils",
-        "flowCore",
         "sva",
         "VIM",
         "CytoML",
@@ -1790,13 +1768,11 @@
         "pbkrtest",
         "DO.db",
         "ggraph",
-        "ggtree",
         "rstatix",
     ],
     "dasper": [
         "GenomicFeatures",
         "ggpubr",
-        "megadepth",
         "plyranges",
         "rtracklayer",
         "biomaRt",
@@ -1809,14 +1785,12 @@
         "pcalg",
         "ggraph",
         "epiNEM",
-        "metap",
         "mnem",
         "graphite",
         "org.Hs.eg.db",
         "Linnorm",
     ],
     "ddPCRclust": [
-        "flowCore",
         "flowDensity",
         "flowViz",
         "car",
@@ -1841,7 +1815,6 @@
         "geneplotter",
         "DO.db",
         "ggraph",
-        "ggtree",
     ],
     "deco": [
         "made4",
@@ -2022,7 +1995,6 @@
         "GO.db",
     ],
     "diffcyt": [
-        "flowCore",
         "FlowSOM",
         "CytoML",
         "flowWorkspace",
@@ -2247,7 +2219,6 @@
         "geneplotter",
         "DO.db",
         "ggraph",
-        "ggtree",
         "annotate",
     ],
     "EGSEA": [
@@ -2258,7 +2229,6 @@
         "GSVA",
         "globaltest",
         "safe",
-        "metap",
         "org.Hs.eg.db",
         "org.Mm.eg.db",
         "org.Rn.eg.db",
@@ -2340,7 +2310,6 @@
         "DOSE",
         "ggraph",
         "GOSemSim",
-        "ggtree",
         "DO.db",
         "GO.db",
     ],
@@ -2362,7 +2331,6 @@
         "annotate",
         "DO.db",
         "ggraph",
-        "ggtree",
         "car",
         "pbkrtest",
     ],
@@ -2422,7 +2390,6 @@
         "GO.db",
         "DO.db",
         "GOSemSim",
-        "ggtree",
     ],
     "epiNEM": [
         "pcalg",
@@ -2515,7 +2482,6 @@
         "annotate",
         "DO.db",
         "ggraph",
-        "ggtree",
     ],
     "escape": [
         "GSEABase",
@@ -2576,7 +2542,6 @@
     ],
     "ExperimentSubset": [
         "SpatialExperiment",
-        "TreeSummarizedExperiment",
         "DropletUtils",
         "scuttle",
     ],
@@ -2590,7 +2555,6 @@
         "GOSemSim",
         "DO.db",
         "ggraph",
-        "ggtree",
     ],
     "fastLiquidAssociation": [
         "LiquidAssociation",
@@ -2620,7 +2584,6 @@
         "GOSemSim",
         "DO.db",
         "ggraph",
-        "ggtree",
     ],
     "fcScan": [
         "VariantAnnotation",
@@ -2670,29 +2633,14 @@
         "scuttle",
         "BiocSingular",
     ],
-    "flowAI": [
-        "flowCore",
-    ],
-    "flowBeads": [
-        "flowCore",
-    ],
     "flowBin": [
-        "flowCore",
         "flowFP",
         "flowViz",
     ],
-    "flowCHIC": [
-        "flowCore",
-    ],
-    "flowClean": [
-        "flowCore",
-    ],
     "flowClust": [
         "flowViz",
-        "flowCore",
     ],
     "flowCut": [
-        "flowCore",
         "flowDensity",
         "flowViz",
         "car",
@@ -2701,7 +2649,6 @@
         "ncdfFlow",
     ],
     "flowDensity": [
-        "flowCore",
         "flowViz",
         "car",
         "flowWorkspace",
@@ -2709,28 +2656,18 @@
         "ncdfFlow",
     ],
     "flowFP": [
-        "flowCore",
         "flowViz",
-    ],
-    "flowMatch": [
-        "flowCore",
-    ],
-    "flowMeans": [
-        "flowCore",
     ],
     "flowMerge": [
         "flowClust",
-        "flowCore",
         "flowViz",
     ],
     "flowPloidy": [
-        "flowCore",
         "car",
         "pbkrtest",
     ],
     "FlowSOM": [
         "CytoML",
-        "flowCore",
         "flowWorkspace",
         "ggpubr",
         "openCyto",
@@ -2745,33 +2682,18 @@
         "fda",
         "fds",
     ],
-    "flowSpecs": [
-        "flowCore",
-    ],
     "flowStats": [
-        "flowCore",
         "flowWorkspace",
         "ncdfFlow",
         "flowViz",
         "fda",
         "fds",
     ],
-    "flowTime": [
-        "flowCore",
-    ],
     "flowTrans": [
-        "flowCore",
         "flowViz",
         "flowClust",
     ],
-    "flowUtils": [
-        "flowCore",
-    ],
-    "flowViz": [
-        "flowCore",
-    ],
     "flowVS": [
-        "flowCore",
         "flowViz",
         "flowStats",
         "flowWorkspace",
@@ -2780,7 +2702,6 @@
         "fds",
     ],
     "flowWorkspace": [
-        "flowCore",
         "ncdfFlow",
     ],
     "fobitools": [
@@ -2888,7 +2809,6 @@
         "prodlim",
     ],
     "GateFinder": [
-        "flowCore",
         "flowFP",
         "flowViz",
     ],
@@ -2914,7 +2834,6 @@
         "DO.db",
         "ggpubr",
         "ggraph",
-        "ggtree",
         "annotate",
         "rstatix",
         "car",
@@ -3121,7 +3040,6 @@
         "biomaRt",
     ],
     "ggcyto": [
-        "flowCore",
         "ncdfFlow",
         "flowWorkspace",
     ],
@@ -3129,9 +3047,6 @@
         "SpatialExperiment",
         "DropletUtils",
         "scuttle",
-    ],
-    "ggtreeExtra": [
-        "ggtree",
     ],
     "girafe": [
         "ShortRead",
@@ -3554,15 +3469,8 @@
         "STRINGdb",
     ],
     "ImmuneSpaceR": [
-        "flowCore",
         "flowWorkspace",
         "ncdfFlow",
-    ],
-    "immunoClust": [
-        "flowCore",
-    ],
-    "infinityFlow": [
-        "flowCore",
     ],
     "InPAS": [
         "BSgenome",
@@ -3678,7 +3586,6 @@
         "scuttle",
         "BiocSingular",
         "DO.db",
-        "ggtree",
         "car",
         "pbkrtest",
     ],
@@ -3834,9 +3741,6 @@
         "bumphunter",
         "GenomicAlignments",
     ],
-    "LymphoSeq": [
-        "ggtree",
-    ],
     "M3Drop": [
         "reldist",
         "Hmisc",
@@ -3905,7 +3809,6 @@
         "GO.db",
         "GOSemSim",
         "ggraph",
-        "ggtree",
         "DO.db",
     ],
     "MAI": [
@@ -4058,9 +3961,6 @@
     "MEIGOR": [
         "CNORode",
     ],
-    "Melissa": [
-        "BPRMeth",
-    ],
     "meshes": [
         "DOSE",
         "enrichplot",
@@ -4069,7 +3969,6 @@
         "MeSHDbi",
         "DO.db",
         "ggraph",
-        "ggtree",
         "GO.db",
     ],
     "meshr": [
@@ -4110,7 +4009,6 @@
         "GenomicAlignments",
     ],
     "MetaCyto": [
-        "flowCore",
         "FlowSOM",
         "CytoML",
         "flowWorkspace",
@@ -4177,9 +4075,6 @@
         "rtracklayer",
         "biomaRt",
         "GenomicAlignments",
-    ],
-    "MetaVolcanoR": [
-        "metap",
     ],
     "MetCirc": [
         "MSnbase",
@@ -4276,7 +4171,6 @@
         "methylumi",
         "DO.db",
         "ggraph",
-        "ggtree",
         "FDb.InfiniumMethylation.hg19",
         "annotate",
         "genefilter",
@@ -4343,18 +4237,15 @@
         "annotate",
     ],
     "mia": [
-        "TreeSummarizedExperiment",
         "MultiAssayExperiment",
         "scuttle",
         "scater",
         "BiocSingular",
     ],
     "miaViz": [
-        "TreeSummarizedExperiment",
         "mia",
         "ggraph",
         "scater",
-        "ggtree",
         "MultiAssayExperiment",
         "scuttle",
         "BiocSingular",
@@ -4368,7 +4259,6 @@
         "annotate",
     ],
     "microbiomeMarker": [
-        "ggtree",
         "DESeq2",
         "ANCOMBC",
         "caret",
@@ -4389,11 +4279,9 @@
         "GO.db",
         "GOSemSim",
         "ggraph",
-        "ggtree",
         "DO.db",
     ],
     "MicrobiotaProcess": [
-        "ggtree",
         "ggtreeExtra",
     ],
     "midasHLA": [
@@ -4506,7 +4394,6 @@
         "ggraph",
         "reactome.db",
         "graphite",
-        "ggtree",
     ],
     "miRspongeR": [
         "clusterProfiler",
@@ -4520,7 +4407,6 @@
         "ggraph",
         "reactome.db",
         "graphite",
-        "ggtree",
     ],
     "missMethyl": [
         "IlluminaHumanMethylation450kanno.ilmn12.hg19",
@@ -4635,7 +4521,6 @@
         "DO.db",
         "biomaRt",
         "ggraph",
-        "ggtree",
     ],
     "mosaics": [
         "GenomicAlignments",
@@ -4797,7 +4682,6 @@
     ],
     "multiGSEA": [
         "graphite",
-        "metap",
     ],
     "multiHiCcompare": [
         "HiCcompare",
@@ -4815,7 +4699,6 @@
         "clusterProfiler",
         "ReactomePA",
         "enrichplot",
-        "metap",
         "ropls",
         "MultiDataSet",
         "recipes",
@@ -4825,7 +4708,6 @@
         "genefilter",
         "geneplotter",
         "ggraph",
-        "ggtree",
         "reactome.db",
         "graphite",
         "DO.db",
@@ -4915,7 +4797,6 @@
         "GenomicAlignments",
         "rtracklayer",
         "trackViewer",
-        "metap",
         "ATACseqQC",
         "csaw",
         "BSgenome",
@@ -4955,9 +4836,6 @@
         "car",
         "pbkrtest",
     ],
-    "ncdfFlow": [
-        "flowCore",
-    ],
     "ncGTW": [
         "xcms",
         "MSnbase",
@@ -4995,7 +4873,6 @@
         "GOSemSim",
         "DO.db",
         "ggraph",
-        "ggtree",
     ],
     "netDx": [
         "MultiAssayExperiment",
@@ -5077,7 +4954,6 @@
         "derfinder",
         "ggpubr",
         "rtracklayer",
-        "megadepth",
         "GenomicFeatures",
         "plyranges",
         "bumphunter",
@@ -5147,14 +5023,10 @@
         "car",
         "pbkrtest",
     ],
-    "oneSENSE": [
-        "flowCore",
-    ],
     "ontoProc": [
         "AnnotationHub",
     ],
     "openCyto": [
-        "flowCore",
         "flowViz",
         "ncdfFlow",
         "flowWorkspace",
@@ -5172,7 +5044,6 @@
     ],
     "OpenStats": [
         "Hmisc",
-        "AICcmodavg",
         "car",
         "pbkrtest",
     ],
@@ -5187,7 +5058,6 @@
     ],
     "optimalFlow": [
         "flowMeans",
-        "flowCore",
     ],
     "ORFhunteR": [
         "rtracklayer",
@@ -5319,7 +5189,6 @@
         "oligoClasses",
     ],
     "PeacoQC": [
-        "flowCore",
         "flowWorkspace",
         "ncdfFlow",
     ],
@@ -5351,7 +5220,6 @@
         "GOSemSim",
         "DO.db",
         "ggraph",
-        "ggtree",
     ],
     "phantasus": [
         "DESeq2",
@@ -5385,9 +5253,6 @@
     "PhenStat": [
         "car",
         "pbkrtest",
-    ],
-    "philr": [
-        "ggtree",
     ],
     "PhosR": [
         "ggpubr",
@@ -5425,7 +5290,6 @@
         "graphite",
         "Hmisc",
         "DO.db",
-        "ggtree",
     ],
     "PING": [
         "PICS",
@@ -5626,7 +5490,6 @@
         "DOSE",
         "ggraph",
         "GOSemSim",
-        "ggtree",
         "DO.db",
         "GO.db",
     ],
@@ -5689,7 +5552,6 @@
         "pbkrtest",
         "DO.db",
         "ggraph",
-        "ggtree",
         "rstatix",
     ],
     "ProteoDisco": [
@@ -5940,7 +5802,6 @@
         "graphite",
         "DO.db",
         "GOSemSim",
-        "ggtree",
         "GO.db",
     ],
     "recount": [
@@ -6364,7 +6225,6 @@
         "GenomicFeatures",
         "pbkrtest",
         "ggraph",
-        "ggtree",
         "annotate",
         "biomaRt",
         "rstatix",
@@ -6416,7 +6276,6 @@
     "rqt": [
         "ropls",
         "car",
-        "metap",
         "pbkrtest",
         "MultiDataSet",
     ],
@@ -6559,7 +6418,6 @@
         "annotate",
     ],
     "scDataviz": [
-        "flowCore",
         "Seurat",
     ],
     "scDblFinder": [
@@ -6626,9 +6484,6 @@
         "GenomicFeatures",
         "rtracklayer",
         "GenomicAlignments",
-    ],
-    "Sconify": [
-        "flowCore",
     ],
     "SCOPE": [
         "BSgenome.Hsapiens.UCSC.hg19",
@@ -6700,7 +6555,6 @@
         "ggraph",
         "graphite",
         "Seurat",
-        "ggtree",
     ],
     "scTGIF": [
         "GSEABase",
@@ -6735,7 +6589,6 @@
         "DOSE",
         "ggraph",
         "GOSemSim",
-        "ggtree",
         "biomaRt",
         "GenomicAlignments",
         "DO.db",
@@ -6853,7 +6706,6 @@
         "AnnotationHub",
         "annotate",
         "ggraph",
-        "ggtree",
     ],
     "signeR": [
         "VariantAnnotation",
@@ -6898,7 +6750,6 @@
         "celldex",
         "DESeq2",
         "ExperimentHub",
-        "ggtree",
         "GSVA",
         "GSVAdata",
         "MAST",
@@ -6917,7 +6768,6 @@
         "scRNAseq",
         "TENxPBMCData",
         "scDblFinder",
-        "metap",
         "BiocSingular",
         "scuttle",
         "AnnotationHub",
@@ -6966,9 +6816,6 @@
         "GenomicFeatures",
         "rtracklayer",
         "GenomicAlignments",
-    ],
-    "sitePath": [
-        "ggtree",
     ],
     "skewr": [
         "methylumi",
@@ -7137,7 +6984,6 @@
         "GO.db",
         "GOSemSim",
         "ggraph",
-        "ggtree",
         "DO.db",
     ],
     "spiky": [
@@ -7231,7 +7077,6 @@
         "GO.db",
         "GOSemSim",
         "ggraph",
-        "ggtree",
         "DO.db",
     ],
     "strandCheckR": [
@@ -7321,12 +7166,10 @@
         "GenomicAlignments",
     ],
     "systemPipeShiny": [
-        "spsComps",
         "shinydashboardPlus",
     ],
     "systemPipeTools": [
         "DESeq2",
-        "ggtree",
         "genefilter",
         "geneplotter",
         "annotate",
@@ -7340,9 +7183,6 @@
         "CGHcall",
         "car",
         "pbkrtest",
-    ],
-    "tanggle": [
-        "ggtree",
     ],
     "TAPseq": [
         "GenomicAlignments",
@@ -7405,7 +7245,6 @@
         "sesameData",
         "DO.db",
         "ggraph",
-        "ggtree",
         "rstatix",
         "ensembldb",
         "BSgenome",
@@ -7487,7 +7326,6 @@
         "GOSemSim",
         "DO.db",
         "ggraph",
-        "ggtree",
     ],
     "TIN": [
         "aroma.affymetrix",
@@ -7597,9 +7435,7 @@
         "TrajectoryUtils",
     ],
     "treekoR": [
-        "ggtree",
         "diffcyt",
-        "flowCore",
         "FlowSOM",
         "CytoML",
         "flowWorkspace",
