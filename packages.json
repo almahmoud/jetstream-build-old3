@@ -59,7 +59,6 @@
         "XtraSNPlocs.Hsapiens.dbSNP144.GRCh37",
         "MafDb.1Kgenomes.phase3.hs37d5",
         "MafDb.ExAC.r1.0.hs37d5",
-        "MafDb.gnomADex.r2.1.hs37d5",
         "COSMIC.67",
         "PolyPhen.Hsapiens.dbSNP131",
         "SIFT.Hsapiens.dbSNP137",
@@ -141,7 +140,6 @@
     "bioCancer": [
         "clusterProfiler",
         "ReactomePA",
-        "enrichplot",
     ],
     "BiocOncoTK": [
         "GenomicFeatures",
@@ -166,7 +164,6 @@
         "ensembldb",
     ],
     "biscuiteer": [
-        "bsseq",
         "VariantAnnotation",
         "Mus.musculus",
         "Homo.sapiens",
@@ -259,8 +256,6 @@
         "CytoML",
         "ggpubr",
         "openCyto",
-        "ggcyto",
-        "flowStats",
     ],
     "cBioPortalData": [
         "RTCGAToolbox",
@@ -269,7 +264,6 @@
     ],
     "CEMiTool": [
         "clusterProfiler",
-        "enrichplot",
     ],
     "censcyt": [
         "diffcyt",
@@ -277,13 +271,10 @@
         "CytoML",
         "ggpubr",
         "openCyto",
-        "ggcyto",
-        "flowStats",
     ],
     "CeTF": [
         "clusterProfiler",
         "ggpubr",
-        "enrichplot",
     ],
     "CexoR": [
         "genomation",
@@ -299,7 +290,6 @@
         "missMethyl",
         "bumphunter",
         "GenomicFeatures",
-        "bsseq",
         "DSS",
         "Gviz",
         "geneLenDataBase",
@@ -321,7 +311,6 @@
     ],
     "ChIPComp": [
         "BSgenome.Hsapiens.UCSC.hg19",
-        "BSgenome.Mmusculus.UCSC.mm9",
     ],
     "chipenrich": [
         "chipenrich.data",
@@ -350,7 +339,6 @@
         "GreyListChIP",
     ],
     "ChIPseeker": [
-        "enrichplot",
         "GenomicFeatures",
         "TxDb.Hsapiens.UCSC.hg19.knownGene",
     ],
@@ -387,9 +375,6 @@
         "mzR",
         "MSnbase",
     ],
-    "clusterProfiler": [
-        "enrichplot",
-    ],
     "CNVfilteR": [
         "regioneR",
         "karyoploteR",
@@ -414,7 +399,6 @@
     ],
     "COCOA": [
         "MIRA",
-        "bsseq",
     ],
     "CODEX": [
         "BSgenome.Hsapiens.UCSC.hg19",
@@ -441,7 +425,6 @@
     "conclus": [
         "factoextra",
         "clusterProfiler",
-        "enrichplot",
         "ggpubr",
     ],
     "consensusDE": [
@@ -513,8 +496,6 @@
         "ggpubr",
         "CytoML",
         "openCyto",
-        "ggcyto",
-        "flowStats",
     ],
     "CytoGLMM": [
         "factoextra",
@@ -522,17 +503,12 @@
     ],
     "CytoML": [
         "openCyto",
-        "ggcyto",
-        "flowStats",
     ],
     "CytoTree": [
         "FlowSOM",
-        "destiny",
         "CytoML",
         "ggpubr",
         "openCyto",
-        "ggcyto",
-        "flowStats",
     ],
     "DAMEfinder": [
         "VariantAnnotation",
@@ -549,9 +525,7 @@
         "DAPARdata",
         "clusterProfiler",
         "factoextra",
-        "enrichplot",
         "ggpubr",
-        "missMDA",
         "mzR",
     ],
     "dasper": [
@@ -561,7 +535,6 @@
     ],
     "debrowser": [
         "clusterProfiler",
-        "enrichplot",
         "pathview",
     ],
     "decompTumor2Sig": [
@@ -618,15 +591,12 @@
         "CytoML",
         "ggpubr",
         "openCyto",
-        "ggcyto",
-        "flowStats",
     ],
     "diffUTR": [
         "ensembldb",
         "GenomicFeatures",
     ],
     "DMRcate": [
-        "bsseq",
         "DSS",
         "minfi",
         "missMethyl",
@@ -652,7 +622,6 @@
         "VariantAnnotation",
     ],
     "dmrseq": [
-        "bsseq",
         "bumphunter",
         "annotatr",
         "GenomicFeatures",
@@ -671,15 +640,11 @@
         "hgu133a2.db",
         "hgu133plus2.db",
     ],
-    "DSS": [
-        "bsseq",
-    ],
     "EDASeq": [
         "GenomicFeatures",
     ],
     "eegc": [
         "clusterProfiler",
-        "enrichplot",
     ],
     "EGSEA": [
         "pathview",
@@ -720,7 +685,6 @@
         "TFBSTools",
         "ggpubr",
         "clusterProfiler",
-        "enrichplot",
         "CNEr",
     ],
     "ensembldb": [
@@ -743,7 +707,6 @@
     ],
     "epihet": [
         "ReactomePA",
-        "enrichplot",
     ],
     "EpiTxDb": [
         "GenomicFeatures",
@@ -789,7 +752,6 @@
         "GenomicFeatures",
         "TFBSTools",
         "motifmatchr",
-        "enrichplot",
         "TxDb.Hsapiens.UCSC.hg19.knownGene",
         "CNEr",
     ],
@@ -810,14 +772,12 @@
     ],
     "famat": [
         "clusterProfiler",
-        "enrichplot",
     ],
     "fCCAC": [
         "genomation",
     ],
     "fcoex": [
         "clusterProfiler",
-        "enrichplot",
     ],
     "fcScan": [
         "VariantAnnotation",
@@ -845,11 +805,6 @@
         "CytoML",
         "ggpubr",
         "openCyto",
-        "ggcyto",
-        "flowStats",
-    ],
-    "flowVS": [
-        "flowStats",
     ],
     "FRASER": [
         "GenomicFeatures",
@@ -880,7 +835,6 @@
         "clusterProfiler",
         "survminer",
         "pathview",
-        "enrichplot",
         "ggpubr",
     ],
     "genbankr": [
@@ -894,7 +848,6 @@
         "GenomicFeatures",
     ],
     "GeneStructureTools": [
-        "BSgenome.Mmusculus.UCSC.mm10",
         "Gviz",
         "GenomicFeatures",
         "ensembldb",
@@ -1018,9 +971,6 @@
         "BSgenome.Hsapiens.UCSC.hg19",
         "TxDb.Hsapiens.UCSC.hg19.knownGene",
     ],
-    "hiReadsProcessor": [
-        "hiAnnotator",
-    ],
     "HTSeqGenie": [
         "gmapR",
         "VariantAnnotation",
@@ -1104,7 +1054,6 @@
     "IRISFGM": [
         "clusterProfiler",
         "ggpubr",
-        "enrichplot",
     ],
     "IsoformSwitchAnalyzeR": [
         "tximeta",
@@ -1133,7 +1082,6 @@
     ],
     "kissDE": [
         "DSS",
-        "bsseq",
     ],
     "ldblock": [
         "VariantAnnotation",
@@ -1179,7 +1127,6 @@
     ],
     "MAGeCKFlute": [
         "clusterProfiler",
-        "enrichplot",
     ],
     "MAIT": [
         "CAMERA",
@@ -1239,9 +1186,6 @@
         "FDb.InfiniumMethylation.hg19",
         "TxDb.Hsapiens.UCSC.hg19.knownGene",
     ],
-    "meshes": [
-        "enrichplot",
-    ],
     "Metab": [
         "xcms",
         "MSnbase",
@@ -1259,8 +1203,6 @@
         "CytoML",
         "ggpubr",
         "openCyto",
-        "ggcyto",
-        "flowStats",
     ],
     "metagene": [
         "GenomicFeatures",
@@ -1277,7 +1219,6 @@
         "DSS",
         "EDASeq",
         "GenomicFeatures",
-        "bsseq",
     ],
     "metavizr": [
         "epivizr",
@@ -1293,7 +1234,6 @@
         "mzR",
     ],
     "MethCP": [
-        "bsseq",
         "DSS",
         "methylKit",
     ],
@@ -1311,7 +1251,6 @@
     "methylCC": [
         "FlowSorted.Blood.450k",
         "minfi",
-        "bsseq",
         "plyranges",
         "bumphunter",
         "IlluminaHumanMethylation450kmanifest",
@@ -1333,7 +1272,6 @@
         "missMethyl",
         "IlluminaHumanMethylation450kanno.ilmn12.hg19",
         "IlluminaHumanMethylationEPICanno.ilm10b4.hg19",
-        "enrichplot",
         "minfi",
         "IlluminaHumanMethylation450kmanifest",
         "IlluminaHumanMethylationEPICmanifest",
@@ -1354,7 +1292,6 @@
         "VariantAnnotation",
     ],
     "methylSig": [
-        "bsseq",
         "DSS",
     ],
     "methylumi": [
@@ -1369,7 +1306,6 @@
     ],
     "MicrobiomeProfiler": [
         "clusterProfiler",
-        "enrichplot",
     ],
     "MineICA": [
         "lumi",
@@ -1389,19 +1325,14 @@
         "VanillaICE",
         "BSgenome.Hsapiens.UCSC.hg18",
     ],
-    "MIRA": [
-        "bsseq",
-    ],
     "miRSM": [
         "miRspongeR",
         "clusterProfiler",
         "ReactomePA",
-        "enrichplot",
     ],
     "miRspongeR": [
         "clusterProfiler",
         "ReactomePA",
-        "enrichplot",
     ],
     "missMethyl": [
         "IlluminaHumanMethylation450kanno.ilmn12.hg19",
@@ -1433,7 +1364,6 @@
     ],
     "MoonlightR": [
         "clusterProfiler",
-        "enrichplot",
     ],
     "motifbreakR": [
         "MotifDb",
@@ -1509,7 +1439,6 @@
     "multiSight": [
         "clusterProfiler",
         "ReactomePA",
-        "enrichplot",
     ],
     "MungeSumstats": [
         "VariantAnnotation",
@@ -1522,8 +1451,6 @@
         "TxDb.Hsapiens.UCSC.hg38.knownGene",
         "BSgenome.Hsapiens.UCSC.hg19",
         "BSgenome.Hsapiens.UCSC.hg38",
-        "BSgenome.Mmusculus.UCSC.mm9",
-        "BSgenome.Mmusculus.UCSC.mm10",
         "deconstructSigs",
         "decompTumor2Sig",
         "factoextra",
@@ -1551,9 +1478,6 @@
         "biovizBase",
         "VariantAnnotation",
     ],
-    "NanoMethViz": [
-        "bsseq",
-    ],
     "ncGTW": [
         "xcms",
         "MSnbase",
@@ -1567,10 +1491,6 @@
     ],
     "netboxr": [
         "clusterProfiler",
-        "enrichplot",
-    ],
-    "netSmooth": [
-        "clusterExperiment",
     ],
     "NoRCE": [
         "GenomicFeatures",
@@ -1597,9 +1517,6 @@
         "ggpubr",
         "GenomicFeatures",
         "VariantAnnotation",
-    ],
-    "openCyto": [
-        "flowStats",
     ],
     "ORFhunteR": [
         "BSgenome.Hsapiens.UCSC.hg38",
@@ -1638,10 +1555,6 @@
     ],
     "PFP": [
         "clusterProfiler",
-        "enrichplot",
-    ],
-    "phemd": [
-        "destiny",
     ],
     "phenoTest": [
         "hgu133a.db",
@@ -1649,13 +1562,9 @@
     "PhosR": [
         "ggpubr",
     ],
-    "PhyloProfile": [
-        "OmaDB",
-    ],
     "Pigengene": [
         "clusterProfiler",
         "ReactomePA",
-        "enrichplot",
     ],
     "PING": [
         "Gviz",
@@ -1715,7 +1624,6 @@
         "TxDb.Hsapiens.UCSC.hg38.knownGene",
         "TxDb.Mmusculus.UCSC.mm10.knownGene",
         "TxDb.Mmusculus.UCSC.mm9.knownGene",
-        "enrichplot",
     ],
     "pRoloc": [
         "MSnbase",
@@ -1733,9 +1641,7 @@
         "imp4p",
         "clusterProfiler",
         "factoextra",
-        "enrichplot",
         "ggpubr",
-        "missMDA",
         "mzR",
     ],
     "ProteoDisco": [
@@ -1828,9 +1734,6 @@
         "TxDb.Hsapiens.UCSC.hg19.knownGene",
         "TxDb.Hsapiens.UCSC.hg38.knownGene",
         "GenomicFeatures",
-    ],
-    "ReactomePA": [
-        "enrichplot",
     ],
     "recount": [
         "derfinder",
@@ -1996,7 +1899,6 @@
         "factoextra",
         "systemPipeRdata",
         "clusterProfiler",
-        "enrichplot",
         "ggpubr",
         "GenomicFeatures",
     ],
@@ -2043,7 +1945,6 @@
         "densEstBayes",
     ],
     "scmeth": [
-        "bsseq",
         "annotatr",
         "GenomicFeatures",
         "regioneR",
@@ -2070,7 +1971,6 @@
     ],
     "scTensor": [
         "ReactomePA",
-        "enrichplot",
     ],
     "scTreeViz": [
         "epivizr",
@@ -2082,7 +1982,6 @@
     ],
     "segmenter": [
         "ChIPseeker",
-        "enrichplot",
         "GenomicFeatures",
         "TxDb.Hsapiens.UCSC.hg19.knownGene",
     ],
@@ -2112,7 +2011,6 @@
     ],
     "signatureSearch": [
         "clusterProfiler",
-        "enrichplot",
     ],
     "signeR": [
         "VariantAnnotation",
@@ -2199,7 +2097,6 @@
     "SpidermiR": [
         "MAGeCKFlute",
         "clusterProfiler",
-        "enrichplot",
     ],
     "SplicingGraphs": [
         "GenomicFeatures",
@@ -2207,7 +2104,6 @@
     "SPLINTER": [
         "GenomicFeatures",
         "Gviz",
-        "BSgenome.Mmusculus.UCSC.mm9",
         "ensembldb",
         "biovizBase",
         "VariantAnnotation",
@@ -2230,7 +2126,6 @@
         "SpidermiR",
         "MAGeCKFlute",
         "clusterProfiler",
-        "enrichplot",
     ],
     "strandCheckR": [
         "TxDb.Hsapiens.UCSC.hg38.knownGene",
@@ -2268,7 +2163,6 @@
         "pathview",
         "ELMER",
         "clusterProfiler",
-        "enrichplot",
         "GenomicFeatures",
         "Gviz",
         "ggpubr",
@@ -2287,7 +2181,6 @@
     ],
     "TimiRGeN": [
         "clusterProfiler",
-        "enrichplot",
     ],
     "TitanCNA": [
         "VariantAnnotation",
@@ -2323,14 +2216,11 @@
         "CytoML",
         "ggpubr",
         "openCyto",
-        "ggcyto",
-        "flowStats",
     ],
     "trena": [
         "MotifDb",
         "BSgenome.Hsapiens.UCSC.hg38",
         "BSgenome.Hsapiens.UCSC.hg19",
-        "BSgenome.Mmusculus.UCSC.mm10",
         "SNPlocs.Hsapiens.dbSNP150.GRCh38",
     ],
     "TRESS": [
@@ -2553,9 +2443,6 @@
         "xcms",
         "MSnbase",
         "mzR",
-    ],
-    "imp4p": [
-        "missMDA",
     ],
     "DAPARdata": [
         "MSnbase",
