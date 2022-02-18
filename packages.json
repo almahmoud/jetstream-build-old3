@@ -20,7 +20,6 @@
     ],
     "abseqR": [
         "flexdashboard",
-        "ggdendro",
         "BiocStyle",
     ],
     "ACE": [
@@ -43,14 +42,12 @@
     "ADAMgui": [
         "ADAM",
         "GO.db",
-        "ggrepel",
         "ggpubr",
         "SummarizedExperiment",
         "rstatix",
         "AnnotationDbi",
         "car",
         "pbkrtest",
-        "lme4",
     ],
     "adductomicsR": [
         "adductData",
@@ -153,7 +150,6 @@
         "DelayedMatrixStats",
         "beachmat",
         "BiocSingular",
-        "ggrepel",
         "ScaledMatrix",
     ],
     "ALDEx2": [
@@ -189,7 +185,6 @@
     "AlpsNMR": [
         "mixOmics",
         "speaq",
-        "ggrepel",
         "SummarizedExperiment",
     ],
     "AMARETTO": [
@@ -223,8 +218,6 @@
     ],
     "AneuFinder": [
         "GenomicAlignments",
-        "ggdendro",
-        "ggrepel",
         "SummarizedExperiment",
     ],
     "animalcules": [
@@ -237,11 +230,9 @@
         "recipes",
         "genefilter",
         "geneplotter",
-        "ggrepel",
         "lmerTest",
         "AnnotationDbi",
         "annotate",
-        "lme4",
         "ipred",
         "prodlim",
     ],
@@ -307,7 +298,6 @@
         "GenomicFeatures",
         "GenomicAlignments",
         "DESeq2",
-        "ggrepel",
         "SummarizedExperiment",
         "rtracklayer",
         "ensembldb",
@@ -400,18 +390,14 @@
     ],
     "artMS": [
         "AnnotationDbi",
-        "ggdendro",
-        "ggrepel",
         "MSstats",
         "org.Hs.eg.db",
-        "lme4",
     ],
     "ASICS": [
         "PepsNMR",
         "ropls",
         "SummarizedExperiment",
         "MultiDataSet",
-        "ggrepel",
     ],
     "ASpediaFI": [
         "SummarizedExperiment",
@@ -428,7 +414,6 @@
         "ensembldb",
         "BSgenome",
         "biovizBase",
-        "lme4",
         "Hmisc",
         "VariantAnnotation",
     ],
@@ -503,7 +488,6 @@
     ],
     "autonomics": [
         "BiocFileCache",
-        "ggrepel",
         "MultiAssayExperiment",
         "SummarizedExperiment",
     ],
@@ -519,7 +503,6 @@
         "doBy",
         "pbkrtest",
         "SummarizedExperiment",
-        "lme4",
     ],
     "BadRegionFinder": [
         "VariantAnnotation",
@@ -555,8 +538,6 @@
         "DRIMSeq",
     ],
     "barcodetrackR": [
-        "ggdendro",
-        "ggridges",
         "SummarizedExperiment",
     ],
     "basecallQC": [
@@ -578,7 +559,6 @@
         "scuttle",
         "SummarizedExperiment",
         "colourpicker",
-        "miniUI",
         "DelayedMatrixStats",
         "BiocSingular",
         "beachmat",
@@ -602,7 +582,6 @@
         "MCMCpack",
         "sva",
         "heatmaply",
-        "egg",
         "genefilter",
         "AnnotationDbi",
         "annotate",
@@ -618,7 +597,6 @@
         "beachmat",
         "scuttle",
         "DelayedMatrixStats",
-        "ggrepel",
     ],
     "bayNorm": [
         "SingleCellExperiment",
@@ -665,15 +643,11 @@
         "MAST",
         "Seurat",
         "ffpe",
-        "ggdendro",
         "genefilter",
         "geneplotter",
         "lumi",
         "methylumi",
         "SingleCellExperiment",
-        "ggrepel",
-        "ggridges",
-        "miniUI",
         "AnnotationDbi",
         "annotate",
         "GenomicFeatures",
@@ -765,11 +739,9 @@
         "ggraph",
         "graphite",
         "pbkrtest",
-        "lme4",
         "aplot",
         "scatterpie",
         "ggtree",
-        "ggrepel",
     ],
     "biocGraph": [
         "geneplotter",
@@ -783,7 +755,6 @@
         "ggpubr",
         "car",
         "pbkrtest",
-        "lme4",
         "MultiAssayExperiment",
         "AnnotationHub",
         "ExperimentHub",
@@ -791,7 +762,6 @@
         "AnnotationDbi",
         "rtracklayer",
         "biomaRt",
-        "ggrepel",
         "rstatix",
         "BiocFileCache",
         "interactiveDisplayBase",
@@ -876,7 +846,6 @@
         "SummarizedExperiment",
         "genefilter",
         "geneplotter",
-        "ggrepel",
         "rstatix",
         "Hmisc",
         "GO.db",
@@ -884,7 +853,6 @@
         "annotate",
         "car",
         "pbkrtest",
-        "lme4",
     ],
     "BioNet": [
         "AnnotationDbi",
@@ -904,7 +872,6 @@
         "ropls",
         "MultiDataSet",
         "SummarizedExperiment",
-        "ggrepel",
     ],
     "BioTIP": [
         "Hmisc",
@@ -913,8 +880,6 @@
         "superheat",
         "drtmle",
         "SummarizedExperiment",
-        "np",
-        "ggdendro",
     ],
     "biovizBase": [
         "Hmisc",
@@ -1010,7 +975,6 @@
         "genefilter",
         "AnnotationDbi",
         "annotate",
-        "ggdendro",
     ],
     "BPRMeth": [
         "BiocStyle",
@@ -1201,14 +1165,12 @@
         "genefilter",
         "geneplotter",
         "biomaRt",
-        "ggrepel",
         "rstatix",
         "GO.db",
         "BiocFileCache",
         "annotate",
         "car",
         "pbkrtest",
-        "lme4",
     ],
     "CAGEr": [
         "MultiAssayExperiment",
@@ -1256,8 +1218,6 @@
         "drc",
         "flowCore",
         "FlowSOM",
-        "ggrepel",
-        "ggridges",
         "SummarizedExperiment",
         "scater",
         "car",
@@ -1270,7 +1230,6 @@
         "BiocSingular",
         "ScaledMatrix",
         "pbkrtest",
-        "lme4",
         "openCyto",
         "ggcyto",
         "ncdfFlow",
@@ -1321,7 +1280,6 @@
     "cbpManager": [
         "shinydashboard",
         "shinycssloaders",
-        "rintrojs",
     ],
     "ccfindR": [
         "SummarizedExperiment",
@@ -1343,7 +1301,6 @@
     ],
     "celda": [
         "SummarizedExperiment",
-        "ggrepel",
         "scater",
         "scran",
         "SingleCellExperiment",
@@ -1355,7 +1312,6 @@
     ],
     "CellBarcode": [
         "ShortRead",
-        "egg",
         "GenomicAlignments",
         "SummarizedExperiment",
     ],
@@ -1381,9 +1337,6 @@
         "DelayedMatrixStats",
         "beachmat",
         "BiocSingular",
-        "ggrepel",
-        "ggridges",
-        "miniUI",
         "ScaledMatrix",
     ],
     "cellity": [
@@ -1397,26 +1350,20 @@
         "FactoMineR",
         "Hmisc",
         "car",
-        "ggrepel",
         "pbkrtest",
-        "lme4",
     ],
     "CellMixS": [
         "scater",
         "SummarizedExperiment",
         "SingleCellExperiment",
-        "ggridges",
         "scuttle",
         "DelayedMatrixStats",
         "beachmat",
         "BiocSingular",
-        "ggrepel",
         "ScaledMatrix",
     ],
     "CellTrails": [
         "SingleCellExperiment",
-        "EnvStats",
-        "ggrepel",
         "SummarizedExperiment",
     ],
     "cellTree": [
@@ -1427,10 +1374,8 @@
     "CEMiTool": [
         "WGCNA",
         "ggpmisc",
-        "ggrepel",
         "clusterProfiler",
         "fgsea",
-        "ggdendro",
         "AnnotationDbi",
         "DOSE",
         "enrichplot",
@@ -1447,7 +1392,6 @@
     "censcyt": [
         "diffcyt",
         "broom.mixed",
-        "lme4",
         "mice",
         "SummarizedExperiment",
         "flowCore",
@@ -1455,7 +1399,6 @@
         "CytoML",
         "flowWorkspace",
         "ggpubr",
-        "ggrepel",
         "openCyto",
         "ggcyto",
         "ncdfFlow",
@@ -1480,7 +1423,6 @@
     ],
     "ceRNAnetsim": [
         "ggraph",
-        "ggrepel",
     ],
     "CeTF": [
         "clusterProfiler",
@@ -1488,7 +1430,6 @@
         "GenomicTools",
         "ggnetwork",
         "ggpubr",
-        "ggrepel",
         "SummarizedExperiment",
         "AnnotationDbi",
         "DOSE",
@@ -1508,7 +1449,6 @@
         "annotate",
         "car",
         "pbkrtest",
-        "lme4",
     ],
     "CexoR": [
         "rtracklayer",
@@ -1683,7 +1623,6 @@
         "SummarizedExperiment",
         "systemPipeR",
         "DESeq2",
-        "ggrepel",
         "apeglm",
         "GreyListChIP",
         "AnnotationDbi",
@@ -1714,7 +1653,6 @@
         "fgsea",
         "qvalue",
         "SummarizedExperiment",
-        "ggrepel",
         "GO.db",
     ],
     "chipseq": [
@@ -1756,7 +1694,6 @@
         "colourpicker",
         "rtracklayer",
         "shinyFiles",
-        "shinyhelper",
         "shinyWidgets",
         "shinydashboardPlus",
         "shinycssloaders",
@@ -1773,10 +1710,7 @@
         "ResidualMatrix",
         "ScaledMatrix",
         "beachmat",
-        "miniUI",
         "GenomicAlignments",
-        "ggrepel",
-        "fresh",
         "biomaRt",
         "AnnotationDbi",
         "BiocFileCache",
@@ -1793,7 +1727,6 @@
     ],
     "chromVAR": [
         "TFBSTools",
-        "miniUI",
         "SummarizedExperiment",
         "BSgenome",
         "rtracklayer",
@@ -1824,11 +1757,9 @@
         "Hmisc",
         "SummarizedExperiment",
         "VariantAnnotation",
-        "ggrepel",
     ],
     "CIMICE": [
         "ggraph",
-        "ggrepel",
     ],
     "circRNAprofiler": [
         "rtracklayer",
@@ -1854,9 +1785,7 @@
         "SingleCellExperiment",
         "SummarizedExperiment",
         "scran",
-        "ggridges",
         "ggraph",
-        "ggrepel",
         "scuttle",
         "DelayedMatrixStats",
         "BiocSingular",
@@ -1912,7 +1841,6 @@
         "mbkmeans",
         "ScaledMatrix",
         "beachmat",
-        "benchmarkme",
         "genefilter",
         "AnnotationDbi",
         "annotate",
@@ -1930,7 +1858,6 @@
         "ggraph",
         "scatterpie",
         "ggtree",
-        "ggrepel",
     ],
     "clustifyr": [
         "fgsea",
@@ -2144,7 +2071,6 @@
         "qvalue",
         "FactoMineR",
         "ggpubr",
-        "ggrepel",
         "scuttle",
         "DelayedMatrixStats",
         "beachmat",
@@ -2159,7 +2085,6 @@
         "car",
         "rstatix",
         "pbkrtest",
-        "lme4",
     ],
     "condiments": [
         "slingshot",
@@ -2387,11 +2312,9 @@
         "AnnotationDbi",
         "DESeq2",
         "GEOquery",
-        "miniUI",
         "oligo",
         "sva",
         "shinyWidgets",
-        "shinypanel",
         "SummarizedExperiment",
         "genefilter",
         "geneplotter",
@@ -2426,13 +2349,11 @@
         "densityClust",
         "SingleCellExperiment",
         "TrajectoryUtils",
-        "ggrepel",
     ],
     "cTRAP": [
         "AnnotationDbi",
         "AnnotationHub",
         "fgsea",
-        "ggrepel",
         "highcharter",
         "shinycssloaders",
         "BiocFileCache",
@@ -2479,7 +2400,6 @@
         "car",
         "flowWorkspace",
         "pbkrtest",
-        "lme4",
         "ncdfFlow",
     ],
     "cydar": [
@@ -2494,15 +2414,12 @@
         "CytoGLMM",
         "diffcyt",
         "shinyFeedback",
-        "shinyMatrix",
         "SummarizedExperiment",
         "factoextra",
         "mbest",
-        "ggrepel",
         "caret",
         "flowCore",
         "FlowSOM",
-        "lme4",
         "recipes",
         "FactoMineR",
         "ggpubr",
@@ -2526,12 +2443,10 @@
     "CytoGLMM": [
         "factoextra",
         "mbest",
-        "ggrepel",
         "caret",
         "recipes",
         "FactoMineR",
         "ggpubr",
-        "lme4",
         "car",
         "rstatix",
         "ipred",
@@ -2569,12 +2484,10 @@
         "scatterpie",
         "SummarizedExperiment",
         "SingleCellExperiment",
-        "ggplot.multistats",
         "VIM",
         "CytoML",
         "flowWorkspace",
         "ggpubr",
-        "ggrepel",
         "genefilter",
         "openCyto",
         "ggcyto",
@@ -2584,7 +2497,6 @@
         "rstatix",
         "car",
         "pbkrtest",
-        "lme4",
         "flowViz",
         "flowStats",
         "flowClust",
@@ -2625,7 +2537,6 @@
         "caret",
         "plsVarSel",
         "arm",
-        "lme4",
         "recipes",
         "genefilter",
         "geneplotter",
@@ -2634,7 +2545,6 @@
         "AnnotationDbi",
         "GenomicFeatures",
         "car",
-        "ggrepel",
         "BiocFileCache",
         "pbkrtest",
         "annotate",
@@ -2648,7 +2558,6 @@
         "cp4p",
         "imp4p",
         "DAPARdata",
-        "lme4",
         "highcharter",
         "clusterProfiler",
         "AnnotationDbi",
@@ -2662,11 +2571,9 @@
         "qvalue",
         "MESS",
         "ggpubr",
-        "ggrepel",
         "car",
         "missMDA",
         "mzR",
-        "modelr",
         "pbkrtest",
         "DO.db",
         "fgsea",
@@ -2675,17 +2582,14 @@
         "scatterpie",
         "ggtree",
         "rstatix",
-        "geepack",
         "ggformula",
         "mice",
-        "ggridges",
         "labelled",
     ],
     "dasper": [
         "BiocFileCache",
         "GenomicFeatures",
         "ggpubr",
-        "ggrepel",
         "megadepth",
         "plyranges",
         "rtracklayer",
@@ -2696,7 +2600,6 @@
         "GenomicAlignments",
         "car",
         "pbkrtest",
-        "lme4",
     ],
     "dce": [
         "pcalg",
@@ -2707,12 +2610,9 @@
         "mnem",
         "graphite",
         "org.Hs.eg.db",
-        "ggrepel",
         "AnnotationDbi",
         "TFisher",
         "Linnorm",
-        "modelr",
-        "ggdendro",
     ],
     "ddPCRclust": [
         "flowCore",
@@ -2721,7 +2621,6 @@
         "car",
         "flowWorkspace",
         "pbkrtest",
-        "lme4",
         "ncdfFlow",
     ],
     "debCAM": [
@@ -2747,7 +2646,6 @@
         "GO.db",
         "GOSemSim",
         "qvalue",
-        "miniUI",
         "genefilter",
         "geneplotter",
         "DO.db",
@@ -2756,8 +2654,6 @@
         "ggraph",
         "scatterpie",
         "ggtree",
-        "egg",
-        "ggrepel",
     ],
     "deco": [
         "AnnotationDbi",
@@ -2779,7 +2675,6 @@
         "TxDb.Hsapiens.UCSC.hg19.knownGene",
         "VariantAnnotation",
         "SummarizedExperiment",
-        "ggseqlogo",
         "BSgenome",
         "AnnotationDbi",
         "rtracklayer",
@@ -2792,7 +2687,6 @@
         "rsq",
         "qvalue",
         "rtracklayer",
-        "lme4",
         "GenomicAlignments",
         "SummarizedExperiment",
     ],
@@ -2818,7 +2712,6 @@
     ],
     "DeepPINCS": [
         "keras",
-        "webchem",
         "ttgsea",
         "textstem",
         "DiagrammeR",
@@ -2852,7 +2745,6 @@
         "AnnotationDbi",
         "rtracklayer",
         "biomaRt",
-        "egg",
         "BiocFileCache",
     ],
     "DEGraph": [
@@ -2860,8 +2752,6 @@
     ],
     "DEGreport": [
         "DESeq2",
-        "ggdendro",
-        "ggrepel",
         "SummarizedExperiment",
         "genefilter",
         "geneplotter",
@@ -2892,13 +2782,11 @@
     "DEP": [
         "SummarizedExperiment",
         "MSnbase",
-        "ggrepel",
         "shinydashboard",
         "mzR",
     ],
     "DepecheR": [
         "mixOmics",
-        "ggrepel",
     ],
     "derfinder": [
         "AnnotationDbi",
@@ -2959,11 +2847,9 @@
     "destiny": [
         "SummarizedExperiment",
         "SingleCellExperiment",
-        "ggplot.multistats",
         "VIM",
         "car",
         "pbkrtest",
-        "lme4",
     ],
     "DEsubs": [
         "NBPSeq",
@@ -3008,7 +2894,6 @@
         "GenomicAlignments",
         "systemPipeR",
         "DESeq2",
-        "ggrepel",
         "apeglm",
         "GreyListChIP",
         "genefilter",
@@ -3030,11 +2915,9 @@
         "flowCore",
         "FlowSOM",
         "SummarizedExperiment",
-        "lme4",
         "CytoML",
         "flowWorkspace",
         "ggpubr",
-        "ggrepel",
         "openCyto",
         "ggcyto",
         "ncdfFlow",
@@ -3069,7 +2952,6 @@
         "SummarizedExperiment",
         "DEXSeq",
         "rtracklayer",
-        "ggrepel",
         "ensembldb",
         "DESeq2",
         "AnnotationDbi",
@@ -3091,9 +2973,6 @@
         "beachmat",
         "scuttle",
         "DelayedMatrixStats",
-        "ggrepel",
-        "ggridges",
-        "miniUI",
     ],
     "DiscoRhythm": [
         "ggExtra",
@@ -3103,8 +2982,6 @@
         "heatmaply",
         "SummarizedExperiment",
         "colourpicker",
-        "miniUI",
-        "egg",
     ],
     "distinct": [
         "SummarizedExperiment",
@@ -3114,12 +2991,9 @@
         "DelayedMatrixStats",
         "beachmat",
         "BiocSingular",
-        "ggrepel",
         "ScaledMatrix",
     ],
     "dittoSeq": [
-        "ggrepel",
-        "ggridges",
         "SummarizedExperiment",
         "SingleCellExperiment",
     ],
@@ -3130,8 +3004,6 @@
         "SummarizedExperiment",
         "arm",
         "rtracklayer",
-        "benchmarkme",
-        "lme4",
         "GenomicAlignments",
     ],
     "DMCHMM": [
@@ -3235,7 +3107,6 @@
         "prodlim",
         "car",
         "pbkrtest",
-        "lme4",
     ],
     "DOSE": [
         "AnnotationDbi",
@@ -3246,7 +3117,6 @@
         "GO.db",
     ],
     "doseR": [
-        "lme4",
         "SummarizedExperiment",
     ],
     "dpeak": [
@@ -3310,7 +3180,6 @@
         "quantiseqr",
         "DESeq2",
         "rstatix",
-        "ggrepel",
         "SummarizedExperiment",
         "genefilter",
         "geneplotter",
@@ -3321,7 +3190,6 @@
         "AnnotationDbi",
         "interactiveDisplayBase",
         "pbkrtest",
-        "lme4",
         "annotate",
     ],
     "easyRNASeq": [
@@ -3355,7 +3223,6 @@
         "snm",
         "jackstraw",
         "qvalue",
-        "lme4",
         "genefilter",
         "AnnotationDbi",
         "annotate",
@@ -3381,7 +3248,6 @@
         "scatterpie",
         "ggtree",
         "annotate",
-        "ggrepel",
     ],
     "EGAD": [
         "GEOquery",
@@ -3423,7 +3289,6 @@
         "MultiAssayExperiment",
         "SummarizedExperiment",
         "biomaRt",
-        "ggrepel",
         "ggpubr",
         "rtracklayer",
         "AnnotationDbi",
@@ -3437,10 +3302,8 @@
         "VariantAnnotation",
         "car",
         "pbkrtest",
-        "lme4",
     ],
     "EnhancedVolcano": [
-        "ggrepel",
         "ggrastr",
     ],
     "enhancerHomologSearch": [
@@ -3519,7 +3382,6 @@
         "DO.db",
         "fgsea",
         "qvalue",
-        "ggrepel",
         "GO.db",
     ],
     "enrichTF": [
@@ -3536,7 +3398,6 @@
         "GO.db",
         "GOSemSim",
         "qvalue",
-        "ggrepel",
         "rstatix",
         "SummarizedExperiment",
         "GenomicAlignments",
@@ -3550,7 +3411,6 @@
         "ggtree",
         "car",
         "pbkrtest",
-        "lme4",
     ],
     "ensembldb": [
         "GenomicFeatures",
@@ -3584,15 +3444,12 @@
         "BiocFileCache",
     ],
     "epidecodeR": [
-        "EnvStats",
         "rtracklayer",
         "rstatix",
         "ggpubr",
-        "ggrepel",
         "car",
         "GenomicAlignments",
         "pbkrtest",
-        "lme4",
         "SummarizedExperiment",
     ],
     "epigenomix": [
@@ -3607,13 +3464,11 @@
         "csaw",
         "ggpubr",
         "GreyListChIP",
-        "ggrepel",
         "rstatix",
         "GenomicAlignments",
         "BSgenome",
         "car",
         "pbkrtest",
-        "lme4",
     ],
     "epihet": [
         "qvalue",
@@ -3633,13 +3488,11 @@
         "aplot",
         "scatterpie",
         "ggtree",
-        "ggrepel",
     ],
     "epiNEM": [
         "pcalg",
         "mnem",
         "Linnorm",
-        "ggdendro",
     ],
     "EpiTxDb": [
         "AnnotationDbi",
@@ -3733,7 +3586,6 @@
     "esATAC": [
         "ShortRead",
         "pipeFrame",
-        "Rbowtie2",
         "rtracklayer",
         "ChIPseeker",
         "clusterProfiler",
@@ -3760,13 +3612,11 @@
         "ggraph",
         "scatterpie",
         "ggtree",
-        "ggrepel",
     ],
     "escape": [
         "GSEABase",
         "GSVA",
         "SingleCellExperiment",
-        "ggridges",
         "annotate",
         "AnnotationDbi",
         "SummarizedExperiment",
@@ -3783,7 +3633,6 @@
     "evaluomeR": [
         "SummarizedExperiment",
         "MultiAssayExperiment",
-        "ggdendro",
     ],
     "EventPointer": [
         "SGSeq",
@@ -3803,7 +3652,6 @@
         "ewceData",
         "ExperimentHub",
         "biomaRt",
-        "ggdendro",
         "SummarizedExperiment",
         "BiocFileCache",
         "AnnotationDbi",
@@ -3865,7 +3713,6 @@
     ],
     "ExploreModelMatrix": [
         "shinydashboard",
-        "rintrojs",
     ],
     "ExpressionAtlas": [
         "SummarizedExperiment",
@@ -3887,13 +3734,11 @@
         "ggraph",
         "scatterpie",
         "ggtree",
-        "ggrepel",
     ],
     "fastLiquidAssociation": [
         "LiquidAssociation",
         "Hmisc",
         "WGCNA",
-        "geepack",
         "org.Sc.sgd.db",
         "GO.db",
         "AnnotationDbi",
@@ -3918,7 +3763,6 @@
     ],
     "fcoex": [
         "FCBF",
-        "ggrepel",
         "clusterProfiler",
         "SingleCellExperiment",
         "AnnotationDbi",
@@ -3981,16 +3825,12 @@
         "rtracklayer",
         "GenomicFeatures",
         "qvalue",
-        "ggrepel",
         "SummarizedExperiment",
         "MultiAssayExperiment",
         "AnnotationDbi",
         "biomaRt",
         "GenomicAlignments",
         "BiocFileCache",
-    ],
-    "FindMyFriends": [
-        "ggdendro",
     ],
     "fishpond": [
         "qvalue",
@@ -4014,7 +3854,6 @@
         "DelayedMatrixStats",
         "beachmat",
         "BiocSingular",
-        "ggrepel",
         "ScaledMatrix",
     ],
     "flowAI": [
@@ -4045,7 +3884,6 @@
         "car",
         "flowWorkspace",
         "pbkrtest",
-        "lme4",
         "ncdfFlow",
     ],
     "flowDensity": [
@@ -4054,15 +3892,11 @@
         "car",
         "flowWorkspace",
         "pbkrtest",
-        "lme4",
         "ncdfFlow",
     ],
     "flowFP": [
         "flowCore",
         "flowViz",
-    ],
-    "flowGraph": [
-        "ggrepel",
     ],
     "flowMatch": [
         "flowCore",
@@ -4079,14 +3913,12 @@
         "flowCore",
         "car",
         "pbkrtest",
-        "lme4",
     ],
     "FlowSOM": [
         "CytoML",
         "flowCore",
         "flowWorkspace",
         "ggpubr",
-        "ggrepel",
         "openCyto",
         "ggcyto",
         "ncdfFlow",
@@ -4096,7 +3928,6 @@
         "flowClust",
         "car",
         "pbkrtest",
-        "lme4",
         "fda",
         "fds",
         "rainbow",
@@ -4146,7 +3977,6 @@
         "ggraph",
         "RecordLinkage",
         "textclean",
-        "ggrepel",
         "ipred",
         "lexicon",
         "prodlim",
@@ -4164,7 +3994,6 @@
         "DelayedMatrixStats",
         "GenomicAlignments",
         "GenomicFeatures",
-        "ggrepel",
         "HDF5Array",
         "OUTRIDER",
         "BiocFileCache",
@@ -4173,7 +4002,6 @@
         "heatmaply",
         "genefilter",
         "geneplotter",
-        "egg",
         "annotate",
     ],
     "frenchFISH": [
@@ -4181,7 +4009,6 @@
         "NHPoisson",
         "car",
         "pbkrtest",
-        "lme4",
     ],
     "FRGEpistasis": [
         "fda",
@@ -4266,7 +4093,6 @@
         "caret",
         "plsVarSel",
         "arm",
-        "lme4",
         "recipes",
         "genefilter",
         "geneplotter",
@@ -4275,7 +4101,6 @@
         "AnnotationDbi",
         "GenomicFeatures",
         "car",
-        "ggrepel",
         "BiocFileCache",
         "pbkrtest",
         "annotate",
@@ -4324,11 +4149,9 @@
         "scatterpie",
         "ggtree",
         "annotate",
-        "ggrepel",
         "rstatix",
         "car",
         "pbkrtest",
-        "lme4",
     ],
     "genbankr": [
         "GenomicFeatures",
@@ -4346,11 +4169,9 @@
         "ggpubr",
         "AnnotationDbi",
         "BiocFileCache",
-        "ggrepel",
         "rstatix",
         "car",
         "pbkrtest",
-        "lme4",
     ],
     "GeneAnswers": [
         "annotate",
@@ -4386,9 +4207,7 @@
     "GeneGeneInteR": [
         "FactoMineR",
         "car",
-        "ggrepel",
         "pbkrtest",
-        "lme4",
     ],
     "GeneMeta": [
         "genefilter",
@@ -4427,16 +4246,12 @@
         "bs4Dash",
         "colourpicker",
         "DESeq2",
-        "ggrepel",
         "GO.db",
-        "rintrojs",
         "shinyAce",
         "shinycssloaders",
         "shinyWidgets",
         "SummarizedExperiment",
         "tippy",
-        "fresh",
-        "miniUI",
         "genefilter",
         "geneplotter",
         "annotate",
@@ -4537,12 +4352,9 @@
         "SummarizedExperiment",
         "ggpubr",
         "BiocFileCache",
-        "flextable",
-        "ggrepel",
         "rstatix",
         "car",
         "pbkrtest",
-        "lme4",
     ],
     "genotypeeval": [
         "VariantAnnotation",
@@ -4567,35 +4379,27 @@
         "GenomicAlignments",
     ],
     "GeoDiff": [
-        "lme4",
         "GeomxTools",
         "NanoStringNCTools",
-        "EnvStats",
         "lmerTest",
     ],
     "GEOexplorer": [
         "factoextra",
         "heatmaply",
         "shinyHeatmaply",
-        "shinybusy",
         "GEOquery",
         "FactoMineR",
         "ggpubr",
-        "ggrepel",
-        "egg",
         "car",
         "rstatix",
         "pbkrtest",
-        "lme4",
     ],
     "GEOmetadb": [
         "GEOquery",
     ],
     "GeomxTools": [
         "NanoStringNCTools",
-        "EnvStats",
         "lmerTest",
-        "lme4",
     ],
     "gep2pep": [
         "GSEABase",
@@ -4618,7 +4422,6 @@
     "GEWIST": [
         "car",
         "pbkrtest",
-        "lme4",
     ],
     "ggbio": [
         "Hmisc",
@@ -4674,9 +4477,6 @@
         "annotate",
         "Hmisc",
     ],
-    "GladiaTOX": [
-        "ggrepel",
-    ],
     "Glimma": [
         "DESeq2",
         "SummarizedExperiment",
@@ -4699,11 +4499,9 @@
         "AnnotationDbi",
         "BiocFileCache",
         "ggpubr",
-        "ggrepel",
         "rstatix",
         "car",
         "pbkrtest",
-        "lme4",
     ],
     "GlobalAncova": [
         "globaltest",
@@ -4820,9 +4618,6 @@
         "GO.db",
         "AnnotationDbi",
     ],
-    "GPA": [
-        "ggrepel",
-    ],
     "gpart": [
         "Homo.sapiens",
         "TxDb.Hsapiens.UCSC.hg38.knownGene",
@@ -4855,7 +4650,6 @@
         "drc",
         "car",
         "pbkrtest",
-        "lme4",
     ],
     "groHMM": [
         "GenomicAlignments",
@@ -4884,9 +4678,6 @@
         "safe",
         "annotate",
         "org.Hs.eg.db",
-    ],
-    "GSEAmining": [
-        "ggwordcloud",
     ],
     "gsean": [
         "fgsea",
@@ -5079,7 +4870,6 @@
     ],
     "HIPPO": [
         "SingleCellExperiment",
-        "ggrepel",
         "SummarizedExperiment",
     ],
     "hiReadsProcessor": [
@@ -5201,8 +4991,6 @@
         "GO.db",
         "AnnotationDbi",
         "shinydashboard",
-        "rintrojs",
-        "ggrepel",
         "shinyAce",
         "genefilter",
         "geneplotter",
@@ -5210,7 +4998,6 @@
         "Category",
         "annotate",
         "AnnotationForge",
-        "egg",
         "NMF",
         "biomaRt",
         "BiocFileCache",
@@ -5258,7 +5045,6 @@
     "IMAS": [
         "GenomicFeatures",
         "IVAS",
-        "lme4",
         "AnnotationDbi",
         "GenomicAlignments",
         "SummarizedExperiment",
@@ -5275,7 +5061,6 @@
         "ggraph",
         "HDF5Array",
         "shinydashboard",
-        "ggrepel",
         "DelayedMatrixStats",
         "beachmat",
         "BiocFileCache",
@@ -5289,7 +5074,6 @@
         "flowCore",
         "flowWorkspace",
         "ncdfFlow",
-        "egg",
     ],
     "immunoClust": [
         "flowCore",
@@ -5334,12 +5118,10 @@
         "rtracklayer",
         "qvalue",
         "ggpubr",
-        "ggrepel",
         "rstatix",
         "GenomicAlignments",
         "car",
         "pbkrtest",
-        "lme4",
     ],
     "intansv": [
         "ggbio",
@@ -5380,14 +5162,11 @@
         "biomaRt",
         "AnnotationDbi",
         "BiocFileCache",
-        "miniUI",
         "FactoMineR",
         "ggpubr",
-        "ggrepel",
         "car",
         "rstatix",
         "pbkrtest",
-        "lme4",
     ],
     "IntEREst": [
         "SummarizedExperiment",
@@ -5419,11 +5198,9 @@
     "iPath": [
         "ggpubr",
         "survminer",
-        "ggrepel",
         "rstatix",
         "car",
         "pbkrtest",
-        "lme4",
     ],
     "ipdDb": [
         "AnnotationDbi",
@@ -5456,15 +5233,12 @@
         "GO.db",
         "GOSemSim",
         "qvalue",
-        "ggrepel",
         "rstatix",
         "scuttle",
         "SummarizedExperiment",
         "DelayedMatrixStats",
         "beachmat",
         "BiocSingular",
-        "ggridges",
-        "miniUI",
         "ScaledMatrix",
         "DO.db",
         "fgsea",
@@ -5473,21 +5247,14 @@
         "ggtree",
         "car",
         "pbkrtest",
-        "lme4",
-    ],
-    "ISAnalytics": [
-        "ggrepel",
     ],
     "iSEE": [
         "SummarizedExperiment",
         "SingleCellExperiment",
         "shinydashboard",
         "shinyAce",
-        "rintrojs",
-        "ggrepel",
         "colourpicker",
         "shinyWidgets",
-        "miniUI",
     ],
     "iSEEu": [
         "iSEE",
@@ -5495,19 +5262,13 @@
         "SingleCellExperiment",
         "colourpicker",
         "shinyAce",
-        "miniUI",
         "shinydashboard",
-        "rintrojs",
-        "ggrepel",
         "shinyWidgets",
     ],
     "isobar": [
         "biomaRt",
         "AnnotationDbi",
         "BiocFileCache",
-    ],
-    "IsoCorrectoRGUI": [
-        "IsoCorrectoR",
     ],
     "IsoformSwitchAnalyzeR": [
         "DEXSeq",
@@ -5541,8 +5302,6 @@
         "AnnotationDbi",
         "DEGreport",
         "DESeq2",
-        "ggdendro",
-        "ggrepel",
         "genefilter",
         "geneplotter",
         "annotate",
@@ -5558,7 +5317,6 @@
     ],
     "IVAS": [
         "GenomicFeatures",
-        "lme4",
         "AnnotationDbi",
         "rtracklayer",
         "biomaRt",
@@ -5570,11 +5328,9 @@
         "SummarizedExperiment",
         "survminer",
         "ggpubr",
-        "ggrepel",
         "rstatix",
         "car",
         "pbkrtest",
-        "lme4",
     ],
     "IWTomics": [
         "fda",
@@ -5665,15 +5421,10 @@
         "ggpubr",
         "rio",
         "MultiAssayExperiment",
-        "ggrepel",
         "rstatix",
         "SummarizedExperiment",
         "car",
         "pbkrtest",
-        "lme4",
-    ],
-    "Linnorm": [
-        "ggdendro",
     ],
     "lionessR": [
         "SummarizedExperiment",
@@ -5683,17 +5434,14 @@
         "fgsea",
         "ropls",
         "MultiDataSet",
-        "ggrepel",
     ],
     "LiquidAssociation": [
-        "geepack",
         "org.Sc.sgd.db",
         "AnnotationDbi",
     ],
     "lisaClust": [
         "spicyR",
         "lmerTest",
-        "lme4",
     ],
     "LOBSTAHS": [
         "xcms",
@@ -5715,7 +5463,6 @@
     "LRcell": [
         "ExperimentHub",
         "AnnotationHub",
-        "ggrepel",
         "BiocFileCache",
         "AnnotationDbi",
         "interactiveDisplayBase",
@@ -5769,7 +5516,6 @@
         "car",
         "lmerTest",
         "glmmTMB",
-        "lme4",
         "pbkrtest",
     ],
     "macat": [
@@ -5783,9 +5529,6 @@
         "GEOquery",
         "ShortRead",
         "SummarizedExperiment",
-    ],
-    "MACSQuantifyR": [
-        "ggrepel",
     ],
     "MACSr": [
         "ExperimentHub",
@@ -5836,7 +5579,6 @@
     "MAGeCKFlute": [
         "clusterProfiler",
         "enrichplot",
-        "ggrepel",
         "AnnotationDbi",
         "DOSE",
         "GO.db",
@@ -5854,7 +5596,6 @@
         "tidyverse",
         "SummarizedExperiment",
         "recipes",
-        "modelr",
         "ipred",
         "prodlim",
     ],
@@ -5876,7 +5617,6 @@
         "questionr",
         "ipred",
         "prodlim",
-        "miniUI",
         "labelled",
     ],
     "mAPKL": [
@@ -5919,7 +5659,6 @@
         "Hmisc",
         "proDA",
         "shinydashboard",
-        "shinyhelper",
     ],
     "MatrixRider": [
         "TFBSTools",
@@ -5938,7 +5677,6 @@
     "mbkmeans": [
         "SingleCellExperiment",
         "SummarizedExperiment",
-        "benchmarkme",
         "beachmat",
     ],
     "mBPCR": [
@@ -5953,7 +5691,6 @@
         "SummarizedExperiment",
         "BiocFileCache",
         "rpx",
-        "PairedData",
     ],
     "MCbiclust": [
         "AnnotationDbi",
@@ -6016,7 +5753,6 @@
         "IlluminaHumanMethylationEPICmanifest",
         "methylumi",
         "org.Hs.eg.db",
-        "ggrepel",
         "sva",
         "BiocFileCache",
         "Hmisc",
@@ -6064,7 +5800,6 @@
         "drc",
         "car",
         "pbkrtest",
-        "lme4",
     ],
     "MEIGOR": [
         "CNORode",
@@ -6076,7 +5811,6 @@
         "BiocStyle",
     ],
     "memes": [
-        "ggseqlogo",
         "universalmotif",
     ],
     "MeSHDbi": [
@@ -6099,7 +5833,6 @@
         "scatterpie",
         "ggtree",
         "GO.db",
-        "ggrepel",
     ],
     "meshr": [
         "BiocStyle",
@@ -6111,8 +5844,6 @@
         "annotate",
     ],
     "MesKit": [
-        "ggrepel",
-        "ggridges",
         "AnnotationDbi",
     ],
     "Metab": [
@@ -6148,7 +5879,6 @@
         "GenomicFeatures",
         "Hmisc",
         "pbkrtest",
-        "lme4",
         "rtracklayer",
         "GenomicAlignments",
     ],
@@ -6158,7 +5888,6 @@
         "CytoML",
         "flowWorkspace",
         "ggpubr",
-        "ggrepel",
         "openCyto",
         "ggcyto",
         "ncdfFlow",
@@ -6168,7 +5897,6 @@
         "flowClust",
         "car",
         "pbkrtest",
-        "lme4",
         "fda",
         "fds",
         "rainbow",
@@ -6222,7 +5950,6 @@
         "bsseq",
         "ShortRead",
         "annotate",
-        "egg",
         "prodlim",
         "ipred",
         "DelayedMatrixStats",
@@ -6279,7 +6006,6 @@
         "SummarizedExperiment",
         "ggpubr",
         "sesameData",
-        "ggrepel",
         "rstatix",
         "ExperimentHub",
         "AnnotationHub",
@@ -6288,7 +6014,6 @@
         "interactiveDisplayBase",
         "car",
         "pbkrtest",
-        "lme4",
     ],
     "methrix": [
         "SummarizedExperiment",
@@ -6346,7 +6071,6 @@
         "minfi",
         "AnnotationHub",
         "BiocFileCache",
-        "ggrepel",
         "rstatix",
         "ExperimentHubData",
         "SummarizedExperiment",
@@ -6355,7 +6079,6 @@
         "genefilter",
         "GEOquery",
         "HDF5Array",
-        "modelr",
         "AnnotationDbi",
         "interactiveDisplayBase",
         "GenomicFeatures",
@@ -6366,7 +6089,6 @@
         "OrganismDbi",
         "AnnotationForge",
         "pbkrtest",
-        "lme4",
         "biomaRt",
         "GenomicAlignments",
     ],
@@ -6405,7 +6127,6 @@
         "TxDb.Hsapiens.UCSC.hg19.knownGene",
         "rtracklayer",
         "biomaRt",
-        "ggrepel",
         "BiocFileCache",
         "GenomicAlignments",
     ],
@@ -6484,7 +6205,6 @@
         "SummarizedExperiment",
     ],
     "mfa": [
-        "ggmcmc",
         "MCMCpack",
     ],
     "MGFM": [
@@ -6508,7 +6228,6 @@
         "scater",
         "beachmat",
         "BiocSingular",
-        "ggrepel",
         "ScaledMatrix",
     ],
     "miaSim": [
@@ -6521,7 +6240,6 @@
         "ggraph",
         "scater",
         "ggtree",
-        "ggrepel",
         "aplot",
         "SingleCellExperiment",
         "MultiAssayExperiment",
@@ -6546,11 +6264,9 @@
         "heatmaply",
         "car",
         "pbkrtest",
-        "lme4",
         "SummarizedExperiment",
         "genefilter",
         "geneplotter",
-        "egg",
         "AnnotationDbi",
         "annotate",
     ],
@@ -6590,12 +6306,9 @@
         "ggtree",
         "DO.db",
         "fgsea",
-        "ggrepel",
     ],
     "MicrobiotaProcess": [
-        "ggrepel",
         "ggtree",
-        "ggstar",
         "SummarizedExperiment",
         "ggtreeExtra",
         "aplot",
@@ -6608,7 +6321,6 @@
     ],
     "MIGSA": [
         "AnnotationDbi",
-        "ggdendro",
         "GO.db",
         "GOstats",
         "GSEABase",
@@ -6623,7 +6335,6 @@
         "BiocSingular",
         "ggraph",
         "SummarizedExperiment",
-        "ggrepel",
         "ScaledMatrix",
         "beachmat",
     ],
@@ -6747,7 +6458,6 @@
         "s4vd",
         "BiBitR",
         "rqubic",
-        "subspace",
         "SOMbrero",
         "miRspongeR",
         "SummarizedExperiment",
@@ -6758,7 +6468,6 @@
         "clusterProfiler",
         "ReactomePA",
         "DOSE",
-        "ggwordcloud",
         "Hmisc",
         "GO.db",
         "enrichplot",
@@ -6772,7 +6481,6 @@
         "aplot",
         "scatterpie",
         "ggtree",
-        "ggrepel",
     ],
     "miRspongeR": [
         "clusterProfiler",
@@ -6792,7 +6500,6 @@
         "aplot",
         "scatterpie",
         "ggtree",
-        "ggrepel",
     ],
     "missMethyl": [
         "IlluminaHumanMethylation450kanno.ilmn12.hg19",
@@ -6844,9 +6551,6 @@
         "GenomicAlignments",
         "BiocFileCache",
     ],
-    "mixOmics": [
-        "ggrepel",
-    ],
     "MLInterfaces": [
         "annotate",
         "genefilter",
@@ -6892,12 +6596,10 @@
         "car",
         "lmerTest",
         "glmmTMB",
-        "lme4",
         "pbkrtest",
     ],
     "mnem": [
         "Linnorm",
-        "ggdendro",
     ],
     "moanin": [
         "SummarizedExperiment",
@@ -6912,7 +6614,6 @@
         "AnnotationDbi",
     ],
     "MOFA2": [
-        "ggrepel",
         "HDF5Array",
     ],
     "mogsa": [
@@ -6940,7 +6641,6 @@
     ],
     "monocle": [
         "densityClust",
-        "ggrepel",
     ],
     "MoonlightR": [
         "SummarizedExperiment",
@@ -6961,7 +6661,6 @@
         "ggraph",
         "scatterpie",
         "ggtree",
-        "ggrepel",
     ],
     "mosaics": [
         "GenomicAlignments",
@@ -7015,13 +6714,9 @@
     ],
     "MQmetrics": [
         "ggpubr",
-        "ggridges",
-        "ggrepel",
-        "gghalves",
         "rstatix",
         "car",
         "pbkrtest",
-        "lme4",
     ],
     "MsFeatures": [
         "SummarizedExperiment",
@@ -7091,7 +6786,6 @@
         "genefilter",
         "car",
         "pbkrtest",
-        "lme4",
         "AnnotationDbi",
         "annotate",
     ],
@@ -7100,13 +6794,8 @@
     ],
     "msqrob2": [
         "QFeatures",
-        "lme4",
         "SummarizedExperiment",
         "MultiAssayExperiment",
-    ],
-    "MSstats": [
-        "lme4",
-        "ggrepel",
     ],
     "MSstatsLiP": [
         "MSstats",
@@ -7115,11 +6804,8 @@
         "ggpubr",
         "tidyverse",
         "FactoMineR",
-        "ggrepel",
         "rstatix",
-        "lme4",
         "MSstatsTMT",
-        "modelr",
         "car",
         "lmerTest",
         "pbkrtest",
@@ -7127,22 +6813,18 @@
     "MSstatsPTM": [
         "MSstatsTMT",
         "MSstats",
-        "ggrepel",
-        "lme4",
         "lmerTest",
     ],
     "MSstatsQC": [
         "ggExtra",
         "MSnbase",
         "colourpicker",
-        "miniUI",
         "mzR",
     ],
     "MSstatsQCgui": [
         "MSstatsQC",
         "ggExtra",
         "colourpicker",
-        "miniUI",
         "MSnbase",
         "mzR",
     ],
@@ -7150,23 +6832,17 @@
         "caret",
         "MSstats",
         "recipes",
-        "lme4",
-        "ggrepel",
         "ipred",
         "prodlim",
     ],
     "MSstatsTMT": [
-        "lme4",
         "lmerTest",
         "MSstats",
-        "ggrepel",
     ],
     "MSstatsTMTPTM": [
         "MSstatsTMT",
-        "lme4",
         "lmerTest",
         "MSstats",
-        "ggrepel",
     ],
     "MultiAssayExperiment": [
         "SummarizedExperiment",
@@ -7176,7 +6852,6 @@
         "ropls",
         "SummarizedExperiment",
         "MultiDataSet",
-        "ggrepel",
     ],
     "multicrispr": [
         "BSgenome",
@@ -7199,7 +6874,6 @@
     ],
     "MultiDataSet": [
         "SummarizedExperiment",
-        "ggrepel",
     ],
     "multiGSEA": [
         "graphite",
@@ -7250,7 +6924,6 @@
         "scatterpie",
         "ggtree",
         "TFisher",
-        "ggrepel",
         "reactome.db",
         "graphite",
         "DO.db",
@@ -7287,7 +6960,6 @@
         "DESeq2",
         "glmmTMB",
         "lmerTest",
-        "lme4",
         "scater",
         "scuttle",
         "SingleCellExperiment",
@@ -7298,7 +6970,6 @@
         "DelayedMatrixStats",
         "beachmat",
         "BiocSingular",
-        "ggrepel",
         "pbkrtest",
         "ScaledMatrix",
         "AnnotationDbi",
@@ -7318,16 +6989,13 @@
         "BSgenome.Mmusculus.UCSC.mm10",
         "deconstructSigs",
         "decompTumor2Sig",
-        "ggrepel",
         "factoextra",
         "shinydashboard",
         "sortable",
         "shinyalert",
-        "shinybusy",
         "TCGAbiolinks",
         "shinyjqui",
         "rtracklayer",
-        "ggseqlogo",
         "FactoMineR",
         "ggpubr",
         "AnnotationDbi",
@@ -7338,13 +7006,11 @@
         "rstatix",
         "GenomicAlignments",
         "pbkrtest",
-        "lme4",
     ],
     "MutationalPatterns": [
         "NMF",
         "BSgenome",
         "VariantAnnotation",
-        "ggdendro",
         "rtracklayer",
         "SummarizedExperiment",
         "AnnotationDbi",
@@ -7358,7 +7024,6 @@
         "car",
         "SummarizedExperiment",
         "pbkrtest",
-        "lme4",
     ],
     "mygene": [
         "GenomicFeatures",
@@ -7431,7 +7096,6 @@
         "AnnotationDbi",
         "tidyverse",
         "org.Hs.eg.db",
-        "modelr",
     ],
     "NanoTube": [
         "fgsea",
@@ -7447,7 +7111,6 @@
     "NBSplice": [
         "car",
         "pbkrtest",
-        "lme4",
     ],
     "ncdfFlow": [
         "flowCore",
@@ -7475,16 +7138,12 @@
         "Seurat",
         "SingleCellExperiment",
         "SummarizedExperiment",
-        "ggrepel",
-        "ggridges",
-        "miniUI",
     ],
     "nempi": [
         "mnem",
         "epiNEM",
         "pcalg",
         "Linnorm",
-        "ggdendro",
     ],
     "netboost": [
         "WGCNA",
@@ -7506,7 +7165,6 @@
         "ggraph",
         "scatterpie",
         "ggtree",
-        "ggrepel",
     ],
     "netDx": [
         "MultiAssayExperiment",
@@ -7518,7 +7176,6 @@
         "GO.db",
         "RandomWalkRestartMH",
         "dnet",
-        "supraHex",
     ],
     "netresponse": [
         "BiocStyle",
@@ -7545,9 +7202,7 @@
         "scuttle",
         "DelayedMatrixStats",
         "beachmat",
-        "ggrepel",
         "ScaledMatrix",
-        "benchmarkme",
         "genefilter",
         "AnnotationDbi",
         "annotate",
@@ -7564,12 +7219,8 @@
         "ScaledMatrix",
         "beachmat",
     ],
-    "ngsReports": [
-        "ggdendro",
-    ],
     "nondetects": [
         "arm",
-        "lme4",
     ],
     "NoRCE": [
         "SummarizedExperiment",
@@ -7587,7 +7238,6 @@
         "RcmdrMisc",
         "SummarizedExperiment",
         "pbkrtest",
-        "lme4",
         "Hmisc",
     ],
     "normr": [
@@ -7609,7 +7259,6 @@
     "nullranges": [
         "InteractionSet",
         "plyranges",
-        "ggridges",
         "SummarizedExperiment",
         "rtracklayer",
         "GenomicAlignments",
@@ -7635,7 +7284,6 @@
         "dasper",
         "derfinder",
         "ggpubr",
-        "ggrepel",
         "rtracklayer",
         "megadepth",
         "GenomicFeatures",
@@ -7652,7 +7300,6 @@
         "VariantAnnotation",
         "car",
         "pbkrtest",
-        "lme4",
         "BSgenome",
     ],
     "oligo": [
@@ -7681,7 +7328,6 @@
     "omicRexposome": [
         "rexposome",
         "sva",
-        "ggrepel",
         "omicade4",
         "MultiDataSet",
         "SmartSVA",
@@ -7691,7 +7337,6 @@
         "made4",
         "FactoMineR",
         "Hmisc",
-        "lme4",
         "mice",
         "genefilter",
         "car",
@@ -7710,7 +7355,6 @@
         "factoextra",
         "FactoMineR",
         "ggpubr",
-        "ggrepel",
         "car",
         "BSgenome",
         "GenomicFeatures",
@@ -7718,7 +7362,6 @@
         "GenomicAlignments",
         "SummarizedExperiment",
         "pbkrtest",
-        "lme4",
         "AnnotationDbi",
         "biomaRt",
         "rstatix",
@@ -7730,7 +7373,6 @@
         "RaggedExperiment",
     ],
     "oncomix": [
-        "ggrepel",
         "SummarizedExperiment",
     ],
     "OncoScore": [
@@ -7740,9 +7382,7 @@
     ],
     "OncoSimulR": [
         "car",
-        "ggrepel",
         "pbkrtest",
-        "lme4",
     ],
     "oneSENSE": [
         "shinyFiles",
@@ -7778,7 +7418,6 @@
         "car",
         "unmarked",
         "pbkrtest",
-        "lme4",
     ],
     "oposSOM": [
         "biomaRt",
@@ -7848,11 +7487,9 @@
     "orthogene": [
         "ggpubr",
         "DelayedMatrixStats",
-        "ggrepel",
         "rstatix",
         "car",
         "pbkrtest",
-        "lme4",
     ],
     "OTUbase": [
         "ShortRead",
@@ -7869,7 +7506,6 @@
         "AnnotationDbi",
         "rtracklayer",
         "biomaRt",
-        "egg",
         "BiocFileCache",
         "annotate",
         "GenomicAlignments",
@@ -7888,9 +7524,7 @@
         "FactoMineR",
         "MultiAssayExperiment",
         "car",
-        "ggrepel",
         "pbkrtest",
-        "lme4",
     ],
     "PADOG": [
         "AnnotationDbi",
@@ -7921,7 +7555,6 @@
     ],
     "PanVizGenerator": [
         "FindMyFriends",
-        "ggdendro",
     ],
     "PAST": [
         "qvalue",
@@ -7957,7 +7590,6 @@
         "GO.db",
         "AnnotationDbi",
         "shinydashboard",
-        "ggrepel",
         "shinyAce",
         "biomaRt",
         "BiocFileCache",
@@ -7965,11 +7597,9 @@
         "annotate",
         "Category",
         "AnnotationForge",
-        "egg",
         "GSEABase",
     ],
     "PCAtools": [
-        "ggrepel",
         "DelayedMatrixStats",
         "BiocSingular",
         "beachmat",
@@ -7993,11 +7623,9 @@
         "ggpubr",
         "AnnotationDbi",
         "BiocFileCache",
-        "ggrepel",
         "rstatix",
         "car",
         "pbkrtest",
-        "lme4",
     ],
     "pdInfoBuilder": [
         "oligo",
@@ -8018,7 +7646,6 @@
         "genefilter",
         "aroma.affymetrix",
         "aroma.core",
-        "R.rsp",
         "AnnotationDbi",
         "annotate",
     ],
@@ -8030,7 +7657,6 @@
         "DelayedMatrixStats",
         "beachmat",
         "BiocSingular",
-        "ggrepel",
         "ScaledMatrix",
     ],
     "PERFect": [
@@ -8041,9 +7667,6 @@
         "rtracklayer",
         "GenomicAlignments",
         "SummarizedExperiment",
-    ],
-    "perturbatr": [
-        "lme4",
     ],
     "PFP": [
         "clusterProfiler",
@@ -8059,7 +7682,6 @@
         "ggraph",
         "scatterpie",
         "ggtree",
-        "ggrepel",
     ],
     "phantasus": [
         "GEOquery",
@@ -8085,15 +7707,10 @@
         "destiny",
         "Seurat",
         "SummarizedExperiment",
-        "ggplot.multistats",
         "VIM",
         "densityClust",
-        "ggrepel",
-        "ggridges",
-        "miniUI",
         "car",
         "pbkrtest",
-        "lme4",
     ],
     "phenopath": [
         "SummarizedExperiment",
@@ -8113,7 +7730,6 @@
     "PhenStat": [
         "car",
         "logistf",
-        "lme4",
         "pbkrtest",
         "mice",
     ],
@@ -8126,13 +7742,10 @@
     ],
     "PhosR": [
         "SummarizedExperiment",
-        "ggdendro",
         "ggpubr",
-        "ggrepel",
         "rstatix",
         "car",
         "pbkrtest",
-        "lme4",
     ],
     "PhyloProfile": [
         "BiocStyle",
@@ -8140,7 +7753,6 @@
         "ExperimentHub",
         "shinyFiles",
         "OmaDB",
-        "miniUI",
         "AnnotationHub",
         "BiocFileCache",
         "topGO",
@@ -8150,8 +7762,6 @@
     ],
     "Pi": [
         "dnet",
-        "supraHex",
-        "ggrepel",
         "caret",
         "ggnetwork",
         "recipes",
@@ -8186,7 +7796,6 @@
         "aplot",
         "scatterpie",
         "ggtree",
-        "ggrepel",
     ],
     "PING": [
         "PICS",
@@ -8217,9 +7826,6 @@
         "DelayedMatrixStats",
         "beachmat",
         "BiocSingular",
-        "ggrepel",
-        "ggridges",
-        "miniUI",
         "ScaledMatrix",
     ],
     "pipeFrame": [
@@ -8248,24 +7854,17 @@
         "SummarizedExperiment",
     ],
     "plotGrouper": [
-        "egg",
         "ggpubr",
         "colourpicker",
         "Hmisc",
-        "miniUI",
-        "ggrepel",
         "rstatix",
         "car",
         "pbkrtest",
-        "lme4",
     ],
     "plyranges": [
         "rtracklayer",
         "GenomicAlignments",
         "SummarizedExperiment",
-    ],
-    "pmm": [
-        "lme4",
     ],
     "pmp": [
         "SummarizedExperiment",
@@ -8286,7 +7885,6 @@
     "POMA": [
         "caret",
         "ggraph",
-        "ggrepel",
         "mixOmics",
         "MSnbase",
         "recipes",
@@ -8306,7 +7904,6 @@
     ],
     "ppcseq": [
         "tidybayes",
-        "benchmarkme",
         "ggdist",
         "posterior",
     ],
@@ -8356,7 +7953,6 @@
     ],
     "PrecisionTrialDrawer": [
         "biomaRt",
-        "ggrepel",
         "AnnotationDbi",
         "BiocFileCache",
     ],
@@ -8420,7 +8016,6 @@
         "pvca",
         "sva",
         "WGCNA",
-        "lme4",
         "genefilter",
         "Hmisc",
         "GO.db",
@@ -8438,7 +8033,6 @@
         "mzR",
         "SummarizedExperiment",
         "MsFeatures",
-        "ggrepel",
     ],
     "profileplyr": [
         "SummarizedExperiment",
@@ -8468,11 +8062,7 @@
         "DO.db",
         "fgsea",
         "qvalue",
-        "ggrepel",
         "GO.db",
-    ],
-    "progeny": [
-        "ggrepel",
     ],
     "projectR": [
         "CoGAPS",
@@ -8499,15 +8089,12 @@
         "MSnbase",
         "shinydashboardPlus",
         "colourpicker",
-        "shinyhelper",
         "shinyWidgets",
         "shinydashboard",
-        "miniUI",
         "mzR",
         "MLInterfaces",
         "caret",
         "biomaRt",
-        "fresh",
         "AnnotationDbi",
         "BiocFileCache",
         "recipes",
@@ -8537,11 +8124,9 @@
         "colourpicker",
         "shinyjqui",
         "shinyWidgets",
-        "miniUI",
         "MSnbase",
         "cp4p",
         "imp4p",
-        "lme4",
         "clusterProfiler",
         "AnnotationDbi",
         "tidyverse",
@@ -8554,11 +8139,9 @@
         "qvalue",
         "MESS",
         "ggpubr",
-        "ggrepel",
         "car",
         "missMDA",
         "mzR",
-        "modelr",
         "pbkrtest",
         "DO.db",
         "fgsea",
@@ -8567,10 +8150,8 @@
         "scatterpie",
         "ggtree",
         "rstatix",
-        "geepack",
         "ggformula",
         "mice",
-        "ggridges",
         "labelled",
     ],
     "ProteoDisco": [
@@ -8602,7 +8183,6 @@
     ],
     "ProteoMM": [
         "biomaRt",
-        "ggrepel",
         "AnnotationDbi",
         "BiocFileCache",
     ],
@@ -8611,13 +8191,11 @@
         "AnnotationHub",
         "BiocFileCache",
         "colourpicker",
-        "ggrepel",
         "highcharter",
         "pairsD3",
         "recount",
         "SummarizedExperiment",
         "interactiveDisplayBase",
-        "miniUI",
         "derfinder",
         "GEOquery",
         "rtracklayer",
@@ -8649,19 +8227,13 @@
         "Hmisc",
         "MSnbase",
         "shinyscreenshot",
-        "ggrepel",
         "rstatix",
         "mzR",
         "car",
         "pbkrtest",
-        "lme4",
-    ],
-    "PubScore": [
-        "ggrepel",
     ],
     "pulsedSilac": [
         "SummarizedExperiment",
-        "ggridges",
     ],
     "puma": [
         "oligo",
@@ -8678,9 +8250,6 @@
         "GenomicAlignments",
         "BSgenome",
         "BiocFileCache",
-    ],
-    "pvca": [
-        "lme4",
     ],
     "Pviz": [
         "Gviz",
@@ -8736,7 +8305,6 @@
     ],
     "qPLEXanalyzer": [
         "MSnbase",
-        "ggdendro",
         "mzR",
     ],
     "qrqc": [
@@ -8844,9 +8412,6 @@
     "RaggedExperiment": [
         "SummarizedExperiment",
     ],
-    "ramr": [
-        "EnvStats",
-    ],
     "ramwas": [
         "GenomicAlignments",
         "biomaRt",
@@ -8856,7 +8421,6 @@
     ],
     "RandomWalkRestartMH": [
         "dnet",
-        "supraHex",
     ],
     "RareVariantVis": [
         "VariantAnnotation",
@@ -8892,7 +8456,6 @@
         "rtracklayer",
         "GenomicFeatures",
         "genomation",
-        "ggseqlogo",
         "GenomicAlignments",
         "AnnotationDbi",
         "biomaRt",
@@ -8953,7 +8516,6 @@
         "aplot",
         "scatterpie",
         "ggtree",
-        "ggrepel",
         "GO.db",
     ],
     "rebook": [
@@ -9056,7 +8618,6 @@
         "derfinder",
         "DEFormats",
         "DESeq2",
-        "knitrBootstrap",
         "SummarizedExperiment",
         "AnnotationDbi",
         "bumphunter",
@@ -9172,8 +8733,6 @@
     "rexposome": [
         "FactoMineR",
         "Hmisc",
-        "lme4",
-        "ggrepel",
         "mice",
         "car",
         "pbkrtest",
@@ -9281,7 +8840,6 @@
         "GenomicFeatures",
         "rtracklayer",
         "RUVSeq",
-        "ggrepel",
         "ShortRead",
         "biomaRt",
         "SummarizedExperiment",
@@ -9335,7 +8893,6 @@
         "GenomicFeatures",
         "rtracklayer",
         "AnnotationHub",
-        "ggprism",
         "RLHub",
         "BiocFileCache",
         "AnnotationDbi",
@@ -9513,12 +9070,10 @@
         "DO.db",
         "fgsea",
         "ggpubr",
-        "ggrepel",
         "car",
         "ShortRead",
         "GenomicFeatures",
         "pbkrtest",
-        "lme4",
         "aplot",
         "ggraph",
         "scatterpie",
@@ -9569,7 +9124,6 @@
     "ropls": [
         "MultiDataSet",
         "SummarizedExperiment",
-        "ggrepel",
     ],
     "RPA": [
         "BiocStyle",
@@ -9605,16 +9159,13 @@
         "car",
         "metap",
         "pbkrtest",
-        "lme4",
         "TFisher",
         "MultiDataSet",
-        "ggrepel",
     ],
     "rrvgo": [
         "GOSemSim",
         "AnnotationDbi",
         "GO.db",
-        "ggrepel",
         "treemap",
     ],
     "rScudo": [
@@ -9628,11 +9179,9 @@
     "RTCGA": [
         "survminer",
         "ggpubr",
-        "ggrepel",
         "rstatix",
         "car",
         "pbkrtest",
-        "lme4",
     ],
     "RTCGAToolbox": [
         "RaggedExperiment",
@@ -9651,23 +9200,19 @@
         "SummarizedExperiment",
         "car",
         "pbkrtest",
-        "lme4",
     ],
     "RTNduals": [
         "RTN",
         "SummarizedExperiment",
         "car",
         "pbkrtest",
-        "lme4",
     ],
     "RTNsurvival": [
         "RTN",
         "RTNduals",
-        "egg",
         "SummarizedExperiment",
         "car",
         "pbkrtest",
-        "lme4",
     ],
     "rtracklayer": [
         "GenomicAlignments",
@@ -9715,10 +9260,8 @@
         "BiocFileCache",
     ],
     "sangeranalyseR": [
-        "sangerseqR",
         "shinydashboard",
         "shinycssloaders",
-        "ggdendro",
         "shinyWidgets",
         "BiocStyle",
     ],
@@ -9742,9 +9285,6 @@
     "scAlign": [
         "SingleCellExperiment",
         "Seurat",
-        "ggrepel",
-        "ggridges",
-        "miniUI",
         "SummarizedExperiment",
     ],
     "SCAN.UPC": [
@@ -9762,7 +9302,6 @@
         "AnnotationHub",
         "ensembldb",
         "GenomicFeatures",
-        "rintrojs",
         "rtracklayer",
         "shinycssloaders",
         "shinydashboard",
@@ -9782,9 +9321,6 @@
         "AnnotationDbi",
         "interactiveDisplayBase",
         "recipes",
-        "ggrepel",
-        "ggridges",
-        "miniUI",
         "ipred",
         "prodlim",
     ],
@@ -9815,7 +9351,6 @@
         "DelayedMatrixStats",
         "beachmat",
         "BiocSingular",
-        "ggrepel",
         "ScaledMatrix",
     ],
     "scBFA": [
@@ -9826,9 +9361,6 @@
         "DESeq2",
         "genefilter",
         "geneplotter",
-        "ggrepel",
-        "ggridges",
-        "miniUI",
         "AnnotationDbi",
         "annotate",
     ],
@@ -9841,9 +9373,6 @@
         "HDF5Array",
         "beachmat",
         "scuttle",
-        "ggrepel",
-        "ggridges",
-        "miniUI",
     ],
     "scClassifR": [
         "Seurat",
@@ -9851,9 +9380,6 @@
         "SummarizedExperiment",
         "caret",
         "recipes",
-        "ggrepel",
-        "ggridges",
-        "miniUI",
         "ipred",
         "prodlim",
     ],
@@ -9865,17 +9391,13 @@
         "HDF5Array",
         "SingleCellExperiment",
         "SummarizedExperiment",
-        "ggrepel",
         "annotate",
         "AnnotationDbi",
     ],
     "scDataviz": [
         "SingleCellExperiment",
-        "ggrepel",
         "flowCore",
         "Seurat",
-        "ggridges",
-        "miniUI",
         "SummarizedExperiment",
     ],
     "scDblFinder": [
@@ -9888,14 +9410,12 @@
         "ScaledMatrix",
         "beachmat",
         "DelayedMatrixStats",
-        "ggrepel",
     ],
     "scDD": [
         "arm",
         "SingleCellExperiment",
         "SummarizedExperiment",
         "scran",
-        "lme4",
         "scuttle",
         "DelayedMatrixStats",
         "BiocSingular",
@@ -9925,9 +9445,6 @@
     "schex": [
         "SingleCellExperiment",
         "Seurat",
-        "ggrepel",
-        "ggridges",
-        "miniUI",
         "SummarizedExperiment",
     ],
     "scHOT": [
@@ -9944,9 +9461,6 @@
     ],
     "scMAGeCK": [
         "Seurat",
-        "ggrepel",
-        "ggridges",
-        "miniUI",
     ],
     "scmap": [
         "SingleCellExperiment",
@@ -10044,7 +9558,6 @@
         "DelayedMatrixStats",
         "beachmat",
         "BiocSingular",
-        "ggrepel",
         "ScaledMatrix",
     ],
     "scran": [
@@ -10115,7 +9628,6 @@
         "qvalue",
         "GO.db",
         "AnnotationForge",
-        "egg",
         "enrichplot",
         "ggraph",
         "graphite",
@@ -10123,9 +9635,6 @@
         "aplot",
         "scatterpie",
         "ggtree",
-        "ggrepel",
-        "ggridges",
-        "miniUI",
     ],
     "scTGIF": [
         "GSEABase",
@@ -10136,9 +9645,6 @@
         "annotate",
         "AnnotationDbi",
         "Seurat",
-        "ggrepel",
-        "ggridges",
-        "miniUI",
     ],
     "scTreeViz": [
         "epivizr",
@@ -10150,7 +9656,6 @@
         "scater",
         "Seurat",
         "SingleCellExperiment",
-        "ggrepel",
         "bumphunter",
         "OrganismDbi",
         "GenomicFeatures",
@@ -10159,8 +9664,6 @@
         "DelayedMatrixStats",
         "beachmat",
         "BiocSingular",
-        "ggridges",
-        "miniUI",
         "ScaledMatrix",
         "AnnotationDbi",
         "rtracklayer",
@@ -10201,7 +9704,6 @@
         "DO.db",
         "fgsea",
         "qvalue",
-        "ggrepel",
         "GO.db",
     ],
     "segmentSeq": [
@@ -10280,7 +9782,6 @@
         "sesameData",
         "SummarizedExperiment",
         "fgsea",
-        "ggrepel",
         "ExperimentHub",
         "AnnotationHub",
         "BiocFileCache",
@@ -10317,7 +9818,6 @@
         "rtracklayer",
         "shinyWidgets",
         "shinycssloaders",
-        "egg",
         "SummarizedExperiment",
         "bumphunter",
         "DelayedMatrixStats",
@@ -10353,7 +9853,6 @@
         "SummarizedExperiment",
     ],
     "SIAMCAT": [
-        "mlr",
         "phyloseq",
     ],
     "SigCheck": [
@@ -10391,7 +9890,6 @@
         "ggraph",
         "scatterpie",
         "ggtree",
-        "ggrepel",
     ],
     "signeR": [
         "VariantAnnotation",
@@ -10459,7 +9957,6 @@
         "DelayedMatrixStats",
         "DESeq2",
         "ExperimentHub",
-        "ggrepel",
         "ggtree",
         "GSVA",
         "GSVAdata",
@@ -10489,7 +9986,6 @@
         "ScaledMatrix",
         "beachmat",
         "AnnotationHub",
-        "miniUI",
         "genefilter",
         "geneplotter",
         "HDF5Array",
@@ -10502,7 +9998,6 @@
         "M3Drop",
         "ensembldb",
         "GenomicFeatures",
-        "ggridges",
         "interactiveDisplayBase",
         "rtracklayer",
         "biomaRt",
@@ -10534,7 +10029,6 @@
         "ScaledMatrix",
     ],
     "singscore": [
-        "ggrepel",
         "GSEABase",
         "SummarizedExperiment",
         "annotate",
@@ -10565,7 +10059,6 @@
     ],
     "sitePath": [
         "aplot",
-        "ggrepel",
         "ggtree",
     ],
     "skewr": [
@@ -10641,9 +10134,6 @@
     "snapcount": [
         "SummarizedExperiment",
     ],
-    "snm": [
-        "lme4",
-    ],
     "SNPhood": [
         "DESeq2",
         "VariantAnnotation",
@@ -10695,9 +10185,6 @@
         "beachmat",
         "scuttle",
         "BiocSingular",
-        "ggrepel",
-        "ggridges",
-        "miniUI",
         "ScaledMatrix",
     ],
     "sparrow": [
@@ -10718,7 +10205,6 @@
         "SummarizedExperiment",
     ],
     "SpatialCPie": [
-        "ggrepel",
         "shinycssloaders",
         "shinyWidgets",
         "SummarizedExperiment",
@@ -10726,7 +10212,6 @@
     "spatialDE": [
         "SpatialExperiment",
         "SummarizedExperiment",
-        "ggrepel",
         "SingleCellExperiment",
         "BiocFileCache",
         "DropletUtils",
@@ -10738,9 +10223,7 @@
     "SpatialDecon": [
         "GeomxTools",
         "NanoStringNCTools",
-        "EnvStats",
         "lmerTest",
-        "lme4",
     ],
     "SpatialExperiment": [
         "SingleCellExperiment",
@@ -10758,7 +10241,6 @@
         "distinct",
         "WGCNA",
         "genefilter",
-        "ggdendro",
         "HDF5Array",
         "SummarizedExperiment",
         "shinydashboard",
@@ -10773,7 +10255,6 @@
         "DelayedMatrixStats",
         "beachmat",
         "BiocSingular",
-        "ggrepel",
         "ScaledMatrix",
     ],
     "spatzie": [
@@ -10808,7 +10289,6 @@
     ],
     "spicyR": [
         "lmerTest",
-        "lme4",
     ],
     "SpidermiR": [
         "miRNAtap",
@@ -10819,7 +10299,6 @@
         "MAGeCKFlute",
         "clusterProfiler",
         "enrichplot",
-        "ggrepel",
         "biomaRt",
         "SummarizedExperiment",
         "BiocFileCache",
@@ -10848,7 +10327,6 @@
         "DelayedMatrixStats",
         "beachmat",
         "BiocSingular",
-        "ggrepel",
         "ScaledMatrix",
     ],
     "SplicingFactory": [
@@ -10885,7 +10363,6 @@
         "VariantAnnotation",
     ],
     "spqn": [
-        "ggridges",
         "SummarizedExperiment",
     ],
     "SPsimSeq": [
@@ -10926,9 +10403,7 @@
     "ssPATHS": [
         "SummarizedExperiment",
         "MESS",
-        "geepack",
         "ggformula",
-        "ggridges",
         "labelled",
     ],
     "stageR": [
@@ -10968,7 +10443,6 @@
         "MAGeCKFlute",
         "clusterProfiler",
         "enrichplot",
-        "ggrepel",
         "biomaRt",
         "SummarizedExperiment",
         "BiocFileCache",
@@ -11013,7 +10487,6 @@
     ],
     "SubCellBarCode": [
         "caret",
-        "ggrepel",
         "org.Hs.eg.db",
         "AnnotationDbi",
         "recipes",
@@ -11046,11 +10519,9 @@
         "SummarizedExperiment",
         "survminer",
         "ggpubr",
-        "ggrepel",
         "rstatix",
         "car",
         "pbkrtest",
-        "lme4",
     ],
     "Sushi": [
         "biomaRt",
@@ -11098,17 +10569,13 @@
     "synergyfinder": [
         "drc",
         "tidyverse",
-        "ggrepel",
         "mice",
         "car",
-        "modelr",
         "pbkrtest",
-        "lme4",
     ],
     "synlet": [
         "doBy",
         "pbkrtest",
-        "lme4",
     ],
     "systemPipeR": [
         "ShortRead",
@@ -11118,19 +10585,16 @@
     "systemPipeShiny": [
         "spsComps",
         "drawer",
-        "bsplus",
         "shinyAce",
         "shinyFiles",
         "shinyWidgets",
         "shinydashboard",
         "shinydashboardPlus",
         "shinyjqui",
-        "fresh",
     ],
     "systemPipeTools": [
         "DESeq2",
         "SummarizedExperiment",
-        "ggrepel",
         "ggtree",
         "genefilter",
         "geneplotter",
@@ -11141,7 +10605,6 @@
     "TADCompare": [
         "HiCcompare",
         "ggpubr",
-        "ggrepel",
         "rstatix",
         "InteractionSet",
         "QDNAseq",
@@ -11150,7 +10613,6 @@
         "CGHcall",
         "car",
         "pbkrtest",
-        "lme4",
     ],
     "tanggle": [
         "ggtree",
@@ -11169,11 +10631,9 @@
     "TargetDecoy": [
         "ggpubr",
         "mzR",
-        "ggrepel",
         "rstatix",
         "car",
         "pbkrtest",
-        "lme4",
     ],
     "TarSeqQC": [
         "GenomicAlignments",
@@ -11194,7 +10654,6 @@
         "DelayedMatrixStats",
         "HDF5Array",
         "BiocSingular",
-        "ggrepel",
         "ScaledMatrix",
         "beachmat",
         "AnnotationDbi",
@@ -11217,7 +10676,6 @@
     "TCGAbiolinksGUI": [
         "shinydashboard",
         "SummarizedExperiment",
-        "ggrepel",
         "caret",
         "shinyFiles",
         "pathview",
@@ -11233,7 +10691,6 @@
         "GO.db",
         "GOSemSim",
         "qvalue",
-        "miniUI",
         "GenomicFeatures",
         "Gviz",
         "MultiAssayExperiment",
@@ -11263,7 +10720,6 @@
         "prodlim",
         "car",
         "pbkrtest",
-        "lme4",
     ],
     "TCGAutils": [
         "AnnotationDbi",
@@ -11315,7 +10771,6 @@
         "SummarizedExperiment",
     ],
     "TFutils": [
-        "miniUI",
         "GSEABase",
         "BiocFileCache",
         "AnnotationDbi",
@@ -11346,7 +10801,6 @@
     ],
     "timeOmics": [
         "mixOmics",
-        "ggrepel",
     ],
     "TimeSeriesExperiment": [
         "SummarizedExperiment",
@@ -11362,7 +10816,6 @@
         "biomaRt",
         "clusterProfiler",
         "FreqProf",
-        "ggdendro",
         "gghighlight",
         "AnnotationDbi",
         "BiocFileCache",
@@ -11371,7 +10824,6 @@
         "GO.db",
         "GOSemSim",
         "qvalue",
-        "ggrepel",
         "SummarizedExperiment",
         "DO.db",
         "fgsea",
@@ -11387,7 +10839,6 @@
         "Hmisc",
         "GO.db",
         "AnnotationDbi",
-        "R.rsp",
     ],
     "TissueEnrich": [
         "SummarizedExperiment",
@@ -11421,7 +10872,6 @@
         "SummarizedExperiment",
         "GSVA",
         "ggpubr",
-        "ggrepel",
         "rstatix",
         "GSEABase",
         "SingleCellExperiment",
@@ -11434,13 +10884,11 @@
         "AnnotationDbi",
         "car",
         "pbkrtest",
-        "lme4",
     ],
     "TOAST": [
         "SummarizedExperiment",
     ],
     "tomoda": [
-        "ggrepel",
         "SummarizedExperiment",
     ],
     "topdownr": [
@@ -11517,9 +10965,6 @@
         "DelayedMatrixStats",
         "beachmat",
     ],
-    "transite": [
-        "ggseqlogo",
-    ],
     "tRanslatome": [
         "anota",
         "DESeq2",
@@ -11554,7 +10999,6 @@
         "ggtree",
         "SingleCellExperiment",
         "diffcyt",
-        "lme4",
         "flowCore",
         "FlowSOM",
         "SummarizedExperiment",
@@ -11562,7 +11006,6 @@
         "CytoML",
         "flowWorkspace",
         "ggpubr",
-        "ggrepel",
         "openCyto",
         "ggcyto",
         "ncdfFlow",
@@ -11620,7 +11063,6 @@
         "DelayedMatrixStats",
         "beachmat",
         "BiocSingular",
-        "ggrepel",
         "ScaledMatrix",
     ],
     "trigger": [
@@ -11722,7 +11164,6 @@
         "BSgenome",
         "GenomicFeatures",
         "GenomicAlignments",
-        "ggrepel",
         "mirbase.db",
         "Organism.dplyr",
         "shinydashboard",
@@ -11740,7 +11181,6 @@
         "regioneR",
         "BSgenome",
         "DESeq2",
-        "Rbowtie2",
         "GenomicAlignments",
         "org.Hs.eg.db",
         "annotate",
@@ -11761,7 +11201,6 @@
         "shinycssloaders",
         "Gviz",
         "Homo.sapiens",
-        "condformat",
         "org.Hs.eg.db",
         "TxDb.Hsapiens.UCSC.hg38.knownGene",
         "BiocFileCache",
@@ -11801,7 +11240,6 @@
     "uSORT": [
         "monocle",
         "densityClust",
-        "ggrepel",
     ],
     "VAExprs": [
         "keras",
@@ -11810,13 +11248,11 @@
         "scater",
         "DeepPINCS",
         "DiagrammeR",
-        "webchem",
         "ttgsea",
         "scuttle",
         "DelayedMatrixStats",
         "beachmat",
         "BiocSingular",
-        "ggrepel",
         "ScaledMatrix",
         "textstem",
         "lexicon",
@@ -11842,7 +11278,6 @@
     "variancePartition": [
         "pbkrtest",
         "lmerTest",
-        "lme4",
     ],
     "VariantAnnotation": [
         "SummarizedExperiment",
@@ -11934,7 +11369,6 @@
     ],
     "vidger": [
         "DESeq2",
-        "ggrepel",
         "SummarizedExperiment",
         "genefilter",
         "geneplotter",
@@ -11952,13 +11386,10 @@
         "heatmaply",
         "topGO",
         "BiocFileCache",
-        "egg",
     ],
     "vissE": [
-        "ggwordcloud",
         "GSEABase",
         "msigdb",
-        "ggrepel",
         "textstem",
         "ggraph",
         "annotate",
@@ -12008,7 +11439,6 @@
         "genefilter",
         "geneplotter",
         "systemPipeR",
-        "ggrepel",
         "apeglm",
         "GreyListChIP",
         "BiocFileCache",
@@ -12021,8 +11451,6 @@
         "eva",
         "BiocFileCache",
         "SingleCellExperiment",
-        "lme4",
-        "EnvStats",
         "SummarizedExperiment",
     ],
     "wateRmelon": [
@@ -12079,9 +11507,6 @@
         "shinydashboard",
         "shinyWidgets",
         "shinycustomloader",
-    ],
-    "wppi": [
-        "OmnipathR",
     ],
     "XCIR": [
         "VariantAnnotation",
@@ -12182,23 +11607,16 @@
         "AnnotationDbi",
     ],
     "ggpubr": [
-        "ggrepel",
         "rstatix",
         "car",
         "pbkrtest",
-        "lme4",
     ],
     "rstatix": [
         "car",
         "pbkrtest",
-        "lme4",
     ],
     "car": [
         "pbkrtest",
-        "lme4",
-    ],
-    "pbkrtest": [
-        "lme4",
     ],
     "adductData": [
         "ExperimentHub",
@@ -12226,16 +11644,11 @@
         "prodlim",
     ],
     "GUniFrac": [
-        "ggrepel",
         "lmerTest",
-        "lme4",
     ],
     "recipes": [
         "ipred",
         "prodlim",
-    ],
-    "lmerTest": [
-        "lme4",
     ],
     "ipred": [
         "prodlim",
@@ -12371,7 +11784,6 @@
     ],
     "doBy": [
         "pbkrtest",
-        "lme4",
     ],
     "BSgenome.Ecoli.NCBI.20080805": [
         "BSgenome",
@@ -12381,21 +11793,9 @@
     ],
     "ggExtra": [
         "colourpicker",
-        "miniUI",
-    ],
-    "colourpicker": [
-        "miniUI",
-    ],
-    "heatmaply": [
-        "egg",
     ],
     "corncob": [
         "phyloseq",
-    ],
-    "Seurat": [
-        "ggrepel",
-        "ggridges",
-        "miniUI",
     ],
     "IlluminaHumanMethylation450kanno.ilmn12.hg19": [
         "minfi",
@@ -12418,16 +11818,12 @@
         "shinyAce",
         "shinyFiles",
         "pbkrtest",
-        "lme4",
     ],
     "org.Bt.eg.db": [
         "AnnotationDbi",
     ],
     "DO.db": [
         "AnnotationDbi",
-    ],
-    "ggraph": [
-        "ggrepel",
     ],
     "rms": [
         "Hmisc",
@@ -12436,15 +11832,6 @@
         "Hmisc",
         "GO.db",
         "AnnotationDbi",
-    ],
-    "ggnetwork": [
-        "ggrepel",
-    ],
-    "superheat": [
-        "ggdendro",
-    ],
-    "drtmle": [
-        "np",
     ],
     "biscuiteerData": [
         "ExperimentHub",
@@ -12514,7 +11901,6 @@
     "drc": [
         "car",
         "pbkrtest",
-        "lme4",
     ],
     "fda": [
         "fds",
@@ -12525,9 +11911,7 @@
     ],
     "FactoMineR": [
         "car",
-        "ggrepel",
         "pbkrtest",
-        "lme4",
     ],
     "IlluminaHumanMethylationEPICmanifest": [
         "minfi",
@@ -12663,10 +12047,6 @@
     ],
     "shinydashboardPlus": [
         "shinydashboard",
-        "fresh",
-    ],
-    "densityClust": [
-        "ggrepel",
     ],
     "BSgenome.Drerio.UCSC.danRer7": [
         "BSgenome",
@@ -12677,11 +12057,9 @@
     "factoextra": [
         "FactoMineR",
         "ggpubr",
-        "ggrepel",
         "car",
         "rstatix",
         "pbkrtest",
-        "lme4",
     ],
     "Ecume": [
         "caret",
@@ -12729,23 +12107,14 @@
         "SummarizedExperiment",
         "MsFeatures",
     ],
-    "mbest": [
-        "lme4",
-    ],
     "VIM": [
         "car",
         "pbkrtest",
-        "lme4",
-    ],
-    "arm": [
-        "lme4",
     ],
     "cp4p": [
         "MESS",
         "qvalue",
-        "geepack",
         "ggformula",
-        "ggridges",
         "labelled",
     ],
     "imp4p": [
@@ -12753,40 +12122,27 @@
         "FactoMineR",
         "mice",
         "car",
-        "ggrepel",
         "pbkrtest",
-        "lme4",
     ],
     "DAPARdata": [
         "MSnbase",
         "mzR",
     ],
-    "tidyverse": [
-        "modelr",
-    ],
     "MESS": [
-        "geepack",
         "ggformula",
-        "ggridges",
         "labelled",
     ],
     "missMDA": [
         "FactoMineR",
         "mice",
         "car",
-        "ggrepel",
         "pbkrtest",
-        "lme4",
     ],
     "ggformula": [
-        "ggridges",
         "labelled",
     ],
     "metap": [
         "TFisher",
-    ],
-    "rsq": [
-        "lme4",
     ],
     "textstem": [
         "lexicon",
@@ -12830,15 +12186,12 @@
     "NHPoisson": [
         "car",
         "pbkrtest",
-        "lme4",
     ],
     "survminer": [
         "ggpubr",
-        "ggrepel",
         "rstatix",
         "car",
         "pbkrtest",
-        "lme4",
     ],
     "logistf": [
         "mice",
@@ -12849,12 +12202,8 @@
         "GenomicAlignments",
         "SummarizedExperiment",
     ],
-    "bs4Dash": [
-        "fresh",
-    ],
     "shinyHeatmaply": [
         "heatmaply",
-        "egg",
     ],
     "HH": [
         "Hmisc",
@@ -12915,22 +12264,16 @@
         "ipred",
         "prodlim",
     ],
-    "glmmTMB": [
-        "lme4",
-    ],
     "agricolae": [
         "klaR",
         "questionr",
-        "miniUI",
         "labelled",
     ],
     "klaR": [
         "questionr",
-        "miniUI",
         "labelled",
     ],
     "questionr": [
-        "miniUI",
         "labelled",
     ],
     "SmartSVA": [
@@ -12996,12 +12339,6 @@
     "miRBaseVersions.db": [
         "AnnotationDbi",
     ],
-    "SOMbrero": [
-        "ggwordcloud",
-    ],
-    "blme": [
-        "lme4",
-    ],
     "deconstructSigs": [
         "BSgenome",
         "BSgenome.Hsapiens.UCSC.hg19",
@@ -13012,14 +12349,10 @@
     "sortable": [
         "learnr",
     ],
-    "dnet": [
-        "supraHex",
-    ],
     "RcmdrMisc": [
         "car",
         "Hmisc",
         "pbkrtest",
-        "lme4",
     ],
     "NxtIRFdata": [
         "ExperimentHub",
@@ -13037,10 +12370,6 @@
     ],
     "AICcmodavg": [
         "unmarked",
-        "lme4",
-    ],
-    "unmarked": [
-        "lme4",
     ],
     "biomartr": [
         "biomaRt",
@@ -13049,10 +12378,6 @@
     ],
     "aroma.affymetrix": [
         "aroma.core",
-        "R.rsp",
-    ],
-    "aroma.core": [
-        "R.rsp",
     ],
     "tidybayes": [
         "ggdist",
@@ -13146,7 +12471,6 @@
     ],
     "clustree": [
         "ggraph",
-        "ggrepel",
     ],
     "celldex": [
         "SummarizedExperiment",
@@ -13199,12 +12523,6 @@
     "spsComps": [
         "shinyAce",
     ],
-    "drawer": [
-        "bsplus",
-    ],
-    "gghighlight": [
-        "ggrepel",
-    ],
     "SNPlocs.Hsapiens.dbSNP150.GRCh38": [
         "BSgenome",
         "rtracklayer",
@@ -13227,8 +12545,5 @@
         "BiocFileCache",
         "interactiveDisplayBase",
         "annotate",
-    ],
-    "eva": [
-        "EnvStats",
     ],
 }
