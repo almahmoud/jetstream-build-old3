@@ -22,7 +22,6 @@
         "flexdashboard",
         "ggdendro",
         "BiocStyle",
-        "bookdown",
     ],
     "ACE": [
         "QDNAseq",
@@ -463,7 +462,6 @@
         "Gviz",
         "BiocStyle",
         "UpSetR",
-        "bookdown",
         "SummarizedExperiment",
         "rtracklayer",
         "biomaRt",
@@ -528,7 +526,6 @@
         "AnnotationDbi",
     ],
     "autonomics": [
-        "assertive",
         "BiocFileCache",
         "ggrepel",
         "MultiAssayExperiment",
@@ -589,7 +586,6 @@
         "SummarizedExperiment",
     ],
     "basecallQC": [
-        "prettydoc",
         "ShortRead",
         "GenomicAlignments",
         "SummarizedExperiment",
@@ -781,9 +777,6 @@
         "GenomicAlignments",
         "SummarizedExperiment",
     ],
-    "bioassayR": [
-        "ChemmineR",
-    ],
     "biobroom": [
         "broom",
     ],
@@ -867,15 +860,11 @@
     "BiocSklearn": [
         "SummarizedExperiment",
     ],
-    "BiocStyle": [
-        "bookdown",
-    ],
     "biocthis": [
         "styler",
     ],
     "BiocWorkflowTools": [
         "BiocStyle",
-        "bookdown",
     ],
     "biodb": [
         "BiocFileCache",
@@ -1079,7 +1068,6 @@
     "BPRMeth": [
         "cowplot",
         "BiocStyle",
-        "bookdown",
     ],
     "brainflowprobes": [
         "BSgenome.Hsapiens.UCSC.hg19",
@@ -1165,7 +1153,6 @@
     "BubbleTree": [
         "BiocStyle",
         "biovizBase",
-        "bookdown",
         "Hmisc",
         "SummarizedExperiment",
         "GenomicAlignments",
@@ -1652,7 +1639,6 @@
         "minfi",
         "DMRcate",
         "IlluminaHumanMethylationEPICmanifest",
-        "prettydoc",
         "Hmisc",
         "globaltest",
         "sva",
@@ -1722,7 +1708,6 @@
         "org.Hs.eg.db",
         "org.Mm.eg.db",
         "BiocStyle",
-        "bookdown",
         "GenomicFeatures",
         "rtracklayer",
         "SummarizedExperiment",
@@ -1887,7 +1872,6 @@
         "shinydashboardPlus",
         "shinycssloaders",
         "shinydashboard",
-        "kableExtra",
         "batchelor",
         "scran",
         "scater",
@@ -2041,7 +2025,6 @@
         "BiocSingular",
         "HDF5Array",
         "zinbwave",
-        "phylobase",
         "mbkmeans",
         "ScaledMatrix",
         "beachmat",
@@ -2253,7 +2236,6 @@
     ],
     "COMPASS": [
         "BiocStyle",
-        "bookdown",
     ],
     "compEpiTools": [
         "topGO",
@@ -2629,7 +2611,6 @@
     ],
     "customCMPdb": [
         "AnnotationHub",
-        "ChemmineR",
         "BiocFileCache",
         "AnnotationDbi",
         "interactiveDisplayBase",
@@ -2756,7 +2737,6 @@
         "flowUtils",
         "flowCore",
         "sva",
-        "prettydoc",
         "scatterpie",
         "SummarizedExperiment",
         "SingleCellExperiment",
@@ -2871,7 +2851,6 @@
         "mzR",
         "haven",
         "modelr",
-        "reprex",
         "pbkrtest",
         "DO.db",
         "fgsea",
@@ -2928,7 +2907,6 @@
         "broom",
         "haven",
         "modelr",
-        "reprex",
         "ggdendro",
         "sn",
     ],
@@ -2989,7 +2967,6 @@
         "SummarizedExperiment",
         "BiocStyle",
         "made4",
-        "bookdown",
     ],
     "DEComplexDisease": [
         "DESeq2",
@@ -3345,11 +3322,9 @@
         "shinydashboard",
         "shinyjs",
         "BiocStyle",
-        "kableExtra",
         "UpSetR",
         "heatmaply",
         "SummarizedExperiment",
-        "bookdown",
         "colourpicker",
         "miniUI",
         "egg",
@@ -3670,9 +3645,6 @@
         "ScaledMatrix",
         "beachmat",
         "sn",
-    ],
-    "eiR": [
-        "ChemmineR",
     ],
     "eisaR": [
         "SummarizedExperiment",
@@ -4072,7 +4044,6 @@
         "SummarizedExperiment",
         "MultiAssayExperiment",
         "ggdendro",
-        "kableExtra",
     ],
     "EventPointer": [
         "SGSeq",
@@ -4459,9 +4430,6 @@
         "flowCore",
         "ncdfFlow",
     ],
-    "fmcsR": [
-        "ChemmineR",
-    ],
     "fobitools": [
         "fgsea",
         "ggraph",
@@ -4792,7 +4760,6 @@
         "AnnotationDbi",
         "BiocStyle",
         "org.Rn.eg.db",
-        "bookdown",
         "GenomicAlignments",
         "SummarizedExperiment",
     ],
@@ -5530,7 +5497,6 @@
     ],
     "hypeR": [
         "msigdbr",
-        "kableExtra",
     ],
     "iasva": [
         "SummarizedExperiment",
@@ -5776,9 +5742,6 @@
     ],
     "InteractionSet": [
         "SummarizedExperiment",
-    ],
-    "InteractiveComplexHeatmap": [
-        "kableExtra",
     ],
     "interactiveDisplay": [
         "interactiveDisplayBase",
@@ -6250,7 +6213,6 @@
     ],
     "MACSQuantifyR": [
         "ggrepel",
-        "prettydoc",
     ],
     "MACSr": [
         "ExperimentHub",
@@ -6327,7 +6289,6 @@
         "broom",
         "haven",
         "modelr",
-        "reprex",
         "ipred",
         "prodlim",
     ],
@@ -6561,7 +6522,6 @@
         "MCMCpack",
         "cowplot",
         "BiocStyle",
-        "bookdown",
     ],
     "memes": [
         "cmdfun",
@@ -6597,7 +6557,6 @@
         "BiocStyle",
         "MeSHDbi",
         "Category",
-        "bookdown",
         "AnnotationDbi",
         "GSEABase",
         "genefilter",
@@ -6726,7 +6685,6 @@
         "ShortRead",
         "annotate",
         "egg",
-        "bookdown",
         "prodlim",
         "ipred",
         "DelayedMatrixStats",
@@ -6871,7 +6829,6 @@
         "broom",
         "haven",
         "modelr",
-        "reprex",
         "AnnotationDbi",
         "interactiveDisplayBase",
         "GenomicFeatures",
@@ -7003,7 +6960,6 @@
     ],
     "MetID": [
         "devtools",
-        "ChemmineR",
     ],
     "MetNet": [
         "SummarizedExperiment",
@@ -7145,7 +7101,6 @@
         "broom",
         "formattable",
         "HardyWeinberg",
-        "kableExtra",
         "SummarizedExperiment",
         "mice",
     ],
@@ -7618,7 +7573,6 @@
     ],
     "MSGFgui": [
         "mzR",
-        "MSGFplus",
         "shinyFiles",
     ],
     "msImpute": [
@@ -7653,7 +7607,6 @@
         "AnnotationDbi",
         "BiocFileCache",
         "interactiveDisplayBase",
-        "bookdown",
         "msmsEDA",
         "qvalue",
     ],
@@ -7700,7 +7653,6 @@
         "broom",
         "haven",
         "modelr",
-        "reprex",
         "car",
         "lmerTest",
         "pbkrtest",
@@ -7762,7 +7714,6 @@
         "ggrepel",
     ],
     "multicrispr": [
-        "assertive",
         "BSgenome",
         "CRISPRseek",
         "GenomicFeatures",
@@ -8043,7 +7994,6 @@
         "broom",
         "haven",
         "modelr",
-        "reprex",
     ],
     "NanoTube": [
         "fgsea",
@@ -8142,7 +8092,6 @@
     "netresponse": [
         "BiocStyle",
         "qvalue",
-        "bookdown",
     ],
     "NetSAM": [
         "WGCNA",
@@ -8161,7 +8110,6 @@
         "NMF",
         "BiocSingular",
         "zinbwave",
-        "phylobase",
         "mbkmeans",
         "scuttle",
         "DelayedMatrixStats",
@@ -8344,7 +8292,6 @@
         "HelloRanges",
         "MultiAssayExperiment",
         "cowplot",
-        "kableExtra",
         "rtracklayer",
         "factoextra",
         "FactoMineR",
@@ -8596,7 +8543,6 @@
         "DESeq2",
         "shinyjs",
         "devtools",
-        "bookdown",
         "SummarizedExperiment",
         "genefilter",
         "geneplotter",
@@ -8837,7 +8783,6 @@
         "shinyFiles",
         "shinyjs",
         "OmaDB",
-        "bookdown",
         "miniUI",
         "AnnotationHub",
         "BiocFileCache",
@@ -8871,7 +8816,6 @@
         "GO.db",
         "clusterProfiler",
         "ReactomePA",
-        "bookdown",
         "AnnotationDbi",
         "DOSE",
         "enrichplot",
@@ -9055,7 +8999,6 @@
         "SummarizedExperiment",
         "BiocStyle",
         "phyloseq",
-        "bookdown",
     ],
     "preciseTAD": [
         "caret",
@@ -9174,7 +9117,6 @@
         "TxDb.Mmusculus.UCSC.mm9.knownGene",
         "org.Hs.eg.db",
         "org.Mm.eg.db",
-        "EnrichedHeatmap",
         "rtracklayer",
         "AnnotationDbi",
         "enrichplot",
@@ -9296,7 +9238,6 @@
         "mzR",
         "haven",
         "modelr",
-        "reprex",
         "pbkrtest",
         "DO.db",
         "fgsea",
@@ -9684,7 +9625,6 @@
     ],
     "Rcpi": [
         "GOSemSim",
-        "ChemmineR",
         "fmcsR",
         "AnnotationDbi",
         "GO.db",
@@ -9722,7 +9662,6 @@
     ],
     "rebook": [
         "BiocStyle",
-        "bookdown",
     ],
     "receptLoss": [
         "SummarizedExperiment",
@@ -9823,7 +9762,6 @@
         "DESeq2",
         "knitrBootstrap",
         "SummarizedExperiment",
-        "bookdown",
         "AnnotationDbi",
         "bumphunter",
         "GenomicAlignments",
@@ -10146,7 +10084,6 @@
         "org.Mm.eg.db",
         "DESeq2",
         "BiocStyle",
-        "bookdown",
         "genefilter",
         "geneplotter",
         "AnnotationDbi",
@@ -10363,7 +10300,6 @@
     "RPA": [
         "BiocStyle",
         "phyloseq",
-        "bookdown",
     ],
     "RpsiXML": [
         "annotate",
@@ -10378,7 +10314,6 @@
         "biovizBase",
         "GenomicAlignments",
         "GenomicFiles",
-        "bookdown",
         "Hmisc",
         "SummarizedExperiment",
         "GenomicFeatures",
@@ -10529,7 +10464,6 @@
         "ggdendro",
         "shinyWidgets",
         "BiocStyle",
-        "bookdown",
     ],
     "satuRn": [
         "SummarizedExperiment",
@@ -10539,7 +10473,6 @@
         "SBGNview.data",
         "SummarizedExperiment",
         "AnnotationDbi",
-        "bookdown",
         "org.Hs.eg.db",
     ],
     "SC3": [
@@ -10950,7 +10883,6 @@
         "schex",
         "BiocFileCache",
         "interactiveDisplayBase",
-        "bookdown",
         "GSEABase",
         "genefilter",
         "annotate",
@@ -10985,7 +10917,6 @@
         "SummarizedExperiment",
         "msigdbr",
         "schex",
-        "bookdown",
         "annotate",
         "AnnotationDbi",
         "Seurat",
@@ -11824,7 +11755,6 @@
         "GenomicAlignments",
         "Gviz",
         "BiocStyle",
-        "bookdown",
         "genefilter",
         "geneplotter",
         "AnnotationDbi",
@@ -11839,7 +11769,6 @@
     ],
     "ssPATHS": [
         "SummarizedExperiment",
-        "dml",
         "MESS",
         "geepack",
         "ggformula",
@@ -12034,7 +11963,6 @@
         "broom",
         "haven",
         "modelr",
-        "reprex",
         "pbkrtest",
         "lme4",
     ],
@@ -12634,7 +12562,6 @@
     ],
     "tscR": [
         "kmlShape",
-        "prettydoc",
         "SummarizedExperiment",
         "longitudinalData",
         "kml",
@@ -13840,7 +13767,6 @@
         "broom",
         "haven",
         "modelr",
-        "reprex",
     ],
     "MESS": [
         "geepack",
@@ -14058,9 +13984,6 @@
         "genefilter",
         "AnnotationDbi",
         "annotate",
-    ],
-    "rmdformats": [
-        "bookdown",
     ],
     "sesameData": [
         "ExperimentHub",
@@ -14290,9 +14213,6 @@
     ],
     "fission": [
         "SummarizedExperiment",
-    ],
-    "SBGNview.data": [
-        "bookdown",
     ],
     "SCATEData": [
         "ExperimentHub",
