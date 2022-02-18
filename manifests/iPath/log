@@ -5,4 +5,4 @@ replacement repositories:
     CRAN: https://packagemanager.rstudio.com/cran/__linux__/focal/latest
 
 Bioconductor version 3.14 (BiocManager 1.30.16), R 4.1.2 (2021-11-01)
-Installing package(s) 'Spaniel'
+Installing package(s) 'iPath'

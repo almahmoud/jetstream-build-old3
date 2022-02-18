@@ -1,0 +1,10 @@
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.rstudio.com/cran/__linux__/focal/latest
+
+Bioconductor version 3.14 (BiocManager 1.30.16), R 4.1.2 (2021-11-01)
+Installing package(s) 'MSstatsLiP'
+also installing the dependencies ‘SparseM’, ‘MatrixModels’, ‘sp’, ‘base64enc’, ‘lazyeval’, ‘later’, ‘bit’, ‘bitops’, ‘numDeriv’, ‘carData’, ‘pbkrtest’, ‘quantreg’, ‘maptools’, ‘htmltools’, ‘htmlwidgets’, ‘crosstalk’, ‘jquerylib’, ‘promises’, ‘rematch’, ‘bit64’, ‘tinytex’, ‘minqa’, ‘nloptr’, ‘RcppEigen’, ‘gtools’, ‘caTools’, ‘zlibbioc’, ‘RCurl’, ‘GenomeInfoDbData’, ‘lmerTest’, ‘viridis’, ‘car’, ‘DT’, ‘ellipse’, ‘flashClust’, ‘leaps’, ‘scatterplot3d’, ‘plyr’, ‘corrplot’, ‘assertthat’, ‘blob’, ‘DBI’, ‘gargle’, ‘uuid’, ‘cellranger’, ‘ids’, ‘vroom’, ‘tzdb’, ‘progress’, ‘rmarkdown’, ‘selectr’, ‘colorspace’, ‘gtable’, ‘isoband’, ‘limma’, ‘lme4’, ‘preprocessCore’, ‘ggrepel’, ‘gplots’, ‘marray’, ‘RcppArmadillo’, ‘log4r’, ‘BiocGenerics’, ‘S4Vectors’, ‘IRanges’, ‘XVector’, ‘GenomeInfoDb’, ‘MSstatsTMT’, ‘abind’, ‘dendextend’, ‘FactoMineR’, ‘reshape2’, ‘ggsci’, ‘cowplot’, ‘ggsignif’, ‘polynom’, ‘rstatix’, ‘broom’, ‘dbplyr’, ‘dtplyr’, ‘forcats’, ‘googledrive’, ‘googlesheets4’, ‘haven’, ‘hms’, ‘lubridate’, ‘modelr’, ‘readr’, ‘readxl’, ‘reprex’, ‘rvest’, ‘farver’, ‘labeling’, ‘munsell’, ‘RColorBrewer’, ‘viridisLite’, ‘gridExtra’, ‘ggplot2’, ‘MSstats’, ‘MSstatsConvert’, ‘data.table’, ‘Biostrings’, ‘MSstatsPTM’, ‘Rcpp’, ‘checkmate’, ‘factoextra’, ‘ggpubr’, ‘tidyverse’, ‘scales’
+
