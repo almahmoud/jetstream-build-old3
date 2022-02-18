@@ -1090,7 +1090,6 @@
         "flowClust",
         "fda",
         "fds",
-        "rainbow",
     ],
     "Category": [
         "AnnotationDbi",
@@ -1247,7 +1246,6 @@
         "pbkrtest",
         "fda",
         "fds",
-        "rainbow",
     ],
     "Cepo": [
         "GSEABase",
@@ -1690,7 +1688,6 @@
         "karyoploteR",
         "CopyNumberPlots",
         "VariantAnnotation",
-        "cn.mops",
         "rtracklayer",
         "biovizBase",
         "GenomicFeatures",
@@ -1707,7 +1704,6 @@
         "CopyNumberPlots",
         "regioneR",
         "VariantAnnotation",
-        "cn.mops",
         "rtracklayer",
         "biovizBase",
         "GenomicFeatures",
@@ -1944,7 +1940,6 @@
         "karyoploteR",
         "regioneR",
         "VariantAnnotation",
-        "cn.mops",
         "rtracklayer",
         "biovizBase",
         "GenomicFeatures",
@@ -2126,7 +2121,6 @@
         "flowCore",
         "flowDensity",
         "flowClust",
-        "cytometree",
         "flowViz",
         "car",
         "flowWorkspace",
@@ -2166,7 +2160,6 @@
         "flowClust",
         "fda",
         "fds",
-        "rainbow",
     ],
     "CytoGLMM": [
         "factoextra",
@@ -2197,7 +2190,6 @@
         "flowClust",
         "fda",
         "fds",
-        "rainbow",
     ],
     "CytoTree": [
         "FlowSOM",
@@ -2224,7 +2216,6 @@
         "flowClust",
         "fda",
         "fds",
-        "rainbow",
     ],
     "dada2": [
         "ShortRead",
@@ -2279,7 +2270,6 @@
         "DAPARdata",
         "clusterProfiler",
         "AnnotationDbi",
-        "tidyverse",
         "FactoMineR",
         "factoextra",
         "DOSE",
@@ -2316,7 +2306,6 @@
     ],
     "dce": [
         "pcalg",
-        "tidyverse",
         "ggraph",
         "epiNEM",
         "metap",
@@ -2605,7 +2594,6 @@
         "pbkrtest",
         "fda",
         "fds",
-        "rainbow",
     ],
     "diffHic": [
         "InteractionSet",
@@ -3331,7 +3319,6 @@
         "BSgenome",
         "GenomicAlignments",
         "rtracklayer",
-        "rainbow",
     ],
     "fcoex": [
         "FCBF",
@@ -3491,7 +3478,6 @@
         "pbkrtest",
         "fda",
         "fds",
-        "rainbow",
     ],
     "flowSpecs": [
         "flowCore",
@@ -3503,7 +3489,6 @@
         "flowViz",
         "fda",
         "fds",
-        "rainbow",
     ],
     "flowTime": [
         "flowCore",
@@ -3527,7 +3512,6 @@
         "ncdfFlow",
         "fda",
         "fds",
-        "rainbow",
     ],
     "flowWorkspace": [
         "flowCore",
@@ -3571,7 +3555,6 @@
     "FRGEpistasis": [
         "fda",
         "fds",
-        "rainbow",
     ],
     "frma": [
         "oligo",
@@ -3581,7 +3564,6 @@
         "fda",
         "GenomicAlignments",
         "fds",
-        "rainbow",
     ],
     "funtooNorm": [
         "minfi",
@@ -3894,7 +3876,6 @@
     ],
     "GeoDiff": [
         "GeomxTools",
-        "NanoStringNCTools",
         "lmerTest",
     ],
     "GEOexplorer": [
@@ -3907,7 +3888,6 @@
         "pbkrtest",
     ],
     "GeomxTools": [
-        "NanoStringNCTools",
         "lmerTest",
     ],
     "gep2pep": [
@@ -4723,7 +4703,6 @@
     "IWTomics": [
         "fda",
         "fds",
-        "rainbow",
     ],
     "karyoploteR": [
         "regioneR",
@@ -4914,7 +4893,6 @@
         "HDF5Array",
         "RnBeads",
         "crlmm",
-        "bigstatsr",
         "oligoClasses",
         "methylumi",
         "FDb.InfiniumMethylation.hg19",
@@ -4947,7 +4925,6 @@
     ],
     "MAI": [
         "caret",
-        "tidyverse",
         "recipes",
         "ipred",
         "prodlim",
@@ -5217,7 +5194,6 @@
         "pbkrtest",
         "fda",
         "fds",
-        "rainbow",
     ],
     "metagene": [
         "rtracklayer",
@@ -5286,7 +5262,6 @@
     ],
     "MetaVolcanoR": [
         "metap",
-        "topconfects",
     ],
     "MetCirc": [
         "MSnbase",
@@ -5367,7 +5342,6 @@
         "methylclockData",
         "ExperimentHub",
         "ggpmisc",
-        "tidyverse",
         "ggpubr",
         "minfi",
         "AnnotationHub",
@@ -5698,8 +5672,6 @@
         "NMF",
         "iBBiG",
         "BicARE",
-        "s4vd",
-        "rqubic",
         "SOMbrero",
         "miRspongeR",
         "GSEABase",
@@ -5885,9 +5857,6 @@
     "mosaics": [
         "GenomicAlignments",
     ],
-    "mosbi": [
-        "QUBIC",
-    ],
     "motifbreakR": [
         "MotifDb",
         "BSgenome",
@@ -6002,7 +5971,6 @@
         "MSstatsPTM",
         "factoextra",
         "ggpubr",
-        "tidyverse",
         "FactoMineR",
         "rstatix",
         "MSstatsTMT",
@@ -6134,7 +6102,6 @@
         "BiocFileCache",
     ],
     "muscat": [
-        "blme",
         "DESeq2",
         "glmmTMB",
         "lmerTest",
@@ -6260,7 +6227,6 @@
     ],
     "nanotatoR": [
         "AnnotationDbi",
-        "tidyverse",
         "org.Hs.eg.db",
     ],
     "NanoTube": [
@@ -6532,7 +6498,6 @@
         "flowClust",
         "fda",
         "fds",
-        "rainbow",
     ],
     "openPrimeR": [
         "Hmisc",
@@ -6545,7 +6510,6 @@
         "Hmisc",
         "AICcmodavg",
         "car",
-        "unmarked",
         "pbkrtest",
     ],
     "oposSOM": [
@@ -6659,9 +6623,6 @@
         "annotate",
         "GO.db",
         "AnnotationDbi",
-    ],
-    "panelcn.mops": [
-        "cn.mops",
     ],
     "PanVizGenerator": [
         "FindMyFriends",
@@ -6889,7 +6850,6 @@
         "BiocFileCache",
         "Hmisc",
         "VariantAnnotation",
-        "rainbow",
     ],
     "pipeComp": [
         "SingleCellExperiment",
@@ -7172,7 +7132,6 @@
         "imp4p",
         "clusterProfiler",
         "AnnotationDbi",
-        "tidyverse",
         "FactoMineR",
         "factoextra",
         "DOSE",
@@ -8167,7 +8126,6 @@
     ],
     "SBGNview": [
         "pathview",
-        "SBGNview.data",
         "AnnotationDbi",
         "org.Hs.eg.db",
     ],
@@ -8595,7 +8553,6 @@
     ],
     "SeqSQC": [
         "ExperimentHub",
-        "rbokeh",
         "AnnotationHub",
         "BiocFileCache",
         "AnnotationDbi",
@@ -8989,7 +8946,6 @@
     ],
     "SpatialDecon": [
         "GeomxTools",
-        "NanoStringNCTools",
         "lmerTest",
     ],
     "SpatialExperiment": [
@@ -9286,7 +9242,6 @@
     ],
     "synergyfinder": [
         "drc",
-        "tidyverse",
         "car",
         "pbkrtest",
     ],
@@ -9573,9 +9528,6 @@
         "fgsea",
         "shinydashboard",
     ],
-    "TPP": [
-        "biobroom",
-    ],
     "trackViewer": [
         "GenomicAlignments",
         "GenomicFeatures",
@@ -9670,7 +9622,6 @@
         "pbkrtest",
         "fda",
         "fds",
-        "rainbow",
     ],
     "TreeSummarizedExperiment": [
         "SingleCellExperiment",
@@ -9821,7 +9772,6 @@
         "geneplotter",
         "fds",
         "biomaRt",
-        "rainbow",
     ],
     "uncoverappLib": [
         "shinyWidgets",
@@ -10092,7 +10042,6 @@
     ],
     "weitrix": [
         "DelayedMatrixStats",
-        "topconfects",
     ],
     "wiggleplotr": [
         "rtracklayer",
@@ -10454,10 +10403,6 @@
     ],
     "fda": [
         "fds",
-        "rainbow",
-    ],
-    "fds": [
-        "rainbow",
     ],
     "FactoMineR": [
         "car",
@@ -10853,9 +10798,6 @@
     ],
     "OMICsPCAdata": [
         "MultiAssayExperiment",
-    ],
-    "AICcmodavg": [
-        "unmarked",
     ],
     "biomartr": [
         "biomaRt",
