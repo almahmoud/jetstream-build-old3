@@ -1,0 +1,92 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"batch/v1","kind":"Job","metadata":{"annotations":{},"name":"bioplex-build","namespace":"newbuild"},"spec":{"backoffLimit":4,"template":{"spec":{"affinity":{"nodeAffinity":{"requiredDuringSchedulingIgnoredDuringExecution":{"nodeSelectorTerms":[{"matchExpressions":[{"key":"kubernetes.io/hostname","operator":"In","values":["am-scalable-k8s-162919","am-scalable-k8s-275c1a","am-scalable-k8s-5872ef","am-scalable-k8s-6509e4","am-scalable-k8s-6effa4","am-scalable-k8s-a34d6c","am-scalable-k8s-ed8ef3"]}]}]}}},"containers":[{"args":["cd /home/rstudio \u0026\u0026 Rscript -e 'p \u003c- .libPaths(); p \u003c- c(p[2], p[-2]); .libPaths(p); if(BiocManager::install(\"BioPlex\", INSTALL_opts = \"--build\", update = FALSE, quiet = TRUE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)' \u0026\u0026 cp -r /usr/local/lib/R/site-library/BioPlex /mnt/libs/R/BioPlex \u0026\u0026 cp BioPlex* /mnt/libs/R/"],"command":["/bin/bash","-c"],"env":[{"name":"R_LIBS_USER","value":"/mnt/libs/R"}],"image":"bioconductor/bioconductor_docker:RELEASE_3_14","name":"build","resources":{"limits":{"cpu":"1700m","memory":"2Gi"},"requests":{"cpu":"250m","memory":"500Mi"}},"volumeMounts":[{"mountPath":"/mnt/libs/R","name":"libraries"}]}],"restartPolicy":"OnFailure","securityContext":{"fsGroup":1000,"runAsUser":1000},"volumes":[{"name":"libraries","persistentVolumeClaim":{"claimName":"rstudio-r-libraries-pvc"}}]}}}}
+  creationTimestamp: "2022-02-18T06:08:03Z"
+  labels:
+    controller-uid: ed9a7e2c-3e0f-4026-b97d-6aeea9f0a901
+    job-name: bioplex-build
+  name: bioplex-build
+  namespace: newbuild
+  resourceVersion: "24162505"
+  selfLink: /apis/batch/v1/namespaces/newbuild/jobs/bioplex-build
+  uid: ed9a7e2c-3e0f-4026-b97d-6aeea9f0a901
+spec:
+  backoffLimit: 4
+  completions: 1
+  parallelism: 1
+  selector:
+    matchLabels:
+      controller-uid: ed9a7e2c-3e0f-4026-b97d-6aeea9f0a901
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        controller-uid: ed9a7e2c-3e0f-4026-b97d-6aeea9f0a901
+        job-name: bioplex-build
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: kubernetes.io/hostname
+                operator: In
+                values:
+                - am-scalable-k8s-162919
+                - am-scalable-k8s-275c1a
+                - am-scalable-k8s-5872ef
+                - am-scalable-k8s-6509e4
+                - am-scalable-k8s-6effa4
+                - am-scalable-k8s-a34d6c
+                - am-scalable-k8s-ed8ef3
+      containers:
+      - args:
+        - cd /home/rstudio && Rscript -e 'p <- .libPaths(); p <- c(p[2], p[-2]); .libPaths(p);
+          if(BiocManager::install("BioPlex", INSTALL_opts = "--build", update = FALSE,
+          quiet = TRUE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages()))
+          q(status = 0) else q(status = 1)' && cp -r /usr/local/lib/R/site-library/BioPlex
+          /mnt/libs/R/BioPlex && cp BioPlex* /mnt/libs/R/
+        command:
+        - /bin/bash
+        - -c
+        env:
+        - name: R_LIBS_USER
+          value: /mnt/libs/R
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        imagePullPolicy: IfNotPresent
+        name: build
+        resources:
+          limits:
+            cpu: 1700m
+            memory: 2Gi
+          requests:
+            cpu: 250m
+            memory: 500Mi
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /mnt/libs/R
+          name: libraries
+      dnsPolicy: ClusterFirst
+      restartPolicy: OnFailure
+      schedulerName: default-scheduler
+      securityContext:
+        fsGroup: 1000
+        runAsUser: 1000
+      terminationGracePeriodSeconds: 30
+      volumes:
+      - name: libraries
+        persistentVolumeClaim:
+          claimName: rstudio-r-libraries-pvc
+status:
+  completionTime: "2022-02-18T07:05:00Z"
+  conditions:
+  - lastProbeTime: "2022-02-18T07:05:00Z"
+    lastTransitionTime: "2022-02-18T07:05:00Z"
+    status: "True"
+    type: Complete
+  startTime: "2022-02-18T06:08:03Z"
+  succeeded: 1
