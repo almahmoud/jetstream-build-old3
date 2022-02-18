@@ -3,28 +3,28 @@ kind: Job
 metadata:
   annotations:
     kubectl.kubernetes.io/last-applied-configuration: |
-      {"apiVersion":"batch/v1","kind":"Job","metadata":{"annotations":{},"name":"baalchip-build","namespace":"newbuild"},"spec":{"backoffLimit":4,"template":{"spec":{"affinity":{"nodeAffinity":{"requiredDuringSchedulingIgnoredDuringExecution":{"nodeSelectorTerms":[{"matchExpressions":[{"key":"kubernetes.io/hostname","operator":"In","values":["am-scalable-k8s-162919","am-scalable-k8s-275c1a","am-scalable-k8s-5872ef","am-scalable-k8s-6509e4","am-scalable-k8s-6effa4","am-scalable-k8s-a34d6c","am-scalable-k8s-ed8ef3"]}]}]}}},"containers":[{"args":["cd /home/rstudio \u0026\u0026 Rscript -e 'p \u003c- .libPaths(); p \u003c- c(p[2], p[-2]); .libPaths(p); if(BiocManager::install(\"BaalChIP\", INSTALL_opts = \"--build\", update = FALSE, quiet = TRUE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)' \u0026\u0026 cp -r /usr/local/lib/R/site-library/BaalChIP /mnt/libs/R/BaalChIP \u0026\u0026 cp BaalChIP* /mnt/libs/R/"],"command":["/bin/bash","-c"],"env":[{"name":"R_LIBS_USER","value":"/mnt/libs/R"}],"image":"bioconductor/bioconductor_docker:RELEASE_3_14","name":"build","resources":{"limits":{"cpu":"1700m","memory":"2Gi"},"requests":{"cpu":"250m","memory":"500Mi"}},"volumeMounts":[{"mountPath":"/mnt/libs/R","name":"libraries"}]}],"restartPolicy":"OnFailure","securityContext":{"fsGroup":1000,"runAsUser":1000},"volumes":[{"name":"libraries","persistentVolumeClaim":{"claimName":"rstudio-r-libraries-pvc"}}]}}}}
-  creationTimestamp: "2022-02-18T06:53:56Z"
+      {"apiVersion":"batch/v1","kind":"Job","metadata":{"annotations":{},"name":"baalchip-build","namespace":"newbuild"},"spec":{"backoffLimit":4,"template":{"spec":{"affinity":{"nodeAffinity":{"requiredDuringSchedulingIgnoredDuringExecution":{"nodeSelectorTerms":[{"matchExpressions":[{"key":"kubernetes.io/hostname","operator":"In","values":["am-scalable-k8s-162919","am-scalable-k8s-275c1a","am-scalable-k8s-5872ef","am-scalable-k8s-6509e4","am-scalable-k8s-6effa4","am-scalable-k8s-a34d6c","am-scalable-k8s-ed8ef3"]}]}]}}},"containers":[{"args":["cd /home/rstudio \u0026\u0026 Rscript -e 'p \u003c- .libPaths(); p \u003c- c(p[2], p[-2]); .libPaths(p); if(BiocManager::install(\"BaalChIP\", INSTALL_opts = \"--build\", update = FALSE, quiet = TRUE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)' \u0026\u0026 cp -r /usr/local/lib/R/site-library/BaalChIP /mnt/libs/R/BaalChIP \u0026\u0026 cp BaalChIP* /mnt/libs/R/"],"command":["/bin/bash","-c"],"env":[{"name":"R_LIBS_USER","value":"/mnt/libs/R"}],"image":"bioconductor/bioconductor_docker:RELEASE_3_14","name":"build","resources":{"requests":{"cpu":"1000m","memory":"1.5Gi"}},"volumeMounts":[{"mountPath":"/mnt/libs/R","name":"libraries"}]}],"restartPolicy":"OnFailure","securityContext":{"fsGroup":1000,"runAsUser":1000},"volumes":[{"name":"libraries","persistentVolumeClaim":{"claimName":"rstudio-r-libraries-pvc"}}]}}}}
+  creationTimestamp: "2022-02-18T18:20:01Z"
   labels:
-    controller-uid: 7a2cd68c-0068-4fa6-9304-ba1a76aea704
+    controller-uid: f0d54ae0-1126-4abb-afbe-0f7c641e3f24
     job-name: baalchip-build
   name: baalchip-build
   namespace: newbuild
-  resourceVersion: "24179033"
+  resourceVersion: "24520541"
   selfLink: /apis/batch/v1/namespaces/newbuild/jobs/baalchip-build
-  uid: 7a2cd68c-0068-4fa6-9304-ba1a76aea704
+  uid: f0d54ae0-1126-4abb-afbe-0f7c641e3f24
 spec:
   backoffLimit: 4
   completions: 1
   parallelism: 1
   selector:
     matchLabels:
-      controller-uid: 7a2cd68c-0068-4fa6-9304-ba1a76aea704
+      controller-uid: f0d54ae0-1126-4abb-afbe-0f7c641e3f24
   template:
     metadata:
       creationTimestamp: null
       labels:
-        controller-uid: 7a2cd68c-0068-4fa6-9304-ba1a76aea704
+        controller-uid: f0d54ae0-1126-4abb-afbe-0f7c641e3f24
         job-name: baalchip-build
     spec:
       affinity:
@@ -59,12 +59,9 @@ spec:
         imagePullPolicy: IfNotPresent
         name: build
         resources:
-          limits:
-            cpu: 1700m
-            memory: 2Gi
           requests:
-            cpu: 250m
-            memory: 500Mi
+            cpu: "1"
+            memory: 1536Mi
         terminationMessagePath: /dev/termination-log
         terminationMessagePolicy: File
         volumeMounts:
@@ -82,11 +79,11 @@ spec:
         persistentVolumeClaim:
           claimName: rstudio-r-libraries-pvc
 status:
+  completionTime: "2022-02-18T18:25:10Z"
   conditions:
-  - lastProbeTime: "2022-02-18T07:31:16Z"
-    lastTransitionTime: "2022-02-18T07:31:16Z"
-    message: Job has reached the specified backoff limit
-    reason: BackoffLimitExceeded
+  - lastProbeTime: "2022-02-18T18:25:10Z"
+    lastTransitionTime: "2022-02-18T18:25:10Z"
     status: "True"
-    type: Failed
-  startTime: "2022-02-18T06:53:56Z"
+    type: Complete
+  startTime: "2022-02-18T18:20:01Z"
+  succeeded: 1

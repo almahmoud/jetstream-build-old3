@@ -1,251 +1,83 @@
 {
-    "adductomicsR": [
-        "mzR",
-    ],
-    "Autotuner": [
-        "MSnbase",
-        "mzR",
-    ],
     "CAMERA": [
         "xcms",
-        "MSnbase",
-        "mzR",
     ],
     "ChAMP": [
         "DMRcate",
-        "IlluminaHumanMethylationEPICanno.ilm10b4.hg19",
-        "missMethyl",
     ],
     "cliqueMS": [
         "xcms",
-        "MSnbase",
-        "mzR",
-    ],
-    "CluMSID": [
-        "mzR",
-        "MSnbase",
-    ],
-    "conumee": [
-        "IlluminaHumanMethylationEPICanno.ilm10b2.hg19",
     ],
     "cosmiq": [
         "xcms",
         "faahKO",
-        "MSnbase",
-        "mzR",
     ],
     "DAPAR": [
-        "MSnbase",
         "DAPARdata",
-        "mzR",
-    ],
-    "DEP": [
-        "MSnbase",
-        "mzR",
-    ],
-    "DIAlignR": [
-        "mzR",
-    ],
-    "DMRcate": [
-        "missMethyl",
-        "IlluminaHumanMethylationEPICanno.ilm10b4.hg19",
     ],
     "flagme": [
         "xcms",
         "CAMERA",
-        "MSnbase",
-        "mzR",
     ],
     "IPO": [
         "xcms",
         "CAMERA",
-        "MSnbase",
-        "mzR",
     ],
     "LOBSTAHS": [
         "xcms",
         "CAMERA",
-        "MSnbase",
-        "mzR",
-    ],
-    "M3Drop": [
-        "reldist",
-        "densEstBayes",
     ],
     "MAIT": [
         "CAMERA",
         "xcms",
-        "MSnbase",
-        "mzR",
-    ],
-    "MEAL": [
-        "missMethyl",
-        "IlluminaHumanMethylationEPICanno.ilm10b4.hg19",
     ],
     "Metab": [
         "xcms",
-        "MSnbase",
-        "mzR",
     ],
     "metaMS": [
         "CAMERA",
         "xcms",
-        "MSnbase",
-        "mzR",
-    ],
-    "MetCirc": [
-        "MSnbase",
-        "mzR",
-    ],
-    "methylCC": [
-        "FlowSorted.Blood.450k",
-    ],
-    "methylGSA": [
-        "missMethyl",
-        "IlluminaHumanMethylationEPICanno.ilm10b4.hg19",
-    ],
-    "missMethyl": [
-        "IlluminaHumanMethylationEPICanno.ilm10b4.hg19",
-    ],
-    "MSGFgui": [
-        "mzR",
-    ],
-    "msmsEDA": [
-        "MSnbase",
-        "mzR",
     ],
     "msmsTests": [
-        "MSnbase",
         "msmsEDA",
-        "mzR",
-    ],
-    "MSnbase": [
-        "mzR",
     ],
     "MSnID": [
-        "MSnbase",
-        "mzR",
         "msmsTests",
         "msmsEDA",
     ],
-    "msPurity": [
-        "mzR",
-    ],
-    "MSstatsQC": [
-        "MSnbase",
-        "mzR",
-    ],
     "MSstatsQCgui": [
         "MSstatsQC",
-        "MSnbase",
-        "mzR",
     ],
     "ncGTW": [
         "xcms",
-        "MSnbase",
-        "mzR",
-    ],
-    "peakPantheR": [
-        "MSnbase",
-        "mzR",
-    ],
-    "POMA": [
-        "MSnbase",
-        "mzR",
-    ],
-    "PrInCE": [
-        "MSnbase",
-        "mzR",
     ],
     "proFIA": [
         "xcms",
-        "MSnbase",
-        "mzR",
-    ],
-    "pRoloc": [
-        "MSnbase",
-        "mzR",
     ],
     "pRolocGUI": [
         "pRoloc",
-        "MSnbase",
-        "mzR",
     ],
     "Prostar": [
         "DAPAR",
         "DAPARdata",
-        "MSnbase",
-        "mzR",
-    ],
-    "ProteomicsAnnotationHubData": [
-        "mzR",
-        "MSnbase",
-    ],
-    "ptairMS": [
-        "MSnbase",
-        "mzR",
-    ],
-    "qPLEXanalyzer": [
-        "MSnbase",
-        "mzR",
     ],
     "RiboCrypt": [
         "ORFik",
     ],
-    "RiboDiPA": [
-        "reldist",
-        "densEstBayes",
-    ],
     "Risa": [
         "xcms",
-        "MSnbase",
-        "mzR",
-    ],
-    "RMassBank": [
-        "mzR",
-        "MSnbase",
     ],
     "RmiR": [
         "RSVGTipsDevice",
     ],
     "scMerge": [
         "M3Drop",
-        "reldist",
-        "densEstBayes",
-    ],
-    "SIMAT": [
-        "mzR",
     ],
     "singleCellTK": [
         "scMerge",
         "M3Drop",
-        "reldist",
-        "densEstBayes",
-    ],
-    "TargetDecoy": [
-        "mzR",
-    ],
-    "topdownr": [
-        "MSnbase",
-        "mzR",
-    ],
-    "xcms": [
-        "MSnbase",
-        "mzR",
-    ],
-    "yamss": [
-        "mzR",
     ],
     "faahKO": [
         "xcms",
-        "MSnbase",
-        "mzR",
-    ],
-    "DAPARdata": [
-        "MSnbase",
-        "mzR",
-    ],
-    "reldist": [
-        "densEstBayes",
     ],
 }
