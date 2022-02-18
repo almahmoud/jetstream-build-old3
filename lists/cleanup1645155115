@@ -1,14 +1,3 @@
-rstudioapi
-shape
-quadprog
-preprocessCore
-pkgconfig
-rappdirs
-rJava
-rjson
-rprojroot
-sets
-timeDate
 additivityTests
 mcbiopi
 msgps
