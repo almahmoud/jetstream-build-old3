@@ -2,9 +2,6 @@
     "a4": [
         "a4Base",
     ],
-    "ADAMgui": [
-        "ggpubr",
-    ],
     "adductomicsR": [
         "mzR",
     ],
@@ -43,7 +40,6 @@
     ],
     "annotatr": [
         "GenomicFeatures",
-        "regioneR",
     ],
     "APAlyzer": [
         "GenomicFeatures",
@@ -56,9 +52,7 @@
         "TxDb.Hsapiens.UCSC.hg19.knownGene",
         "Homo.sapiens",
         "SNPlocs.Hsapiens.dbSNP144.GRCh37",
-        "XtraSNPlocs.Hsapiens.dbSNP144.GRCh37",
         "MafDb.1Kgenomes.phase3.hs37d5",
-        "MafDb.ExAC.r1.0.hs37d5",
         "COSMIC.67",
         "PolyPhen.Hsapiens.dbSNP131",
         "SIFT.Hsapiens.dbSNP137",
@@ -93,7 +87,6 @@
         "ChIPpeakAnno",
         "ensembldb",
         "GenomicFeatures",
-        "regioneR",
     ],
     "Autotuner": [
         "MSnbase",
@@ -143,7 +136,6 @@
     ],
     "BiocOncoTK": [
         "GenomicFeatures",
-        "ggpubr",
     ],
     "biomvRCNS": [
         "Gviz",
@@ -151,9 +143,6 @@
         "ensembldb",
         "biovizBase",
         "VariantAnnotation",
-    ],
-    "BioNERO": [
-        "ggpubr",
     ],
     "BioNetStat": [
         "pathview",
@@ -174,7 +163,6 @@
         "GenomicFeatures",
         "TxDb.Hsapiens.UCSC.hg19.knownGene",
         "TxDb.Mmusculus.UCSC.mm10.knownGene",
-        "regioneR",
     ],
     "BLMA": [
         "PADOG",
@@ -232,7 +220,6 @@
     "cageminer": [
         "ggbio",
         "BioNERO",
-        "ggpubr",
         "biovizBase",
         "VariantAnnotation",
         "GenomicFeatures",
@@ -254,7 +241,6 @@
     "CATALYST": [
         "FlowSOM",
         "CytoML",
-        "ggpubr",
         "openCyto",
     ],
     "cBioPortalData": [
@@ -269,15 +255,10 @@
         "diffcyt",
         "FlowSOM",
         "CytoML",
-        "ggpubr",
         "openCyto",
     ],
     "CeTF": [
         "clusterProfiler",
-        "ggpubr",
-    ],
-    "CexoR": [
-        "genomation",
     ],
     "ChAMP": [
         "minfi",
@@ -324,7 +305,6 @@
     "ChIPpeakAnno": [
         "ensembldb",
         "GenomicFeatures",
-        "regioneR",
     ],
     "ChIPQC": [
         "DiffBind",
@@ -336,7 +316,6 @@
         "TxDb.Rnorvegicus.UCSC.rn4.ensGene",
         "TxDb.Celegans.UCSC.ce6.ensGene",
         "TxDb.Dmelanogaster.UCSC.dm3.ensGene",
-        "GreyListChIP",
     ],
     "ChIPseeker": [
         "GenomicFeatures",
@@ -376,7 +355,6 @@
         "MSnbase",
     ],
     "CNVfilteR": [
-        "regioneR",
         "karyoploteR",
         "CopyNumberPlots",
         "VariantAnnotation",
@@ -387,7 +365,6 @@
     "CNViz": [
         "karyoploteR",
         "CopyNumberPlots",
-        "regioneR",
         "VariantAnnotation",
         "biovizBase",
         "GenomicFeatures",
@@ -425,7 +402,6 @@
     "conclus": [
         "factoextra",
         "clusterProfiler",
-        "ggpubr",
     ],
     "consensusDE": [
         "EDASeq",
@@ -451,7 +427,6 @@
     ],
     "CopyNumberPlots": [
         "karyoploteR",
-        "regioneR",
         "VariantAnnotation",
         "biovizBase",
         "GenomicFeatures",
@@ -472,7 +447,6 @@
         "GenomicFeatures",
         "ChIPpeakAnno",
         "ensembldb",
-        "regioneR",
     ],
     "CSSQ": [
         "GenomicFeatures",
@@ -493,13 +467,11 @@
         "diffcyt",
         "factoextra",
         "FlowSOM",
-        "ggpubr",
         "CytoML",
         "openCyto",
     ],
     "CytoGLMM": [
         "factoextra",
-        "ggpubr",
     ],
     "CytoML": [
         "openCyto",
@@ -507,7 +479,6 @@
     "CytoTree": [
         "FlowSOM",
         "CytoML",
-        "ggpubr",
         "openCyto",
     ],
     "DAMEfinder": [
@@ -521,16 +492,13 @@
     ],
     "DAPAR": [
         "MSnbase",
-        "imp4p",
         "DAPARdata",
         "clusterProfiler",
         "factoextra",
-        "ggpubr",
         "mzR",
     ],
     "dasper": [
         "GenomicFeatures",
-        "ggpubr",
         "plyranges",
     ],
     "debrowser": [
@@ -578,18 +546,13 @@
         "ChIPpeakAnno",
         "ensembldb",
         "GenomicFeatures",
-        "regioneR",
     ],
     "DIAlignR": [
         "mzR",
     ],
-    "DiffBind": [
-        "GreyListChIP",
-    ],
     "diffcyt": [
         "FlowSOM",
         "CytoML",
-        "ggpubr",
         "openCyto",
     ],
     "diffUTR": [
@@ -625,7 +588,6 @@
         "bumphunter",
         "annotatr",
         "GenomicFeatures",
-        "regioneR",
     ],
     "DominoEffect": [
         "VariantAnnotation",
@@ -655,7 +617,6 @@
     "ELMER": [
         "GenomicFeatures",
         "Gviz",
-        "ggpubr",
         "ensembldb",
         "biovizBase",
         "VariantAnnotation",
@@ -680,10 +641,8 @@
         "pathview",
     ],
     "enrichTF": [
-        "pipeFrame",
         "motifmatchr",
         "TFBSTools",
-        "ggpubr",
         "clusterProfiler",
         "CNEr",
     ],
@@ -697,13 +656,6 @@
     "epialleleR": [
         "VariantAnnotation",
         "GenomicFeatures",
-    ],
-    "epidecodeR": [
-        "ggpubr",
-    ],
-    "epigraHMM": [
-        "ggpubr",
-        "GreyListChIP",
     ],
     "epihet": [
         "ReactomePA",
@@ -746,7 +698,6 @@
         "TxDb.Hsapiens.UCSC.hg19.knownGene",
     ],
     "esATAC": [
-        "pipeFrame",
         "ChIPseeker",
         "clusterProfiler",
         "GenomicFeatures",
@@ -767,14 +718,8 @@
         "GenomicFeatures",
         "OrganismDbi",
     ],
-    "ExperimentSubset": [
-        "SpatialExperiment",
-    ],
     "famat": [
         "clusterProfiler",
-    ],
-    "fCCAC": [
-        "genomation",
     ],
     "fcoex": [
         "clusterProfiler",
@@ -803,7 +748,6 @@
     ],
     "FlowSOM": [
         "CytoML",
-        "ggpubr",
         "openCyto",
     ],
     "FRASER": [
@@ -835,14 +779,10 @@
         "clusterProfiler",
         "survminer",
         "pathview",
-        "ggpubr",
     ],
     "genbankr": [
         "GenomicFeatures",
         "VariantAnnotation",
-    ],
-    "GeneAccord": [
-        "ggpubr",
     ],
     "geneAttribution": [
         "GenomicFeatures",
@@ -873,9 +813,6 @@
         "OrganismDbi",
         "ensembldb",
     ],
-    "GenomicSuperSignature": [
-        "ggpubr",
-    ],
     "genotypeeval": [
         "VariantAnnotation",
         "GenomicFeatures",
@@ -886,7 +823,6 @@
     ],
     "GEOexplorer": [
         "factoextra",
-        "ggpubr",
     ],
     "ggbio": [
         "biovizBase",
@@ -895,12 +831,8 @@
         "OrganismDbi",
         "ensembldb",
     ],
-    "ggspavis": [
-        "SpatialExperiment",
-    ],
     "glmSparseNet": [
         "survminer",
-        "ggpubr",
     ],
     "gmapR": [
         "GenomicFeatures",
@@ -935,7 +867,6 @@
         "ChIPpeakAnno",
         "ensembldb",
         "GenomicFeatures",
-        "regioneR",
     ],
     "Guitar": [
         "GenomicFeatures",
@@ -1010,9 +941,6 @@
         "GenomicFeatures",
         "IVAS",
     ],
-    "imcRtools": [
-        "SpatialExperiment",
-    ],
     "InPAS": [
         "cleanUpdTSeq",
         "plyranges",
@@ -1022,9 +950,6 @@
     "INSPEcT": [
         "GenomicFeatures",
         "TxDb.Mmusculus.UCSC.mm9.knownGene",
-    ],
-    "InTAD": [
-        "ggpubr",
     ],
     "intansv": [
         "ggbio",
@@ -1036,13 +961,11 @@
     ],
     "InterCellar": [
         "factoextra",
-        "ggpubr",
     ],
     "IntEREst": [
         "GenomicFeatures",
     ],
     "iPath": [
-        "ggpubr",
         "survminer",
     ],
     "IPO": [
@@ -1053,7 +976,6 @@
     ],
     "IRISFGM": [
         "clusterProfiler",
-        "ggpubr",
     ],
     "IsoformSwitchAnalyzeR": [
         "tximeta",
@@ -1065,10 +987,8 @@
     ],
     "ivygapSE": [
         "survminer",
-        "ggpubr",
     ],
     "karyoploteR": [
-        "regioneR",
         "biovizBase",
         "GenomicFeatures",
         "VariantAnnotation",
@@ -1089,9 +1009,6 @@
         "EnsDb.Hsapiens.v75",
         "GenomicFiles",
         "GenomicFeatures",
-    ],
-    "LinkHD": [
-        "ggpubr",
     ],
     "LOBSTAHS": [
         "xcms",
@@ -1193,7 +1110,6 @@
     ],
     "MetaboSignal": [
         "EnsDb.Hsapiens.v75",
-        "MWASTools",
         "mygene",
         "ensembldb",
         "GenomicFeatures",
@@ -1201,7 +1117,6 @@
     "MetaCyto": [
         "FlowSOM",
         "CytoML",
-        "ggpubr",
         "openCyto",
     ],
     "metagene": [
@@ -1240,9 +1155,6 @@
     "methInheritSim": [
         "methylKit",
     ],
-    "MethReg": [
-        "ggpubr",
-    ],
     "MethylAid": [
         "minfi",
         "bumphunter",
@@ -1259,7 +1171,6 @@
     ],
     "methylclock": [
         "methylclockData",
-        "ggpubr",
         "minfi",
         "ExperimentHubData",
         "bumphunter",
@@ -1377,9 +1288,6 @@
         "TFBSTools",
         "CNEr",
     ],
-    "MQmetrics": [
-        "ggpubr",
-    ],
     "msgbsR": [
         "easyRNASeq",
         "GenomicFeatures",
@@ -1415,7 +1323,6 @@
     ],
     "MSstatsLiP": [
         "factoextra",
-        "ggpubr",
     ],
     "MSstatsQC": [
         "MSnbase",
@@ -1431,7 +1338,6 @@
         "GenomicFeatures",
         "karyoploteR",
         "plyranges",
-        "regioneR",
         "biovizBase",
         "VariantAnnotation",
         "ensembldb",
@@ -1454,7 +1360,6 @@
         "deconstructSigs",
         "decompTumor2Sig",
         "factoextra",
-        "ggpubr",
     ],
     "MutationalPatterns": [
         "VariantAnnotation",
@@ -1474,7 +1379,6 @@
         "GenomicFeatures",
         "Gviz",
         "ensembldb",
-        "regioneR",
         "biovizBase",
         "VariantAnnotation",
     ],
@@ -1501,7 +1405,6 @@
     "ODER": [
         "dasper",
         "derfinder",
-        "ggpubr",
         "GenomicFeatures",
         "plyranges",
         "bumphunter",
@@ -1514,7 +1417,6 @@
     "OMICsPCA": [
         "HelloRanges",
         "factoextra",
-        "ggpubr",
         "GenomicFeatures",
         "VariantAnnotation",
     ],
@@ -1530,9 +1432,6 @@
     "OrganismDbi": [
         "GenomicFeatures",
     ],
-    "orthogene": [
-        "ggpubr",
-    ],
     "OUTRIDER": [
         "GenomicFeatures",
     ],
@@ -1547,7 +1446,6 @@
     ],
     "PDATK": [
         "survminer",
-        "ggpubr",
     ],
     "peakPantheR": [
         "MSnbase",
@@ -1558,9 +1456,6 @@
     ],
     "phenoTest": [
         "hgu133a.db",
-    ],
-    "PhosR": [
-        "ggpubr",
     ],
     "Pigengene": [
         "clusterProfiler",
@@ -1576,9 +1471,6 @@
     "plotgardener": [
         "plyranges",
     ],
-    "plotGrouper": [
-        "ggpubr",
-    ],
     "POMA": [
         "MSnbase",
         "mzR",
@@ -1592,7 +1484,6 @@
     ],
     "primirTSS": [
         "BSgenome.Hsapiens.UCSC.hg38",
-        "phastCons100way.UCSC.hg38",
         "Gviz",
         "TFBSTools",
         "GenomicFeatures",
@@ -1617,7 +1508,6 @@
         "mzR",
     ],
     "profileplyr": [
-        "soGGi",
         "ChIPseeker",
         "GenomicFeatures",
         "TxDb.Hsapiens.UCSC.hg19.knownGene",
@@ -1638,10 +1528,8 @@
         "DAPAR",
         "DAPARdata",
         "MSnbase",
-        "imp4p",
         "clusterProfiler",
         "factoextra",
-        "ggpubr",
         "mzR",
     ],
     "ProteoDisco": [
@@ -1667,7 +1555,6 @@
         "BgeeDB",
     ],
     "ptairMS": [
-        "ggpubr",
         "MSnbase",
         "mzR",
     ],
@@ -1727,7 +1614,6 @@
     "RCAS": [
         "BSgenome.Hsapiens.UCSC.hg19",
         "GenomicFeatures",
-        "genomation",
     ],
     "rCGH": [
         "TxDb.Hsapiens.UCSC.hg18.knownGene",
@@ -1751,11 +1637,9 @@
         "GenomicFeatures",
     ],
     "REDseq": [
-        "BSgenome.Celegans.UCSC.ce2",
         "ChIPpeakAnno",
         "ensembldb",
         "GenomicFeatures",
-        "regioneR",
     ],
     "regionReport": [
         "derfinder",
@@ -1817,7 +1701,6 @@
     ],
     "RIPAT": [
         "karyoploteR",
-        "regioneR",
         "biovizBase",
         "GenomicFeatures",
         "VariantAnnotation",
@@ -1835,7 +1718,6 @@
         "consensusSeekeR",
     ],
     "RLSeq": [
-        "regioneR",
         "valr",
         "GenomicFeatures",
     ],
@@ -1899,7 +1781,6 @@
         "factoextra",
         "systemPipeRdata",
         "clusterProfiler",
-        "ggpubr",
         "GenomicFeatures",
     ],
     "RnBeads": [
@@ -1919,7 +1800,6 @@
     ],
     "RTCGA": [
         "survminer",
-        "ggpubr",
     ],
     "RTCGAToolbox": [
         "TCGAutils",
@@ -1947,7 +1827,6 @@
     "scmeth": [
         "annotatr",
         "GenomicFeatures",
-        "regioneR",
     ],
     "scone": [
         "RUVSeq",
@@ -2077,9 +1956,6 @@
         "OrganismDbi",
         "ensembldb",
     ],
-    "spatialDE": [
-        "SpatialExperiment",
-    ],
     "spatialHeatmap": [
         "distinct",
     ],
@@ -2137,7 +2013,6 @@
     ],
     "survtype": [
         "survminer",
-        "ggpubr",
     ],
     "svaNUMT": [
         "VariantAnnotation",
@@ -2149,14 +2024,10 @@
         "VariantAnnotation",
         "GenomicFeatures",
     ],
-    "TADCompare": [
-        "ggpubr",
-    ],
     "TAPseq": [
         "GenomicFeatures",
     ],
     "TargetDecoy": [
-        "ggpubr",
         "mzR",
     ],
     "TCGAbiolinksGUI": [
@@ -2165,7 +2036,6 @@
         "clusterProfiler",
         "GenomicFeatures",
         "Gviz",
-        "ggpubr",
         "ensembldb",
         "biovizBase",
         "VariantAnnotation",
@@ -2190,9 +2060,6 @@
         "VariantAnnotation",
         "GenomicFeatures",
     ],
-    "TNBC.CMS": [
-        "ggpubr",
-    ],
     "topdownr": [
         "MSnbase",
         "mzR",
@@ -2214,7 +2081,6 @@
         "diffcyt",
         "FlowSOM",
         "CytoML",
-        "ggpubr",
         "openCyto",
     ],
     "trena": [
@@ -2246,7 +2112,6 @@
         "Organism.dplyr",
     ],
     "UMI4Cats": [
-        "regioneR",
         "TxDb.Hsapiens.UCSC.hg19.knownGene",
         "GenomicFeatures",
     ],
@@ -2267,9 +2132,6 @@
     "Uniquorn": [
         "VariantAnnotation",
         "GenomicFeatures",
-    ],
-    "VAExprs": [
-        "DeepPINCS",
     ],
     "VanillaICE": [
         "BSgenome.Hsapiens.UCSC.hg18",
@@ -2307,8 +2169,6 @@
         "DiffBind",
         "ensembldb",
         "GenomicFeatures",
-        "regioneR",
-        "GreyListChIP",
     ],
     "wateRmelon": [
         "methylumi",
@@ -2427,9 +2287,6 @@
     "TxDb.Dmelanogaster.UCSC.dm3.ensGene": [
         "GenomicFeatures",
     ],
-    "factoextra": [
-        "ggpubr",
-    ],
     "EnsDb.Hsapiens.v86": [
         "ensembldb",
         "GenomicFeatures",
@@ -2447,9 +2304,6 @@
     "DAPARdata": [
         "MSnbase",
         "mzR",
-    ],
-    "survminer": [
-        "ggpubr",
     ],
     "TxDb.Hsapiens.UCSC.hg38.knownGene": [
         "GenomicFeatures",
