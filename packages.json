@@ -6,9 +6,6 @@
     "a4Base": [
         "annaffy",
     ],
-    "ABAEnrichment": [
-        "GOfuncR",
-    ],
     "ADAMgui": [
         "ggpubr",
         "rstatix",
@@ -143,9 +140,6 @@
         "BSgenome",
         "rtracklayer",
     ],
-    "attract": [
-        "reactome.db",
-    ],
     "Autotuner": [
         "MSnbase",
         "mzR",
@@ -227,7 +221,6 @@
         "radiant.data",
         "DOSE",
         "clusterProfiler",
-        "reactome.db",
         "ReactomePA",
         "enrichplot",
         "GOSemSim",
@@ -459,9 +452,6 @@
         "rtracklayer",
         "genomation",
         "BSgenome",
-    ],
-    "cghMCR": [
-        "CNTools",
     ],
     "ChAMP": [
         "minfi",
@@ -924,13 +914,9 @@
     ],
     "decoupleR": [
         "GSVA",
-        "AUCell",
     ],
     "DeepBlueR": [
         "rtracklayer",
-    ],
-    "DeepPINCS": [
-        "ttgsea",
     ],
     "deepSNV": [
         "VariantAnnotation",
@@ -1210,7 +1196,6 @@
         "ReactomePA",
         "DOSE",
         "enrichplot",
-        "reactome.db",
         "GOSemSim",
     ],
     "EpiTxDb": [
@@ -1301,7 +1286,6 @@
         "DropletUtils",
     ],
     "famat": [
-        "reactome.db",
         "clusterProfiler",
         "DOSE",
         "enrichplot",
@@ -1866,7 +1850,6 @@
         "densEstBayes",
     ],
     "m6Aboost": [
-        "adabag",
         "rtracklayer",
         "BSgenome",
     ],
@@ -1903,9 +1886,6 @@
         "xcms",
         "MSnbase",
         "mzR",
-    ],
-    "mAPKL": [
-        "reactome.db",
     ],
     "maPredictDSC": [
         "hgu133plus2.db",
@@ -2096,7 +2076,6 @@
     "methylGSA": [
         "clusterProfiler",
         "missMethyl",
-        "reactome.db",
         "IlluminaHumanMethylation450kanno.ilmn12.hg19",
         "IlluminaHumanMethylationEPICanno.ilm10b4.hg19",
         "DOSE",
@@ -2204,7 +2183,6 @@
         "DOSE",
         "enrichplot",
         "GOSemSim",
-        "reactome.db",
     ],
     "miRspongeR": [
         "clusterProfiler",
@@ -2212,7 +2190,6 @@
         "DOSE",
         "enrichplot",
         "GOSemSim",
-        "reactome.db",
     ],
     "missMethyl": [
         "IlluminaHumanMethylation450kanno.ilmn12.hg19",
@@ -2371,7 +2348,6 @@
         "enrichplot",
         "DOSE",
         "GOSemSim",
-        "reactome.db",
     ],
     "mumosa": [
         "scran",
@@ -2460,9 +2436,6 @@
         "enrichplot",
         "GOSemSim",
     ],
-    "netOmics": [
-        "RandomWalkRestartMH",
-    ],
     "NetSAM": [
         "WGCNA",
     ],
@@ -2471,7 +2444,6 @@
         "clusterExperiment",
     ],
     "NoRCE": [
-        "reactome.db",
         "rtracklayer",
         "GenomicFeatures",
     ],
@@ -2583,7 +2555,6 @@
         "topGO",
     ],
     "PDATK": [
-        "CoreGx",
         "survminer",
         "genefu",
         "ggpubr",
@@ -2595,9 +2566,6 @@
     "peakPantheR": [
         "MSnbase",
         "mzR",
-    ],
-    "PECA": [
-        "aroma.affymetrix",
     ],
     "peco": [
         "scater",
@@ -2611,9 +2579,6 @@
         "DOSE",
         "enrichplot",
         "GOSemSim",
-    ],
-    "PharmacoGx": [
-        "CoreGx",
     ],
     "phemd": [
         "destiny",
@@ -2637,7 +2602,6 @@
         "DOSE",
         "enrichplot",
         "GOSemSim",
-        "reactome.db",
     ],
     "PING": [
         "PICS",
@@ -2675,9 +2639,6 @@
     "POMA": [
         "MSnbase",
         "mzR",
-    ],
-    "ppcseq": [
-        "tidybayes",
     ],
     "pram": [
         "rtracklayer",
@@ -2869,9 +2830,6 @@
         "rtracklayer",
         "GenomicFeatures",
     ],
-    "RadioGx": [
-        "CoreGx",
-    ],
     "RareVariantVis": [
         "VariantAnnotation",
         "GenomicFeatures",
@@ -2899,16 +2857,12 @@
         "GenomicFeatures",
         "rtracklayer",
     ],
-    "RcisTarget": [
-        "AUCell",
-    ],
     "Rcpi": [
         "GOSemSim",
     ],
     "ReactomePA": [
         "DOSE",
         "enrichplot",
-        "reactome.db",
         "GOSemSim",
     ],
     "recount": [
@@ -3292,7 +3246,6 @@
         "ensembldb",
     ],
     "scTensor": [
-        "reactome.db",
         "meshr",
         "ReactomePA",
         "DOSE",
@@ -3363,7 +3316,6 @@
         "rtracklayer",
     ],
     "signatureSearch": [
-        "reactome.db",
         "clusterProfiler",
         "DOSE",
         "enrichplot",
@@ -3443,7 +3395,6 @@
         "apComplex",
     ],
     "SMITE": [
-        "reactome.db",
         "goseq",
         "geneLenDataBase",
         "rtracklayer",
@@ -3661,7 +3612,6 @@
         "GOSemSim",
     ],
     "TIN": [
-        "aroma.affymetrix",
         "WGCNA",
     ],
     "TitanCNA": [
@@ -3684,9 +3634,6 @@
     "topdownr": [
         "MSnbase",
         "mzR",
-    ],
-    "ToxicoGx": [
-        "CoreGx",
     ],
     "trackViewer": [
         "GenomicFeatures",
@@ -3808,7 +3755,6 @@
     "VAExprs": [
         "scater",
         "DeepPINCS",
-        "ttgsea",
     ],
     "VanillaICE": [
         "crlmm",
@@ -3912,7 +3858,6 @@
     ],
     "Xeva": [
         "PharmacoGx",
-        "CoreGx",
     ],
     "XNAString": [
         "BSgenome",
