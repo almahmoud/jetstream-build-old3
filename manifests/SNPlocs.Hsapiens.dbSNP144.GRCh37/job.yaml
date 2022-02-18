@@ -1,0 +1,94 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"batch/v1","kind":"Job","metadata":{"annotations":{},"name":"snplocshsapiensdbsnp144grch37-build","namespace":"newbuild"},"spec":{"backoffLimit":4,"template":{"spec":{"affinity":{"nodeAffinity":{"requiredDuringSchedulingIgnoredDuringExecution":{"nodeSelectorTerms":[{"matchExpressions":[{"key":"kubernetes.io/hostname","operator":"In","values":["am-scalable-k8s-162919","am-scalable-k8s-275c1a","am-scalable-k8s-5872ef","am-scalable-k8s-6509e4","am-scalable-k8s-6effa4","am-scalable-k8s-a34d6c","am-scalable-k8s-ed8ef3"]}]}]}}},"containers":[{"args":["cd /home/rstudio \u0026\u0026 Rscript -e 'p \u003c- .libPaths(); p \u003c- c(p[2], p[-2]); .libPaths(p); if(BiocManager::install(\"SNPlocs.Hsapiens.dbSNP144.GRCh37\", INSTALL_opts = \"--build\", update = FALSE, quiet = TRUE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)' \u0026\u0026 cp -r /usr/local/lib/R/site-library/SNPlocs.Hsapiens.dbSNP144.GRCh37 /mnt/libs/R/SNPlocs.Hsapiens.dbSNP144.GRCh37 \u0026\u0026 cp SNPlocs.Hsapiens.dbSNP144.GRCh37* /mnt/libs/R/"],"command":["/bin/bash","-c"],"env":[{"name":"R_LIBS_USER","value":"/mnt/libs/R"}],"image":"bioconductor/bioconductor_docker:RELEASE_3_14","name":"build","resources":{"limits":{"cpu":"1700m","memory":"2Gi"},"requests":{"cpu":"250m","memory":"500Mi"}},"volumeMounts":[{"mountPath":"/mnt/libs/R","name":"libraries"}]}],"restartPolicy":"OnFailure","securityContext":{"fsGroup":1000,"runAsUser":1000},"volumes":[{"name":"libraries","persistentVolumeClaim":{"claimName":"rstudio-r-libraries-pvc"}}]}}}}
+  creationTimestamp: "2022-02-18T07:40:27Z"
+  labels:
+    controller-uid: 4c38d69c-b290-4053-8ef4-d9a456690126
+    job-name: snplocshsapiensdbsnp144grch37-build
+  name: snplocshsapiensdbsnp144grch37-build
+  namespace: newbuild
+  resourceVersion: "24196827"
+  selfLink: /apis/batch/v1/namespaces/newbuild/jobs/snplocshsapiensdbsnp144grch37-build
+  uid: 4c38d69c-b290-4053-8ef4-d9a456690126
+spec:
+  backoffLimit: 4
+  completions: 1
+  parallelism: 1
+  selector:
+    matchLabels:
+      controller-uid: 4c38d69c-b290-4053-8ef4-d9a456690126
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        controller-uid: 4c38d69c-b290-4053-8ef4-d9a456690126
+        job-name: snplocshsapiensdbsnp144grch37-build
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: kubernetes.io/hostname
+                operator: In
+                values:
+                - am-scalable-k8s-162919
+                - am-scalable-k8s-275c1a
+                - am-scalable-k8s-5872ef
+                - am-scalable-k8s-6509e4
+                - am-scalable-k8s-6effa4
+                - am-scalable-k8s-a34d6c
+                - am-scalable-k8s-ed8ef3
+      containers:
+      - args:
+        - cd /home/rstudio && Rscript -e 'p <- .libPaths(); p <- c(p[2], p[-2]); .libPaths(p);
+          if(BiocManager::install("SNPlocs.Hsapiens.dbSNP144.GRCh37", INSTALL_opts
+          = "--build", update = FALSE, quiet = TRUE, force = TRUE, keep_outputs =
+          TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status =
+          1)' && cp -r /usr/local/lib/R/site-library/SNPlocs.Hsapiens.dbSNP144.GRCh37
+          /mnt/libs/R/SNPlocs.Hsapiens.dbSNP144.GRCh37 && cp SNPlocs.Hsapiens.dbSNP144.GRCh37*
+          /mnt/libs/R/
+        command:
+        - /bin/bash
+        - -c
+        env:
+        - name: R_LIBS_USER
+          value: /mnt/libs/R
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        imagePullPolicy: IfNotPresent
+        name: build
+        resources:
+          limits:
+            cpu: 1700m
+            memory: 2Gi
+          requests:
+            cpu: 250m
+            memory: 500Mi
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /mnt/libs/R
+          name: libraries
+      dnsPolicy: ClusterFirst
+      restartPolicy: OnFailure
+      schedulerName: default-scheduler
+      securityContext:
+        fsGroup: 1000
+        runAsUser: 1000
+      terminationGracePeriodSeconds: 30
+      volumes:
+      - name: libraries
+        persistentVolumeClaim:
+          claimName: rstudio-r-libraries-pvc
+status:
+  completionTime: "2022-02-18T07:58:30Z"
+  conditions:
+  - lastProbeTime: "2022-02-18T07:58:30Z"
+    lastTransitionTime: "2022-02-18T07:58:30Z"
+    status: "True"
+    type: Complete
+  startTime: "2022-02-18T07:40:27Z"
+  succeeded: 1

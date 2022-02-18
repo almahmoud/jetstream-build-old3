@@ -51,8 +51,6 @@
         "BSgenome.Hsapiens.UCSC.hg19",
         "TxDb.Hsapiens.UCSC.hg19.knownGene",
         "Homo.sapiens",
-        "SNPlocs.Hsapiens.dbSNP144.GRCh37",
-        "MafDb.1Kgenomes.phase3.hs37d5",
         "COSMIC.67",
         "PolyPhen.Hsapiens.dbSNP131",
         "SIFT.Hsapiens.dbSNP137",
@@ -130,10 +128,6 @@
         "IlluminaHumanMethylation450kanno.ilmn12.hg19",
         "TxDb.Hsapiens.UCSC.hg19.knownGene",
     ],
-    "bioCancer": [
-        "clusterProfiler",
-        "ReactomePA",
-    ],
     "BiocOncoTK": [
         "GenomicFeatures",
     ],
@@ -143,9 +137,6 @@
         "ensembldb",
         "biovizBase",
         "VariantAnnotation",
-    ],
-    "BioNetStat": [
-        "pathview",
     ],
     "biovizBase": [
         "GenomicFeatures",
@@ -166,8 +157,6 @@
     ],
     "BLMA": [
         "PADOG",
-        "hgu133plus2.db",
-        "hgu133a.db",
     ],
     "brainflowprobes": [
         "BSgenome.Hsapiens.UCSC.hg19",
@@ -233,7 +222,6 @@
     ],
     "canceR": [
         "phenoTest",
-        "hgu133a.db",
     ],
     "casper": [
         "GenomicFeatures",
@@ -248,17 +236,11 @@
         "TCGAutils",
         "GenomicFeatures",
     ],
-    "CEMiTool": [
-        "clusterProfiler",
-    ],
     "censcyt": [
         "diffcyt",
         "FlowSOM",
         "CytoML",
         "openCyto",
-    ],
-    "CeTF": [
-        "clusterProfiler",
     ],
     "ChAMP": [
         "minfi",
@@ -293,9 +275,6 @@
     "ChIPComp": [
         "BSgenome.Hsapiens.UCSC.hg19",
     ],
-    "chipenrich": [
-        "chipenrich.data",
-    ],
     "ChIPexoQual": [
         "biovizBase",
         "GenomicFeatures",
@@ -323,7 +302,6 @@
     ],
     "chromVAR": [
         "TFBSTools",
-        "CNEr",
     ],
     "cicero": [
         "Gviz",
@@ -374,9 +352,6 @@
         "VariantAnnotation",
         "GenomicFeatures",
     ],
-    "COCOA": [
-        "MIRA",
-    ],
     "CODEX": [
         "BSgenome.Hsapiens.UCSC.hg19",
     ],
@@ -401,7 +376,6 @@
     ],
     "conclus": [
         "factoextra",
-        "clusterProfiler",
     ],
     "consensusDE": [
         "EDASeq",
@@ -493,17 +467,12 @@
     "DAPAR": [
         "MSnbase",
         "DAPARdata",
-        "clusterProfiler",
         "factoextra",
         "mzR",
     ],
     "dasper": [
         "GenomicFeatures",
         "plyranges",
-    ],
-    "debrowser": [
-        "clusterProfiler",
-        "pathview",
     ],
     "decompTumor2Sig": [
         "GenomicFeatures",
@@ -597,22 +566,11 @@
         "ensembldb",
         "GenomicFeatures",
     ],
-    "DrugVsDisease": [
-        "hgu133a.db",
-        "hgu133a2.db",
-        "hgu133plus2.db",
-    ],
     "EDASeq": [
         "GenomicFeatures",
     ],
-    "eegc": [
-        "clusterProfiler",
-    ],
     "EGSEA": [
-        "pathview",
         "PADOG",
-        "hgu133plus2.db",
-        "hgu133a.db",
     ],
     "ELMER": [
         "GenomicFeatures",
@@ -624,7 +582,6 @@
     "enhancerHomologSearch": [
         "motifmatchr",
         "TFBSTools",
-        "CNEr",
     ],
     "EnMCB": [
         "IlluminaHumanMethylation450kanno.ilmn12.hg19",
@@ -637,14 +594,9 @@
         "bumphunter",
         "GenomicFeatures",
     ],
-    "EnrichmentBrowser": [
-        "pathview",
-    ],
     "enrichTF": [
         "motifmatchr",
         "TFBSTools",
-        "clusterProfiler",
-        "CNEr",
     ],
     "ensembldb": [
         "GenomicFeatures",
@@ -656,9 +608,6 @@
     "epialleleR": [
         "VariantAnnotation",
         "GenomicFeatures",
-    ],
-    "epihet": [
-        "ReactomePA",
     ],
     "EpiTxDb": [
         "GenomicFeatures",
@@ -699,12 +648,10 @@
     ],
     "esATAC": [
         "ChIPseeker",
-        "clusterProfiler",
         "GenomicFeatures",
         "TFBSTools",
         "motifmatchr",
         "TxDb.Hsapiens.UCSC.hg19.knownGene",
-        "CNEr",
     ],
     "EventPointer": [
         "SGSeq",
@@ -717,12 +664,6 @@
         "AnnotationHubData",
         "GenomicFeatures",
         "OrganismDbi",
-    ],
-    "famat": [
-        "clusterProfiler",
-    ],
-    "fcoex": [
-        "clusterProfiler",
     ],
     "fcScan": [
         "VariantAnnotation",
@@ -776,9 +717,7 @@
         "GenomicFeatures",
     ],
     "GDCRNATools": [
-        "clusterProfiler",
         "survminer",
-        "pathview",
     ],
     "genbankr": [
         "GenomicFeatures",
@@ -854,7 +793,6 @@
     ],
     "GSEABenchmarkeR": [
         "EnrichmentBrowser",
-        "pathview",
     ],
     "GSReg": [
         "Homo.sapiens",
@@ -974,9 +912,6 @@
         "MSnbase",
         "mzR",
     ],
-    "IRISFGM": [
-        "clusterProfiler",
-    ],
     "IsoformSwitchAnalyzeR": [
         "tximeta",
         "GenomicFeatures",
@@ -993,12 +928,6 @@
         "GenomicFeatures",
         "VariantAnnotation",
         "ensembldb",
-    ],
-    "KEGGlincs": [
-        "hgu133a.db",
-    ],
-    "keggorthology": [
-        "hgu95av2.db",
     ],
     "kissDE": [
         "DSS",
@@ -1042,17 +971,11 @@
         "TxDb.Hsapiens.UCSC.hg19.knownGene",
         "bumphunter",
     ],
-    "MAGeCKFlute": [
-        "clusterProfiler",
-    ],
     "MAIT": [
         "CAMERA",
         "xcms",
         "MSnbase",
         "mzR",
-    ],
-    "maPredictDSC": [
-        "hgu133plus2.db",
     ],
     "maser": [
         "Gviz",
@@ -1063,7 +986,6 @@
     ],
     "MatrixRider": [
         "TFBSTools",
-        "CNEr",
     ],
     "mCSEA": [
         "Homo.sapiens",
@@ -1179,7 +1101,6 @@
         "OrganismDbi",
     ],
     "methylGSA": [
-        "clusterProfiler",
         "missMethyl",
         "IlluminaHumanMethylation450kanno.ilmn12.hg19",
         "IlluminaHumanMethylationEPICanno.ilm10b4.hg19",
@@ -1215,12 +1136,8 @@
     "miaViz": [
         "mia",
     ],
-    "MicrobiomeProfiler": [
-        "clusterProfiler",
-    ],
     "MineICA": [
         "lumi",
-        "lumiHumanAll.db",
         "methylumi",
         "GenomicFeatures",
         "FDb.InfiniumMethylation.hg19",
@@ -1238,12 +1155,6 @@
     ],
     "miRSM": [
         "miRspongeR",
-        "clusterProfiler",
-        "ReactomePA",
-    ],
-    "miRspongeR": [
-        "clusterProfiler",
-        "ReactomePA",
     ],
     "missMethyl": [
         "IlluminaHumanMethylation450kanno.ilmn12.hg19",
@@ -1271,10 +1182,6 @@
     ],
     "monaLisa": [
         "TFBSTools",
-        "CNEr",
-    ],
-    "MoonlightR": [
-        "clusterProfiler",
     ],
     "motifbreakR": [
         "MotifDb",
@@ -1286,10 +1193,8 @@
     ],
     "motifmatchr": [
         "TFBSTools",
-        "CNEr",
     ],
     "msgbsR": [
-        "easyRNASeq",
         "GenomicFeatures",
         "ggbio",
         "biovizBase",
@@ -1342,10 +1247,6 @@
         "VariantAnnotation",
         "ensembldb",
     ],
-    "multiSight": [
-        "clusterProfiler",
-        "ReactomePA",
-    ],
     "MungeSumstats": [
         "VariantAnnotation",
         "GenomicFeatures",
@@ -1393,9 +1294,6 @@
         "TxDb.Hsapiens.UCSC.hg38.knownGene",
         "GenomicFeatures",
     ],
-    "netboxr": [
-        "clusterProfiler",
-    ],
     "NoRCE": [
         "GenomicFeatures",
     ],
@@ -1435,14 +1333,9 @@
     "OUTRIDER": [
         "GenomicFeatures",
     ],
-    "PADOG": [
-        "hgu133plus2.db",
-        "hgu133a.db",
-    ],
     "pageRank": [
         "motifmatchr",
         "TFBSTools",
-        "CNEr",
     ],
     "PDATK": [
         "survminer",
@@ -1450,16 +1343,6 @@
     "peakPantheR": [
         "MSnbase",
         "mzR",
-    ],
-    "PFP": [
-        "clusterProfiler",
-    ],
-    "phenoTest": [
-        "hgu133a.db",
-    ],
-    "Pigengene": [
-        "clusterProfiler",
-        "ReactomePA",
     ],
     "PING": [
         "Gviz",
@@ -1489,7 +1372,6 @@
         "GenomicFeatures",
         "ensembldb",
         "biovizBase",
-        "CNEr",
         "VariantAnnotation",
     ],
     "PrInCE": [
@@ -1528,7 +1410,6 @@
         "DAPAR",
         "DAPARdata",
         "MSnbase",
-        "clusterProfiler",
         "factoextra",
         "mzR",
     ],
@@ -1609,7 +1490,6 @@
         "GenomicFeatures",
         "BSgenome.Hsapiens.UCSC.hg19",
         "TxDb.Hsapiens.UCSC.hg19.knownGene",
-        "phastCons100way.UCSC.hg19",
     ],
     "RCAS": [
         "BSgenome.Hsapiens.UCSC.hg19",
@@ -1776,11 +1656,8 @@
         "VariantAnnotation",
     ],
     "RNASeqR": [
-        "pathview",
-        "ballgown",
         "factoextra",
         "systemPipeRdata",
-        "clusterProfiler",
         "GenomicFeatures",
     ],
     "RnBeads": [
@@ -1811,9 +1688,6 @@
     "RUVSeq": [
         "EDASeq",
         "GenomicFeatures",
-    ],
-    "SBGNview": [
-        "pathview",
     ],
     "scanMiRApp": [
         "ensembldb",
@@ -1847,9 +1721,6 @@
         "VariantAnnotation",
         "OrganismDbi",
         "ensembldb",
-    ],
-    "scTensor": [
-        "ReactomePA",
     ],
     "scTreeViz": [
         "epivizr",
@@ -1888,9 +1759,6 @@
         "bumphunter",
         "GenomicFeatures",
     ],
-    "signatureSearch": [
-        "clusterProfiler",
-    ],
     "signeR": [
         "VariantAnnotation",
         "GenomicFeatures",
@@ -1908,7 +1776,6 @@
         "celda",
         "scRNAseq",
         "scDblFinder",
-        "hgu95a.db",
         "M3Drop",
         "ensembldb",
         "GenomicFeatures",
@@ -1965,14 +1832,12 @@
         "motifmatchr",
         "TFBSTools",
         "Gviz",
-        "CNEr",
         "ensembldb",
         "biovizBase",
         "VariantAnnotation",
     ],
     "SpidermiR": [
         "MAGeCKFlute",
-        "clusterProfiler",
     ],
     "SplicingGraphs": [
         "GenomicFeatures",
@@ -2001,7 +1866,6 @@
     "StarBioTrek": [
         "SpidermiR",
         "MAGeCKFlute",
-        "clusterProfiler",
     ],
     "strandCheckR": [
         "TxDb.Hsapiens.UCSC.hg38.knownGene",
@@ -2031,9 +1895,7 @@
         "mzR",
     ],
     "TCGAbiolinksGUI": [
-        "pathview",
         "ELMER",
-        "clusterProfiler",
         "GenomicFeatures",
         "Gviz",
         "ensembldb",
@@ -2043,14 +1905,8 @@
     "TCGAutils": [
         "GenomicFeatures",
     ],
-    "TFBSTools": [
-        "CNEr",
-    ],
     "TFEA.ChIP": [
         "GenomicFeatures",
-    ],
-    "TimiRGeN": [
-        "clusterProfiler",
     ],
     "TitanCNA": [
         "VariantAnnotation",
@@ -2149,9 +2005,6 @@
     "VariantTools": [
         "VariantAnnotation",
         "GenomicFeatures",
-    ],
-    "VaSP": [
-        "ballgown",
     ],
     "VCFArray": [
         "VariantAnnotation",
@@ -2334,9 +2187,6 @@
     ],
     "systemPipeRdata": [
         "GenomicFeatures",
-    ],
-    "GSVAdata": [
-        "hgu95a.db",
     ],
     "scRNAseq": [
         "ensembldb",
