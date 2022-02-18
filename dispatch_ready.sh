@@ -56,7 +56,6 @@ then
     sed -i "/        \"$(cat lists/cleanup$UNIQUE | sed 's/\./\\\./' | awk '{print $1"\\"}' | paste -sd'|' - | awk '{print "\\("$0")"}')\"\(,\)\{0,1\}/d" packages.json &&\
     sed -i '/^$/d' packages.json &&\
     sed -i ':a;N;$!ba;s/\[\n    \]/\[ \]/g' packages.json &&\
-    cat lists/cleanup$UNIQUE | xargs -i sh -c "kubectl get -n $namespace -o yaml job/\$(echo {} | tr -cd '[:alnum:]' | tr '[:upper:]' '[:lower:]')-build -o yaml > manifests/{}/job.yaml && kubectl logs -n $namespace job/\$(echo {} | tr -cd '[:alnum:]' | tr '[:upper:]' '[:lower:]')-build > manifests/{}/log" &&\
     cat lists/cleanup$UNIQUE >> $built;
     cat lists/tmpbuildlist$UNIQUE | xargs kubectl delete -n $namespace job;
 fi
