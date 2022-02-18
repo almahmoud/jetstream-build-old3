@@ -1,0 +1,1175 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ontologyplot-build
+  namespace: newbuild
+spec:
+  template:
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: "kubernetes.io/hostname"
+                operator: "In"
+                values: ["am-scalable-k8s-162919","am-scalable-k8s-275c1a","am-scalable-k8s-5872ef","am-scalable-k8s-6509e4","am-scalable-k8s-6effa4","am-scalable-k8s-a34d6c","am-scalable-k8s-ed8ef3"]
+      securityContext:
+        runAsUser: 1000
+        fsGroup: 1000
+      volumes:
+        - name: libraries
+          persistentVolumeClaim:
+            claimName: rstudio-r-libraries-pvc
+      containers:
+      - name: build
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - cd /home/rstudio && Rscript -e 'p <- .libPaths(); p <- c(p[2], p[-2]); .libPaths(p); if(BiocManager::install("ontologyPlot", INSTALL_opts = "--build", update = FALSE, quiet = TRUE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)' && cp -r /usr/local/lib/R/site-library/ontologyPlot /mnt/libs/R/ontologyPlot && cp ontologyPlot* /mnt/libs/R/
+        env:
+          - name: R_LIBS_USER
+            value: "/mnt/libs/R"
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+        resources:
+          requests:
+            memory: 500Mi
+            cpu: 250m
+          limits:
+            memory: 2Gi
+            cpu: 1700m
+      restartPolicy: OnFailure
+  backoffLimit: 4
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: linkcomm-build
+  namespace: newbuild
+spec:
+  template:
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: "kubernetes.io/hostname"
+                operator: "In"
+                values: ["am-scalable-k8s-162919","am-scalable-k8s-275c1a","am-scalable-k8s-5872ef","am-scalable-k8s-6509e4","am-scalable-k8s-6effa4","am-scalable-k8s-a34d6c","am-scalable-k8s-ed8ef3"]
+      securityContext:
+        runAsUser: 1000
+        fsGroup: 1000
+      volumes:
+        - name: libraries
+          persistentVolumeClaim:
+            claimName: rstudio-r-libraries-pvc
+      containers:
+      - name: build
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - cd /home/rstudio && Rscript -e 'p <- .libPaths(); p <- c(p[2], p[-2]); .libPaths(p); if(BiocManager::install("linkcomm", INSTALL_opts = "--build", update = FALSE, quiet = TRUE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)' && cp -r /usr/local/lib/R/site-library/linkcomm /mnt/libs/R/linkcomm && cp linkcomm* /mnt/libs/R/
+        env:
+          - name: R_LIBS_USER
+            value: "/mnt/libs/R"
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+        resources:
+          requests:
+            memory: 500Mi
+            cpu: 250m
+          limits:
+            memory: 2Gi
+            cpu: 1700m
+      restartPolicy: OnFailure
+  backoffLimit: 4
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: kknn-build
+  namespace: newbuild
+spec:
+  template:
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: "kubernetes.io/hostname"
+                operator: "In"
+                values: ["am-scalable-k8s-162919","am-scalable-k8s-275c1a","am-scalable-k8s-5872ef","am-scalable-k8s-6509e4","am-scalable-k8s-6effa4","am-scalable-k8s-a34d6c","am-scalable-k8s-ed8ef3"]
+      securityContext:
+        runAsUser: 1000
+        fsGroup: 1000
+      volumes:
+        - name: libraries
+          persistentVolumeClaim:
+            claimName: rstudio-r-libraries-pvc
+      containers:
+      - name: build
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - cd /home/rstudio && Rscript -e 'p <- .libPaths(); p <- c(p[2], p[-2]); .libPaths(p); if(BiocManager::install("kknn", INSTALL_opts = "--build", update = FALSE, quiet = TRUE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)' && cp -r /usr/local/lib/R/site-library/kknn /mnt/libs/R/kknn && cp kknn* /mnt/libs/R/
+        env:
+          - name: R_LIBS_USER
+            value: "/mnt/libs/R"
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+        resources:
+          requests:
+            memory: 500Mi
+            cpu: 250m
+          limits:
+            memory: 2Gi
+            cpu: 1700m
+      restartPolicy: OnFailure
+  backoffLimit: 4
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: influencer-build
+  namespace: newbuild
+spec:
+  template:
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: "kubernetes.io/hostname"
+                operator: "In"
+                values: ["am-scalable-k8s-162919","am-scalable-k8s-275c1a","am-scalable-k8s-5872ef","am-scalable-k8s-6509e4","am-scalable-k8s-6effa4","am-scalable-k8s-a34d6c","am-scalable-k8s-ed8ef3"]
+      securityContext:
+        runAsUser: 1000
+        fsGroup: 1000
+      volumes:
+        - name: libraries
+          persistentVolumeClaim:
+            claimName: rstudio-r-libraries-pvc
+      containers:
+      - name: build
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - cd /home/rstudio && Rscript -e 'p <- .libPaths(); p <- c(p[2], p[-2]); .libPaths(p); if(BiocManager::install("influenceR", INSTALL_opts = "--build", update = FALSE, quiet = TRUE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)' && cp -r /usr/local/lib/R/site-library/influenceR /mnt/libs/R/influenceR && cp influenceR* /mnt/libs/R/
+        env:
+          - name: R_LIBS_USER
+            value: "/mnt/libs/R"
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+        resources:
+          requests:
+            memory: 500Mi
+            cpu: 250m
+          limits:
+            memory: 2Gi
+            cpu: 1700m
+      restartPolicy: OnFailure
+  backoffLimit: 4
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: graphlayouts-build
+  namespace: newbuild
+spec:
+  template:
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: "kubernetes.io/hostname"
+                operator: "In"
+                values: ["am-scalable-k8s-162919","am-scalable-k8s-275c1a","am-scalable-k8s-5872ef","am-scalable-k8s-6509e4","am-scalable-k8s-6effa4","am-scalable-k8s-a34d6c","am-scalable-k8s-ed8ef3"]
+      securityContext:
+        runAsUser: 1000
+        fsGroup: 1000
+      volumes:
+        - name: libraries
+          persistentVolumeClaim:
+            claimName: rstudio-r-libraries-pvc
+      containers:
+      - name: build
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - cd /home/rstudio && Rscript -e 'p <- .libPaths(); p <- c(p[2], p[-2]); .libPaths(p); if(BiocManager::install("graphlayouts", INSTALL_opts = "--build", update = FALSE, quiet = TRUE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)' && cp -r /usr/local/lib/R/site-library/graphlayouts /mnt/libs/R/graphlayouts && cp graphlayouts* /mnt/libs/R/
+        env:
+          - name: R_LIBS_USER
+            value: "/mnt/libs/R"
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+        resources:
+          requests:
+            memory: 500Mi
+            cpu: 250m
+          limits:
+            memory: 2Gi
+            cpu: 1700m
+      restartPolicy: OnFailure
+  backoffLimit: 4
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ggm-build
+  namespace: newbuild
+spec:
+  template:
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: "kubernetes.io/hostname"
+                operator: "In"
+                values: ["am-scalable-k8s-162919","am-scalable-k8s-275c1a","am-scalable-k8s-5872ef","am-scalable-k8s-6509e4","am-scalable-k8s-6effa4","am-scalable-k8s-a34d6c","am-scalable-k8s-ed8ef3"]
+      securityContext:
+        runAsUser: 1000
+        fsGroup: 1000
+      volumes:
+        - name: libraries
+          persistentVolumeClaim:
+            claimName: rstudio-r-libraries-pvc
+      containers:
+      - name: build
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - cd /home/rstudio && Rscript -e 'p <- .libPaths(); p <- c(p[2], p[-2]); .libPaths(p); if(BiocManager::install("ggm", INSTALL_opts = "--build", update = FALSE, quiet = TRUE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)' && cp -r /usr/local/lib/R/site-library/ggm /mnt/libs/R/ggm && cp ggm* /mnt/libs/R/
+        env:
+          - name: R_LIBS_USER
+            value: "/mnt/libs/R"
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+        resources:
+          requests:
+            memory: 500Mi
+            cpu: 250m
+          limits:
+            memory: 2Gi
+            cpu: 1700m
+      restartPolicy: OnFailure
+  backoffLimit: 4
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: genlasso-build
+  namespace: newbuild
+spec:
+  template:
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: "kubernetes.io/hostname"
+                operator: "In"
+                values: ["am-scalable-k8s-162919","am-scalable-k8s-275c1a","am-scalable-k8s-5872ef","am-scalable-k8s-6509e4","am-scalable-k8s-6effa4","am-scalable-k8s-a34d6c","am-scalable-k8s-ed8ef3"]
+      securityContext:
+        runAsUser: 1000
+        fsGroup: 1000
+      volumes:
+        - name: libraries
+          persistentVolumeClaim:
+            claimName: rstudio-r-libraries-pvc
+      containers:
+      - name: build
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - cd /home/rstudio && Rscript -e 'p <- .libPaths(); p <- c(p[2], p[-2]); .libPaths(p); if(BiocManager::install("genlasso", INSTALL_opts = "--build", update = FALSE, quiet = TRUE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)' && cp -r /usr/local/lib/R/site-library/genlasso /mnt/libs/R/genlasso && cp genlasso* /mnt/libs/R/
+        env:
+          - name: R_LIBS_USER
+            value: "/mnt/libs/R"
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+        resources:
+          requests:
+            memory: 500Mi
+            cpu: 250m
+          limits:
+            memory: 2Gi
+            cpu: 1700m
+      restartPolicy: OnFailure
+  backoffLimit: 4
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: c3net-build
+  namespace: newbuild
+spec:
+  template:
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: "kubernetes.io/hostname"
+                operator: "In"
+                values: ["am-scalable-k8s-162919","am-scalable-k8s-275c1a","am-scalable-k8s-5872ef","am-scalable-k8s-6509e4","am-scalable-k8s-6effa4","am-scalable-k8s-a34d6c","am-scalable-k8s-ed8ef3"]
+      securityContext:
+        runAsUser: 1000
+        fsGroup: 1000
+      volumes:
+        - name: libraries
+          persistentVolumeClaim:
+            claimName: rstudio-r-libraries-pvc
+      containers:
+      - name: build
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - cd /home/rstudio && Rscript -e 'p <- .libPaths(); p <- c(p[2], p[-2]); .libPaths(p); if(BiocManager::install("c3net", INSTALL_opts = "--build", update = FALSE, quiet = TRUE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)' && cp -r /usr/local/lib/R/site-library/c3net /mnt/libs/R/c3net && cp c3net* /mnt/libs/R/
+        env:
+          - name: R_LIBS_USER
+            value: "/mnt/libs/R"
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+        resources:
+          requests:
+            memory: 500Mi
+            cpu: 250m
+          limits:
+            memory: 2Gi
+            cpu: 1700m
+      restartPolicy: OnFailure
+  backoffLimit: 4
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: bnstruct-build
+  namespace: newbuild
+spec:
+  template:
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: "kubernetes.io/hostname"
+                operator: "In"
+                values: ["am-scalable-k8s-162919","am-scalable-k8s-275c1a","am-scalable-k8s-5872ef","am-scalable-k8s-6509e4","am-scalable-k8s-6effa4","am-scalable-k8s-a34d6c","am-scalable-k8s-ed8ef3"]
+      securityContext:
+        runAsUser: 1000
+        fsGroup: 1000
+      volumes:
+        - name: libraries
+          persistentVolumeClaim:
+            claimName: rstudio-r-libraries-pvc
+      containers:
+      - name: build
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - cd /home/rstudio && Rscript -e 'p <- .libPaths(); p <- c(p[2], p[-2]); .libPaths(p); if(BiocManager::install("bnstruct", INSTALL_opts = "--build", update = FALSE, quiet = TRUE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)' && cp -r /usr/local/lib/R/site-library/bnstruct /mnt/libs/R/bnstruct && cp bnstruct* /mnt/libs/R/
+        env:
+          - name: R_LIBS_USER
+            value: "/mnt/libs/R"
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+        resources:
+          requests:
+            memory: 500Mi
+            cpu: 250m
+          limits:
+            memory: 2Gi
+            cpu: 1700m
+      restartPolicy: OnFailure
+  backoffLimit: 4
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: reder-build
+  namespace: newbuild
+spec:
+  template:
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: "kubernetes.io/hostname"
+                operator: "In"
+                values: ["am-scalable-k8s-162919","am-scalable-k8s-275c1a","am-scalable-k8s-5872ef","am-scalable-k8s-6509e4","am-scalable-k8s-6effa4","am-scalable-k8s-a34d6c","am-scalable-k8s-ed8ef3"]
+      securityContext:
+        runAsUser: 1000
+        fsGroup: 1000
+      volumes:
+        - name: libraries
+          persistentVolumeClaim:
+            claimName: rstudio-r-libraries-pvc
+      containers:
+      - name: build
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - cd /home/rstudio && Rscript -e 'p <- .libPaths(); p <- c(p[2], p[-2]); .libPaths(p); if(BiocManager::install("RedeR", INSTALL_opts = "--build", update = FALSE, quiet = TRUE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)' && cp -r /usr/local/lib/R/site-library/RedeR /mnt/libs/R/RedeR && cp RedeR* /mnt/libs/R/
+        env:
+          - name: R_LIBS_USER
+            value: "/mnt/libs/R"
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+        resources:
+          requests:
+            memory: 500Mi
+            cpu: 250m
+          limits:
+            memory: 2Gi
+            cpu: 1700m
+      restartPolicy: OnFailure
+  backoffLimit: 4
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: kegggraph-build
+  namespace: newbuild
+spec:
+  template:
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: "kubernetes.io/hostname"
+                operator: "In"
+                values: ["am-scalable-k8s-162919","am-scalable-k8s-275c1a","am-scalable-k8s-5872ef","am-scalable-k8s-6509e4","am-scalable-k8s-6effa4","am-scalable-k8s-a34d6c","am-scalable-k8s-ed8ef3"]
+      securityContext:
+        runAsUser: 1000
+        fsGroup: 1000
+      volumes:
+        - name: libraries
+          persistentVolumeClaim:
+            claimName: rstudio-r-libraries-pvc
+      containers:
+      - name: build
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - cd /home/rstudio && Rscript -e 'p <- .libPaths(); p <- c(p[2], p[-2]); .libPaths(p); if(BiocManager::install("KEGGgraph", INSTALL_opts = "--build", update = FALSE, quiet = TRUE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)' && cp -r /usr/local/lib/R/site-library/KEGGgraph /mnt/libs/R/KEGGgraph && cp KEGGgraph* /mnt/libs/R/
+        env:
+          - name: R_LIBS_USER
+            value: "/mnt/libs/R"
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+        resources:
+          requests:
+            memory: 500Mi
+            cpu: 250m
+          limits:
+            memory: 2Gi
+            cpu: 1700m
+      restartPolicy: OnFailure
+  backoffLimit: 4
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: boolnet-build
+  namespace: newbuild
+spec:
+  template:
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: "kubernetes.io/hostname"
+                operator: "In"
+                values: ["am-scalable-k8s-162919","am-scalable-k8s-275c1a","am-scalable-k8s-5872ef","am-scalable-k8s-6509e4","am-scalable-k8s-6effa4","am-scalable-k8s-a34d6c","am-scalable-k8s-ed8ef3"]
+      securityContext:
+        runAsUser: 1000
+        fsGroup: 1000
+      volumes:
+        - name: libraries
+          persistentVolumeClaim:
+            claimName: rstudio-r-libraries-pvc
+      containers:
+      - name: build
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - cd /home/rstudio && Rscript -e 'p <- .libPaths(); p <- c(p[2], p[-2]); .libPaths(p); if(BiocManager::install("BoolNet", INSTALL_opts = "--build", update = FALSE, quiet = TRUE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)' && cp -r /usr/local/lib/R/site-library/BoolNet /mnt/libs/R/BoolNet && cp BoolNet* /mnt/libs/R/
+        env:
+          - name: R_LIBS_USER
+            value: "/mnt/libs/R"
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+        resources:
+          requests:
+            memory: 500Mi
+            cpu: 250m
+          limits:
+            memory: 2Gi
+            cpu: 1700m
+      restartPolicy: OnFailure
+  backoffLimit: 4
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: paircompviz-build
+  namespace: newbuild
+spec:
+  template:
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: "kubernetes.io/hostname"
+                operator: "In"
+                values: ["am-scalable-k8s-162919","am-scalable-k8s-275c1a","am-scalable-k8s-5872ef","am-scalable-k8s-6509e4","am-scalable-k8s-6effa4","am-scalable-k8s-a34d6c","am-scalable-k8s-ed8ef3"]
+      securityContext:
+        runAsUser: 1000
+        fsGroup: 1000
+      volumes:
+        - name: libraries
+          persistentVolumeClaim:
+            claimName: rstudio-r-libraries-pvc
+      containers:
+      - name: build
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - cd /home/rstudio && Rscript -e 'p <- .libPaths(); p <- c(p[2], p[-2]); .libPaths(p); if(BiocManager::install("paircompviz", INSTALL_opts = "--build", update = FALSE, quiet = TRUE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)' && cp -r /usr/local/lib/R/site-library/paircompviz /mnt/libs/R/paircompviz && cp paircompviz* /mnt/libs/R/
+        env:
+          - name: R_LIBS_USER
+            value: "/mnt/libs/R"
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+        resources:
+          requests:
+            memory: 500Mi
+            cpu: 250m
+          limits:
+            memory: 2Gi
+            cpu: 1700m
+      restartPolicy: OnFailure
+  backoffLimit: 4
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: netbiov-build
+  namespace: newbuild
+spec:
+  template:
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: "kubernetes.io/hostname"
+                operator: "In"
+                values: ["am-scalable-k8s-162919","am-scalable-k8s-275c1a","am-scalable-k8s-5872ef","am-scalable-k8s-6509e4","am-scalable-k8s-6effa4","am-scalable-k8s-a34d6c","am-scalable-k8s-ed8ef3"]
+      securityContext:
+        runAsUser: 1000
+        fsGroup: 1000
+      volumes:
+        - name: libraries
+          persistentVolumeClaim:
+            claimName: rstudio-r-libraries-pvc
+      containers:
+      - name: build
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - cd /home/rstudio && Rscript -e 'p <- .libPaths(); p <- c(p[2], p[-2]); .libPaths(p); if(BiocManager::install("netbiov", INSTALL_opts = "--build", update = FALSE, quiet = TRUE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)' && cp -r /usr/local/lib/R/site-library/netbiov /mnt/libs/R/netbiov && cp netbiov* /mnt/libs/R/
+        env:
+          - name: R_LIBS_USER
+            value: "/mnt/libs/R"
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+        resources:
+          requests:
+            memory: 500Mi
+            cpu: 250m
+          limits:
+            memory: 2Gi
+            cpu: 1700m
+      restartPolicy: OnFailure
+  backoffLimit: 4
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: flowcl-build
+  namespace: newbuild
+spec:
+  template:
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: "kubernetes.io/hostname"
+                operator: "In"
+                values: ["am-scalable-k8s-162919","am-scalable-k8s-275c1a","am-scalable-k8s-5872ef","am-scalable-k8s-6509e4","am-scalable-k8s-6effa4","am-scalable-k8s-a34d6c","am-scalable-k8s-ed8ef3"]
+      securityContext:
+        runAsUser: 1000
+        fsGroup: 1000
+      volumes:
+        - name: libraries
+          persistentVolumeClaim:
+            claimName: rstudio-r-libraries-pvc
+      containers:
+      - name: build
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - cd /home/rstudio && Rscript -e 'p <- .libPaths(); p <- c(p[2], p[-2]); .libPaths(p); if(BiocManager::install("flowCL", INSTALL_opts = "--build", update = FALSE, quiet = TRUE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)' && cp -r /usr/local/lib/R/site-library/flowCL /mnt/libs/R/flowCL && cp flowCL* /mnt/libs/R/
+        env:
+          - name: R_LIBS_USER
+            value: "/mnt/libs/R"
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+        resources:
+          requests:
+            memory: 500Mi
+            cpu: 250m
+          limits:
+            memory: 2Gi
+            cpu: 1700m
+      restartPolicy: OnFailure
+  backoffLimit: 4
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: coveb-build
+  namespace: newbuild
+spec:
+  template:
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: "kubernetes.io/hostname"
+                operator: "In"
+                values: ["am-scalable-k8s-162919","am-scalable-k8s-275c1a","am-scalable-k8s-5872ef","am-scalable-k8s-6509e4","am-scalable-k8s-6effa4","am-scalable-k8s-a34d6c","am-scalable-k8s-ed8ef3"]
+      securityContext:
+        runAsUser: 1000
+        fsGroup: 1000
+      volumes:
+        - name: libraries
+          persistentVolumeClaim:
+            claimName: rstudio-r-libraries-pvc
+      containers:
+      - name: build
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - cd /home/rstudio && Rscript -e 'p <- .libPaths(); p <- c(p[2], p[-2]); .libPaths(p); if(BiocManager::install("covEB", INSTALL_opts = "--build", update = FALSE, quiet = TRUE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)' && cp -r /usr/local/lib/R/site-library/covEB /mnt/libs/R/covEB && cp covEB* /mnt/libs/R/
+        env:
+          - name: R_LIBS_USER
+            value: "/mnt/libs/R"
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+        resources:
+          requests:
+            memory: 500Mi
+            cpu: 250m
+          limits:
+            memory: 2Gi
+            cpu: 1700m
+      restartPolicy: OnFailure
+  backoffLimit: 4
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: tdaracne-build
+  namespace: newbuild
+spec:
+  template:
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: "kubernetes.io/hostname"
+                operator: "In"
+                values: ["am-scalable-k8s-162919","am-scalable-k8s-275c1a","am-scalable-k8s-5872ef","am-scalable-k8s-6509e4","am-scalable-k8s-6effa4","am-scalable-k8s-a34d6c","am-scalable-k8s-ed8ef3"]
+      securityContext:
+        runAsUser: 1000
+        fsGroup: 1000
+      volumes:
+        - name: libraries
+          persistentVolumeClaim:
+            claimName: rstudio-r-libraries-pvc
+      containers:
+      - name: build
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - cd /home/rstudio && Rscript -e 'p <- .libPaths(); p <- c(p[2], p[-2]); .libPaths(p); if(BiocManager::install("TDARACNE", INSTALL_opts = "--build", update = FALSE, quiet = TRUE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)' && cp -r /usr/local/lib/R/site-library/TDARACNE /mnt/libs/R/TDARACNE && cp TDARACNE* /mnt/libs/R/
+        env:
+          - name: R_LIBS_USER
+            value: "/mnt/libs/R"
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+        resources:
+          requests:
+            memory: 500Mi
+            cpu: 250m
+          limits:
+            memory: 2Gi
+            cpu: 1700m
+      restartPolicy: OnFailure
+  backoffLimit: 4
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: santa-build
+  namespace: newbuild
+spec:
+  template:
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: "kubernetes.io/hostname"
+                operator: "In"
+                values: ["am-scalable-k8s-162919","am-scalable-k8s-275c1a","am-scalable-k8s-5872ef","am-scalable-k8s-6509e4","am-scalable-k8s-6effa4","am-scalable-k8s-a34d6c","am-scalable-k8s-ed8ef3"]
+      securityContext:
+        runAsUser: 1000
+        fsGroup: 1000
+      volumes:
+        - name: libraries
+          persistentVolumeClaim:
+            claimName: rstudio-r-libraries-pvc
+      containers:
+      - name: build
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - cd /home/rstudio && Rscript -e 'p <- .libPaths(); p <- c(p[2], p[-2]); .libPaths(p); if(BiocManager::install("SANTA", INSTALL_opts = "--build", update = FALSE, quiet = TRUE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)' && cp -r /usr/local/lib/R/site-library/SANTA /mnt/libs/R/SANTA && cp SANTA* /mnt/libs/R/
+        env:
+          - name: R_LIBS_USER
+            value: "/mnt/libs/R"
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+        resources:
+          requests:
+            memory: 500Mi
+            cpu: 250m
+          limits:
+            memory: 2Gi
+            cpu: 1700m
+      restartPolicy: OnFailure
+  backoffLimit: 4
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: path2ppi-build
+  namespace: newbuild
+spec:
+  template:
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: "kubernetes.io/hostname"
+                operator: "In"
+                values: ["am-scalable-k8s-162919","am-scalable-k8s-275c1a","am-scalable-k8s-5872ef","am-scalable-k8s-6509e4","am-scalable-k8s-6effa4","am-scalable-k8s-a34d6c","am-scalable-k8s-ed8ef3"]
+      securityContext:
+        runAsUser: 1000
+        fsGroup: 1000
+      volumes:
+        - name: libraries
+          persistentVolumeClaim:
+            claimName: rstudio-r-libraries-pvc
+      containers:
+      - name: build
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - cd /home/rstudio && Rscript -e 'p <- .libPaths(); p <- c(p[2], p[-2]); .libPaths(p); if(BiocManager::install("Path2PPI", INSTALL_opts = "--build", update = FALSE, quiet = TRUE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)' && cp -r /usr/local/lib/R/site-library/Path2PPI /mnt/libs/R/Path2PPI && cp Path2PPI* /mnt/libs/R/
+        env:
+          - name: R_LIBS_USER
+            value: "/mnt/libs/R"
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+        resources:
+          requests:
+            memory: 500Mi
+            cpu: 250m
+          limits:
+            memory: 2Gi
+            cpu: 1700m
+      restartPolicy: OnFailure
+  backoffLimit: 4
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: netpathminer-build
+  namespace: newbuild
+spec:
+  template:
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: "kubernetes.io/hostname"
+                operator: "In"
+                values: ["am-scalable-k8s-162919","am-scalable-k8s-275c1a","am-scalable-k8s-5872ef","am-scalable-k8s-6509e4","am-scalable-k8s-6effa4","am-scalable-k8s-a34d6c","am-scalable-k8s-ed8ef3"]
+      securityContext:
+        runAsUser: 1000
+        fsGroup: 1000
+      volumes:
+        - name: libraries
+          persistentVolumeClaim:
+            claimName: rstudio-r-libraries-pvc
+      containers:
+      - name: build
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - cd /home/rstudio && Rscript -e 'p <- .libPaths(); p <- c(p[2], p[-2]); .libPaths(p); if(BiocManager::install("NetPathMiner", INSTALL_opts = "--build", update = FALSE, quiet = TRUE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)' && cp -r /usr/local/lib/R/site-library/NetPathMiner /mnt/libs/R/NetPathMiner && cp NetPathMiner* /mnt/libs/R/
+        env:
+          - name: R_LIBS_USER
+            value: "/mnt/libs/R"
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+        resources:
+          requests:
+            memory: 500Mi
+            cpu: 250m
+          limits:
+            memory: 2Gi
+            cpu: 1700m
+      restartPolicy: OnFailure
+  backoffLimit: 4
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: gsar-build
+  namespace: newbuild
+spec:
+  template:
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: "kubernetes.io/hostname"
+                operator: "In"
+                values: ["am-scalable-k8s-162919","am-scalable-k8s-275c1a","am-scalable-k8s-5872ef","am-scalable-k8s-6509e4","am-scalable-k8s-6effa4","am-scalable-k8s-a34d6c","am-scalable-k8s-ed8ef3"]
+      securityContext:
+        runAsUser: 1000
+        fsGroup: 1000
+      volumes:
+        - name: libraries
+          persistentVolumeClaim:
+            claimName: rstudio-r-libraries-pvc
+      containers:
+      - name: build
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - cd /home/rstudio && Rscript -e 'p <- .libPaths(); p <- c(p[2], p[-2]); .libPaths(p); if(BiocManager::install("GSAR", INSTALL_opts = "--build", update = FALSE, quiet = TRUE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)' && cp -r /usr/local/lib/R/site-library/GSAR /mnt/libs/R/GSAR && cp GSAR* /mnt/libs/R/
+        env:
+          - name: R_LIBS_USER
+            value: "/mnt/libs/R"
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+        resources:
+          requests:
+            memory: 500Mi
+            cpu: 250m
+          limits:
+            memory: 2Gi
+            cpu: 1700m
+      restartPolicy: OnFailure
+  backoffLimit: 4
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: dart-build
+  namespace: newbuild
+spec:
+  template:
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: "kubernetes.io/hostname"
+                operator: "In"
+                values: ["am-scalable-k8s-162919","am-scalable-k8s-275c1a","am-scalable-k8s-5872ef","am-scalable-k8s-6509e4","am-scalable-k8s-6effa4","am-scalable-k8s-a34d6c","am-scalable-k8s-ed8ef3"]
+      securityContext:
+        runAsUser: 1000
+        fsGroup: 1000
+      volumes:
+        - name: libraries
+          persistentVolumeClaim:
+            claimName: rstudio-r-libraries-pvc
+      containers:
+      - name: build
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - cd /home/rstudio && Rscript -e 'p <- .libPaths(); p <- c(p[2], p[-2]); .libPaths(p); if(BiocManager::install("DART", INSTALL_opts = "--build", update = FALSE, quiet = TRUE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)' && cp -r /usr/local/lib/R/site-library/DART /mnt/libs/R/DART && cp DART* /mnt/libs/R/
+        env:
+          - name: R_LIBS_USER
+            value: "/mnt/libs/R"
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+        resources:
+          requests:
+            memory: 500Mi
+            cpu: 250m
+          limits:
+            memory: 2Gi
+            cpu: 1700m
+      restartPolicy: OnFailure
+  backoffLimit: 4
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: causalr-build
+  namespace: newbuild
+spec:
+  template:
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: "kubernetes.io/hostname"
+                operator: "In"
+                values: ["am-scalable-k8s-162919","am-scalable-k8s-275c1a","am-scalable-k8s-5872ef","am-scalable-k8s-6509e4","am-scalable-k8s-6effa4","am-scalable-k8s-a34d6c","am-scalable-k8s-ed8ef3"]
+      securityContext:
+        runAsUser: 1000
+        fsGroup: 1000
+      volumes:
+        - name: libraries
+          persistentVolumeClaim:
+            claimName: rstudio-r-libraries-pvc
+      containers:
+      - name: build
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - cd /home/rstudio && Rscript -e 'p <- .libPaths(); p <- c(p[2], p[-2]); .libPaths(p); if(BiocManager::install("CausalR", INSTALL_opts = "--build", update = FALSE, quiet = TRUE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)' && cp -r /usr/local/lib/R/site-library/CausalR /mnt/libs/R/CausalR && cp CausalR* /mnt/libs/R/
+        env:
+          - name: R_LIBS_USER
+            value: "/mnt/libs/R"
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+        resources:
+          requests:
+            memory: 500Mi
+            cpu: 250m
+          limits:
+            memory: 2Gi
+            cpu: 1700m
+      restartPolicy: OnFailure
+  backoffLimit: 4
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: biomvcclass-build
+  namespace: newbuild
+spec:
+  template:
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: "kubernetes.io/hostname"
+                operator: "In"
+                values: ["am-scalable-k8s-162919","am-scalable-k8s-275c1a","am-scalable-k8s-5872ef","am-scalable-k8s-6509e4","am-scalable-k8s-6effa4","am-scalable-k8s-a34d6c","am-scalable-k8s-ed8ef3"]
+      securityContext:
+        runAsUser: 1000
+        fsGroup: 1000
+      volumes:
+        - name: libraries
+          persistentVolumeClaim:
+            claimName: rstudio-r-libraries-pvc
+      containers:
+      - name: build
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - cd /home/rstudio && Rscript -e 'p <- .libPaths(); p <- c(p[2], p[-2]); .libPaths(p); if(BiocManager::install("BioMVCClass", INSTALL_opts = "--build", update = FALSE, quiet = TRUE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)' && cp -r /usr/local/lib/R/site-library/BioMVCClass /mnt/libs/R/BioMVCClass && cp BioMVCClass* /mnt/libs/R/
+        env:
+          - name: R_LIBS_USER
+            value: "/mnt/libs/R"
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+        resources:
+          requests:
+            memory: 500Mi
+            cpu: 250m
+          limits:
+            memory: 2Gi
+            cpu: 1700m
+      restartPolicy: OnFailure
+  backoffLimit: 4
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: birewire-build
+  namespace: newbuild
+spec:
+  template:
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: "kubernetes.io/hostname"
+                operator: "In"
+                values: ["am-scalable-k8s-162919","am-scalable-k8s-275c1a","am-scalable-k8s-5872ef","am-scalable-k8s-6509e4","am-scalable-k8s-6effa4","am-scalable-k8s-a34d6c","am-scalable-k8s-ed8ef3"]
+      securityContext:
+        runAsUser: 1000
+        fsGroup: 1000
+      volumes:
+        - name: libraries
+          persistentVolumeClaim:
+            claimName: rstudio-r-libraries-pvc
+      containers:
+      - name: build
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - cd /home/rstudio && Rscript -e 'p <- .libPaths(); p <- c(p[2], p[-2]); .libPaths(p); if(BiocManager::install("BiRewire", INSTALL_opts = "--build", update = FALSE, quiet = TRUE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)' && cp -r /usr/local/lib/R/site-library/BiRewire /mnt/libs/R/BiRewire && cp BiRewire* /mnt/libs/R/
+        env:
+          - name: R_LIBS_USER
+            value: "/mnt/libs/R"
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+        resources:
+          requests:
+            memory: 500Mi
+            cpu: 250m
+          limits:
+            memory: 2Gi
+            cpu: 1700m
+      restartPolicy: OnFailure
+  backoffLimit: 4
+---
