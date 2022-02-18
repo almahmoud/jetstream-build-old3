@@ -26,7 +26,6 @@
         "survival",
         "Matrix",
         "foreach",
-        "shape",
         "Rcpp",
         "RcppEigen",
         "gtools",
@@ -93,7 +92,6 @@
         "survival",
         "Matrix",
         "foreach",
-        "shape",
         "Rcpp",
         "RcppEigen",
         "gtools",
@@ -150,7 +148,6 @@
         "BiocGenerics",
         "Matrix",
         "foreach",
-        "shape",
         "survival",
         "Rcpp",
         "RcppEigen",
@@ -171,7 +168,6 @@
         "BiocGenerics",
         "Matrix",
         "foreach",
-        "shape",
         "survival",
         "Rcpp",
         "RcppEigen",
@@ -274,7 +270,6 @@
         "yaml",
         "BiocManager",
         "GlobalOptions",
-        "shape",
         "colorspace",
         "jsonlite",
         "htmltools",
@@ -712,7 +707,6 @@
         "Matrix",
         "fansi",
         "utf8",
-        "rstudioapi",
         "broom",
         "corrplot",
         "car",
@@ -931,7 +925,6 @@
         "RCurl",
         "GenomeInfoDbData",
         "XVector",
-        "shape",
         "survival",
         "RcppEigen",
         "matrixStats",
@@ -1032,9 +1025,6 @@
         "zlibbioc",
         "cli",
         "utf8"
-    ],
-    "affxparser": [
-
     ],
     "affy": [
         "BiocGenerics",
@@ -1237,7 +1227,6 @@
         "lambda.r",
         "futile.options",
         "checkmate",
-        "rstudioapi",
         "jpeg",
         "askpass",
         "hms",
@@ -1431,9 +1420,6 @@
         "bitops",
         "zlibbioc"
     ],
-    "agilp": [
-
-    ],
     "AgiMicroRna": [
         "Biobase",
         "limma",
@@ -1600,7 +1586,6 @@
         "lambda.r",
         "futile.options",
         "checkmate",
-        "rstudioapi",
         "jpeg",
         "askpass",
         "hms",
@@ -1709,7 +1694,6 @@
         "irlba",
         "rsvd",
         "backports",
-        "shape",
         "sparseMatrixStats",
         "iterators",
         "codetools",
@@ -1984,7 +1968,6 @@
         "knitr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "formatR",
         "colorspace",
         "askpass",
@@ -2270,7 +2253,6 @@
         "GenomeInfoDbData",
         "XVector",
         "highr",
-        "quadprog",
         "lpSolve",
         "waveslim",
         "nlme",
@@ -2368,7 +2350,6 @@
         "processx",
         "R6",
         "GlobalOptions",
-        "shape",
         "colorspace",
         "GetoptLong",
         "clue",
@@ -2481,9 +2462,6 @@
         "bslib",
         "sass",
         "fs"
-    ],
-    "AMOUNTAIN": [
-
     ],
     "amplican": [
         "BiocGenerics",
@@ -2761,7 +2739,6 @@
         "GenomeInfoDbData",
         "colorspace",
         "utf8",
-        "rstudioapi",
         "Rhdf5lib",
         "rhdf5filters",
         "stringi",
@@ -2938,7 +2915,6 @@
         "isoband",
         "MASS",
         "mgcv",
-        "shape",
         "survival",
         "RcppEigen",
         "matrixStats",
@@ -3060,7 +3036,6 @@
         "waldo",
         "future",
         "globals",
-        "rstudioapi",
         "diffobj",
         "rematch2",
         "listenv",
@@ -3889,7 +3864,6 @@
         "cli",
         "fs",
         "rappdirs",
-        "rstudioapi",
         "yaml",
         "openssl",
         "nlme",
@@ -4455,7 +4429,6 @@
         "magrittr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "jsonlite",
         "mime",
@@ -4597,7 +4570,6 @@
         "DelayedMatrixStats",
         "mclust",
         "reshape",
-        "quadprog",
         "data.table",
         "GEOquery",
         "DelayedArray",
@@ -4746,7 +4718,6 @@
         "magrittr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "base64",
         "plyr",
@@ -4829,7 +4800,6 @@
         "KEGGREST",
         "bit",
         "GlobalOptions",
-        "shape",
         "colorspace",
         "generics",
         "glue",
@@ -4928,15 +4898,8 @@
         "waldo",
         "zlibbioc",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "rematch2"
-    ],
-    "ASAFE": [
-
-    ],
-    "ASEB": [
-
     ],
     "ASGSCA": [
         "Matrix",
@@ -4951,7 +4914,6 @@
         "mvtnorm",
         "PepsNMR",
         "plyr",
-        "quadprog",
         "ropls",
         "SummarizedExperiment",
         "Matrix",
@@ -4970,7 +4932,6 @@
         "tibble",
         "withr",
         "foreach",
-        "shape",
         "survival",
         "Rcpp",
         "RcppEigen",
@@ -5184,7 +5145,6 @@
         "knitr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "brio",
         "callr",
         "desc",
@@ -5348,7 +5308,6 @@
         "stringi",
         "assertthat",
         "checkmate",
-        "rstudioapi",
         "formatR",
         "askpass",
         "sys",
@@ -5749,7 +5708,6 @@
         "openssl",
         "nlme",
         "Matrix",
-        "rstudioapi",
         "zlibbioc",
         "bitops",
         "Rhtslib",
@@ -6241,12 +6199,8 @@
         "ps",
         "waldo",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "rematch2"
-    ],
-    "BAC": [
-
     ],
     "bacon": [
         "ggplot2",
@@ -6288,9 +6242,6 @@
         "cli",
         "crayon",
         "utf8"
-    ],
-    "BADER": [
-
     ],
     "BadRegionFinder": [
         "VariantAnnotation",
@@ -6718,7 +6669,6 @@
         "vegan",
         "viridis",
         "GlobalOptions",
-        "shape",
         "colorspace",
         "gtable",
         "generics",
@@ -7430,7 +7380,6 @@
         "BiocParallel",
         "RcppArmadillo",
         "RcppProgress",
-        "quadprog",
         "futile.logger",
         "snow",
         "BH",
@@ -7744,9 +7693,6 @@
         "MatrixModels",
         "lattice"
     ],
-    "BeadDataPackR": [
-
-    ],
     "BEARscc": [
         "ggplot2",
         "SingleCellExperiment",
@@ -8004,7 +7950,6 @@
         "annotate",
         "RCurl",
         "GenomeInfoDbData",
-        "shape",
         "gtools",
         "caTools",
         "curl",
@@ -8092,7 +8037,6 @@
         "DelayedMatrixStats",
         "mclust",
         "reshape",
-        "quadprog",
         "GEOquery",
         "HDF5Array",
         "colorspace",
@@ -8100,7 +8044,6 @@
         "cli",
         "utf8",
         "desc",
-        "rstudioapi",
         "RcppGSL",
         "Rhdf5lib",
         "rhdf5filters",
@@ -8322,9 +8265,6 @@
         "GenomeInfoDbData",
         "bitops"
     ],
-    "BHC": [
-
-    ],
     "BicARE": [
         "Biobase",
         "multtest",
@@ -8398,14 +8338,12 @@
         "graph",
         "Rgraphviz",
         "diagram",
-        "quadprog",
         "lpSolve",
         "MASS",
         "BiocGenerics",
         "glue",
         "magrittr",
         "stringi",
-        "shape"
     ],
     "bigmelon": [
         "wateRmelon",
@@ -8453,7 +8391,6 @@
         "nlme",
         "reshape",
         "MASS",
-        "quadprog",
         "DelayedArray",
         "HDF5Array",
         "BiocParallel",
@@ -8659,7 +8596,6 @@
         "XVector",
         "knitr",
         "checkmate",
-        "rstudioapi",
         "curl",
         "openssl",
         "png",
@@ -8942,7 +8878,6 @@
         "purrr",
         "RColorBrewer",
         "readr",
-        "rstudioapi",
         "scales",
         "stringr",
         "viridis",
@@ -9230,9 +9165,6 @@
         "sys",
         "fastmap"
     ],
-    "BiocGenerics": [
-
-    ],
     "biocGraph": [
         "Rgraphviz",
         "graph",
@@ -9426,14 +9358,12 @@
         "xml2",
         "bit",
         "sass",
-        "shape",
         "cluster",
         "lazyeval",
         "iterators",
         "codetools",
         "cli",
         "fs",
-        "rstudioapi",
         "GenomeInfoDbData",
         "rhdf5",
         "rhdf5filters",
@@ -9809,7 +9739,6 @@
         "jsonlite",
         "lifecycle",
         "rappdirs",
-        "rstudioapi",
         "whisker",
         "yaml",
         "R6",
@@ -9833,9 +9762,6 @@
         "mime",
         "utf8"
     ],
-    "BiocVersion": [
-
-    ],
     "biocViews": [
         "Biobase",
         "graph",
@@ -9855,7 +9781,6 @@
         "httr",
         "knitr",
         "rmarkdown",
-        "rstudioapi",
         "stringr",
         "usethis",
         "yaml",
@@ -9961,7 +9886,6 @@
         "pillar",
         "mime",
         "cachem",
-        "rstudioapi",
         "diffobj",
         "fansi",
         "rematch2",
@@ -10032,7 +9956,6 @@
         "pillar",
         "mime",
         "cachem",
-        "rstudioapi",
         "diffobj",
         "fansi",
         "rematch2",
@@ -10083,7 +10006,6 @@
         "glue",
         "rprojroot",
         "askpass",
-        "rstudioapi",
         "hms",
         "prettyunits",
         "bitops",
@@ -10174,7 +10096,6 @@
         "pillar",
         "mime",
         "cachem",
-        "rstudioapi",
         "diffobj",
         "fansi",
         "rematch2",
@@ -10245,7 +10166,6 @@
         "pillar",
         "mime",
         "cachem",
-        "rstudioapi",
         "diffobj",
         "fansi",
         "rematch2",
@@ -10316,7 +10236,6 @@
         "pillar",
         "mime",
         "cachem",
-        "rstudioapi",
         "diffobj",
         "fansi",
         "rematch2",
@@ -10435,7 +10354,6 @@
         "withr",
         "Matrix",
         "foreach",
-        "shape",
         "survival",
         "Rcpp",
         "RcppEigen",
@@ -10488,7 +10406,6 @@
         "knitr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "pkgconfig",
         "mvtnorm",
@@ -10666,7 +10583,6 @@
         "knitr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "cachem",
         "colorspace",
@@ -10771,7 +10687,6 @@
         "DBI",
         "RSQLite",
         "KEGGREST",
-        "shape",
         "cluster",
         "iterators",
         "generics",
@@ -10826,7 +10741,6 @@
         "lme4",
         "knitr",
         "checkmate",
-        "rstudioapi",
         "fastmap",
         "Biostrings",
         "formatR",
@@ -11013,7 +10927,6 @@
         "lambda.r",
         "futile.options",
         "checkmate",
-        "rstudioapi",
         "RCurl",
         "httr",
         "Biostrings",
@@ -11253,7 +11166,6 @@
         "knitr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "png",
         "jpeg",
@@ -11341,7 +11253,6 @@
         "nlme",
         "boot",
         "cubature",
-        "quadprog",
         "quantreg",
         "cli",
         "crayon",
@@ -11460,7 +11371,6 @@
         "magrittr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "png",
         "jpeg",
@@ -11808,7 +11718,6 @@
         "SummarizedExperiment",
         "pasilla",
         "GlobalOptions",
-        "shape",
         "colorspace",
         "GetoptLong",
         "clue",
@@ -12019,7 +11928,6 @@
         "V8",
         "limma",
         "GlobalOptions",
-        "shape",
         "colorspace",
         "GetoptLong",
         "clue",
@@ -12091,7 +11999,6 @@
         "rjson",
         "lattice",
         "nlme",
-        "rstudioapi",
         "farver",
         "labeling",
         "munsell",
@@ -12630,7 +12537,6 @@
         "knitr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "jsonlite",
         "mime",
@@ -13359,7 +13265,6 @@
         "matrixStats",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "png",
         "jpeg",
@@ -13386,9 +13291,6 @@
         "formatR",
         "askpass",
         "sys"
-    ],
-    "BufferedMatrix": [
-
     ],
     "BufferedMatrixMethods": [
         "BufferedMatrix"
@@ -13469,7 +13371,6 @@
         "remotes",
         "rlang",
         "roxygen2",
-        "rstudioapi",
         "rversions",
         "sessioninfo",
         "testthat",
@@ -13938,7 +13839,6 @@
         "knitr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "png",
         "jpeg",
@@ -14103,7 +14003,6 @@
         "knitr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "colorspace",
         "askpass",
         "sys",
@@ -14268,7 +14167,6 @@
         "httr",
         "BiocFileCache",
         "rappdirs",
-        "shape",
         "iterators",
         "generics",
         "tidyselect",
@@ -14279,7 +14177,6 @@
         "rjson",
         "knitr",
         "checkmate",
-        "rstudioapi",
         "fastmap",
         "jsonlite",
         "yaml",
@@ -14495,7 +14392,6 @@
         "knitr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "png",
         "jpeg",
@@ -14575,7 +14471,6 @@
         "R.methodsS3",
         "httr",
         "GlobalOptions",
-        "shape",
         "colorspace",
         "EBarrays",
         "minet",
@@ -14657,7 +14552,6 @@
         "magrittr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "png",
         "Biostrings",
@@ -15067,7 +14961,6 @@
         "scales",
         "scater",
         "GlobalOptions",
-        "shape",
         "colorspace",
         "GetoptLong",
         "clue",
@@ -15259,7 +15152,6 @@
         "sys",
         "rprojroot",
         "rainbow",
-        "rstudioapi",
         "diffobj",
         "rematch2",
         "hdrcde",
@@ -15901,7 +15793,6 @@
         "multipanelfigure",
         "circlize",
         "GlobalOptions",
-        "shape",
         "colorspace",
         "GetoptLong",
         "clue",
@@ -16655,7 +16546,6 @@
         "withr",
         "knitr",
         "checkmate",
-        "rstudioapi",
         "fastmap",
         "png",
         "jpeg",
@@ -17162,7 +17052,6 @@
         "tidytree",
         "treeio",
         "checkmate",
-        "rstudioapi",
         "httr",
         "png",
         "Biostrings",
@@ -17260,7 +17149,6 @@
         "backports",
         "ggplot2",
         "GlobalOptions",
-        "shape",
         "colorspace",
         "GetoptLong",
         "clue",
@@ -17356,7 +17244,6 @@
         "ks",
         "rrcov",
         "R.utils",
-        "rstudioapi",
         "corrplot",
         "car",
         "farver",
@@ -17580,7 +17467,6 @@
         "S4Vectors",
         "RcppArmadillo",
         "GlobalOptions",
-        "shape",
         "colorspace",
         "AnnotationDbi",
         "downloader",
@@ -17769,7 +17655,6 @@
         "ps",
         "waldo",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "rematch2"
     ],
@@ -17863,9 +17748,6 @@
         "utf8",
         "prettyunits",
         "purrr"
-    ],
-    "CFAssay": [
-
     ],
     "cfDNAPro": [
         "magrittr",
@@ -18055,7 +17937,6 @@
         "isva",
         "doParallel",
         "bumphunter",
-        "quadprog",
         "shiny",
         "shinythemes",
         "plotly",
@@ -18209,7 +18090,6 @@
         "rhdf5filters",
         "Rhdf5lib",
         "checkmate",
-        "rstudioapi",
         "clue",
         "highr",
         "png",
@@ -18566,7 +18446,6 @@
         "magrittr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "png",
         "jpeg",
@@ -18741,7 +18620,6 @@
         "isoband",
         "MASS",
         "mgcv",
-        "rstudioapi",
         "formatR",
         "colorspace",
         "askpass",
@@ -18911,7 +18789,6 @@
         "knitr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "httr",
         "mvtnorm",
@@ -19090,7 +18967,6 @@
         "matrixStats",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "png",
         "formatR",
         "jpeg",
@@ -19988,7 +19864,6 @@
         "rvest",
         "rmarkdown",
         "viridisLite",
-        "rstudioapi",
         "webshot",
         "svglite",
         "lattice",
@@ -20427,7 +20302,6 @@
         "rappdirs",
         "xml2",
         "GlobalOptions",
-        "shape",
         "colorspace",
         "iterators",
         "codetools",
@@ -20643,7 +20517,6 @@
         "knitr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "cachem",
         "askpass",
@@ -20923,9 +20796,6 @@
         "base64enc",
         "formatR",
         "fs"
-    ],
-    "cisPath": [
-
     ],
     "CiteFuse": [
         "SingleCellExperiment",
@@ -21459,9 +21329,6 @@
     ],
     "Clonality": [
         "DNAcopy"
-    ],
-    "clonotypeR": [
-
     ],
     "clst": [
         "ROC",
@@ -22378,7 +22245,6 @@
         "rprojroot",
         "lattice",
         "nlme",
-        "rstudioapi",
         "farver",
         "labeling",
         "munsell",
@@ -22604,7 +22470,6 @@
         "magrittr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "jsonlite",
         "mime",
         "openssl",
@@ -22832,7 +22697,6 @@
         "futile.options",
         "knitr",
         "checkmate",
-        "rstudioapi",
         "jpeg",
         "hms",
         "prettyunits",
@@ -22930,7 +22794,6 @@
         "base64enc",
         "lattice",
         "nlme",
-        "rstudioapi",
         "farver",
         "labeling",
         "munsell",
@@ -23206,7 +23069,6 @@
         "HDF5Array",
         "rhdf5",
         "beachmat",
-        "shape",
         "cluster",
         "iterators",
         "generics",
@@ -23536,7 +23398,6 @@
         "remotes",
         "rlang",
         "roxygen2",
-        "rstudioapi",
         "rversions",
         "sessioninfo",
         "testthat",
@@ -23729,9 +23590,6 @@
         "matrixStats",
         "formatR"
     ],
-    "coGPS": [
-
-    ],
     "COHCAP": [
         "WriteXLS",
         "COHCAPanno",
@@ -23772,7 +23630,6 @@
         "foreach",
         "doParallel",
         "irlba",
-        "shape",
         "colorspace",
         "IRanges",
         "iterators",
@@ -23817,7 +23674,6 @@
         "vegan",
         "SummarizedExperiment",
         "numDeriv",
-        "quadprog",
         "BiocGenerics",
         "SparseM",
         "quantreg",
@@ -24014,7 +23870,6 @@
         "knitr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "cachem",
         "colorspace",
@@ -24372,7 +24227,6 @@
         "knitr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "colorspace",
         "cli",
         "fansi",
@@ -24396,7 +24250,6 @@
         "matrixStats",
         "foreach",
         "doParallel",
-        "shape",
         "cluster",
         "iterators",
         "codetools",
@@ -24735,7 +24588,6 @@
         "ps",
         "waldo",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "rematch2"
     ],
@@ -24981,7 +24833,6 @@
         "viridis",
         "knitr",
         "checkmate",
-        "rstudioapi",
         "FNN",
         "kernlab",
         "mclust",
@@ -25327,9 +25178,6 @@
         "lattice",
         "matrixStats"
     ],
-    "CONSTANd": [
-
-    ],
     "contiBAIT": [
         "BH",
         "Rsamtools",
@@ -25356,7 +25204,6 @@
         "diagram",
         "futile.logger",
         "snow",
-        "shape",
         "GenomeInfoDb",
         "SummarizedExperiment",
         "Biostrings",
@@ -25486,7 +25333,6 @@
         "nlme",
         "reshape",
         "MASS",
-        "quadprog",
         "data.table",
         "GEOquery",
         "DelayedArray",
@@ -25728,7 +25574,6 @@
         "magrittr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "jsonlite",
         "mime",
         "openssl",
@@ -26392,9 +26237,6 @@
         "zlibbioc",
         "bitops"
     ],
-    "COSNet": [
-
-    ],
     "CountClust": [
         "ggplot2",
         "SQUAREM",
@@ -26885,7 +26727,6 @@
         "processx",
         "yaml",
         "tfautograph",
-        "rstudioapi",
         "base64enc",
         "whisker",
         "pkgconfig",
@@ -27048,7 +26889,6 @@
         "config",
         "processx",
         "tfautograph",
-        "rstudioapi",
         "whisker",
         "purrr",
         "assertthat",
@@ -27459,7 +27299,6 @@
         "magrittr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "httr",
         "png",
@@ -27506,9 +27345,6 @@
         "zlibbioc",
         "sys",
         "bitops"
-    ],
-    "CSSP": [
-
     ],
     "CSSQ": [
         "SummarizedExperiment",
@@ -28149,7 +27985,6 @@
         "knitr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "askpass",
         "sys",
         "backports",
@@ -28514,7 +28349,6 @@
         "gridExtra",
         "sys",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "rematch2"
     ],
@@ -28645,7 +28479,6 @@
         "BH",
         "RProtoBufLib",
         "Matrix",
-        "shape",
         "survival",
         "RcppEigen",
         "RcppParallel",
@@ -28756,7 +28589,6 @@
         "pROC",
         "recipes",
         "GlobalOptions",
-        "shape",
         "colorspace",
         "GetoptLong",
         "clue",
@@ -28900,7 +28732,6 @@
         "foreign",
         "numDeriv",
         "knitr",
-        "rstudioapi",
         "lava",
         "SparseM",
         "MatrixModels",
@@ -29078,7 +28909,6 @@
         "future.apply",
         "progressr",
         "SQUAREM",
-        "rstudioapi",
         "diffobj",
         "rematch2",
         "future",
@@ -29108,7 +28938,6 @@
         "snow",
         "BH",
         "GlobalOptions",
-        "shape",
         "colorspace",
         "GetoptLong",
         "clue",
@@ -29627,7 +29456,6 @@
         "processx",
         "ps",
         "waldo",
-        "rstudioapi",
         "hdrcde",
         "diffobj",
         "rematch2",
@@ -30055,7 +29883,6 @@
         "rtracklayer",
         "knitr",
         "checkmate",
-        "rstudioapi",
         "fastmap",
         "pkgconfig",
         "png",
@@ -30311,7 +30138,6 @@
         "modelr",
         "readr",
         "reprex",
-        "rstudioapi",
         "rvest",
         "xml2",
         "gmm",
@@ -30411,8 +30237,6 @@
         "ape",
         "tidytree",
         "treeio",
-        "shape",
-        "quadprog",
         "sp",
         "foreign",
         "cachem",
@@ -30599,7 +30423,6 @@
         "waldo",
         "gert",
         "gh",
-        "rstudioapi",
         "whisker",
         "sys",
         "fastmap",
@@ -30632,7 +30455,6 @@
         "circlize",
         "doRNG",
         "GlobalOptions",
-        "shape",
         "colorspace",
         "rngtools",
         "iterators",
@@ -30756,7 +30578,6 @@
         "readr",
         "readxl",
         "reprex",
-        "rstudioapi",
         "rvest",
         "xml2",
         "Biobase",
@@ -31035,7 +30856,6 @@
         "gridExtra",
         "sys",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "rematch2"
     ],
@@ -31565,7 +31385,6 @@
         "Matrix",
         "GenomeInfoDb",
         "DelayedArray",
-        "shape",
         "cluster",
         "iterators",
         "codetools",
@@ -31631,7 +31450,6 @@
     "decompTumor2Sig": [
         "ggplot2",
         "Matrix",
-        "quadprog",
         "GenomicRanges",
         "GenomicFeatures",
         "Biostrings",
@@ -31756,7 +31574,6 @@
         "scales",
         "tibble",
         "withr",
-        "quadprog",
         "lpSolve",
         "Biobase",
         "BiocGenerics",
@@ -31831,7 +31648,6 @@
         "magrittr",
         "matrixStats",
         "e1071",
-        "quadprog",
         "nnls",
         "rsq",
         "MASS",
@@ -31940,7 +31756,6 @@
         "rprojroot",
         "formatR",
         "colorspace",
-        "rstudioapi",
         "diffobj",
         "rematch2"
     ],
@@ -32196,7 +32011,6 @@
         "processx",
         "yaml",
         "tfautograph",
-        "rstudioapi",
         "stringi",
         "SnowballC",
         "tm",
@@ -32704,7 +32518,6 @@
         "glue",
         "purrr",
         "GlobalOptions",
-        "shape",
         "colorspace",
         "GetoptLong",
         "clue",
@@ -33031,7 +32844,6 @@
         "R6",
         "RColorBrewer",
         "viridisLite",
-        "quadprog",
         "quantmod",
         "nlme",
         "Matrix",
@@ -33164,7 +32976,6 @@
         "imputeLCMD",
         "cluster",
         "GlobalOptions",
-        "shape",
         "colorspace",
         "GetoptLong",
         "clue",
@@ -33484,7 +33295,6 @@
         "magrittr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "png",
         "jpeg",
@@ -33677,7 +33487,6 @@
         "knitr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "jsonlite",
         "mime",
@@ -34050,7 +33859,6 @@
         "ps",
         "waldo",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "rematch2"
     ],
@@ -34070,7 +33878,6 @@
         "jsonlite",
         "DESeq2",
         "GlobalOptions",
-        "shape",
         "colorspace",
         "S4Vectors",
         "IRanges",
@@ -34151,7 +33958,6 @@
         "GenomeInfoDbData",
         "matrixStats",
         "utf8",
-        "rstudioapi",
         "plyr",
         "stringr",
         "diffobj",
@@ -34529,7 +34335,6 @@
         "fastmatch",
         "igraph",
         "Matrix",
-        "quadprog",
         "RcppTOML",
         "here",
         "jsonlite",
@@ -34760,7 +34565,6 @@
         "knitr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "httr",
         "png",
@@ -34818,7 +34622,6 @@
         "ComplexHeatmap",
         "circlize",
         "GlobalOptions",
-        "shape",
         "colorspace",
         "GetoptLong",
         "clue",
@@ -34979,7 +34782,6 @@
         "multicool",
         "plot3D",
         "pracma",
-        "rstudioapi",
         "R.oo",
         "R.methodsS3",
         "robustbase",
@@ -35312,7 +35114,6 @@
         "rappdirs",
         "xml2",
         "crayon",
-        "shape",
         "cluster",
         "RcppArmadillo",
         "iterators",
@@ -35657,7 +35458,6 @@
         "xml2",
         "rvest",
         "viridisLite",
-        "rstudioapi",
         "svglite",
         "evaluate",
         "highr",
@@ -35991,7 +35791,6 @@
         "waldo",
         "withr",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "rematch2"
     ],
@@ -36129,7 +35928,6 @@
         "nlme",
         "reshape",
         "MASS",
-        "quadprog",
         "GEOquery",
         "IlluminaHumanMethylation450kanno.ilmn12.hg19",
         "IlluminaHumanMethylationEPICanno.ilm10b4.hg19",
@@ -36256,7 +36054,6 @@
         "promises",
         "knitr",
         "checkmate",
-        "rstudioapi",
         "fastmap",
         "formatR",
         "cachem",
@@ -36396,7 +36193,6 @@
         "knitr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "cachem",
         "colorspace",
@@ -36622,9 +36418,6 @@
         "Rcpp",
         "BH",
         "lattice"
-    ],
-    "DNAcopy": [
-
     ],
     "DNAshapeR": [
         "GenomicRanges",
@@ -36983,7 +36776,6 @@
         "waldo",
         "cpp11",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "rematch2"
     ],
@@ -37123,7 +36915,6 @@
         "zlibbioc",
         "glue",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "fansi",
         "rematch2",
@@ -37285,9 +37076,6 @@
         "crayon",
         "utf8",
         "bitops"
-    ],
-    "DriverNet": [
-
     ],
     "DropletUtils": [
         "SingleCellExperiment",
@@ -37752,9 +37540,6 @@
         "BiocGenerics",
         "limma"
     ],
-    "DynDoc": [
-
-    ],
     "easier": [
         "progeny",
         "easierData",
@@ -37853,7 +37638,6 @@
         "gtools",
         "caTools",
         "KernSmooth",
-        "quadprog",
         "lpSolve",
         "TH.data",
         "sandwich",
@@ -37944,7 +37728,6 @@
         "ps",
         "waldo",
         "rprojroot",
-        "rstudioapi",
         "fs",
         "diffobj",
         "rematch2"
@@ -38236,7 +38019,6 @@
         "glue",
         "rprojroot",
         "lattice",
-        "rstudioapi",
         "diffobj",
         "fansi",
         "rematch2",
@@ -38278,7 +38060,6 @@
         "glue",
         "rprojroot",
         "lattice",
-        "rstudioapi",
         "diffobj",
         "fansi",
         "rematch2",
@@ -38497,7 +38278,6 @@
         "rprojroot",
         "cachem",
         "askpass",
-        "rstudioapi",
         "diffobj",
         "rematch2",
         "sys",
@@ -39026,7 +38806,6 @@
         "BiocFileCache",
         "rappdirs",
         "GlobalOptions",
-        "shape",
         "colorspace",
         "GetoptLong",
         "clue",
@@ -39162,7 +38941,6 @@
         "lambda.r",
         "futile.options",
         "checkmate",
-        "rstudioapi",
         "boot",
         "minqa",
         "nloptr",
@@ -39228,9 +39006,6 @@
         "cli",
         "crayon",
         "utf8"
-    ],
-    "EmpiricalBrownsMethod": [
-
     ],
     "EnhancedVolcano": [
         "ggplot2",
@@ -39458,13 +39233,11 @@
         "tibble",
         "withr",
         "Matrix",
-        "shape",
         "Rcpp",
         "RcppEigen",
         "stabs",
         "lattice",
         "nnls",
-        "quadprog",
         "partykit",
         "BiocGenerics",
         "GenomicRanges",
@@ -39539,7 +39312,6 @@
         "knitr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "base64",
         "mvtnorm",
@@ -39642,7 +39414,6 @@
         "AnnotationHub",
         "genefilter",
         "gplots",
-        "quadprog",
         "S4Vectors",
         "BiocGenerics",
         "BiocFileCache",
@@ -39799,7 +39570,6 @@
         "circlize",
         "IRanges",
         "GlobalOptions",
-        "shape",
         "colorspace",
         "clue",
         "RColorBrewer",
@@ -40224,7 +39994,6 @@
         "ps",
         "waldo",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "rematch2"
     ],
@@ -40621,14 +40390,12 @@
         "ps",
         "waldo",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "rematch2"
     ],
     "EpiDISH": [
         "MASS",
         "e1071",
-        "quadprog",
         "matrixStats",
         "stringr",
         "locfdr",
@@ -40864,7 +40631,6 @@
         "ps",
         "waldo",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "rematch2"
     ],
@@ -40989,7 +40755,6 @@
         "RcppArmadillo",
         "knitr",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "curl",
         "jsonlite",
@@ -42358,7 +42123,6 @@
         "rmarkdown",
         "viridisLite",
         "htmltools",
-        "rstudioapi",
         "webshot",
         "svglite",
         "GenomicRanges",
@@ -42472,7 +42236,6 @@
         "BiocIO",
         "biomaRt",
         "Biobase",
-        "shape",
         "survival",
         "Rcpp",
         "RcppEigen",
@@ -43318,7 +43081,6 @@
         "survey",
         "magrittr",
         "pkgconfig",
-        "quadprog",
         "lattice",
         "survival",
         "minqa",
@@ -43542,7 +43304,6 @@
         "knitr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "png",
         "jpeg",
@@ -43781,7 +43542,6 @@
         "tibble",
         "withr",
         "crayon",
-        "shape",
         "cluster",
         "iterators",
         "rainbow",
@@ -44117,9 +43877,6 @@
         "fansi",
         "utf8"
     ],
-    "fdrame": [
-
-    ],
     "FEAST": [
         "mclust",
         "BiocParallel",
@@ -44401,7 +44158,6 @@
         "DelayedMatrixStats",
         "mclust",
         "reshape",
-        "quadprog",
         "data.table",
         "GEOquery",
         "DelayedArray",
@@ -44693,7 +44449,6 @@
         "Rcpp",
         "Matrix",
         "foreach",
-        "shape",
         "survival",
         "RcppEigen",
         "hms",
@@ -45002,7 +44757,6 @@
         "knitr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "png",
         "jpeg",
@@ -45614,7 +45368,6 @@
         "gridExtra",
         "sys",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "rematch2"
     ],
@@ -45766,7 +45519,6 @@
         "gridExtra",
         "sys",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "rematch2"
     ],
@@ -45987,9 +45739,6 @@
         "jpeg",
         "nlme"
     ],
-    "flowPeaks": [
-
-    ],
     "flowPloidy": [
         "flowCore",
         "car",
@@ -46094,7 +45843,6 @@
         "pkgconfig",
         "cpp11",
         "rprojroot",
-        "rstudioapi",
         "farver",
         "labeling",
         "munsell",
@@ -46103,9 +45851,6 @@
         "diffobj",
         "rematch2",
         "colorspace"
-    ],
-    "flowPlots": [
-
     ],
     "FlowSOM": [
         "igraph",
@@ -46282,7 +46027,6 @@
         "rprojroot",
         "locfit",
         "ash",
-        "rstudioapi",
         "diffobj",
         "rematch2"
     ],
@@ -47215,7 +46959,6 @@
         "pkgconfig",
         "cpp11",
         "rprojroot",
-        "rstudioapi",
         "farver",
         "labeling",
         "munsell",
@@ -47337,9 +47080,6 @@
         "affyio",
         "BiocManager",
         "zlibbioc"
-    ],
-    "FScanR": [
-
     ],
     "FunChIP": [
         "GenomicRanges",
@@ -47474,7 +47214,6 @@
         "nlme",
         "reshape",
         "MASS",
-        "quadprog",
         "data.table",
         "GEOquery",
         "DelayedArray",
@@ -47846,9 +47585,6 @@
         "RUnit",
         "BiocGenerics"
     ],
-    "gaia": [
-
-    ],
     "GAPGOM": [
         "Matrix",
         "fastmatch",
@@ -47939,16 +47675,12 @@
         "glmnet",
         "Matrix",
         "foreach",
-        "shape",
         "survival",
         "Rcpp",
         "RcppEigen",
         "lattice",
         "codetools",
         "iterators"
-    ],
-    "garfield": [
-
     ],
     "GARS": [
         "ggplot2",
@@ -48121,7 +47853,6 @@
         "rtracklayer",
         "knitr",
         "checkmate",
-        "rstudioapi",
         "fastmap",
         "png",
         "jpeg",
@@ -48309,7 +48040,6 @@
         "S4Vectors",
         "GenomeInfoDb",
         "DelayedArray",
-        "shape",
         "cluster",
         "iterators",
         "codetools",
@@ -48380,15 +48110,11 @@
         "glue",
         "fs",
         "rappdirs",
-        "rstudioapi",
         "withr",
         "cachem",
         "askpass",
         "sys",
         "fastmap"
-    ],
-    "GCSFilesystem": [
-
     ],
     "GCSscore": [
         "BiocManager",
@@ -48415,7 +48141,6 @@
         "remotes",
         "rlang",
         "roxygen2",
-        "rstudioapi",
         "rversions",
         "sessioninfo",
         "testthat",
@@ -48711,7 +48436,6 @@
         "ps",
         "waldo",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "rematch2"
     ],
@@ -48736,9 +48460,6 @@
         "matrixStats",
         "bitops",
         "zlibbioc"
-    ],
-    "gdsfmt": [
-
     ],
     "GEM": [
         "ggplot2",
@@ -49045,7 +48766,6 @@
         "ps",
         "waldo",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "rematch2"
     ],
@@ -49522,7 +49242,6 @@
         "waldo",
         "cpp11",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "rematch2"
     ],
@@ -49909,7 +49628,6 @@
         "knitr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "cachem",
         "colorspace",
@@ -50001,7 +49719,6 @@
         "bslib",
         "httr",
         "GlobalOptions",
-        "shape",
         "htmlwidgets",
         "miniUI",
         "shinyjs",
@@ -50073,7 +49790,6 @@
         "cluster",
         "iterators",
         "codetools",
-        "rstudioapi",
         "annotate",
         "survival",
         "lattice",
@@ -50234,9 +49950,6 @@
         "stringi",
         "pkgconfig",
         "purrr"
-    ],
-    "genoCN": [
-
     ],
     "GenoGAM": [
         "SummarizedExperiment",
@@ -50945,7 +50658,6 @@
         "knitr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "formatR",
         "cachem",
@@ -51080,7 +50792,6 @@
         "knitr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "png",
         "jpeg",
@@ -51284,7 +50995,6 @@
         "Matrix",
         "GenomeInfoDb",
         "DelayedArray",
-        "shape",
         "cluster",
         "assertthat",
         "blob",
@@ -51360,7 +51070,6 @@
         "ps",
         "waldo",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "rematch2"
     ],
@@ -51752,7 +51461,6 @@
         "scales",
         "stringr",
         "numDeriv",
-        "rstudioapi",
         "cellranger",
         "progress",
         "DEoptimR",
@@ -51951,7 +51659,6 @@
         "pkgload",
         "praise",
         "waldo",
-        "rstudioapi",
         "diffobj",
         "rematch2"
     ],
@@ -52144,7 +51851,6 @@
         "ps",
         "waldo",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "rematch2"
     ],
@@ -52304,7 +52010,6 @@
         "mgcv",
         "scales",
         "withr",
-        "shape",
         "survival",
         "Rcpp",
         "RcppEigen",
@@ -52462,7 +52167,6 @@
         "pkgconfig",
         "cpp11",
         "rprojroot",
-        "rstudioapi",
         "farver",
         "labeling",
         "munsell",
@@ -52577,7 +52281,6 @@
         "knitr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "png",
         "jpeg",
@@ -53174,7 +52877,6 @@
         "magrittr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "curl",
         "openssl",
         "Biostrings",
@@ -53441,7 +53143,6 @@
         "scales",
         "withr",
         "foreach",
-        "shape",
         "survival",
         "Rcpp",
         "RcppEigen",
@@ -53564,7 +53265,6 @@
         "ps",
         "waldo",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "rematch2"
     ],
@@ -53643,9 +53343,6 @@
         "utf8",
         "zlibbioc",
         "bitops"
-    ],
-    "globalSeq": [
-
     ],
     "globaltest": [
         "survival",
@@ -53897,7 +53594,6 @@
         "tibble",
         "knitr",
         "checkmate",
-        "rstudioapi",
         "curl",
         "openssl",
         "jpeg",
@@ -53942,7 +53638,6 @@
         "XVector",
         "crayon",
         "GlobalOptions",
-        "shape",
         "GetoptLong",
         "clue",
         "RColorBrewer",
@@ -54031,7 +53726,6 @@
         "diagram",
         "plotrix",
         "GenomicRanges",
-        "shape",
         "BiocGenerics",
         "S4Vectors",
         "IRanges",
@@ -54062,7 +53756,6 @@
         "RColorBrewer",
         "readr",
         "rlang",
-        "rstudioapi",
         "scales",
         "stringr",
         "tibble",
@@ -55025,9 +54718,6 @@
         "matrixStats",
         "formatR"
     ],
-    "gpls": [
-
-    ],
     "gprege": [
         "gptk",
         "Matrix",
@@ -55080,7 +54770,6 @@
         "boot",
         "mvtnorm",
         "expm",
-        "rstudioapi",
         "Exact",
         "gld",
         "data.table",
@@ -55141,7 +54830,6 @@
         "withr",
         "gridGraphics",
         "yulab.utils",
-        "quadprog",
         "lpSolve",
         "RColorBrewer",
         "ellipsis",
@@ -55207,9 +54895,6 @@
     ],
     "graph": [
         "BiocGenerics"
-    ],
-    "GraphAlignment": [
-
     ],
     "GraphAT": [
         "graph",
@@ -55495,7 +55180,6 @@
         "ps",
         "waldo",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "rematch2"
     ],
@@ -55546,7 +55230,6 @@
         "mvtnorm",
         "Matrix",
         "foreach",
-        "shape",
         "Rcpp",
         "RcppEigen",
         "BiocGenerics",
@@ -55688,7 +55371,6 @@
         "glue",
         "rprojroot",
         "formatR",
-        "rstudioapi",
         "bitops",
         "diffobj",
         "fansi",
@@ -56272,7 +55954,6 @@
         "circlize",
         "GetoptLong",
         "GlobalOptions",
-        "shape",
         "colorspace",
         "BiocGenerics",
         "S4Vectors",
@@ -56417,7 +56098,6 @@
         "config",
         "processx",
         "tfautograph",
-        "rstudioapi",
         "base64enc",
         "whisker",
         "bit",
@@ -56652,7 +56332,6 @@
         "knitr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "cachem",
         "colorspace",
@@ -57167,7 +56846,6 @@
         "munsell",
         "knitr",
         "checkmate",
-        "rstudioapi",
         "fastmap",
         "curl",
         "mime",
@@ -57947,7 +57625,6 @@
         "knitr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "formatR",
         "cachem",
@@ -57964,7 +57641,6 @@
         "fmsb",
         "Matrix",
         "foreach",
-        "shape",
         "survival",
         "Rcpp",
         "RcppEigen",
@@ -57977,7 +57653,6 @@
         "glmnet",
         "Matrix",
         "foreach",
-        "shape",
         "survival",
         "Rcpp",
         "RcppEigen",
@@ -57993,7 +57668,6 @@
         "GenomicRanges",
         "polylabelr",
         "GlobalOptions",
-        "shape",
         "colorspace",
         "BiocGenerics",
         "S4Vectors",
@@ -58393,7 +58067,6 @@
         "yaml"
     ],
     "HIREewas": [
-        "quadprog",
         "gplots",
         "gtools",
         "caTools",
@@ -58493,9 +58166,6 @@
         "purrr",
         "lattice",
         "colorspace"
-    ],
-    "hpar": [
-
     ],
     "HPAStainR": [
         "dplyr",
@@ -58889,7 +58559,6 @@
         "purrr",
         "rappdirs",
         "rprojroot",
-        "rstudioapi",
         "whisker",
         "withr",
         "yaml",
@@ -59056,7 +58725,6 @@
         "xml2",
         "rvest",
         "viridisLite",
-        "rstudioapi",
         "webshot",
         "svglite",
         "babelgene",
@@ -59113,9 +58781,6 @@
     "hypergraph": [
         "graph",
         "BiocGenerics"
-    ],
-    "iASeq": [
-
     ],
     "iasva": [
         "irlba",
@@ -59265,7 +58930,6 @@
         "magrittr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "png",
         "jpeg",
@@ -59528,7 +59192,6 @@
         "DelayedMatrixStats",
         "mclust",
         "reshape",
-        "quadprog",
         "data.table",
         "GEOquery",
         "DelayedArray",
@@ -59594,9 +59257,6 @@
     ],
     "iChip": [
         "limma"
-    ],
-    "iClusterPlus": [
-
     ],
     "iCNV": [
         "CODEX",
@@ -60369,7 +60029,6 @@
         "boot",
         "mvtnorm",
         "expm",
-        "rstudioapi",
         "Exact",
         "gld",
         "data.table",
@@ -60662,7 +60321,6 @@
         "assertthat",
         "rprojroot",
         "askpass",
-        "rstudioapi",
         "diffobj",
         "rematch2",
         "sys"
@@ -61099,9 +60757,6 @@
     "IMPCdata": [
         "rjson"
     ],
-    "impute": [
-
-    ],
     "INDEED": [
         "glasso",
         "devtools",
@@ -61122,7 +60777,6 @@
         "remotes",
         "rlang",
         "roxygen2",
-        "rstudioapi",
         "rversions",
         "sessioninfo",
         "testthat",
@@ -61711,7 +61365,6 @@
         "ps",
         "waldo",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "rematch2"
     ],
@@ -61821,7 +61474,6 @@
         "knitr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "png",
         "jpeg",
@@ -61929,7 +61581,6 @@
         "rmarkdown",
         "scales",
         "viridisLite",
-        "rstudioapi",
         "glue",
         "webshot",
         "httpuv",
@@ -61949,7 +61600,6 @@
         "cpp11",
         "sass",
         "jquerylib",
-        "shape",
         "cluster",
         "iterators",
         "codetools",
@@ -62164,7 +61814,6 @@
         "rappdirs",
         "xml2",
         "GlobalOptions",
-        "shape",
         "jsonlite",
         "miniUI",
         "shinyjs",
@@ -62209,7 +61858,6 @@
         "pkgload",
         "remotes",
         "roxygen2",
-        "rstudioapi",
         "testthat",
         "usethis",
         "base64enc",
@@ -62571,7 +62219,6 @@
         "magrittr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "evaluate",
         "highr",
@@ -62820,7 +62467,6 @@
         "ps",
         "waldo",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "rematch2"
     ],
@@ -62992,7 +62638,6 @@
         "knitr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "formatR",
         "png",
@@ -63306,7 +62951,6 @@
         "processx",
         "ps",
         "waldo",
-        "rstudioapi",
         "diffobj",
         "rematch2"
     ],
@@ -63402,7 +63046,6 @@
         "ComplexHeatmap",
         "circlize",
         "GlobalOptions",
-        "shape",
         "colorspace",
         "htmltools",
         "htmlwidgets",
@@ -63539,7 +63182,6 @@
         "GenomeInfoDb",
         "sass",
         "GlobalOptions",
-        "shape",
         "colorspace",
         "GetoptLong",
         "clue",
@@ -63574,9 +63216,6 @@
         "fs",
         "rappdirs",
         "zlibbioc"
-    ],
-    "iSeq": [
-
     ],
     "isobar": [
         "Biobase",
@@ -63666,7 +63305,6 @@
     "IsoCorrectoR": [
         "dplyr",
         "magrittr",
-        "quadprog",
         "readr",
         "readxl",
         "stringr",
@@ -63709,7 +63347,6 @@
         "tcltk2",
         "dplyr",
         "magrittr",
-        "quadprog",
         "readr",
         "stringr",
         "tibble",
@@ -63920,7 +63557,6 @@
         "annotate",
         "AnnotationDbi",
         "nlme",
-        "quadprog",
         "mvtnorm",
         "MASS",
         "Matrix",
@@ -63968,9 +63604,6 @@
         "ellipsis",
         "glue",
         "bitops"
-    ],
-    "ISoLDE": [
-
     ],
     "isomiRs": [
         "DiscriMiner",
@@ -64065,7 +63698,6 @@
         "BH",
         "bitops",
         "GlobalOptions",
-        "shape",
         "colorspace",
         "GetoptLong",
         "clue",
@@ -64371,7 +64003,6 @@
         "assertthat",
         "rprojroot",
         "askpass",
-        "rstudioapi",
         "MatrixGenerics",
         "DelayedArray",
         "diffobj",
@@ -64525,7 +64156,6 @@
         "ps",
         "waldo",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "rematch2"
     ],
@@ -64701,7 +64331,6 @@
         "magrittr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "jsonlite",
         "mime",
         "openssl",
@@ -64727,9 +64356,6 @@
         "sys",
         "cli",
         "utf8"
-    ],
-    "KBoost": [
-
     ],
     "KCsmart": [
         "siggenes",
@@ -65126,7 +64752,6 @@
         "Biobase",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "highr",
         "png",
@@ -65231,9 +64856,6 @@
         "Biobase",
         "BiocGenerics"
     ],
-    "LBE": [
-
-    ],
     "ldblock": [
         "Matrix",
         "snpStats",
@@ -65333,9 +64955,6 @@
         "fansi",
         "utf8"
     ],
-    "LEA": [
-
-    ],
     "LedPred": [
         "e1071",
         "akima",
@@ -65386,7 +65005,6 @@
         "KernSmooth",
         "nlme",
         "Matrix",
-        "rstudioapi",
         "farver",
         "labeling",
         "munsell",
@@ -65551,7 +65169,6 @@
         "askpass",
         "fansi",
         "utf8",
-        "rstudioapi",
         "farver",
         "labeling",
         "munsell",
@@ -65566,9 +65183,6 @@
     ],
     "lfa": [
         "corpcor"
-    ],
-    "limma": [
-
     ],
     "limmaGUI": [
         "limma",
@@ -65591,7 +65205,6 @@
         "snow",
         "BH",
         "GlobalOptions",
-        "shape",
         "colorspace",
         "GetoptLong",
         "clue",
@@ -65785,7 +65398,6 @@
         "ps",
         "waldo",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "rematch2"
     ],
@@ -66126,7 +65738,6 @@
         "ps",
         "waldo",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "rematch2"
     ],
@@ -66219,7 +65830,6 @@
         "knitr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "png",
         "jpeg",
@@ -66432,17 +66042,11 @@
         "cli",
         "utf8"
     ],
-    "LPE": [
-
-    ],
     "LPEadj": [
         "LPE"
     ],
     "lpNet": [
         "lpSolve"
-    ],
-    "lpsymphony": [
-
     ],
     "LRBaseDbi": [
         "AnnotationDbi",
@@ -66675,7 +66279,6 @@
         "DelayedMatrixStats",
         "mclust",
         "reshape",
-        "quadprog",
         "data.table",
         "GEOquery",
         "DelayedArray",
@@ -66767,7 +66370,6 @@
         "GenomeInfoDb",
         "crayon",
         "GlobalOptions",
-        "shape",
         "colorspace",
         "generics",
         "glue",
@@ -66798,7 +66400,6 @@
         "fastmatch",
         "igraph",
         "Matrix",
-        "quadprog",
         "gridExtra",
         "futile.logger",
         "nlme",
@@ -66939,7 +66540,6 @@
         "magrittr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "png",
         "jpeg",
@@ -67220,7 +66820,6 @@
         "proxy",
         "codetools",
         "iterators",
-        "shape",
         "survival",
         "gtools",
         "caTools",
@@ -67264,7 +66863,6 @@
         "ps",
         "waldo",
         "rprojroot",
-        "rstudioapi",
         "cpp11",
         "diffobj",
         "rematch2"
@@ -67851,7 +67449,6 @@
         "DelayedMatrixStats",
         "mclust",
         "reshape",
-        "quadprog",
         "GEOquery",
         "BiocParallel",
         "colorspace",
@@ -68089,7 +67686,6 @@
         "readxl",
         "reprex",
         "rlang",
-        "rstudioapi",
         "rvest",
         "stringr",
         "tibble",
@@ -68311,7 +67907,6 @@
         "knitr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "prodlim",
         "png",
@@ -68398,9 +67993,6 @@
         "aws",
         "awsMethods",
         "gsl"
-    ],
-    "MantelCorr": [
-
     ],
     "mAPKL": [
         "Biobase",
@@ -68810,7 +68402,6 @@
         "futile.options",
         "knitr",
         "checkmate",
-        "rstudioapi",
         "cachem",
         "askpass",
         "sys",
@@ -68846,9 +68437,6 @@
         "RCurl",
         "GenomeInfoDbData",
         "bitops"
-    ],
-    "MassArray": [
-
     ],
     "massiR": [
         "cluster",
@@ -68922,9 +68510,6 @@
         "utf8",
         "bitops",
         "zlibbioc"
-    ],
-    "matchBox": [
-
     ],
     "MatrixGenerics": [
         "matrixStats"
@@ -69051,7 +68636,6 @@
         "preprocessCore",
         "zlibbioc",
         "sass",
-        "shape",
         "iterators",
         "codetools",
         "RCurl",
@@ -69059,7 +68643,6 @@
         "XVector",
         "rjson",
         "checkmate",
-        "rstudioapi",
         "curl",
         "highr",
         "jpeg",
@@ -69215,9 +68798,6 @@
         "lambda.r",
         "futile.options",
         "formatR"
-    ],
-    "MBAmethyl": [
-
     ],
     "MBASED": [
         "RUnit",
@@ -69613,7 +69193,6 @@
         "knitr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "curl",
         "jsonlite",
@@ -69776,7 +69355,6 @@
         "knitr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "formatR",
         "backports",
         "evaluate",
@@ -69914,7 +69492,6 @@
         "genefilter",
         "nlme",
         "reshape",
-        "quadprog",
         "data.table",
         "GEOquery",
         "DelayedArray",
@@ -70050,7 +69627,6 @@
         "knitr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "formatR",
         "cachem",
@@ -70060,9 +69636,6 @@
         "evaluate",
         "highr",
         "xfun"
-    ],
-    "MeasurementError.cor": [
-
     ],
     "MEAT": [
         "impute",
@@ -70086,7 +69659,6 @@
         "pillar",
         "Matrix",
         "foreach",
-        "shape",
         "survival",
         "Rcpp",
         "RcppEigen",
@@ -70112,7 +69684,6 @@
         "nlme",
         "reshape",
         "MASS",
-        "quadprog",
         "data.table",
         "GEOquery",
         "DelayedArray",
@@ -70447,7 +70018,6 @@
         "pkgconfig",
         "cpp11",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "rematch2"
     ],
@@ -70509,7 +70079,6 @@
         "gh",
         "rappdirs",
         "rprojroot",
-        "rstudioapi",
         "whisker",
         "yaml",
         "bit64",
@@ -70740,7 +70309,6 @@
         "jsonlite",
         "rappdirs",
         "rprojroot",
-        "rstudioapi",
         "whisker",
         "RCurl",
         "GenomeInfoDbData",
@@ -70779,9 +70347,6 @@
         "bitops",
         "diffobj",
         "rematch2"
-    ],
-    "Mergeomics": [
-
     ],
     "MeSHDbi": [
         "AnnotationDbi",
@@ -71069,7 +70634,6 @@
         "GenomeInfoDb",
         "crayon",
         "GlobalOptions",
-        "shape",
         "colorspace",
         "GetoptLong",
         "clue",
@@ -71098,7 +70662,6 @@
         "fastmatch",
         "igraph",
         "Matrix",
-        "quadprog",
         "ellipsis",
         "purrr",
         "cpp11",
@@ -71179,7 +70742,6 @@
         "digest",
         "Rcpp",
         "svGUI",
-        "rstudioapi",
         "BiocParallel",
         "MSnbase",
         "mzR",
@@ -71582,7 +71144,6 @@
         "lazyeval",
         "bit",
         "vctrs",
-        "shape",
         "assertthat",
         "ellipsis",
         "lifecycle",
@@ -71597,7 +71158,6 @@
         "knitr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "jpeg",
         "minqa",
@@ -71648,9 +71208,6 @@
         "formatR",
         "diffobj",
         "rematch2"
-    ],
-    "metaCCA": [
-
     ],
     "MetaCyto": [
         "flowCore",
@@ -71832,7 +71389,6 @@
         "rprojroot",
         "locfit",
         "ash",
-        "rstudioapi",
         "diffobj",
         "rematch2"
     ],
@@ -72037,7 +71593,6 @@
         "BiocGenerics",
         "codetools",
         "iterators",
-        "shape",
         "survival",
         "Rcpp",
         "RcppEigen",
@@ -72047,9 +71602,6 @@
         "lattice",
         "locfit",
         "bitops"
-    ],
-    "metahdep": [
-
     ],
     "metaMS": [
         "CAMERA",
@@ -72135,7 +71687,6 @@
         "knitr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "png",
         "jpeg",
@@ -72586,7 +72137,6 @@
         "rlang",
         "tibble",
         "withr",
-        "shape",
         "survival",
         "RcppEigen",
         "gtools",
@@ -72760,7 +72310,6 @@
         "ggplot2",
         "S4Vectors",
         "GlobalOptions",
-        "shape",
         "colorspace",
         "digest",
         "glue",
@@ -73250,7 +72799,6 @@
         "ps",
         "waldo",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "rematch2"
     ],
@@ -73399,7 +72947,6 @@
         "genefilter",
         "nlme",
         "reshape",
-        "quadprog",
         "data.table",
         "GEOquery",
         "DelayedArray",
@@ -73525,7 +73072,6 @@
         "magrittr",
         "minfi",
         "bsseq",
-        "quadprog",
         "plyranges",
         "bumphunter",
         "genefilter",
@@ -73667,7 +73213,6 @@
     "methylclock": [
         "methylclockData",
         "devtools",
-        "quadprog",
         "Rcpp",
         "ExperimentHub",
         "dplyr",
@@ -73700,7 +73245,6 @@
         "remotes",
         "rlang",
         "roxygen2",
-        "rstudioapi",
         "rversions",
         "sessioninfo",
         "testthat",
@@ -74050,7 +73594,6 @@
         "DelayedMatrixStats",
         "mclust",
         "reshape",
-        "quadprog",
         "data.table",
         "GEOquery",
         "DelayedArray",
@@ -74500,7 +74043,6 @@
         "knitr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "formatR",
         "cachem",
@@ -74796,7 +74338,6 @@
         "mclust",
         "nlme",
         "reshape",
-        "quadprog",
         "data.table",
         "GEOquery",
         "DelayedArray",
@@ -74923,7 +74464,6 @@
         "remotes",
         "rlang",
         "roxygen2",
-        "rstudioapi",
         "rversions",
         "sessioninfo",
         "testthat",
@@ -75652,7 +75192,6 @@
         "crayon",
         "codetools",
         "iterators",
-        "shape",
         "survival",
         "RcppEigen",
         "sandwich",
@@ -75819,7 +75358,6 @@
         "GenomeInfoDb",
         "XVector",
         "isoband",
-        "shape",
         "RcppEigen",
         "gtools",
         "caTools",
@@ -75880,7 +75418,6 @@
         "praise",
         "waldo",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "rematch2"
     ],
@@ -75997,7 +75534,6 @@
         "futile.logger",
         "snow",
         "BH",
-        "shape",
         "iterators",
         "class",
         "proxy",
@@ -76079,7 +75615,6 @@
         "curl",
         "openssl",
         "formatR",
-        "rstudioapi",
         "lava",
         "bit64",
         "blob",
@@ -76158,7 +75693,6 @@
         "pkgload",
         "remotes",
         "roxygen2",
-        "rstudioapi",
         "testthat",
         "usethis",
         "base64enc",
@@ -76420,7 +75954,6 @@
         "rvest",
         "scales",
         "viridisLite",
-        "rstudioapi",
         "webshot",
         "digest",
         "svglite",
@@ -76803,7 +76336,6 @@
         "colorspace",
         "fansi",
         "utf8",
-        "rstudioapi",
         "SparseM",
         "MatrixModels",
         "rmutil",
@@ -76868,7 +76400,6 @@
         "knitr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "png",
         "jpeg",
@@ -77008,7 +76539,6 @@
         "knitr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "jsonlite",
         "mime",
@@ -77056,7 +76586,6 @@
         "siggenes",
         "DelayedMatrixStats",
         "reshape",
-        "quadprog",
         "GEOquery",
         "DelayedArray",
         "HDF5Array",
@@ -77123,7 +76652,6 @@
         "nlme",
         "reshape",
         "MASS",
-        "quadprog",
         "data.table",
         "GEOquery",
         "DelayedArray",
@@ -77493,9 +77021,6 @@
         "sys",
         "bitops"
     ],
-    "miRBaseConverter": [
-
-    ],
     "miRcomp": [
         "Biobase",
         "miRcompData",
@@ -77618,7 +77143,6 @@
         "boot",
         "gsl",
         "foreach",
-        "shape",
         "survival",
         "RcppEigen",
         "GO.db",
@@ -77697,7 +77221,6 @@
         "withr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "pkgconfig",
         "evaluate",
@@ -77710,7 +77233,6 @@
         "matrixStats",
         "stabs",
         "nnls",
-        "quadprog",
         "partykit",
         "askpass",
         "cli",
@@ -77818,9 +77340,6 @@
         "zlibbioc",
         "sys",
         "bitops"
-    ],
-    "miRNApath": [
-
     ],
     "miRNAtap": [
         "AnnotationDbi",
@@ -78074,7 +77593,6 @@
         "rappdirs",
         "knitr",
         "htmlwidgets",
-        "rstudioapi",
         "curl",
         "openssl",
         "Biostrings",
@@ -78337,7 +77855,6 @@
         "nlme",
         "reshape",
         "MASS",
-        "quadprog",
         "data.table",
         "GEOquery",
         "DelayedArray",
@@ -78623,7 +78140,6 @@
         "corrplot",
         "htmltools",
         "jsonlite",
-        "rstudioapi",
         "forcats",
         "gtable",
         "lifecycle",
@@ -79092,7 +78608,6 @@
         "XVector",
         "matrixStats",
         "data.table",
-        "rstudioapi",
         "dplyr",
         "generics",
         "gower",
@@ -79446,7 +78961,6 @@
         "proxy",
         "codetools",
         "iterators",
-        "shape",
         "survival",
         "gtools",
         "caTools",
@@ -79478,7 +78992,6 @@
         "ps",
         "waldo",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "rematch2"
     ],
@@ -79704,7 +79217,6 @@
         "knitr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "httr",
         "png",
@@ -79987,7 +79499,6 @@
         "tibble",
         "tidyr",
         "GlobalOptions",
-        "shape",
         "colorspace",
         "GetoptLong",
         "clue",
@@ -80081,7 +79592,6 @@
         "matrixStats",
         "Rsamtools",
         "GlobalOptions",
-        "shape",
         "colorspace",
         "GetoptLong",
         "clue",
@@ -80285,7 +79795,6 @@
         "RISmed",
         "BiocGenerics",
         "GlobalOptions",
-        "shape",
         "colorspace",
         "AnnotationDbi",
         "downloader",
@@ -80705,7 +80214,6 @@
         "generics",
         "knitr",
         "checkmate",
-        "rstudioapi",
         "cachem",
         "colorspace",
         "askpass",
@@ -81028,9 +80536,6 @@
         "cachem",
         "fastmap"
     ],
-    "MPFE": [
-
-    ],
     "mpra": [
         "BiocGenerics",
         "SummarizedExperiment",
@@ -81207,7 +80712,6 @@
         "ps",
         "waldo",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "rematch2"
     ],
@@ -81452,7 +80956,6 @@
         "knitr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "jsonlite",
         "mime",
@@ -82183,7 +81686,6 @@
         "waldo",
         "sys",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "rematch2"
     ],
@@ -82359,7 +81861,6 @@
         "colorspace",
         "askpass",
         "utf8",
-        "rstudioapi",
         "diffobj",
         "rematch2",
         "sys"
@@ -82431,7 +81932,6 @@
         "ps",
         "waldo",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "rematch2"
     ],
@@ -82529,7 +82029,6 @@
         "readr",
         "readxl",
         "reprex",
-        "rstudioapi",
         "rvest",
         "xml2",
         "assertthat",
@@ -82741,7 +82240,6 @@
         "ps",
         "waldo",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "rematch2"
     ],
@@ -83090,7 +82588,6 @@
         "progressr",
         "numDeriv",
         "SQUAREM",
-        "rstudioapi",
         "diffobj",
         "rematch2",
         "future",
@@ -83168,7 +82665,6 @@
         "ps",
         "waldo",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "rematch2"
     ],
@@ -83251,7 +82747,6 @@
         "ps",
         "waldo",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "rematch2"
     ],
@@ -83607,7 +83102,6 @@
         "config",
         "processx",
         "tfautograph",
-        "rstudioapi",
         "whisker",
         "assertthat",
         "lambda.r",
@@ -83882,9 +83376,6 @@
         "parallelly",
         "codetools"
     ],
-    "MultiMed": [
-
-    ],
     "multiMiR": [
         "XML",
         "RCurl",
@@ -84060,7 +83551,6 @@
         "pkgload",
         "remotes",
         "roxygen2",
-        "rstudioapi",
         "testthat",
         "usethis",
         "digest",
@@ -84363,7 +83853,6 @@
         "KEGGREST",
         "fs",
         "rappdirs",
-        "rstudioapi",
         "withr",
         "BiocParallel",
         "biomaRt",
@@ -84500,7 +83989,6 @@
         "ScaledMatrix",
         "irlba",
         "rsvd",
-        "shape",
         "cluster",
         "sparseMatrixStats",
         "codetools",
@@ -84561,7 +84049,6 @@
         "mime",
         "openssl",
         "Biostrings",
-        "rstudioapi",
         "bit64",
         "blob",
         "memoise",
@@ -84660,7 +84147,6 @@
         "gtable",
         "scales",
         "Matrix",
-        "quadprog",
         "plyr",
         "ggseqlogo",
         "readxl",
@@ -84752,7 +84238,6 @@
         "rappdirs",
         "sass",
         "jquerylib",
-        "shape",
         "viridis",
         "iterators",
         "BH",
@@ -84844,7 +84329,6 @@
         "processx",
         "ps",
         "waldo",
-        "rstudioapi",
         "diffobj",
         "rematch2"
     ],
@@ -84973,9 +84457,6 @@
         "askpass",
         "sys"
     ],
-    "MVCClass": [
-
-    ],
     "MWASTools": [
         "glm2",
         "ppcor",
@@ -85038,7 +84519,6 @@
         "DelayedArray",
         "XVector",
         "crayon",
-        "shape",
         "cluster",
         "iterators",
         "codetools",
@@ -85099,7 +84579,6 @@
         "waldo",
         "cpp11",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "rematch2"
     ],
@@ -85171,7 +84650,6 @@
         "magrittr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "png",
         "jpeg",
@@ -85300,7 +84778,6 @@
         "knitr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "png",
         "jpeg",
@@ -85472,7 +84949,6 @@
         "htmltools",
         "jsonlite",
         "yaml",
-        "quadprog",
         "lpSolve",
         "ade4",
         "mvtnorm",
@@ -85577,7 +85053,6 @@
         "promises",
         "knitr",
         "checkmate",
-        "rstudioapi",
         "askpass",
         "httpuv",
         "xtable",
@@ -85954,7 +85429,6 @@
         "readr",
         "readxl",
         "reprex",
-        "rstudioapi",
         "rvest",
         "tidyr",
         "xml2",
@@ -86242,7 +85716,6 @@
         "waldo",
         "cpp11",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "rematch2"
     ],
@@ -86924,7 +86397,6 @@
         "magrittr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "httr",
         "png",
@@ -87149,7 +86621,6 @@
         "tibble",
         "withr",
         "Matrix",
-        "shape",
         "survival",
         "RcppEigen",
         "jsonlite",
@@ -87235,7 +86706,6 @@
         "withr",
         "Matrix",
         "foreach",
-        "shape",
         "survival",
         "Rcpp",
         "RcppEigen",
@@ -87587,7 +87057,6 @@
         "knitr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "jpeg",
         "RColorBrewer",
@@ -87827,7 +87296,6 @@
         "processx",
         "yaml",
         "tfautograph",
-        "rstudioapi",
         "base64enc",
         "whisker",
         "tidyselect",
@@ -88036,7 +87504,6 @@
         "withr",
         "glue",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "fansi",
         "rematch2",
@@ -88164,7 +87631,6 @@
     "normalize450K": [
         "Biobase",
         "illuminaio",
-        "quadprog",
         "BiocGenerics",
         "base64",
         "openssl",
@@ -88284,7 +87750,6 @@
         "rematch",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "evaluate",
         "highr",
@@ -88591,9 +88056,6 @@
         "formatR",
         "matrixStats"
     ],
-    "nuCpos": [
-
-    ],
     "nullranges": [
         "IRanges",
         "GenomicRanges",
@@ -88682,9 +88144,6 @@
         "lambda.r",
         "futile.options",
         "formatR"
-    ],
-    "NuPoP": [
-
     ],
     "NxtIRFcore": [
         "NxtIRFdata",
@@ -88823,9 +88282,6 @@
         "sys",
         "sass",
         "fs"
-    ],
-    "occugene": [
-
     ],
     "OCplus": [
         "multtest",
@@ -89003,7 +88459,6 @@
         "knitr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "jpeg",
         "cachem",
@@ -89421,7 +88876,6 @@
         "snow",
         "BH",
         "GlobalOptions",
-        "shape",
         "colorspace",
         "locfit",
         "car",
@@ -89505,7 +88959,6 @@
         "futile.options",
         "knitr",
         "checkmate",
-        "rstudioapi",
         "fastmap",
         "png",
         "jpeg",
@@ -89685,7 +89138,6 @@
         "rvest",
         "viridisLite",
         "htmltools",
-        "rstudioapi",
         "webshot",
         "svglite",
         "Rcpp",
@@ -89693,7 +89145,6 @@
         "Biobase",
         "qpdf",
         "xts",
-        "quadprog",
         "zoo",
         "plyr",
         "htmlwidgets",
@@ -90166,7 +89617,6 @@
         "waldo",
         "cpp11",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "rematch2"
     ],
@@ -90591,7 +90041,6 @@
         "knitr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "png",
         "jpeg",
@@ -90728,7 +90177,6 @@
         "RCurl",
         "GenomeInfoDbData",
         "checkmate",
-        "rstudioapi",
         "png",
         "jpeg",
         "Matrix",
@@ -90817,7 +90265,6 @@
         "scales",
         "withr",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "png",
         "jpeg",
@@ -91042,7 +90489,6 @@
         "remotes",
         "rlang",
         "roxygen2",
-        "rstudioapi",
         "rversions",
         "sessioninfo",
         "testthat",
@@ -91737,12 +91183,8 @@
         "ps",
         "waldo",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "rematch2"
-    ],
-    "OSAT": [
-
     ],
     "Oscope": [
         "EBSeq",
@@ -91781,7 +91223,6 @@
         "gtools",
         "caTools",
         "KernSmooth",
-        "rstudioapi",
         "diffobj",
         "fansi",
         "rematch2",
@@ -92219,7 +91660,6 @@
         "ps",
         "waldo",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "rematch2"
     ],
@@ -92442,7 +91882,6 @@
         "glue",
         "rprojroot",
         "formatR",
-        "rstudioapi",
         "bitops",
         "diffobj",
         "fansi",
@@ -92719,9 +92158,6 @@
         "ellipsis",
         "glue"
     ],
-    "parody": [
-
-    ],
     "PAST": [
         "dplyr",
         "rlang",
@@ -92814,9 +92250,6 @@
         "Rcpp",
         "R.methodsS3"
     ],
-    "PathNet": [
-
-    ],
     "PathoStat": [
         "limma",
         "corpcor",
@@ -92889,7 +92322,6 @@
         "remotes",
         "rlang",
         "roxygen2",
-        "rstudioapi",
         "rversions",
         "sessioninfo",
         "testthat",
@@ -92913,7 +92345,6 @@
         "MASS",
         "mgcv",
         "Matrix",
-        "shape",
         "survival",
         "RcppEigen",
         "gdata",
@@ -93709,7 +93140,6 @@
         "ps",
         "waldo",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "rematch2"
     ],
@@ -93768,7 +93198,6 @@
         "gridExtra",
         "plyr",
         "GlobalOptions",
-        "shape",
         "colorspace",
         "GetoptLong",
         "clue",
@@ -94122,7 +93551,6 @@
         "BH",
         "Matrix",
         "foreach",
-        "shape",
         "survival",
         "Rcpp",
         "RcppEigen",
@@ -94446,7 +93874,6 @@
         "ps",
         "waldo",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "rematch2"
     ],
@@ -94570,9 +93997,6 @@
         "askpass",
         "zlibbioc",
         "sys"
-    ],
-    "pgca": [
-
     ],
     "phantasus": [
         "ggplot2",
@@ -95064,7 +94488,6 @@
         "processx",
         "ps",
         "waldo",
-        "rstudioapi",
         "diffobj",
         "rematch2"
     ],
@@ -95227,7 +94650,6 @@
         "magrittr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "jsonlite",
         "mime",
@@ -95374,7 +94796,6 @@
         "praise",
         "waldo",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "rematch2"
     ],
@@ -95408,7 +94829,6 @@
         "fastmatch",
         "igraph",
         "Matrix",
-        "quadprog",
         "ellipsis",
         "lifecycle",
         "tidyselect",
@@ -95489,7 +94909,6 @@
         "reshape2",
         "ggtext",
         "GlobalOptions",
-        "shape",
         "colorspace",
         "magrittr",
         "viridis",
@@ -95597,7 +95016,6 @@
         "ps",
         "waldo",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "rematch2"
     ],
@@ -95858,7 +95276,6 @@
         "isoband",
         "mgcv",
         "Rcpp",
-        "shape",
         "survival",
         "RcppEigen",
         "pkgconfig",
@@ -96195,7 +95612,6 @@
         "treeio",
         "RcppArmadillo",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "curl",
         "mime",
@@ -96354,7 +95770,6 @@
         "knitr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "FNN",
         "kernlab",
@@ -96409,7 +95824,6 @@
         "snow",
         "BH",
         "GlobalOptions",
-        "shape",
         "colorspace",
         "GetoptLong",
         "png",
@@ -96951,7 +96365,6 @@
         "rematch",
         "knitr",
         "checkmate",
-        "rstudioapi",
         "yaml",
         "png",
         "jpeg",
@@ -97091,7 +96504,6 @@
         "withr",
         "glue",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "fansi",
         "rematch2",
@@ -97472,7 +96884,6 @@
         "tidygraph",
         "graphlayouts",
         "Matrix",
-        "shape",
         "survival",
         "RcppEigen",
         "evaluate",
@@ -98460,9 +97871,6 @@
         "BiocGenerics",
         "lattice"
     ],
-    "preprocessCore": [
-
-    ],
     "primirTSS": [
         "GenomicRanges",
         "S4Vectors",
@@ -98634,7 +98042,6 @@
         "crosstalk",
         "knitr",
         "checkmate",
-        "rstudioapi",
         "formatR",
         "nlme",
         "colorspace",
@@ -98738,7 +98145,6 @@
         "knitr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "png",
         "jpeg",
@@ -98756,7 +98162,6 @@
         "labeling",
         "munsell",
         "viridisLite",
-        "quadprog",
         "quantmod",
         "nlme",
         "limma",
@@ -99090,7 +98495,6 @@
         "knitr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "png",
         "Biostrings",
@@ -99322,7 +98726,6 @@
         "plotrix",
         "RColorBrewer",
         "GlobalOptions",
-        "shape",
         "colorspace",
         "GetoptLong",
         "clue",
@@ -99918,7 +99321,6 @@
         "reshape2",
         "lazyeval",
         "viridis",
-        "rstudioapi",
         "base64enc",
         "yaml",
         "evaluate",
@@ -100337,7 +99739,6 @@
         "modelr",
         "readr",
         "reprex",
-        "rstudioapi",
         "rvest",
         "xml2",
         "gmm",
@@ -100421,8 +99822,6 @@
         "ape",
         "tidytree",
         "treeio",
-        "shape",
-        "quadprog",
         "sp",
         "foreign",
         "askpass",
@@ -100445,9 +99844,6 @@
         "gridGraphics",
         "formatR",
         "diffobj"
-    ],
-    "proteinProfiles": [
-
     ],
     "ProteoDisco": [
         "BiocGenerics",
@@ -100793,9 +100189,6 @@
         "zlibbioc",
         "bitops"
     ],
-    "ProtGenerics": [
-
-    ],
     "PSEA": [
         "Biobase",
         "MASS",
@@ -100987,7 +100380,6 @@
         "codetools",
         "knitr",
         "checkmate",
-        "rstudioapi",
         "formatR",
         "jpeg",
         "BSgenome",
@@ -101274,7 +100666,6 @@
         "stringr",
         "knitr",
         "checkmate",
-        "rstudioapi",
         "yaml",
         "curl",
         "openssl",
@@ -101682,7 +101073,6 @@
         "rprojroot",
         "colorspace",
         "utf8",
-        "rstudioapi",
         "diffobj",
         "rematch2"
     ],
@@ -101780,7 +101170,6 @@
         "magrittr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "jsonlite",
         "mime",
@@ -102531,7 +101920,6 @@
         "base64enc",
         "nlme",
         "Matrix",
-        "rstudioapi",
         "bitops",
         "farver",
         "labeling",
@@ -102696,7 +102084,6 @@
         "magrittr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "png",
         "jpeg",
@@ -102807,7 +102194,6 @@
         "scales",
         "tibble",
         "withr",
-        "quadprog",
         "lpSolve",
         "MatrixGenerics",
         "GenomicRanges",
@@ -102886,7 +102272,6 @@
         "genefilter",
         "nlme",
         "reshape",
-        "quadprog",
         "data.table",
         "GEOquery",
         "DelayedArray",
@@ -103336,7 +102721,6 @@
         "knitr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "png",
         "jpeg",
@@ -103754,9 +103138,6 @@
         "Matrix",
         "lattice"
     ],
-    "rama": [
-
-    ],
     "ramr": [
         "GenomicRanges",
         "doParallel",
@@ -103845,7 +103226,6 @@
         "BiocParallel",
         "Matrix",
         "foreach",
-        "shape",
         "survival",
         "Rcpp",
         "RcppEigen",
@@ -104091,9 +103471,6 @@
         "formatR",
         "fs"
     ],
-    "rawrr": [
-
-    ],
     "RbcBook1": [
         "Biobase",
         "graph",
@@ -104203,9 +103580,6 @@
     "RBM": [
         "limma",
         "marray"
-    ],
-    "Rbowtie": [
-
     ],
     "Rbowtie2": [
         "magrittr",
@@ -104437,9 +103811,6 @@
         "lambda.r",
         "futile.options",
         "formatR"
-    ],
-    "RCASPAR": [
-
     ],
     "rcellminer": [
         "Biobase",
@@ -104769,7 +104140,6 @@
         "plyr",
         "vegan",
         "stringr",
-        "quadprog",
         "zoo",
         "quantmod",
         "pixmap",
@@ -104999,7 +104369,6 @@
         "RColorBrewer",
         "readr",
         "rlang",
-        "rstudioapi",
         "scales",
         "stringr",
         "tibble",
@@ -105127,7 +104496,6 @@
         "influenceR",
         "RColorBrewer",
         "readr",
-        "rstudioapi",
         "scales",
         "stringr",
         "tidyr",
@@ -105310,7 +104678,6 @@
         "foreach",
         "iterators",
         "codetools",
-        "rstudioapi",
         "attempt",
         "glue",
         "httr",
@@ -105823,7 +105190,6 @@
         "knitr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "png",
         "formatR",
@@ -105982,7 +105348,6 @@
         "nlme",
         "reshape",
         "MASS",
-        "quadprog",
         "data.table",
         "GEOquery",
         "BiocParallel",
@@ -106102,7 +105467,6 @@
         "XVector",
         "crayon",
         "GlobalOptions",
-        "shape",
         "colorspace",
         "GetoptLong",
         "clue",
@@ -106444,7 +105808,6 @@
         "knitr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "curl",
         "jsonlite",
@@ -106634,7 +105997,6 @@
         "lambda.r",
         "futile.options",
         "htmlwidgets",
-        "rstudioapi",
         "png",
         "jpeg",
         "nlme",
@@ -106682,7 +106044,6 @@
         "Rcpp",
         "Matrix",
         "foreach",
-        "shape",
         "survival",
         "RcppEigen",
         "BiocGenerics",
@@ -106857,7 +106218,6 @@
         "mgcv",
         "knitr",
         "checkmate",
-        "rstudioapi",
         "colorspace",
         "highr",
         "xfun",
@@ -106932,7 +106292,6 @@
         "genefilter",
         "reshape",
         "MASS",
-        "quadprog",
         "data.table",
         "GEOquery",
         "DelayedArray",
@@ -107315,7 +106674,6 @@
         "futile.options",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "jpeg",
         "cachem",
@@ -107502,7 +106860,6 @@
         "bit",
         "cli",
         "fs",
-        "rstudioapi",
         "withr",
         "RCurl",
         "GenomeInfoDbData",
@@ -107573,7 +106930,6 @@
         "mice",
         "BiocGenerics",
         "GlobalOptions",
-        "shape",
         "colorspace",
         "car",
         "cluster",
@@ -107653,7 +107009,6 @@
         "iterators",
         "knitr",
         "checkmate",
-        "rstudioapi",
         "fastmap",
         "png",
         "jpeg",
@@ -107862,7 +107217,6 @@
         "yaml",
         "xfun",
         "cli",
-        "rstudioapi",
         "withr",
         "magrittr",
         "glue"
@@ -108212,9 +107566,6 @@
     ],
     "rhdf5filters": [
         "Rhdf5lib"
-    ],
-    "Rhdf5lib": [
-
     ],
     "Rhisat2": [
         "GenomicFeatures",
@@ -108580,7 +107931,6 @@
         "knitr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "png",
         "jpeg",
@@ -108734,7 +108084,6 @@
         "knitr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "jsonlite",
         "mime",
@@ -109210,7 +108559,6 @@
         "knitr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "jpeg",
         "backports",
         "evaluate",
@@ -109434,7 +108782,6 @@
         "withr",
         "Matrix",
         "foreach",
-        "shape",
         "survival",
         "Rcpp",
         "RcppEigen",
@@ -109510,7 +108857,6 @@
         "igraph",
         "survival",
         "foreach",
-        "shape",
         "Rcpp",
         "RcppEigen",
         "magrittr",
@@ -109568,7 +108914,6 @@
         "data.table",
         "caret",
         "GlobalOptions",
-        "shape",
         "colorspace",
         "GetoptLong",
         "clue",
@@ -109903,7 +109248,6 @@
         "remotes",
         "rlang",
         "roxygen2",
-        "rstudioapi",
         "rversions",
         "sessioninfo",
         "testthat",
@@ -110206,7 +109550,6 @@
         "knitr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "formatR",
         "jpeg",
         "askpass",
@@ -110276,7 +109619,6 @@
         "vctrs",
         "rprojroot",
         "utf8",
-        "rstudioapi",
         "diffobj",
         "rematch2"
     ],
@@ -110635,7 +109977,6 @@
         "knitr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "askpass",
         "sys",
         "backports",
@@ -110773,7 +110114,6 @@
         "knitr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "formatR",
         "cachem",
@@ -110925,7 +110265,6 @@
         "knitr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "askpass",
         "sys",
         "backports",
@@ -111063,7 +110402,6 @@
         "knitr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "formatR",
         "cachem",
@@ -111134,9 +110472,6 @@
     ],
     "rnaseqcomp": [
         "RColorBrewer"
-    ],
-    "RNASeqPower": [
-
     ],
     "RNASeqR": [
         "ggplot2",
@@ -111223,7 +110558,6 @@
         "png",
         "KEGGREST",
         "xts",
-        "quadprog",
         "zoo",
         "Matrix",
         "RcppTOML",
@@ -111367,7 +110701,6 @@
         "processx",
         "ps",
         "waldo",
-        "rstudioapi",
         "diffobj",
         "rematch2"
     ],
@@ -111520,7 +110853,6 @@
         "DelayedMatrixStats",
         "mclust",
         "reshape",
-        "quadprog",
         "data.table",
         "GEOquery",
         "DelayedArray",
@@ -111936,9 +111268,6 @@
         "utf8",
         "bitops"
     ],
-    "RProtoBufLib": [
-
-    ],
     "RpsiXML": [
         "XML",
         "annotate",
@@ -112162,7 +111491,6 @@
         "xml2",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "formatR",
         "colorspace",
         "cli",
@@ -112209,7 +111537,6 @@
         "lme4",
         "nlme",
         "foreach",
-        "shape",
         "survival",
         "Rcpp",
         "RcppEigen",
@@ -112316,7 +111643,6 @@
         "cpp11",
         "rprojroot",
         "colorspace",
-        "rstudioapi",
         "diffobj",
         "rematch2"
     ],
@@ -112724,7 +112050,6 @@
         "ps",
         "waldo",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "rematch2"
     ],
@@ -112943,7 +112268,6 @@
         "waldo",
         "cpp11",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "rematch2"
     ],
@@ -113057,7 +112381,6 @@
         "waldo",
         "cpp11",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "rematch2"
     ],
@@ -113175,7 +112498,6 @@
         "waldo",
         "cpp11",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "rematch2"
     ],
@@ -113305,7 +112627,6 @@
         "magrittr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "png",
         "jpeg",
@@ -113521,7 +112842,6 @@
         "scales",
         "tibble",
         "matrixStats",
-        "rstudioapi",
         "dplyr",
         "purrr",
         "tidyselect",
@@ -113690,7 +113010,6 @@
         "bootstrap",
         "Matrix",
         "lattice",
-        "quadprog",
         "foreach",
         "doParallel",
         "gRbase",
@@ -113898,9 +113217,6 @@
         "zlibbioc",
         "bitops"
     ],
-    "SamSPECTRAL": [
-
-    ],
     "sangeranalyseR": [
         "stringr",
         "ape",
@@ -113959,7 +113275,6 @@
         "fastmatch",
         "igraph",
         "Matrix",
-        "quadprog",
         "scales",
         "httr",
         "digest",
@@ -114454,7 +113769,6 @@
         "tfruns",
         "yaml",
         "tfautograph",
-        "rstudioapi",
         "MatrixGenerics",
         "IRanges",
         "survival",
@@ -115505,9 +114819,6 @@
         "stringi",
         "bit"
     ],
-    "SCBN": [
-
-    ],
     "scCB2": [
         "SingleCellExperiment",
         "SummarizedExperiment",
@@ -116335,7 +115646,6 @@
         "formatR",
         "colorspace",
         "utf8",
-        "rstudioapi",
         "diffobj",
         "rematch2",
         "zlibbioc"
@@ -116438,7 +115748,6 @@
         "snow",
         "BH",
         "foreach",
-        "shape",
         "Rcpp",
         "RcppEigen",
         "magrittr",
@@ -116458,7 +115767,6 @@
         "processx",
         "yaml",
         "tfautograph",
-        "rstudioapi",
         "codetools",
         "iterators",
         "lambda.r",
@@ -116566,7 +115874,6 @@
         "mgcv",
         "scales",
         "Matrix",
-        "shape",
         "survival",
         "RcppEigen",
         "DelayedArray",
@@ -117226,7 +116533,6 @@
         "knitr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "formatR",
         "png",
@@ -117699,7 +117005,6 @@
         "mvtnorm",
         "expm",
         "Rcpp",
-        "rstudioapi",
         "Exact",
         "gld",
         "data.table",
@@ -118095,7 +117400,6 @@
         "colorspace",
         "fansi",
         "utf8",
-        "rstudioapi",
         "hms",
         "prettyunits",
         "bitops",
@@ -118240,7 +117544,6 @@
         "scales",
         "tibble",
         "withr",
-        "shape",
         "RcppEigen",
         "RcppTOML",
         "here",
@@ -118478,7 +117781,6 @@
         "knitr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "jsonlite",
         "mime",
@@ -119361,7 +118663,6 @@
         "circlize",
         "randomcoloR",
         "GlobalOptions",
-        "shape",
         "colorspace",
         "GetoptLong",
         "clue",
@@ -119458,7 +118759,6 @@
         "DBI",
         "RSQLite",
         "KEGGREST",
-        "shape",
         "cluster",
         "iterators",
         "generics",
@@ -119889,7 +119189,6 @@
         "knitr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "png",
         "Biostrings",
@@ -120250,9 +119549,6 @@
         "utf8",
         "bitops",
         "fastmap"
-    ],
-    "seqLogo": [
-
     ],
     "seqPattern": [
         "Biostrings",
@@ -120704,7 +120000,6 @@
         "snow",
         "BH",
         "GlobalOptions",
-        "shape",
         "colorspace",
         "GetoptLong",
         "clue",
@@ -121064,7 +120359,6 @@
         "genefilter",
         "nlme",
         "reshape",
-        "quadprog",
         "GEOquery",
         "DelayedArray",
         "HDF5Array",
@@ -121207,7 +120501,6 @@
         "nlme",
         "reshape",
         "MASS",
-        "quadprog",
         "data.table",
         "GEOquery",
         "DelayedArray",
@@ -121383,7 +120676,6 @@
         "corrplot",
         "Matrix",
         "foreach",
-        "shape",
         "survival",
         "Rcpp",
         "RcppEigen",
@@ -122029,7 +121321,6 @@
         "lattice",
         "cachem",
         "nlme",
-        "rstudioapi",
         "rjson",
         "yaml",
         "bit64",
@@ -122065,11 +121356,7 @@
         "askpass",
         "sys"
     ],
-    "sigPathway": [
-
-    ],
     "SigsPack": [
-        "quadprog",
         "Biobase",
         "BSgenome",
         "VariantAnnotation",
@@ -122429,7 +121716,6 @@
         "S4Vectors",
         "KEGGREST",
         "GlobalOptions",
-        "shape",
         "colorspace",
         "RColorBrewer",
         "png",
@@ -122566,7 +121852,6 @@
         "multtest",
         "scran",
         "GlobalOptions",
-        "shape",
         "colorspace",
         "locfit",
         "Rcpp",
@@ -122743,7 +122028,6 @@
         "multipanelfigure",
         "AnnotationHub",
         "GlobalOptions",
-        "shape",
         "htmltools",
         "htmlwidgets",
         "jsonlite",
@@ -122975,7 +122259,6 @@
         "RcppParallel",
         "StanHeaders",
         "checkmate",
-        "rstudioapi",
         "jpeg",
         "tmvnsim",
         "SparseM",
@@ -123480,9 +122763,6 @@
         "crayon",
         "utf8"
     ],
-    "sizepower": [
-
-    ],
     "skewr": [
         "methylumi",
         "wateRmelon",
@@ -123520,7 +122800,6 @@
         "nlme",
         "reshape",
         "MASS",
-        "quadprog",
         "data.table",
         "GEOquery",
         "DelayedArray",
@@ -123868,9 +123147,6 @@
         "bitops",
         "zlibbioc"
     ],
-    "SLqPCR": [
-
-    ],
     "SMAD": [
         "RcppAlgos",
         "magrittr",
@@ -123896,9 +123172,6 @@
         "fansi",
         "utf8",
         "pkgconfig"
-    ],
-    "SMAP": [
-
     ],
     "SMITE": [
         "GenomicRanges",
@@ -123974,7 +123247,6 @@
         "knitr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "curl",
         "jsonlite",
@@ -124215,7 +123487,6 @@
         "withr",
         "glue",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "fansi",
         "rematch2",
@@ -124661,7 +123932,6 @@
         "knitr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "png",
         "jpeg",
@@ -124943,7 +124213,6 @@
         "tidyr",
         "backports",
         "GlobalOptions",
-        "shape",
         "colorspace",
         "GetoptLong",
         "clue",
@@ -125063,7 +124332,6 @@
         "glmnet",
         "huge",
         "foreach",
-        "shape",
         "survival",
         "Rcpp",
         "RcppEigen",
@@ -125486,7 +124754,6 @@
         "ps",
         "waldo",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "rematch2"
     ],
@@ -125755,7 +125022,6 @@
         "vipor",
         "knitr",
         "checkmate",
-        "rstudioapi",
         "png",
         "Biostrings",
         "jpeg",
@@ -125927,7 +125193,6 @@
         "knitr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "backports",
         "evaluate",
         "highr",
@@ -126223,7 +125488,6 @@
         "waldo",
         "rprojroot",
         "proxy",
-        "rstudioapi",
         "diffobj",
         "rematch2"
     ],
@@ -126390,9 +125654,6 @@
         "lambda.r",
         "futile.options",
         "formatR"
-    ],
-    "spikeLI": [
-
     ],
     "spiky": [
         "Rsamtools",
@@ -126854,7 +126115,6 @@
         "knitr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "formatR",
         "backports",
         "evaluate",
@@ -126881,7 +126141,6 @@
         "rngtools",
         "Matrix",
         "codetools",
-        "shape",
         "survival",
         "Rcpp",
         "RcppEigen",
@@ -127027,7 +126286,6 @@
         "magrittr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "pkgconfig",
         "png",
@@ -127296,7 +126554,6 @@
         "remotes",
         "rlang",
         "roxygen2",
-        "rstudioapi",
         "rversions",
         "sessioninfo",
         "testthat",
@@ -127517,13 +126774,11 @@
         "mgcv",
         "withr",
         "foreach",
-        "shape",
         "survival",
         "RcppEigen",
         "gtools",
         "caTools",
         "KernSmooth",
-        "quadprog",
         "plyr",
         "rARPACK",
         "lattice",
@@ -127804,7 +127059,6 @@
         "knitr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "cachem",
         "colorspace",
@@ -128831,7 +128085,6 @@
         "withr",
         "glue",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "fansi",
         "rematch2",
@@ -129059,7 +128312,6 @@
         "askpass",
         "fansi",
         "utf8",
-        "rstudioapi",
         "prettyunits",
         "farver",
         "labeling",
@@ -129243,7 +128495,6 @@
         "ps",
         "waldo",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "rematch2"
     ],
@@ -129659,9 +128910,6 @@
         "futile.options",
         "formatR"
     ],
-    "swfdr": [
-
-    ],
     "switchBox": [
         "pROC",
         "gplots",
@@ -129838,7 +129086,6 @@
         "readr",
         "readxl",
         "reprex",
-        "rstudioapi",
         "rvest",
         "xml2",
         "permute",
@@ -130030,7 +129277,6 @@
         "ps",
         "waldo",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "rematch2"
     ],
@@ -130146,7 +129392,6 @@
         "magrittr",
         "plotly",
         "rlang",
-        "rstudioapi",
         "shinyAce",
         "shinyFiles",
         "shinyWidgets",
@@ -130510,7 +129755,6 @@
         "ps",
         "waldo",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "rematch2"
     ],
@@ -130544,7 +129788,6 @@
         "fastmatch",
         "igraph",
         "Matrix",
-        "quadprog",
         "ggplotify",
         "patchwork",
         "generics",
@@ -130803,7 +130046,6 @@
         "ps",
         "waldo",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "rematch2"
     ],
@@ -130877,7 +130119,6 @@
         "magrittr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "png",
         "jpeg",
@@ -130991,7 +130232,6 @@
         "irlba",
         "rsvd",
         "beachmat",
-        "shape",
         "cluster",
         "lazyeval",
         "R6",
@@ -131410,7 +130650,6 @@
         "rappdirs",
         "sass",
         "GlobalOptions",
-        "shape",
         "colorspace",
         "GetoptLong",
         "clue",
@@ -131528,7 +130767,6 @@
         "formatR",
         "lava",
         "checkmate",
-        "rstudioapi",
         "future.apply",
         "progressr",
         "numDeriv",
@@ -131836,7 +131074,6 @@
         "purrr",
         "cli",
         "fs",
-        "rstudioapi",
         "openssl",
         "fansi",
         "utf8",
@@ -132796,7 +132033,6 @@
         "knitr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "png",
         "jpeg",
@@ -133092,7 +132328,6 @@
         "knitr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "httr",
         "png",
@@ -133450,7 +132685,6 @@
     ],
     "TNBC.CMS": [
         "e1071",
-        "quadprog",
         "SummarizedExperiment",
         "GSVA",
         "pheatmap",
@@ -133611,7 +132845,6 @@
         "ps",
         "waldo",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "rematch2"
     ],
@@ -133649,7 +132882,6 @@
         "EpiDISH",
         "limma",
         "nnls",
-        "quadprog",
         "SummarizedExperiment",
         "corpcor",
         "doParallel",
@@ -134380,7 +133612,6 @@
         "mgcv",
         "knitr",
         "checkmate",
-        "rstudioapi",
         "formatR",
         "askpass",
         "sys",
@@ -135064,7 +134295,6 @@
         "withr",
         "Matrix",
         "foreach",
-        "shape",
         "survival",
         "RcppEigen",
         "caTools",
@@ -135334,7 +134564,6 @@
         "cpp11",
         "ggplotify",
         "GlobalOptions",
-        "shape",
         "colorspace",
         "GetoptLong",
         "clue",
@@ -135434,7 +134663,6 @@
         "ks",
         "rrcov",
         "R.utils",
-        "rstudioapi",
         "bitops",
         "broom",
         "corrplot",
@@ -135583,7 +134811,6 @@
         "Rsamtools",
         "Matrix",
         "foreach",
-        "shape",
         "survival",
         "Rcpp",
         "RcppEigen",
@@ -135666,7 +134893,6 @@
         "knitr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "jpeg",
         "RColorBrewer",
         "askpass",
@@ -136117,7 +135343,6 @@
         "pkgload",
         "remotes",
         "roxygen2",
-        "rstudioapi",
         "testthat",
         "usethis",
         "gtable",
@@ -136389,7 +135614,6 @@
         "R.methodsS3",
         "httr",
         "GlobalOptions",
-        "shape",
         "colorspace",
         "codetools",
         "magrittr",
@@ -136708,7 +135932,6 @@
         "RColorBrewer",
         "readr",
         "rlang",
-        "rstudioapi",
         "scales",
         "stringr",
         "tibble",
@@ -136990,7 +136213,6 @@
         "knitr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "askpass",
         "sys",
         "backports",
@@ -137278,12 +136500,6 @@
         "base64enc",
         "formatR",
         "fs"
-    ],
-    "tximport": [
-
-    ],
-    "TypeInfo": [
-
     ],
     "Ularcirc": [
         "AnnotationHub",
@@ -137693,7 +136909,6 @@
         "GenomeInfoDbData",
         "BiocIO",
         "checkmate",
-        "rstudioapi",
         "base64enc",
         "openssl",
         "evaluate",
@@ -138094,7 +137309,6 @@
         "RColorBrewer",
         "readr",
         "rlang",
-        "rstudioapi",
         "scales",
         "stringr",
         "tibble",
@@ -138494,7 +137708,6 @@
         "waldo",
         "cpp11",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "rematch2"
     ],
@@ -138809,7 +138022,6 @@
         "mgcv",
         "knitr",
         "checkmate",
-        "rstudioapi",
         "colorspace",
         "askpass",
         "cli",
@@ -139015,9 +138227,6 @@
         "fansi",
         "utf8",
         "fastmap"
-    ],
-    "vbmp": [
-
     ],
     "VCFArray": [
         "BiocGenerics",
@@ -139473,7 +138682,6 @@
         "purrr",
         "readr",
         "rlang",
-        "rstudioapi",
         "tibble",
         "tidyr",
         "visNetwork",
@@ -140227,7 +139435,6 @@
         "waldo",
         "rprojroot",
         "colorspace",
-        "rstudioapi",
         "diffobj",
         "rematch2"
     ],
@@ -140306,7 +139513,6 @@
         "DelayedMatrixStats",
         "mclust",
         "reshape",
-        "quadprog",
         "data.table",
         "GEOquery",
         "DelayedArray",
@@ -140470,7 +139676,6 @@
         "knitr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "png",
         "jpeg",
@@ -140684,9 +139889,6 @@
         "bitops",
         "zlibbioc"
     ],
-    "widgetTools": [
-
-    ],
     "wiggleplotr": [
         "dplyr",
         "ggplot2",
@@ -140808,7 +140010,6 @@
         "pkgload",
         "remotes",
         "roxygen2",
-        "rstudioapi",
         "testthat",
         "usethis",
         "httpuv",
@@ -141255,7 +140456,6 @@
         "BH",
         "bitops",
         "backports",
-        "shape",
         "cluster",
         "MatrixGenerics",
         "piano",
@@ -141402,9 +140602,6 @@
         "cachem",
         "fastmap"
     ],
-    "xmapbridge": [
-
-    ],
     "XNAString": [
         "Biostrings",
         "BSgenome",
@@ -141548,7 +140745,6 @@
         "crayon",
         "BSgenome",
         "GlobalOptions",
-        "shape",
         "colorspace",
         "clue",
         "RColorBrewer",
@@ -141579,7 +140775,6 @@
         "scales",
         "withr",
         "httr",
-        "quadprog",
         "lpSolve",
         "mvtnorm",
         "multcompView",
@@ -141689,7 +140884,6 @@
         "knitr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "jpeg",
         "hms",
         "prettyunits",
@@ -141782,7 +140976,6 @@
         "genefilter",
         "nlme",
         "reshape",
-        "quadprog",
         "data.table",
         "GEOquery",
         "DelayedArray",
@@ -142007,9 +141200,6 @@
         "ellipsis",
         "glue"
     ],
-    "zlibbioc": [
-
-    ],
     "mpm": [
         "MASS",
         "KernSmooth"
@@ -142017,7 +141207,6 @@
     "glmnet": [
         "Matrix",
         "foreach",
-        "shape",
         "survival",
         "Rcpp",
         "RcppEigen",
@@ -142046,12 +141235,6 @@
     ],
     "varSelRF": [
         "randomForest"
-    ],
-    "xtable": [
-
-    ],
-    "BiocManager": [
-
     ],
     "GO.db": [
         "AnnotationDbi",
@@ -142093,9 +141276,6 @@
         "sys",
         "bitops"
     ],
-    "DBI": [
-
-    ],
     "survival": [
         "Matrix",
         "lattice"
@@ -142107,37 +141287,13 @@
         "codetools",
         "iterators"
     ],
-    "shape": [
-
-    ],
-    "Rcpp": [
-
-    ],
     "RcppEigen": [
         "Matrix",
         "Rcpp",
         "lattice"
     ],
-    "gtools": [
-
-    ],
     "caTools": [
         "bitops"
-    ],
-    "KernSmooth": [
-
-    ],
-    "MASS": [
-
-    ],
-    "cluster": [
-
-    ],
-    "randomForest": [
-
-    ],
-    "XML": [
-
     ],
     "httr": [
         "curl",
@@ -142164,36 +141320,9 @@
         "ellipsis",
         "glue"
     ],
-    "bitops": [
-
-    ],
-    "codetools": [
-
-    ],
-    "iterators": [
-
-    ],
-    "lattice": [
-
-    ],
-    "curl": [
-
-    ],
-    "jsonlite": [
-
-    ],
-    "mime": [
-
-    ],
     "openssl": [
         "askpass",
         "sys"
-    ],
-    "R6": [
-
-    ],
-    "png": [
-
     ],
     "bit64": [
         "bit"
@@ -142209,21 +141338,6 @@
         "cachem",
         "fastmap"
     ],
-    "pkgconfig": [
-
-    ],
-    "plogr": [
-
-    ],
-    "crayon": [
-
-    ],
-    "bit": [
-
-    ],
-    "rlang": [
-
-    ],
     "vctrs": [
         "ellipsis",
         "glue",
@@ -142236,40 +141350,16 @@
     "askpass": [
         "sys"
     ],
-    "sys": [
-
-    ],
-    "fastmap": [
-
-    ],
     "RCurl": [
         "bitops"
     ],
-    "GenomeInfoDbData": [
-
-    ],
     "ellipsis": [
         "rlang"
-    ],
-    "glue": [
-
-    ],
-    "ABAData": [
-
-    ],
-    "data.table": [
-
     ],
     "vioplot": [
         "sm",
         "zoo",
         "lattice"
-    ],
-    "mapplots": [
-
-    ],
-    "sm": [
-
     ],
     "zoo": [
         "lattice"
@@ -142306,12 +141396,8 @@
         "crayon",
         "utf8"
     ],
-    "RColorBrewer": [
-
-    ],
     "circlize": [
         "GlobalOptions",
-        "shape",
         "colorspace"
     ],
     "reshape2": [
@@ -142551,12 +141637,6 @@
         "futile.options",
         "formatR"
     ],
-    "snow": [
-
-    ],
-    "BH": [
-
-    ],
     "bookdown": [
         "htmltools",
         "knitr",
@@ -142576,15 +141656,6 @@
         "glue",
         "magrittr",
         "stringi"
-    ],
-    "yaml": [
-
-    ],
-    "GlobalOptions": [
-
-    ],
-    "colorspace": [
-
     ],
     "htmltools": [
         "digest",
@@ -142631,15 +141702,6 @@
         "fs",
         "rappdirs"
     ],
-    "digest": [
-
-    ],
-    "gtable": [
-
-    ],
-    "isoband": [
-
-    ],
     "mgcv": [
         "nlme",
         "Matrix",
@@ -142671,26 +141733,8 @@
         "crayon",
         "utf8"
     ],
-    "withr": [
-
-    ],
-    "evaluate": [
-
-    ],
     "highr": [
         "xfun"
-    ],
-    "xfun": [
-
-    ],
-    "magrittr": [
-
-    ],
-    "viridisLite": [
-
-    ],
-    "base64enc": [
-
     ],
     "tidyr": [
         "dplyr",
@@ -142732,9 +141776,6 @@
         "pkgconfig",
         "purrr"
     ],
-    "lazyeval": [
-
-    ],
     "crosstalk": [
         "htmltools",
         "jsonlite",
@@ -142766,15 +141807,6 @@
         "rlang",
         "fastmap"
     ],
-    "stringi": [
-
-    ],
-    "permute": [
-
-    ],
-    "generics": [
-
-    ],
     "lifecycle": [
         "glue",
         "rlang"
@@ -142801,21 +141833,12 @@
     "lambda.r": [
         "formatR"
     ],
-    "futile.options": [
-
-    ],
     "nlme": [
         "lattice"
     ],
     "later": [
         "Rcpp",
         "rlang"
-    ],
-    "farver": [
-
-    ],
-    "labeling": [
-
     ],
     "munsell": [
         "colorspace"
@@ -142835,12 +141858,6 @@
         "base64enc",
         "fastmap"
     ],
-    "sourcetools": [
-
-    ],
-    "commonmark": [
-
-    ],
     "bslib": [
         "htmltools",
         "jsonlite",
@@ -142854,12 +141871,6 @@
         "R6",
         "rappdirs"
     ],
-    "fansi": [
-
-    ],
-    "cpp11": [
-
-    ],
     "sass": [
         "fs",
         "rlang",
@@ -142870,29 +141881,11 @@
         "base64enc",
         "fastmap"
     ],
-    "formatR": [
-
-    ],
     "cli": [
         "glue"
     ],
-    "utf8": [
-
-    ],
-    "fs": [
-
-    ],
-    "rappdirs": [
-
-    ],
     "locfit": [
         "lattice"
-    ],
-    "boot": [
-
-    ],
-    "matrixStats": [
-
     ],
     "R.utils": [
         "R.oo",
@@ -142922,15 +141915,6 @@
     "R.oo": [
         "R.methodsS3"
     ],
-    "R.methodsS3": [
-
-    ],
-    "listenv": [
-
-    ],
-    "parallelly": [
-
-    ],
     "ff": [
         "bit"
     ],
@@ -142939,36 +141923,18 @@
         "fastmatch",
         "bit"
     ],
-    "waveslim": [
-
-    ],
-    "fastmatch": [
-
-    ],
     "aws": [
         "awsMethods",
         "gsl"
-    ],
-    "pixmap": [
-
     ],
     "strucchange": [
         "zoo",
         "sandwich",
         "lattice"
     ],
-    "awsMethods": [
-
-    ],
-    "gsl": [
-
-    ],
     "sandwich": [
         "zoo",
         "lattice"
-    ],
-    "pbapply": [
-
     ],
     "DT": [
         "htmltools",
@@ -142987,9 +141953,6 @@
         "yaml",
         "Rcpp",
         "later"
-    ],
-    "varhandle": [
-
     ],
     "ggrepel": [
         "ggplot2",
@@ -143109,7 +142072,6 @@
         "ps",
         "waldo",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "rematch2"
     ],
@@ -143145,9 +142107,6 @@
         "cli",
         "crayon",
         "utf8"
-    ],
-    "colorRamps": [
-
     ],
     "shinyjs": [
         "digest",
@@ -143202,7 +142161,6 @@
         "withr",
         "glue",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "fansi",
         "rematch2",
@@ -143277,9 +142235,6 @@
         "cli",
         "crayon",
         "utf8"
-    ],
-    "polynom": [
-
     ],
     "rstatix": [
         "tidyr",
@@ -143358,12 +142313,8 @@
         "ps",
         "waldo",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "rematch2"
-    ],
-    "brio": [
-
     ],
     "callr": [
         "processx",
@@ -143381,20 +142332,13 @@
         "desc",
         "rlang",
         "rprojroot",
-        "rstudioapi",
         "withr",
         "glue",
         "R6"
     ],
-    "praise": [
-
-    ],
     "processx": [
         "ps",
         "R6"
-    ],
-    "ps": [
-
     ],
     "waldo": [
         "cli",
@@ -143412,12 +142356,6 @@
         "pkgconfig",
         "vctrs",
         "utf8"
-    ],
-    "rprojroot": [
-
-    ],
-    "rstudioapi": [
-
     ],
     "broom": [
         "backports",
@@ -143460,9 +142398,6 @@
         "viridisLite",
         "lattice",
         "colorspace"
-    ],
-    "corrplot": [
-
     ],
     "car": [
         "carData",
@@ -143533,7 +142468,6 @@
         "pkgconfig",
         "cpp11",
         "rprojroot",
-        "rstudioapi",
         "farver",
         "labeling",
         "munsell",
@@ -143560,18 +142494,6 @@
         "cli",
         "crayon",
         "utf8"
-    ],
-    "backports": [
-
-    ],
-    "carData": [
-
-    ],
-    "abind": [
-
-    ],
-    "nnet": [
-
     ],
     "pbkrtest": [
         "lme4",
@@ -143638,7 +142560,6 @@
         "waldo",
         "rprojroot",
         "colorspace",
-        "rstudioapi",
         "diffobj",
         "rematch2"
     ],
@@ -143685,7 +142606,6 @@
         "withr",
         "glue",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "fansi",
         "rematch2",
@@ -143721,7 +142641,6 @@
         "withr",
         "glue",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "fansi",
         "rematch2",
@@ -143733,15 +142652,6 @@
     ],
     "sp": [
         "lattice"
-    ],
-    "foreign": [
-
-    ],
-    "numDeriv": [
-
-    ],
-    "SparseM": [
-
     ],
     "MatrixModels": [
         "Matrix",
@@ -143829,9 +142739,6 @@
         "zlibbioc",
         "bitops"
     ],
-    "OrgMassSpecR": [
-
-    ],
     "ade4": [
         "MASS",
         "pixmap",
@@ -143868,9 +142775,6 @@
     "pastecs": [
         "boot"
     ],
-    "pracma": [
-
-    ],
     "fpc": [
         "MASS",
         "cluster",
@@ -143892,21 +142796,12 @@
         "snow",
         "codetools"
     ],
-    "fastcluster": [
-
-    ],
-    "bootstrap": [
-
-    ],
     "smoother": [
         "TTR",
         "xts",
         "zoo",
         "curl",
         "lattice"
-    ],
-    "mclust": [
-
     ],
     "flexmix": [
         "lattice",
@@ -143920,17 +142815,8 @@
     "class": [
         "MASS"
     ],
-    "diptest": [
-
-    ],
     "robustbase": [
         "DEoptimR"
-    ],
-    "kernlab": [
-
-    ],
-    "ncdf4": [
-
     ],
     "selectr": [
         "stringr",
@@ -143938,9 +142824,6 @@
         "glue",
         "magrittr",
         "stringi"
-    ],
-    "xml2": [
-
     ],
     "TTR": [
         "xts",
@@ -143972,21 +142855,9 @@
         "crayon",
         "utf8"
     ],
-    "filelock": [
-
-    ],
-    "modeltools": [
-
-    ],
-    "DEoptimR": [
-
-    ],
     "xts": [
         "zoo",
         "lattice"
-    ],
-    "assertthat": [
-
     ],
     "checkmate": [
         "backports"
@@ -144006,7 +142877,6 @@
         "doParallel",
         "Matrix",
         "codetools",
-        "shape",
         "survival",
         "Rcpp",
         "RcppEigen",
@@ -144028,9 +142898,6 @@
         "BiocManager",
         "preprocessCore",
         "zlibbioc"
-    ],
-    "hwriter": [
-
     ],
     "PFAM.db": [
         "AnnotationDbi",
@@ -144103,7 +142970,6 @@
         "magrittr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "png",
         "jpeg",
@@ -144179,9 +143045,6 @@
         "utf8",
         "lattice"
     ],
-    "dichromat": [
-
-    ],
     "forcats": [
         "ellipsis",
         "magrittr",
@@ -144213,17 +143076,11 @@
         "plyr",
         "Rcpp"
     ],
-    "Formula": [
-
-    ],
     "latticeExtra": [
         "lattice",
         "png",
         "jpeg",
         "RColorBrewer"
-    ],
-    "rpart": [
-
     ],
     "htmlTable": [
         "stringr",
@@ -144232,7 +143089,6 @@
         "checkmate",
         "htmlwidgets",
         "htmltools",
-        "rstudioapi",
         "backports",
         "digest",
         "base64enc",
@@ -144289,9 +143145,6 @@
         "bitops",
         "BiocGenerics"
     ],
-    "jpeg": [
-
-    ],
     "hms": [
         "ellipsis",
         "lifecycle",
@@ -144300,25 +143153,10 @@
         "vctrs",
         "glue"
     ],
-    "prettyunits": [
-
-    ],
-    "rjson": [
-
-    ],
-    "tkrplot": [
-
-    ],
-    "R2HTML": [
-
-    ],
     "e1071": [
         "class",
         "proxy",
         "MASS"
-    ],
-    "proxy": [
-
     ],
     "smurf": [
         "catdata",
@@ -144331,7 +143169,6 @@
         "speedglm",
         "RcppArmadillo",
         "foreach",
-        "shape",
         "survival",
         "RcppEigen",
         "lattice",
@@ -144354,16 +143191,10 @@
     "clue": [
         "cluster"
     ],
-    "dynamicTreeCut": [
-
-    ],
     "forestplot": [
         "magrittr",
         "checkmate",
         "backports"
-    ],
-    "lpSolve": [
-
     ],
     "RcppNumerical": [
         "Rcpp",
@@ -144433,24 +143264,12 @@
         "MASS",
         "lattice"
     ],
-    "bdsmatrix": [
-
-    ],
-    "mvtnorm": [
-
-    ],
     "RcppHNSW": [
         "Rcpp"
     ],
     "irlba": [
         "Matrix",
         "lattice"
-    ],
-    "beeswarm": [
-
-    ],
-    "vipor": [
-
     ],
     "zCompositions": [
         "MASS",
@@ -144474,9 +143293,6 @@
         "survival",
         "Matrix",
         "lattice"
-    ],
-    "truncnorm": [
-
     ],
     "RcppGSL": [
         "Rcpp"
@@ -144560,9 +143376,6 @@
         "glue",
         "cli",
         "utf8"
-    ],
-    "writexl": [
-
     ],
     "speaq": [
         "MassSpecWavelet",
@@ -144654,23 +143467,12 @@
     "baseline": [
         "SparseM",
         "limSolve",
-        "quadprog",
         "lpSolve",
         "MASS"
-    ],
-    "zip": [
-
     ],
     "limSolve": [
-        "quadprog",
         "lpSolve",
         "MASS"
-    ],
-    "ellipse": [
-
-    ],
-    "corpcor": [
-
     ],
     "rARPACK": [
         "RSpectra",
@@ -144707,20 +143509,8 @@
         "codetools",
         "iterators"
     ],
-    "rematch": [
-
-    ],
-    "quadprog": [
-
-    ],
     "itertools": [
         "iterators"
-    ],
-    "qtl": [
-
-    ],
-    "outliers": [
-
     ],
     "RSpectra": [
         "Matrix",
@@ -144736,12 +143526,6 @@
         "RcppDE",
         "Rcpp",
         "RcppArmadillo"
-    ],
-    "nnls": [
-
-    ],
-    "Iso": [
-
     ],
     "RcppDE": [
         "Rcpp",
@@ -144871,9 +143655,6 @@
         "prettyunits",
         "purrr"
     ],
-    "clipr": [
-
-    ],
     "vroom": [
         "bit64",
         "crayon",
@@ -144976,18 +143757,9 @@
         "crayon",
         "utf8"
     ],
-    "clusterCrit": [
-
-    ],
     "extrafont": [
         "extrafontdb",
         "Rttf2pt1"
-    ],
-    "extrafontdb": [
-
-    ],
-    "Rttf2pt1": [
-
     ],
     "Rdpack": [
         "rbibutils"
@@ -144996,12 +143768,6 @@
         "nlme",
         "lattice",
         "Rcpp"
-    ],
-    "rbibutils": [
-
-    ],
-    "AneuFinderData": [
-
     ],
     "ecp": [
         "Rcpp"
@@ -145112,9 +143878,6 @@
         "lazyeval",
         "askpass",
         "sys"
-    ],
-    "tsne": [
-
     ],
     "plotROC": [
         "ggplot2",
@@ -145265,7 +144028,6 @@
         "ps",
         "waldo",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "rematch2"
     ],
@@ -145328,15 +144090,6 @@
     "rex": [
         "lazyeval"
     ],
-    "statmod": [
-
-    ],
-    "rmutil": [
-
-    ],
-    "dirmult": [
-
-    ],
     "lmerTest": [
         "lme4",
         "numDeriv",
@@ -145388,7 +144141,6 @@
         "ps",
         "waldo",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "rematch2"
     ],
@@ -145434,16 +144186,10 @@
     "stable": [
         "rmutil"
     ],
-    "stabledist": [
-
-    ],
     "statip": [
         "clue",
         "rpart",
         "cluster"
-    ],
-    "gower": [
-
     ],
     "ipred": [
         "rpart",
@@ -145472,9 +144218,6 @@
         "generics",
         "cpp11"
     ],
-    "timeDate": [
-
-    ],
     "RcppTOML": [
         "Rcpp"
     ],
@@ -145483,12 +144226,6 @@
     ],
     "timeSeries": [
         "timeDate"
-    ],
-    "spatial": [
-
-    ],
-    "gss": [
-
     ],
     "prodlim": [
         "Rcpp",
@@ -145526,23 +144263,11 @@
     "progressr": [
         "digest"
     ],
-    "SQUAREM": [
-
-    ],
     "RMySQL": [
         "DBI"
     ],
-    "stringdist": [
-
-    ],
     "optparse": [
         "getopt"
-    ],
-    "RUnit": [
-
-    ],
-    "getopt": [
-
     ],
     "rapiclient": [
         "jsonlite",
@@ -145575,7 +144300,6 @@
         "cli",
         "fs",
         "rappdirs",
-        "rstudioapi",
         "withr",
         "mime",
         "openssl",
@@ -145631,7 +144355,6 @@
         "jsonlite",
         "rappdirs",
         "rlang",
-        "rstudioapi",
         "withr",
         "curl",
         "mime",
@@ -145639,12 +144362,6 @@
         "R6",
         "askpass",
         "sys"
-    ],
-    "rapidjsonr": [
-
-    ],
-    "whisker": [
-
     ],
     "repmis": [
         "data.table",
@@ -146689,9 +145406,6 @@
         "Rcpp",
         "triebeard"
     ],
-    "httpcode": [
-
-    ],
     "triebeard": [
         "Rcpp"
     ],
@@ -146699,17 +145413,8 @@
         "MASS",
         "lpSolve"
     ],
-    "rJava": [
-
-    ],
-    "svMisc": [
-
-    ],
     "sendmailR": [
         "base64enc"
-    ],
-    "nleqslv": [
-
     ],
     "FDb.InfiniumMethylation.hg19": [
         "GenomicFeatures",
@@ -146807,12 +145512,6 @@
         "askpass",
         "sys"
     ],
-    "beanplot": [
-
-    ],
-    "nor1mix": [
-
-    ],
     "doRNG": [
         "foreach",
         "rngtools",
@@ -146820,20 +145519,11 @@
         "codetools",
         "digest"
     ],
-    "scrime": [
-
-    ],
     "rngtools": [
         "digest"
     ],
-    "gridBase": [
-
-    ],
     "hexbin": [
         "lattice"
-    ],
-    "setRNG": [
-
     ],
     "svglite": [
         "systemfonts",
@@ -146841,9 +145531,6 @@
     ],
     "systemfonts": [
         "cpp11"
-    ],
-    "ARRmData": [
-
     ],
     "pheatmap": [
         "RColorBrewer",
@@ -146894,9 +145581,6 @@
         "cli",
         "crayon",
         "utf8"
-    ],
-    "log4r": [
-
     ],
     "qqman": [
         "calibrate",
@@ -146969,17 +145653,11 @@
         "utf8",
         "lattice"
     ],
-    "GSA": [
-
-    ],
     "ismev": [
         "mgcv",
         "nlme",
         "Matrix",
         "lattice"
-    ],
-    "pbmcapply": [
-
     ],
     "msm": [
         "survival",
@@ -146987,12 +145665,6 @@
         "expm",
         "Matrix",
         "lattice"
-    ],
-    "rmeta": [
-
-    ],
-    "Rlab": [
-
     ],
     "preseqR": [
         "polynom"
@@ -147072,9 +145744,6 @@
         "glue",
         "magrittr"
     ],
-    "assertive.base": [
-
-    ],
     "assertive.properties": [
         "assertive.base"
     ],
@@ -147145,12 +145814,6 @@
         "assertive.types",
         "codetools"
     ],
-    "entropy": [
-
-    ],
-    "MALDIquant": [
-
-    ],
     "doBy": [
         "broom",
         "Deriv",
@@ -147219,18 +145882,8 @@
         "ps",
         "waldo",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "rematch2"
-    ],
-    "Deriv": [
-
-    ],
-    "microbenchmark": [
-
-    ],
-    "breastCancerVDX": [
-
     ],
     "xgboost": [
         "Matrix",
@@ -147295,12 +145948,6 @@
         "Matrix",
         "Rcpp",
         "lattice"
-    ],
-    "inline": [
-
-    ],
-    "RcppParallel": [
-
     ],
     "loo": [
         "checkmate",
@@ -147383,12 +146030,6 @@
     ],
     "terra": [
         "Rcpp"
-    ],
-    "RJSONIO": [
-
-    ],
-    "RCircos": [
-
     ],
     "BSgenome.Ecoli.NCBI.20080805": [
         "BSgenome",
@@ -147595,9 +146236,6 @@
         "SparseM",
         "Matrix",
         "MatrixModels"
-    ],
-    "moments": [
-
     ],
     "ggvis": [
         "assertthat",
@@ -147811,22 +146449,13 @@
         "crayon",
         "utf8"
     ],
-    "mcmc": [
-
-    ],
     "TSP": [
         "foreach",
         "codetools",
         "iterators"
     ],
-    "qap": [
-
-    ],
     "gclus": [
         "cluster"
-    ],
-    "registry": [
-
     ],
     "DirichletReg": [
         "Formula",
@@ -147842,9 +146471,6 @@
         "Rcpp",
         "RcppArmadillo"
     ],
-    "RcppProgress": [
-
-    ],
     "maxLik": [
         "miscTools",
         "sandwich",
@@ -147855,9 +146481,6 @@
     ],
     "miscTools": [
         "digest"
-    ],
-    "BB": [
-        "quadprog"
     ],
     "fitdistrplus": [
         "MASS",
@@ -147943,7 +146566,6 @@
         "utf8",
         "desc",
         "rprojroot",
-        "rstudioapi",
         "stringr",
         "registry",
         "slam",
@@ -148092,21 +146714,12 @@
         "fs",
         "stringi"
     ],
-    "MGLM": [
-
-    ],
     "optimr": [
         "optextras",
         "numDeriv",
         "setRNG",
         "Rvmmin",
         "Rcgmin"
-    ],
-    "VGAM": [
-
-    ],
-    "trust": [
-
     ],
     "detectseparation": [
         "ROI",
@@ -148118,18 +146731,11 @@
         "desc",
         "rlang",
         "rprojroot",
-        "rstudioapi",
         "withr",
         "registry",
         "slam",
         "glue",
         "R6"
-    ],
-    "sfsmisc": [
-
-    ],
-    "ica": [
-
     ],
     "leiden": [
         "reticulate",
@@ -148183,9 +146789,6 @@
         "cli",
         "crayon",
         "utf8"
-    ],
-    "RANN": [
-
     ],
     "RcppAnnoy": [
         "Rcpp"
@@ -148334,9 +146937,6 @@
         "registry",
         "slam"
     ],
-    "lpSolveAPI": [
-
-    ],
     "optextras": [
         "numDeriv"
     ],
@@ -148361,33 +146961,12 @@
         "polyclip",
         "lattice"
     ],
-    "spatstat.utils": [
-
-    ],
     "spatstat.sparse": [
         "Matrix",
         "abind",
         "tensor",
         "spatstat.utils",
         "lattice"
-    ],
-    "tensor": [
-
-    ],
-    "goftest": [
-
-    ],
-    "deldir": [
-
-    ],
-    "polyclip": [
-
-    ],
-    "FNN": [
-
-    ],
-    "slam": [
-
     ],
     "sjmisc": [
         "dplyr",
@@ -148414,25 +146993,14 @@
     "rslurm": [
         "whisker"
     ],
-    "insight": [
-
-    ],
     "sjlabelled": [
         "insight"
-    ],
-    "poibin": [
-
     ],
     "LIM": [
         "limSolve",
         "diagram",
-        "shape",
-        "quadprog",
         "lpSolve",
         "MASS"
-    ],
-    "diagram": [
-        "shape"
     ],
     "IlluminaHumanMethylation450kanno.ilmn12.hg19": [
         "minfi",
@@ -148459,7 +147027,6 @@
         "nlme",
         "reshape",
         "MASS",
-        "quadprog",
         "data.table",
         "GEOquery",
         "DelayedArray",
@@ -148644,9 +147211,6 @@
         "magrittr",
         "rlang"
     ],
-    "rsvg": [
-
-    ],
     "radiant.data": [
         "magrittr",
         "ggplot2",
@@ -148670,7 +147234,6 @@
         "writexl",
         "scales",
         "curl",
-        "rstudioapi",
         "import",
         "plotly",
         "glue",
@@ -148793,12 +147356,6 @@
         "askpass",
         "sys"
     ],
-    "AlgDesign": [
-
-    ],
-    "import": [
-
-    ],
     "shinythemes": [
         "shiny",
         "httpuv",
@@ -148883,7 +147440,6 @@
         "RColorBrewer",
         "readr",
         "rlang",
-        "rstudioapi",
         "scales",
         "stringr",
         "tibble",
@@ -148946,9 +147502,6 @@
     ],
     "downloader": [
         "digest"
-    ],
-    "yulab.utils": [
-
     ],
     "influenceR": [
         "igraph",
@@ -149075,9 +147628,6 @@
         "cli",
         "utf8",
         "rappdirs"
-    ],
-    "randomizr": [
-
     ],
     "ggraph": [
         "ggplot2",
@@ -149281,9 +147831,6 @@
         "pkgconfig",
         "lattice"
     ],
-    "infotheo": [
-
-    ],
     "mnormt": [
         "tmvnsim"
     ],
@@ -149383,12 +147930,6 @@
         "crayon",
         "utf8"
     ],
-    "tmvnsim": [
-
-    ],
-    "gridGraphics": [
-
-    ],
     "gh": [
         "cli",
         "gitcreds",
@@ -149402,15 +147943,6 @@
         "R6",
         "askpass",
         "sys"
-    ],
-    "gitcreds": [
-
-    ],
-    "ini": [
-
-    ],
-    "ontologyIndex": [
-
     ],
     "styler": [
         "backports",
@@ -149454,7 +147986,6 @@
         "rappdirs",
         "rlang",
         "rprojroot",
-        "rstudioapi",
         "whisker",
         "withr",
         "yaml",
@@ -149474,7 +148005,6 @@
         "askpass",
         "credentials",
         "openssl",
-        "rstudioapi",
         "sys",
         "zip",
         "curl",
@@ -149486,9 +148016,6 @@
         "curl",
         "jsonlite",
         "askpass"
-    ],
-    "git2r": [
-
     ],
     "chk": [
         "lifecycle",
@@ -149535,7 +148062,6 @@
         "magrittr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "mvtnorm",
         "TH.data",
@@ -149607,17 +148133,11 @@
         "crayon",
         "utf8"
     ],
-    "nsprcomp": [
-
-    ],
     "ranger": [
         "Rcpp",
         "Matrix",
         "RcppEigen",
         "lattice"
-    ],
-    "CMplot": [
-
     ],
     "imager": [
         "magrittr",
@@ -149649,9 +148169,6 @@
         "png",
         "tiff"
     ],
-    "polspline": [
-
-    ],
     "multcomp": [
         "mvtnorm",
         "survival",
@@ -149671,12 +148188,6 @@
         "MASS",
         "Matrix",
         "lattice"
-    ],
-    "bmp": [
-
-    ],
-    "tiff": [
-
     ],
     "WGCNA": [
         "dynamicTreeCut",
@@ -149730,7 +148241,6 @@
         "magrittr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "httr",
         "png",
@@ -149936,9 +148446,6 @@
         "crayon",
         "utf8"
     ],
-    "RhpcBLASctl": [
-
-    ],
     "statnet.common": [
         "coda",
         "lattice"
@@ -150022,7 +148529,6 @@
         "globals",
         "boot",
         "cubature",
-        "quadprog",
         "quantreg",
         "nnls",
         "gam",
@@ -150064,7 +148570,6 @@
     "np": [
         "boot",
         "cubature",
-        "quadprog",
         "quantreg",
         "Rcpp",
         "SparseM",
@@ -150412,18 +148917,12 @@
     "lokern": [
         "sfsmisc"
     ],
-    "pasilla": [
-
-    ],
     "metafor": [
         "Matrix",
         "nlme",
         "mathjaxr",
         "pbapply",
         "lattice"
-    ],
-    "mathjaxr": [
-
     ],
     "KEGGdzPathwaysGEO": [
         "Biobase",
@@ -150538,20 +149037,11 @@
         "jsonlite",
         "curl"
     ],
-    "fftwtools": [
-
-    ],
     "flexclust": [
         "lattice",
         "modeltools",
         "class",
         "MASS"
-    ],
-    "binom": [
-
-    ],
-    "hash": [
-
     ],
     "BoolNet": [
         "igraph",
@@ -150595,19 +149085,10 @@
         "glue",
         "stringi"
     ],
-    "naturalsort": [
-
-    ],
-    "wesanderson": [
-
-    ],
     "apcluster": [
         "Rcpp",
         "Matrix",
         "lattice"
-    ],
-    "amap": [
-
     ],
     "gmodels": [
         "MASS",
@@ -150630,9 +149111,6 @@
         "zoo",
         "lattice"
     ],
-    "fastICA": [
-
-    ],
     "gdata": [
         "gtools"
     ],
@@ -150642,19 +149120,10 @@
         "TeachingDemos",
         "plotrix"
     ],
-    "matrixcalc": [
-
-    ],
     "plotmo": [
         "Formula",
         "plotrix",
         "TeachingDemos"
-    ],
-    "TeachingDemos": [
-
-    ],
-    "plotrix": [
-
     ],
     "PolynomF": [
         "Rcpp"
@@ -150782,7 +149251,6 @@
         "scales",
         "knitr",
         "checkmate",
-        "rstudioapi",
         "fastmap",
         "jpeg",
         "RColorBrewer",
@@ -150822,9 +149290,6 @@
     ],
     "lsa": [
         "SnowballC"
-    ],
-    "SnowballC": [
-
     ],
     "gbm": [
         "lattice",
@@ -150869,12 +149334,6 @@
         "formatR",
         "lattice"
     ],
-    "breakpointRdata": [
-
-    ],
-    "WriteXLS": [
-
-    ],
     "devtools": [
         "usethis",
         "callr",
@@ -150891,7 +149350,6 @@
         "remotes",
         "rlang",
         "roxygen2",
-        "rstudioapi",
         "rversions",
         "sessioninfo",
         "testthat",
@@ -150965,9 +149423,6 @@
         "crayon",
         "ps"
     ],
-    "remotes": [
-
-    ],
     "roxygen2": [
         "brew",
         "commonmark",
@@ -150989,7 +149444,6 @@
         "yaml",
         "xfun",
         "cli",
-        "rstudioapi",
         "withr",
         "magrittr",
         "glue"
@@ -151006,15 +149460,6 @@
         "processx",
         "ps",
         "R6"
-    ],
-    "brew": [
-
-    ],
-    "zeallot": [
-
-    ],
-    "PoiClaClu": [
-
     ],
     "pryr": [
         "stringr",
@@ -151096,15 +149541,6 @@
     "formula.tools": [
         "operator.tools"
     ],
-    "som": [
-
-    ],
-    "operator.tools": [
-
-    ],
-    "tcltk2": [
-
-    ],
     "BMA": [
         "survival",
         "leaps",
@@ -151117,18 +149553,12 @@
         "pcaPP",
         "Matrix"
     ],
-    "leaps": [
-
-    ],
     "rrcov": [
         "robustbase",
         "mvtnorm",
         "lattice",
         "pcaPP",
         "DEoptimR"
-    ],
-    "sigclust": [
-
     ],
     "NMF": [
         "pkgmaker",
@@ -151249,12 +149679,6 @@
     "gsubfn": [
         "proto"
     ],
-    "proto": [
-
-    ],
-    "chron": [
-
-    ],
     "drc": [
         "MASS",
         "car",
@@ -151340,7 +149764,6 @@
         "pkgconfig",
         "cpp11",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "rematch2"
     ],
@@ -151526,12 +149949,6 @@
         "crayon",
         "utf8"
     ],
-    "deSolve": [
-
-    ],
-    "misc3d": [
-
-    ],
     "rainbow": [
         "MASS",
         "pcaPP",
@@ -151627,15 +150044,6 @@
         "crayon",
         "utf8"
     ],
-    "ash": [
-
-    ],
-    "uuid": [
-
-    ],
-    "uchardet": [
-
-    ],
     "base64url": [
         "backports"
     ],
@@ -151696,9 +150104,6 @@
         "utf8",
         "vctrs"
     ],
-    "pbdZMQ": [
-
-    ],
     "rapportools": [
         "reshape",
         "plyr",
@@ -151736,15 +150141,6 @@
         "magrittr",
         "fs",
         "rappdirs"
-    ],
-    "Rmpi": [
-
-    ],
-    "ccdata": [
-
-    ],
-    "CCP": [
-
     ],
     "enrichR": [
         "httr",
@@ -151843,9 +150239,6 @@
         "crayon",
         "utf8"
     ],
-    "combinat": [
-
-    ],
     "magick": [
         "Rcpp",
         "magrittr",
@@ -151856,16 +150249,10 @@
         "Rdpack",
         "rbibutils"
     ],
-    "tictoc": [
-
-    ],
     "mvoutlier": [
         "sgeostat",
         "robustbase",
         "DEoptimR"
-    ],
-    "sgeostat": [
-
     ],
     "FME": [
         "deSolve",
@@ -151981,21 +150368,8 @@
         "waldo",
         "cpp11",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "rematch2"
-    ],
-    "flashClust": [
-
-    ],
-    "scatterplot3d": [
-
-    ],
-    "rootSolve": [
-
-    ],
-    "minpack.lm": [
-
     ],
     "spBayes": [
         "coda",
@@ -152011,12 +150385,6 @@
     ],
     "kSamples": [
         "SuppDists"
-    ],
-    "SuppDists": [
-
-    ],
-    "squash": [
-
     ],
     "cba": [
         "proxy"
@@ -152062,9 +150430,6 @@
         "cluster",
         "rpart"
     ],
-    "nortest": [
-
-    ],
     "topicmodels": [
         "modeltools",
         "slam",
@@ -152083,9 +150448,6 @@
         "slam",
         "xml2",
         "BH"
-    ],
-    "NLP": [
-
     ],
     "ggpmisc": [
         "ggpp",
@@ -152185,12 +150547,6 @@
         "utf8",
         "purrr"
     ],
-    "lmodel2": [
-
-    ],
-    "splus2R": [
-
-    ],
     "broom.mixed": [
         "broom",
         "coda",
@@ -152289,7 +150645,6 @@
         "snpStats",
         "RcppArmadillo",
         "GlobalOptions",
-        "shape",
         "colorspace",
         "clinfun",
         "survival",
@@ -152320,9 +150675,6 @@
     "clinfun": [
         "mvtnorm"
     ],
-    "idr": [
-
-    ],
     "quantmod": [
         "xts",
         "zoo",
@@ -152341,9 +150693,6 @@
         "GenomeInfoDbData",
         "zlibbioc",
         "bitops"
-    ],
-    "Illumina450ProbeVariants.db": [
-
     ],
     "IlluminaHumanMethylationEPICmanifest": [
         "minfi",
@@ -152370,7 +150719,6 @@
         "nlme",
         "reshape",
         "MASS",
-        "quadprog",
         "data.table",
         "GEOquery",
         "DelayedArray",
@@ -152507,7 +150855,6 @@
         "nlme",
         "reshape",
         "MASS",
-        "quadprog",
         "data.table",
         "GEOquery",
         "DelayedArray",
@@ -152641,7 +150988,6 @@
         "nlme",
         "reshape",
         "MASS",
-        "quadprog",
         "data.table",
         "GEOquery",
         "DelayedArray",
@@ -152795,9 +151141,6 @@
         "cli",
         "crayon",
         "utf8"
-    ],
-    "BiasedUrn": [
-
     ],
     "geneLenDataBase": [
         "rtracklayer",
@@ -153036,12 +151379,6 @@
         "globals",
         "listenv",
         "parallelly"
-    ],
-    "intervals": [
-
-    ],
-    "Delaporte": [
-
     ],
     "RcppRoll": [
         "Rcpp"
@@ -153284,9 +151621,6 @@
         "zlibbioc",
         "sys",
         "bitops"
-    ],
-    "Nozzle.R1": [
-
     ],
     "TxDb.Hsapiens.UCSC.hg18.knownGene": [
         "GenomicFeatures",
@@ -153752,15 +152086,6 @@
         "Matrix",
         "lattice"
     ],
-    "etrunct": [
-
-    ],
-    "invgamma": [
-
-    ],
-    "timsac": [
-
-    ],
     "ChIPXpressData": [
         "bigmemory",
         "Rcpp",
@@ -153782,9 +152107,6 @@
         "bigmemory.sri",
         "codetools",
         "iterators"
-    ],
-    "bigmemory.sri": [
-
     ],
     "shinyhelper": [
         "shiny",
@@ -153858,7 +152180,6 @@
         "waiter",
         "lifecycle",
         "sass",
-        "rstudioapi",
         "digest",
         "base64enc",
         "rlang",
@@ -153895,7 +152216,6 @@
         "scales",
         "viridisLite",
         "htmltools",
-        "rstudioapi",
         "glue",
         "webshot",
         "digest",
@@ -153973,9 +152293,6 @@
         "crayon",
         "utf8"
     ],
-    "coop": [
-
-    ],
     "matrixTests": [
         "matrixStats"
     ],
@@ -153999,9 +152316,6 @@
         "pkgconfig",
         "purrr"
     ],
-    "RApiSerialize": [
-
-    ],
     "stringfish": [
         "Rcpp",
         "RcppParallel"
@@ -154010,7 +152324,6 @@
         "sass",
         "htmltools",
         "shiny",
-        "rstudioapi",
         "digest",
         "base64enc",
         "rlang",
@@ -154069,9 +152382,6 @@
         "fs",
         "rappdirs"
     ],
-    "chromstaRData": [
-
-    ],
     "nabor": [
         "Rcpp",
         "RcppEigen",
@@ -154085,9 +152395,6 @@
     "poweRlaw": [
         "pracma"
     ],
-    "glasso": [
-
-    ],
     "DDRTree": [
         "irlba",
         "Rcpp",
@@ -154095,9 +152402,6 @@
         "BH",
         "Matrix",
         "lattice"
-    ],
-    "HSMMSingleCell": [
-
     ],
     "densityClust": [
         "Rcpp",
@@ -154148,19 +152452,10 @@
         "Matrix",
         "lattice"
     ],
-    "docopt": [
-
-    ],
     "relations": [
         "cluster",
         "slam",
         "sets"
-    ],
-    "sets": [
-
-    ],
-    "RcppThread": [
-
     ],
     "propr": [
         "fastcluster",
@@ -154269,12 +152564,6 @@
         "pkgconfig",
         "lattice",
         "BH"
-    ],
-    "howmany": [
-
-    ],
-    "locfdr": [
-
     ],
     "phylobase": [
         "ade4",
@@ -154472,17 +152761,8 @@
         "utf8",
         "purrr"
     ],
-    "gmp": [
-
-    ],
     "princurve": [
         "Rcpp"
-    ],
-    "genalg": [
-
-    ],
-    "bezier": [
-
     ],
     "brglm": [
         "profileModel"
@@ -154490,15 +152770,9 @@
     "splitstackshape": [
         "data.table"
     ],
-    "profileModel": [
-
-    ],
     "rjags": [
         "coda",
         "lattice"
-    ],
-    "simpleCache": [
-
     ],
     "kohonen": [
         "Rcpp"
@@ -154512,9 +152786,6 @@
         "pcaPP",
         "DEoptimR"
     ],
-    "COHCAPanno": [
-
-    ],
     "skmeans": [
         "slam",
         "clue",
@@ -154526,9 +152797,6 @@
         "polylabelr",
         "Rcpp",
         "RcppArmadillo"
-    ],
-    "GenSA": [
-
     ],
     "polylabelr": [
         "Rcpp"
@@ -154542,15 +152810,6 @@
         "Matrix",
         "MatrixModels",
         "lattice"
-    ],
-    "colortools": [
-
-    ],
-    "RMTstat": [
-
-    ],
-    "pdist": [
-
     ],
     "rio": [
         "foreign",
@@ -154728,7 +152987,6 @@
         "ps",
         "waldo",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "rematch2"
     ],
@@ -154910,7 +153168,6 @@
         "magrittr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "mvtnorm",
         "TH.data",
@@ -155084,12 +153341,6 @@
         "Matrix",
         "lattice"
     ],
-    "iC10TrainingData": [
-
-    ],
-    "survivalROC": [
-
-    ],
     "IlluminaHumanMethylationEPICanno.ilm10b2.hg19": [
         "minfi",
         "BiocGenerics",
@@ -155115,7 +153366,6 @@
         "nlme",
         "reshape",
         "MASS",
-        "quadprog",
         "data.table",
         "GEOquery",
         "DelayedArray",
@@ -155224,9 +153474,6 @@
         "fastmap",
         "assertthat"
     ],
-    "CopyhelpeR": [
-
-    ],
     "arules": [
         "Matrix",
         "generics",
@@ -155240,9 +153487,6 @@
     ],
     "mapproj": [
         "maps"
-    ],
-    "maps": [
-
     ],
     "capushe": [
         "MASS"
@@ -155271,9 +153515,6 @@
         "Rcpp",
         "RcppArmadillo",
         "DEoptimR"
-    ],
-    "tensorA": [
-
     ],
     "bayesm": [
         "Rcpp",
@@ -155417,12 +153658,6 @@
         "mgcv",
         "Matrix"
     ],
-    "randtests": [
-
-    ],
-    "LaplacesDemon": [
-
-    ],
     "keras": [
         "generics",
         "reticulate",
@@ -155446,7 +153681,6 @@
         "processx",
         "yaml",
         "tfautograph",
-        "rstudioapi",
         "base64enc",
         "whisker",
         "tidyselect",
@@ -155469,7 +153703,6 @@
         "tfruns",
         "yaml",
         "tfautograph",
-        "rstudioapi",
         "ps",
         "R6",
         "Matrix",
@@ -155502,7 +153735,6 @@
         "whisker",
         "tidyselect",
         "rlang",
-        "rstudioapi",
         "reticulate",
         "Matrix",
         "Rcpp",
@@ -155534,9 +153766,6 @@
         "withr",
         "rprojroot",
         "lattice"
-    ],
-    "fdrtool": [
-
     ],
     "metaMA": [
         "limma",
@@ -155579,14 +153808,8 @@
         "fs",
         "rappdirs"
     ],
-    "SMVar": [
-
-    ],
     "NCmisc": [
         "proftools"
-    ],
-    "proftools": [
-
     ],
     "fields": [
         "spam",
@@ -155628,12 +153851,6 @@
     ],
     "spam": [
         "dotCall64"
-    ],
-    "dotCall64": [
-
-    ],
-    "binr": [
-
     ],
     "highcharter": [
         "htmlwidgets",
@@ -155859,9 +154076,6 @@
     "linprog": [
         "lpSolve"
     ],
-    "RPMG": [
-
-    ],
     "GEOmap": [
         "RPMG",
         "splancs",
@@ -155916,9 +154130,6 @@
     ],
     "MBA": [
         "BH"
-    ],
-    "Rwave": [
-
     ],
     "rpart.plot": [
         "rpart"
@@ -156026,7 +154237,6 @@
         "withr",
         "glue",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "fansi",
         "rematch2",
@@ -156035,9 +154245,6 @@
         "pkgconfig",
         "vctrs",
         "utf8"
-    ],
-    "logging": [
-
     ],
     "svgPanZoom": [
         "htmlwidgets",
@@ -156165,7 +154372,6 @@
         "pkgconfig",
         "cpp11",
         "rprojroot",
-        "rstudioapi",
         "farver",
         "labeling",
         "munsell",
@@ -156234,9 +154440,6 @@
         "RWekajars",
         "rJava"
     ],
-    "ineq": [
-
-    ],
     "arm": [
         "MASS",
         "Matrix",
@@ -156272,7 +154475,6 @@
         "withr",
         "glue",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "fansi",
         "rematch2",
@@ -156281,9 +154483,6 @@
         "pkgconfig",
         "vctrs",
         "utf8"
-    ],
-    "pls": [
-
     ],
     "RSNNS": [
         "Rcpp"
@@ -156312,14 +154511,8 @@
         "glue",
         "stringi"
     ],
-    "praznik": [
-
-    ],
     "RWekajars": [
         "rJava"
-    ],
-    "Cairo": [
-
     ],
     "tmvtnorm": [
         "mvtnorm",
@@ -156328,9 +154521,6 @@
         "sandwich",
         "lattice",
         "zoo"
-    ],
-    "norm": [
-
     ],
     "cp4p": [
         "MESS",
@@ -156370,9 +154560,7 @@
         "mgcv",
         "withr",
         "foreach",
-        "shape",
         "RcppEigen",
-        "quadprog",
         "lattice",
         "plyr",
         "backports",
@@ -156522,7 +154710,6 @@
         "ps",
         "waldo",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "rematch2"
     ],
@@ -156627,7 +154814,6 @@
         "readxl",
         "reprex",
         "rlang",
-        "rstudioapi",
         "rvest",
         "stringr",
         "tibble",
@@ -156733,10 +154919,8 @@
         "mgcv",
         "withr",
         "foreach",
-        "shape",
         "survival",
         "RcppEigen",
-        "quadprog",
         "lattice",
         "backports",
         "dplyr",
@@ -156879,7 +155063,6 @@
         "ps",
         "waldo",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "rematch2"
     ],
@@ -156921,7 +155104,6 @@
         "withr",
         "fs",
         "rappdirs",
-        "rstudioapi",
         "curl",
         "mime",
         "openssl",
@@ -156953,7 +155135,6 @@
         "fs",
         "jsonlite",
         "rappdirs",
-        "rstudioapi",
         "withr",
         "lifecycle",
         "pillar",
@@ -157021,7 +155202,6 @@
         "knitr",
         "rlang",
         "rmarkdown",
-        "rstudioapi",
         "withr",
         "processx",
         "R6",
@@ -157163,7 +155343,6 @@
     ],
     "kinship2": [
         "Matrix",
-        "quadprog",
         "lattice"
     ],
     "ggstance": [
@@ -157294,7 +155473,6 @@
         "glue",
         "rappdirs",
         "rprojroot",
-        "rstudioapi",
         "whisker",
         "yaml",
         "askpass",
@@ -157314,9 +155492,6 @@
         "pkgconfig",
         "vctrs",
         "utf8"
-    ],
-    "CombinePValue": [
-
     ],
     "metap": [
         "lattice",
@@ -157387,17 +155562,8 @@
     "ppcor": [
         "MASS"
     ],
-    "glm2": [
-
-    ],
     "harmonicmeanp": [
         "FMStable"
-    ],
-    "logger": [
-
-    ],
-    "FMStable": [
-
     ],
     "TFisher": [
         "sn",
@@ -157483,9 +155649,6 @@
         "Matrix",
         "MatrixModels",
         "lattice"
-    ],
-    "startupmsg": [
-
     ],
     "survey": [
         "Matrix",
@@ -157608,7 +155771,6 @@
         "withr",
         "glue",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "fansi",
         "rematch2",
@@ -157617,9 +155779,6 @@
         "pkgconfig",
         "vctrs",
         "utf8"
-    ],
-    "RobustRankAggreg": [
-
     ],
     "diffr": [
         "htmlwidgets",
@@ -157631,19 +155790,10 @@
         "rlang",
         "fastmap"
     ],
-    "settings": [
-
-    ],
-    "filehash": [
-
-    ],
     "CatEncoders": [
         "Matrix",
         "data.table",
         "lattice"
-    ],
-    "matlab": [
-
     ],
     "rcdk": [
         "rcdklibs",
@@ -157692,14 +155842,8 @@
         "utf8",
         "sys"
     ],
-    "PRROC": [
-
-    ],
     "rcdklibs": [
         "rJava"
-    ],
-    "fingerprint": [
-
     ],
     "text2vec": [
         "Matrix",
@@ -157776,9 +155920,6 @@
     "data.tree": [
         "R6",
         "stringi"
-    ],
-    "ISOcodes": [
-
     ],
     "rsparse": [
         "Matrix",
@@ -157901,9 +156042,6 @@
         "slam",
         "stringi"
     ],
-    "sylly": [
-
-    ],
     "sylly.en": [
         "sylly"
     ],
@@ -157944,26 +156082,8 @@
         "float",
         "lattice"
     ],
-    "float": [
-
-    ],
-    "english": [
-
-    ],
-    "mgsub": [
-
-    ],
     "qdapRegex": [
         "stringi"
-    ],
-    "dtt": [
-
-    ],
-    "lasso2": [
-
-    ],
-    "rTensor": [
-
     ],
     "einsum": [
         "Rcpp",
@@ -157971,7 +156091,6 @@
         "mathjaxr"
     ],
     "tseries": [
-        "quadprog",
         "zoo",
         "quantmod",
         "xts",
@@ -157979,14 +156098,8 @@
         "curl",
         "lattice"
     ],
-    "pvclust": [
-
-    ],
     "truncdist": [
         "evd"
-    ],
-    "evd": [
-
     ],
     "imputeLCMD": [
         "tmvtnorm",
@@ -158015,9 +156128,6 @@
     ],
     "pscl": [
         "MASS"
-    ],
-    "gamlss.data": [
-
     ],
     "gamlss.dist": [
         "MASS"
@@ -158092,7 +156202,6 @@
         "fastmatch",
         "igraph",
         "Matrix",
-        "quadprog",
         "Rcpp",
         "nlme",
         "lattice",
@@ -158134,12 +156243,6 @@
         "relimp",
         "lattice"
     ],
-    "qvcalc": [
-
-    ],
-    "relimp": [
-
-    ],
     "fastDummies": [
         "data.table",
         "tibble",
@@ -158157,18 +156260,6 @@
         "cli",
         "crayon",
         "utf8"
-    ],
-    "numbers": [
-
-    ],
-    "corrgram": [
-
-    ],
-    "DrugVsDiseasedata": [
-
-    ],
-    "cMap2data": [
-
     ],
     "hgu133a2.db": [
         "AnnotationDbi",
@@ -158210,9 +156301,6 @@
         "zlibbioc",
         "sys",
         "bitops"
-    ],
-    "LSD": [
-
     ],
     "gganimate": [
         "ggplot2",
@@ -158421,9 +156509,6 @@
     "HTMLUtils": [
         "R2HTML"
     ],
-    "EGSEAdata": [
-
-    ],
     "ELMER.data": [
         "GenomicRanges",
         "BiocGenerics",
@@ -158435,15 +156520,6 @@
         "GenomeInfoDbData",
         "zlibbioc",
         "bitops"
-    ],
-    "TCGAbiolinksGUI.data": [
-
-    ],
-    "emdist": [
-
-    ],
-    "CDFt": [
-
     ],
     "ggalt": [
         "ggplot2",
@@ -158552,9 +156628,6 @@
         "crayon",
         "utf8"
     ],
-    "proj4": [
-
-    ],
     "ragg": [
         "systemfonts",
         "textshaping",
@@ -158570,7 +156643,6 @@
         "survival",
         "lattice",
         "nnls",
-        "quadprog",
         "partykit",
         "libcoin",
         "mvtnorm",
@@ -158581,7 +156653,6 @@
     "survivalsvm": [
         "survival",
         "pracma",
-        "quadprog",
         "kernlab",
         "Matrix",
         "Hmisc",
@@ -158614,7 +156685,6 @@
         "magrittr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "png",
         "jpeg",
@@ -158643,9 +156713,6 @@
         "crayon",
         "utf8"
     ],
-    "stabs": [
-
-    ],
     "partykit": [
         "libcoin",
         "mvtnorm",
@@ -158660,14 +156727,8 @@
         "libcoin",
         "mvtnorm"
     ],
-    "JASPAR2018": [
-
-    ],
     "heatmap3": [
         "fastcluster"
-    ],
-    "EntropyExplorer": [
-
     ],
     "RNOmni": [
         "plyr",
@@ -158756,12 +156817,6 @@
         "zlibbioc",
         "bitops"
     ],
-    "HGNChelper": [
-
-    ],
-    "gap": [
-
-    ],
     "MPINet": [
         "BiasedUrn",
         "mgcv",
@@ -158834,22 +156889,10 @@
         "Biobase",
         "BiocGenerics"
     ],
-    "lars": [
-
-    ],
-    "LiblineaR": [
-
-    ],
-    "gcspikelite": [
-
-    ],
     "SPARQL": [
         "XML",
         "RCurl",
         "bitops"
-    ],
-    "effsize": [
-
     ],
     "ggiraph": [
         "ggplot2",
@@ -158894,9 +156937,6 @@
         "cli",
         "crayon",
         "utf8"
-    ],
-    "clisymbols": [
-
     ],
     "RecordLinkage": [
         "DBI",
@@ -159023,7 +157063,6 @@
         "pkgconfig",
         "cpp11",
         "rprojroot",
-        "rstudioapi",
         "farver",
         "labeling",
         "munsell",
@@ -159045,7 +157084,6 @@
         "glue",
         "fs",
         "rappdirs",
-        "rstudioapi",
         "withr",
         "curl",
         "mime",
@@ -159077,7 +157115,6 @@
         "sys",
         "fs",
         "rappdirs",
-        "rstudioapi",
         "withr",
         "cachem",
         "fastmap"
@@ -159205,7 +157242,6 @@
         "ps",
         "waldo",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "rematch2"
     ],
@@ -159260,19 +157296,10 @@
         "crayon",
         "utf8"
     ],
-    "exactRankTests": [
-
-    ],
-    "KMsurv": [
-
-    ],
     "km.ci": [
         "survival",
         "Matrix",
         "lattice"
-    ],
-    "GWASExactHW": [
-
     ],
     "logistf": [
         "mice",
@@ -159402,7 +157429,6 @@
         "sass",
         "jquerylib",
         "rlang",
-        "rstudioapi",
         "digest",
         "base64enc",
         "fastmap",
@@ -159471,9 +157497,6 @@
         "lattice",
         "dotCall64"
     ],
-    "lsr": [
-
-    ],
     "flextable": [
         "officer",
         "rmarkdown",
@@ -159540,9 +157563,6 @@
         "fansi",
         "utf8",
         "purrr"
-    ],
-    "FField": [
-
     ],
     "robust": [
         "fit.models",
@@ -159702,9 +157722,6 @@
     "repo": [
         "digest"
     ],
-    "htm2txt": [
-
-    ],
     "seqmagick": [
         "Biostrings",
         "magrittr",
@@ -159821,7 +157838,6 @@
         "magrittr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "zoo",
         "stringi",
         "Matrix",
@@ -159933,9 +157949,6 @@
         "nnet",
         "lattice"
     ],
-    "bnlearn": [
-
-    ],
     "gRain": [
         "gRbase",
         "graph",
@@ -159951,9 +157964,6 @@
         "pkgconfig",
         "lattice",
         "BH"
-    ],
-    "CompQuadForm": [
-
     ],
     "gProfileR": [
         "RCurl",
@@ -160095,7 +158105,6 @@
         "mvtnorm",
         "expm",
         "Rcpp",
-        "rstudioapi",
         "Exact",
         "gld",
         "data.table",
@@ -160117,9 +158126,6 @@
         "class",
         "proxy",
         "MASS"
-    ],
-    "lmom": [
-
     ],
     "epiR": [
         "survival",
@@ -160176,9 +158182,6 @@
     ],
     "units": [
         "Rcpp"
-    ],
-    "wk": [
-
     ],
     "RMallow": [
         "combinat"
@@ -160271,9 +158274,6 @@
         "crayon",
         "utf8"
     ],
-    "janeaustenr": [
-
-    ],
     "yeastExpData": [
         "graph",
         "BiocGenerics"
@@ -160284,9 +158284,6 @@
     ],
     "nsga2R": [
         "mco"
-    ],
-    "mco": [
-
     ],
     "GA": [
         "foreach",
@@ -160324,12 +158321,6 @@
         "ellipsis",
         "glue"
     ],
-    "h5vcData": [
-
-    ],
-    "fmsb": [
-
-    ],
     "R2jags": [
         "rjags",
         "abind",
@@ -160354,12 +158345,6 @@
         "later",
         "rlang",
         "magrittr"
-    ],
-    "sonicLength": [
-
-    ],
-    "protr": [
-
     ],
     "available": [
         "cli",
@@ -160417,9 +158402,6 @@
         "R6",
         "askpass",
         "sys"
-    ],
-    "yesno": [
-
     ],
     "reactable": [
         "digest",
@@ -160481,12 +158463,6 @@
         "cli",
         "crayon",
         "utf8"
-    ],
-    "additivityTests": [
-
-    ],
-    "simpIntLists": [
-
     ],
     "TxDb.Dmelanogaster.UCSC.dm6.ensGene": [
         "GenomicFeatures",
@@ -160600,9 +158576,6 @@
         "RcppParallel",
         "RcppArmadillo"
     ],
-    "RTriangle": [
-
-    ],
     "concaveman": [
         "V8",
         "sf",
@@ -160655,16 +158628,10 @@
         "lattice",
         "Rcpp"
     ],
-    "HiddenMarkov": [
-
-    ],
     "argparse": [
         "R6",
         "findpython",
         "jsonlite"
-    ],
-    "findpython": [
-
     ],
     "depmixS4": [
         "nnet",
@@ -160692,7 +158659,6 @@
         "remotes",
         "rlang",
         "roxygen2",
-        "rstudioapi",
         "shiny",
         "testthat",
         "usethis",
@@ -160837,7 +158803,6 @@
         "lifecycle",
         "purrr",
         "rappdirs",
-        "rstudioapi",
         "whisker",
         "yaml",
         "processx",
@@ -160892,7 +158857,6 @@
         "magrittr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "evaluate",
         "highr",
@@ -160940,9 +158904,6 @@
     ],
     "rsm": [
         "estimability"
-    ],
-    "estimability": [
-
     ],
     "MCL": [
         "expm",
@@ -161058,9 +159019,6 @@
         "crayon",
         "utf8"
     ],
-    "Rcapture": [
-
-    ],
     "IsoGene": [
         "Iso",
         "xtable",
@@ -161076,9 +159034,6 @@
     ],
     "ORCME": [
         "Iso"
-    ],
-    "ORIClust": [
-
     ],
     "orQA": [
         "Rcpp",
@@ -161131,17 +159086,10 @@
     ],
     "goric": [
         "nlme",
-        "quadprog",
         "mvtnorm",
         "MASS",
         "Matrix",
         "lattice"
-    ],
-    "DiscriMiner": [
-
-    ],
-    "ITALICSData": [
-
     ],
     "pd.mapping50k.xba240": [
         "Biostrings",
@@ -161189,9 +159137,6 @@
         "ellipsis",
         "glue"
     ],
-    "KOdata": [
-
-    ],
     "hgu95av2.db": [
         "AnnotationDbi",
         "org.Hs.eg.db",
@@ -161232,9 +159177,6 @@
         "zlibbioc",
         "sys",
         "bitops"
-    ],
-    "aod": [
-
     ],
     "EnsDb.Hsapiens.v75": [
         "ensembldb",
@@ -161348,22 +159290,10 @@
         "lattice",
         "nlme"
     ],
-    "stemHypoxia": [
-
-    ],
     "LogicReg": [
         "survival",
         "Matrix",
         "lattice"
-    ],
-    "mcbiopi": [
-
-    ],
-    "LowMACAAnnotation": [
-
-    ],
-    "LymphoSeqDB": [
-
     ],
     "reldist": [
         "mgcv",
@@ -161407,7 +159337,6 @@
         "magrittr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "png",
         "jpeg",
@@ -161623,7 +159552,6 @@
         "withr",
         "glue",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "fansi",
         "rematch2",
@@ -161677,9 +159605,6 @@
         "crayon",
         "utf8"
     ],
-    "tweedie": [
-
-    ],
     "TMB": [
         "Matrix",
         "RcppEigen",
@@ -161720,12 +159645,6 @@
         "crayon",
         "utf8",
         "purrr"
-    ],
-    "memuse": [
-
-    ],
-    "pinfsc50": [
-
     ],
     "bigstatsr": [
         "bigassertr",
@@ -161789,9 +159708,6 @@
         "GenomeInfoDbData",
         "zlibbioc",
         "bitops"
-    ],
-    "bigassertr": [
-
     ],
     "bigparallelr": [
         "foreach",
@@ -161869,7 +159785,6 @@
         "lattice",
         "shiny",
         "miniUI",
-        "rstudioapi",
         "highr",
         "styler",
         "classInt",
@@ -161947,7 +159862,6 @@
         "questionr",
         "shiny",
         "miniUI",
-        "rstudioapi",
         "highr",
         "styler",
         "classInt",
@@ -162022,7 +159936,6 @@
     "questionr": [
         "shiny",
         "miniUI",
-        "rstudioapi",
         "highr",
         "styler",
         "classInt",
@@ -162125,17 +160038,8 @@
         "glue",
         "stringi"
     ],
-    "parmigene": [
-
-    ],
-    "LungCancerACvsSCCGEO": [
-
-    ],
     "venn": [
         "admisc"
-    ],
-    "admisc": [
-
     ],
     "PairedData": [
         "MASS",
@@ -162175,9 +160079,6 @@
         "cli",
         "crayon",
         "utf8"
-    ],
-    "mCSEAdata": [
-
     ],
     "SmartSVA": [
         "sva",
@@ -162274,13 +160175,6 @@
     ],
     "svDialogs": [
         "svGUI",
-        "rstudioapi"
-    ],
-    "svGUI": [
-
-    ],
-    "muStat": [
-
     ],
     "rmdformats": [
         "knitr",
@@ -162418,7 +160312,6 @@
         "nlme",
         "reshape",
         "MASS",
-        "quadprog",
         "data.table",
         "GEOquery",
         "DelayedArray",
@@ -162658,7 +160551,6 @@
     ],
     "PerformanceAnalytics": [
         "xts",
-        "quadprog",
         "zoo",
         "lattice"
     ],
@@ -162667,9 +160559,6 @@
         "rebus.datetimes",
         "rebus.numbers",
         "rebus.unicode"
-    ],
-    "rebus.base": [
-
     ],
     "rebus.datetimes": [
         "rebus.base"
@@ -162969,9 +160858,6 @@
         "formatR",
         "lattice"
     ],
-    "miRcompData": [
-
-    ],
     "energy": [
         "Rcpp",
         "boot",
@@ -162982,14 +160868,12 @@
         "mboost",
         "Matrix",
         "foreach",
-        "shape",
         "survival",
         "Rcpp",
         "RcppEigen",
         "stabs",
         "lattice",
         "nnls",
-        "quadprog",
         "partykit",
         "codetools",
         "iterators",
@@ -163039,9 +160923,6 @@
         "zlibbioc",
         "sys",
         "bitops"
-    ],
-    "GFA": [
-
     ],
     "linkcomm": [
         "igraph",
@@ -163159,9 +161040,6 @@
         "cli",
         "crayon",
         "utf8"
-    ],
-    "PMA": [
-
     ],
     "subspace": [
         "ggvis",
@@ -163396,14 +161274,8 @@
         "Matrix",
         "lattice"
     ],
-    "kpeaks": [
-
-    ],
     "lhs": [
         "Rcpp"
-    ],
-    "distances": [
-
     ],
     "echarts4r": [
         "htmlwidgets",
@@ -163416,7 +161288,6 @@
         "corrplot",
         "htmltools",
         "jsonlite",
-        "rstudioapi",
         "backports",
         "ellipsis",
         "generics",
@@ -163472,18 +161343,6 @@
         "fs",
         "rappdirs",
         "lattice"
-    ],
-    "countrycode": [
-
-    ],
-    "mlbench": [
-
-    ],
-    "NMI": [
-
-    ],
-    "svd": [
-
     ],
     "MKmisc": [
         "RColorBrewer",
@@ -163556,9 +161415,6 @@
         "R6",
         "askpass",
         "sys"
-    ],
-    "akmbiclust": [
-
     ],
     "grImport": [
         "XML"
@@ -163681,9 +161537,6 @@
         "fs",
         "rappdirs"
     ],
-    "aggregation": [
-
-    ],
     "anyLib": [
         "devtools",
         "withr",
@@ -163704,7 +161557,6 @@
         "remotes",
         "rlang",
         "roxygen2",
-        "rstudioapi",
         "rversions",
         "sessioninfo",
         "testthat",
@@ -163758,9 +161610,6 @@
         "vctrs",
         "utf8"
     ],
-    "easyPubMed": [
-
-    ],
     "blme": [
         "lme4",
         "Matrix",
@@ -163794,7 +161643,6 @@
         "withr",
         "glue",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "fansi",
         "rematch2",
@@ -163936,9 +161784,6 @@
         "fs",
         "rappdirs"
     ],
-    "poorman": [
-
-    ],
     "learnr": [
         "withr",
         "rappdirs",
@@ -163984,9 +161829,6 @@
         "magrittr",
         "stringi",
         "fs"
-    ],
-    "renv": [
-
     ],
     "ggalluvial": [
         "ggplot2",
@@ -164069,9 +161911,6 @@
         "plyr",
         "Rcpp",
         "bitops"
-    ],
-    "mppa": [
-
     ],
     "GeneNet": [
         "corpcor",
@@ -164235,7 +162074,6 @@
         "knitr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "fastmap",
         "png",
         "jpeg",
@@ -164485,17 +162323,11 @@
         "class",
         "MASS"
     ],
-    "NbClust": [
-
-    ],
     "qpdf": [
         "Rcpp",
         "askpass",
         "curl",
         "sys"
-    ],
-    "smatr": [
-
     ],
     "ontologyPlot": [
         "ontologyIndex",
@@ -164504,17 +162336,11 @@
         "graph",
         "BiocGenerics"
     ],
-    "paintmap": [
-
-    ],
     "distrEx": [
         "distr",
         "startupmsg",
         "sfsmisc",
         "MASS"
-    ],
-    "uniqtag": [
-
     ],
     "AICcmodavg": [
         "lattice",
@@ -164559,7 +162385,6 @@
         "withr",
         "glue",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "fansi",
         "rematch2",
@@ -164650,7 +162475,6 @@
         "withr",
         "glue",
         "rprojroot",
-        "rstudioapi",
         "diffobj",
         "fansi",
         "rematch2",
@@ -164659,9 +162483,6 @@
         "pkgconfig",
         "vctrs",
         "utf8"
-    ],
-    "optimalFlowData": [
-
     ],
     "Peptides": [
         "Rcpp"
@@ -164785,9 +162606,6 @@
         "grr",
         "lattice"
     ],
-    "grr": [
-
-    ],
     "mRMRe": [
         "survival",
         "igraph",
@@ -164812,20 +162630,8 @@
         "lattice",
         "Rcpp"
     ],
-    "cMAP": [
-
-    ],
-    "EMT": [
-
-    ],
     "Matching": [
         "MASS"
-    ],
-    "pcxnData": [
-
-    ],
-    "clusterRepro": [
-
     ],
     "reportROC": [
         "pROC",
@@ -164988,9 +162794,6 @@
         "pkgconfig",
         "lattice"
     ],
-    "geigen": [
-
-    ],
     "diffusr": [
         "Rcpp",
         "igraph",
@@ -165057,9 +162860,6 @@
         "NISTunits",
         "pracma"
     ],
-    "NISTunits": [
-
-    ],
     "phateR": [
         "Matrix",
         "reticulate",
@@ -165112,9 +162912,6 @@
         "RcppZiggurat",
         "RcppArmadillo",
         "RcppGSL"
-    ],
-    "msgps": [
-
     ],
     "pingr": [
         "processx",
@@ -165187,14 +162984,8 @@
     "intrinsicDimension": [
         "yaImpute"
     ],
-    "yaImpute": [
-
-    ],
     "strawr": [
         "Rcpp"
-    ],
-    "logspline": [
-
     ],
     "evmix": [
         "MASS",
@@ -165345,12 +163136,6 @@
         "colorspace",
         "lattice"
     ],
-    "svUnit": [
-
-    ],
-    "HDInterval": [
-
-    ],
     "distributional": [
         "vctrs",
         "rlang",
@@ -165388,9 +163173,6 @@
     ],
     "googleVis": [
         "jsonlite"
-    ],
-    "catnet": [
-
     ],
     "phastCons100way.UCSC.hg38": [
         "GenomicScores",
@@ -165524,7 +163306,6 @@
         "scales",
         "tibble",
         "withr",
-        "quadprog",
         "quantmod",
         "nlme",
         "lattice",
@@ -165547,15 +163328,6 @@
         "cli",
         "crayon",
         "utf8"
-    ],
-    "naivebayes": [
-
-    ],
-    "tester": [
-
-    ],
-    "fracdiff": [
-
     ],
     "urca": [
         "nlme",
@@ -165675,9 +163447,6 @@
         "magrittr",
         "fs",
         "rappdirs"
-    ],
-    "enviPat": [
-
     ],
     "shinyscreenshot": [
         "base64enc",
@@ -165811,15 +163580,9 @@
         "zlibbioc",
         "bitops"
     ],
-    "fftw": [
-
-    ],
     "ExtDist": [
         "numDeriv",
         "optimx"
-    ],
-    "filematrix": [
-
     ],
     "phastCons100way.UCSC.hg19": [
         "GenomicScores",
@@ -165999,7 +163762,6 @@
         "purrr",
         "R6",
         "rlang",
-        "rstudioapi",
         "shiny",
         "tibble",
         "tidyr",
@@ -166042,9 +163804,6 @@
         "sys",
         "fs",
         "rappdirs"
-    ],
-    "getPass": [
-        "rstudioapi"
     ],
     "CodeDepends": [
         "codetools",
@@ -166132,9 +163891,6 @@
         "askpass",
         "sys"
     ],
-    "gsmoothr": [
-
-    ],
     "rGenomeTracksData": [
         "AnnotationHub",
         "BiocGenerics",
@@ -166216,9 +163972,6 @@
         "zlibbioc",
         "bitops"
     ],
-    "RGMQLlib": [
-
-    ],
     "elitism": [
         "MASS"
     ],
@@ -166256,12 +164009,6 @@
         "cli",
         "crayon",
         "utf8"
-    ],
-    "shades": [
-
-    ],
-    "RITANdata": [
-
     ],
     "valr": [
         "broom",
@@ -166578,9 +164325,6 @@
         "sys",
         "bitops"
     ],
-    "RSVGTipsDevice": [
-
-    ],
     "TBX20BamSubset": [
         "Rsamtools",
         "xtable",
@@ -166785,12 +164529,6 @@
         "fs",
         "rappdirs"
     ],
-    "pwr": [
-
-    ],
-    "dunn.test": [
-
-    ],
     "bladderbatch": [
         "Biobase",
         "BiocGenerics"
@@ -166805,14 +164543,10 @@
         "bootstrap",
         "Matrix",
         "lattice",
-        "quadprog",
         "foreach",
         "doParallel",
         "iterators",
         "codetools"
-    ],
-    "SPAtest": [
-
     ],
     "excelR": [
         "htmlwidgets",
@@ -166844,9 +164578,6 @@
         "glue",
         "magrittr",
         "stringi"
-    ],
-    "smoothie": [
-
     ],
     "scanMiRData": [
         "scanMiR",
@@ -167019,12 +164750,6 @@
         "pspline",
         "numDeriv"
     ],
-    "ADGofTest": [
-
-    ],
-    "pspline": [
-
-    ],
     "proxyC": [
         "Matrix",
         "Rcpp",
@@ -167041,9 +164766,6 @@
     "Lmoments": [
         "Rcpp",
         "RcppArmadillo"
-    ],
-    "distillery": [
-
     ],
     "elasticnet": [
         "lars"
@@ -167108,9 +164830,6 @@
     ],
     "glmpca": [
         "MASS"
-    ],
-    "dgof": [
-
     ],
     "nnTensor": [
         "fields",
@@ -167255,12 +164974,6 @@
         "cpp11",
         "colorspace"
     ],
-    "chromhmmData": [
-
-    ],
-    "seq2pathway.data": [
-
-    ],
     "adehabitatLT": [
         "sp",
         "ade4",
@@ -167271,9 +164984,6 @@
         "filehash",
         "boot",
         "lattice"
-    ],
-    "seqCNA.annot": [
-
     ],
     "adehabitatMA": [
         "sp",
@@ -167397,9 +165107,6 @@
     "objectProperties": [
         "objectSignals"
     ],
-    "objectSignals": [
-
-    ],
     "mlr": [
         "ParamHelpers",
         "backports",
@@ -167468,9 +165175,6 @@
         "rlang",
         "cachem",
         "fastmap"
-    ],
-    "multcompView": [
-
     ],
     "BWStest": [
         "memoise",
@@ -167881,9 +165585,6 @@
         "Rcpp",
         "RcppThread"
     ],
-    "SNAGEEdata": [
-
-    ],
     "nls2": [
         "proto"
     ],
@@ -167916,12 +165617,6 @@
         "png",
         "jpeg",
         "Rcpp"
-    ],
-    "nnlasso": [
-
-    ],
-    "av": [
-
     ],
     "protViz": [
         "Rcpp"
@@ -167994,12 +165689,6 @@
         "BH",
         "nlme"
     ],
-    "BlandAltmanLeh": [
-
-    ],
-    "FIs": [
-
-    ],
     "dml": [
         "MASS",
         "lfda",
@@ -168019,9 +165708,6 @@
         "Matrix",
         "RcppEigen",
         "lattice"
-    ],
-    "poilog": [
-
     ],
     "MLmetrics": [
         "ROCR",
@@ -168068,9 +165754,6 @@
         "rlang",
         "vctrs",
         "warp"
-    ],
-    "warp": [
-
     ],
     "clustvarsel": [
         "mclust",
@@ -168136,9 +165819,6 @@
         "cli",
         "crayon",
         "utf8"
-    ],
-    "kriging": [
-
     ],
     "spacetime": [
         "lattice",
@@ -168268,9 +165948,6 @@
         "stringi",
         "highr"
     ],
-    "ROCit": [
-
-    ],
     "GenKern": [
         "KernSmooth"
     ],
@@ -168295,9 +165972,6 @@
     ],
     "RcppCCTZ": [
         "Rcpp"
-    ],
-    "RcppDate": [
-
     ],
     "FreqProf": [
         "reshape2",
@@ -168395,12 +166069,6 @@
         "lattice",
         "colorspace"
     ],
-    "ensurer": [
-
-    ],
-    "mefa": [
-
-    ],
     "tractor.base": [
         "ore",
         "reportr",
@@ -168408,17 +166076,11 @@
         "RNifti",
         "Rcpp"
     ],
-    "ore": [
-
-    ],
     "reportr": [
         "ore"
     ],
     "RNifti": [
         "Rcpp"
-    ],
-    "vbsr": [
-
     ],
     "lassopv": [
         "lars"
@@ -168611,7 +166273,6 @@
         "stringr",
         "checkmate",
         "htmlwidgets",
-        "rstudioapi",
         "digest",
         "base64enc",
         "fastmap",
@@ -168639,9 +166300,6 @@
         "cli",
         "crayon",
         "utf8"
-    ],
-    "gradDescent": [
-
     ],
     "msigdb": [
         "ExperimentHub",
@@ -168766,16 +166424,9 @@
         "crayon",
         "utf8"
     ],
-    "seqminer": [
-
-    ],
     "Rmisc": [
         "lattice",
         "plyr",
         "Rcpp"
     ],
-    "alluvial": [
-
-    ]
 }
-
