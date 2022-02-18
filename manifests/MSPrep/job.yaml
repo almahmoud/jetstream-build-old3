@@ -1,0 +1,92 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"batch/v1","kind":"Job","metadata":{"annotations":{},"name":"msprep-build","namespace":"newbuild"},"spec":{"backoffLimit":4,"template":{"spec":{"affinity":{"nodeAffinity":{"requiredDuringSchedulingIgnoredDuringExecution":{"nodeSelectorTerms":[{"matchExpressions":[{"key":"kubernetes.io/hostname","operator":"In","values":["am-scalable-k8s-162919","am-scalable-k8s-275c1a","am-scalable-k8s-5872ef","am-scalable-k8s-6509e4","am-scalable-k8s-6effa4","am-scalable-k8s-a34d6c","am-scalable-k8s-ed8ef3"]}]}]}}},"containers":[{"args":["cd /home/rstudio \u0026\u0026 Rscript -e 'p \u003c- .libPaths(); p \u003c- c(p[2], p[-2]); .libPaths(p); if(BiocManager::install(\"MSPrep\", INSTALL_opts = \"--build\", update = FALSE, quiet = TRUE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)' \u0026\u0026 cp -r /usr/local/lib/R/site-library/MSPrep /mnt/libs/R/MSPrep \u0026\u0026 cp MSPrep* /mnt/libs/R/"],"command":["/bin/bash","-c"],"env":[{"name":"R_LIBS_USER","value":"/mnt/libs/R"}],"image":"bioconductor/bioconductor_docker:RELEASE_3_14","name":"build","resources":{"limits":{"cpu":"1700m","memory":"2Gi"},"requests":{"cpu":"250m","memory":"500Mi"}},"volumeMounts":[{"mountPath":"/mnt/libs/R","name":"libraries"}]}],"restartPolicy":"OnFailure","securityContext":{"fsGroup":1000,"runAsUser":1000},"volumes":[{"name":"libraries","persistentVolumeClaim":{"claimName":"rstudio-r-libraries-pvc"}}]}}}}
+  creationTimestamp: "2022-02-18T07:42:41Z"
+  labels:
+    controller-uid: 13a1362a-c5b0-4578-b2bd-6da8365cc9dc
+    job-name: msprep-build
+  name: msprep-build
+  namespace: newbuild
+  resourceVersion: "24202666"
+  selfLink: /apis/batch/v1/namespaces/newbuild/jobs/msprep-build
+  uid: 13a1362a-c5b0-4578-b2bd-6da8365cc9dc
+spec:
+  backoffLimit: 4
+  completions: 1
+  parallelism: 1
+  selector:
+    matchLabels:
+      controller-uid: 13a1362a-c5b0-4578-b2bd-6da8365cc9dc
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        controller-uid: 13a1362a-c5b0-4578-b2bd-6da8365cc9dc
+        job-name: msprep-build
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: kubernetes.io/hostname
+                operator: In
+                values:
+                - am-scalable-k8s-162919
+                - am-scalable-k8s-275c1a
+                - am-scalable-k8s-5872ef
+                - am-scalable-k8s-6509e4
+                - am-scalable-k8s-6effa4
+                - am-scalable-k8s-a34d6c
+                - am-scalable-k8s-ed8ef3
+      containers:
+      - args:
+        - cd /home/rstudio && Rscript -e 'p <- .libPaths(); p <- c(p[2], p[-2]); .libPaths(p);
+          if(BiocManager::install("MSPrep", INSTALL_opts = "--build", update = FALSE,
+          quiet = TRUE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages()))
+          q(status = 0) else q(status = 1)' && cp -r /usr/local/lib/R/site-library/MSPrep
+          /mnt/libs/R/MSPrep && cp MSPrep* /mnt/libs/R/
+        command:
+        - /bin/bash
+        - -c
+        env:
+        - name: R_LIBS_USER
+          value: /mnt/libs/R
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        imagePullPolicy: IfNotPresent
+        name: build
+        resources:
+          limits:
+            cpu: 1700m
+            memory: 2Gi
+          requests:
+            cpu: 250m
+            memory: 500Mi
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /mnt/libs/R
+          name: libraries
+      dnsPolicy: ClusterFirst
+      restartPolicy: OnFailure
+      schedulerName: default-scheduler
+      securityContext:
+        fsGroup: 1000
+        runAsUser: 1000
+      terminationGracePeriodSeconds: 30
+      volumes:
+      - name: libraries
+        persistentVolumeClaim:
+          claimName: rstudio-r-libraries-pvc
+status:
+  completionTime: "2022-02-18T08:08:12Z"
+  conditions:
+  - lastProbeTime: "2022-02-18T08:08:12Z"
+    lastTransitionTime: "2022-02-18T08:08:12Z"
+    status: "True"
+    type: Complete
+  startTime: "2022-02-18T07:42:41Z"
+  succeeded: 1
