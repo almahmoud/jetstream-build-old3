@@ -1,83 +1,11 @@
 {
-    "CAMERA": [
-        "xcms",
-    ],
-    "ChAMP": [
-        "DMRcate",
-    ],
-    "cliqueMS": [
-        "xcms",
-    ],
     "cosmiq": [
-        "xcms",
         "faahKO",
-    ],
-    "DAPAR": [
-        "DAPARdata",
-    ],
-    "flagme": [
-        "xcms",
-        "CAMERA",
-    ],
-    "IPO": [
-        "xcms",
-        "CAMERA",
-    ],
-    "LOBSTAHS": [
-        "xcms",
-        "CAMERA",
-    ],
-    "MAIT": [
-        "CAMERA",
-        "xcms",
-    ],
-    "Metab": [
-        "xcms",
-    ],
-    "metaMS": [
-        "CAMERA",
-        "xcms",
-    ],
-    "msmsTests": [
-        "msmsEDA",
-    ],
-    "MSnID": [
-        "msmsTests",
-        "msmsEDA",
-    ],
-    "MSstatsQCgui": [
-        "MSstatsQC",
-    ],
-    "ncGTW": [
-        "xcms",
-    ],
-    "proFIA": [
-        "xcms",
-    ],
-    "pRolocGUI": [
-        "pRoloc",
-    ],
-    "Prostar": [
-        "DAPAR",
-        "DAPARdata",
     ],
     "RiboCrypt": [
         "ORFik",
     ],
-    "Risa": [
-        "xcms",
-    ],
     "RmiR": [
         "RSVGTipsDevice",
-    ],
-    "scMerge": [
-        "M3Drop",
-    ],
-    "singleCellTK": [
-        "scMerge",
-        "M3Drop",
-    ],
-    "faahKO": [
-        "xcms",
     ],
 }
