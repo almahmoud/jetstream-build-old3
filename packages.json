@@ -14,23 +14,15 @@
     "AllelicImbalance": [
         "Gviz",
     ],
-    "appreci8R": [
-        "PolyPhen.Hsapiens.dbSNP131",
-        "SIFT.Hsapiens.dbSNP137",
-    ],
     "arrayMvout": [
         "lumi",
         "methylumi",
-        "FDb.InfiniumMethylation.hg19",
     ],
     "ASpediaFI": [
         "Gviz",
     ],
     "ASpli": [
         "Gviz",
-    ],
-    "ATACseqQC": [
-        "ChIPpeakAnno",
     ],
     "Autotuner": [
         "MSnbase",
@@ -40,20 +32,14 @@
         "ffpe",
         "lumi",
         "methylumi",
-        "FDb.InfiniumMethylation.hg19",
     ],
     "bigmelon": [
         "wateRmelon",
         "methylumi",
-        "FDb.InfiniumMethylation.hg19",
         "lumi",
-        "IlluminaHumanMethylation450kanno.ilmn12.hg19",
     ],
     "biomvRCNS": [
         "Gviz",
-    ],
-    "biscuiteer": [
-        "dmrseq",
     ],
     "brainflowprobes": [
         "derfinder",
@@ -80,13 +66,10 @@
         "DMRcate",
         "IlluminaHumanMethylationEPICanno.ilm10b4.hg19",
         "wateRmelon",
-        "goseq",
         "missMethyl",
         "Gviz",
-        "IlluminaHumanMethylation450kanno.ilmn12.hg19",
         "methylumi",
         "lumi",
-        "FDb.InfiniumMethylation.hg19",
     ],
     "chimeraviz": [
         "Gviz",
@@ -118,11 +101,7 @@
         "methylPipe",
         "Gviz",
     ],
-    "consensusDE": [
-        "EnsDb.Hsapiens.v86",
-    ],
     "conumee": [
-        "IlluminaHumanMethylation450kanno.ilmn12.hg19",
         "IlluminaHumanMethylationEPICanno.ilm10b2.hg19",
     ],
     "CopyNumberPlots": [
@@ -136,7 +115,6 @@
     ],
     "crisprseekplus": [
         "GUIDEseq",
-        "ChIPpeakAnno",
     ],
     "cummeRbund": [
         "Gviz",
@@ -154,19 +132,14 @@
         "derfinder",
         "ggbio",
     ],
-    "DEScan2": [
-        "ChIPpeakAnno",
-    ],
     "DIAlignR": [
         "mzR",
     ],
     "DMRcate": [
         "missMethyl",
         "Gviz",
-        "IlluminaHumanMethylation450kanno.ilmn12.hg19",
         "IlluminaHumanMethylationEPICanno.ilm10b4.hg19",
         "methylumi",
-        "FDb.InfiniumMethylation.hg19",
     ],
     "DMRforPairs": [
         "Gviz",
@@ -174,38 +147,18 @@
     "ELMER": [
         "Gviz",
     ],
-    "EnMCB": [
-        "IlluminaHumanMethylation450kanno.ilmn12.hg19",
-    ],
-    "epivizr": [
-        "epivizrData",
-    ],
-    "epivizrChart": [
-        "epivizrData",
-    ],
     "epivizrStandalone": [
         "epivizr",
-        "epivizrData",
-    ],
-    "esATAC": [
-        "ChIPseeker",
     ],
     "ffpe": [
         "lumi",
         "methylumi",
-        "FDb.InfiniumMethylation.hg19",
     ],
     "flagme": [
         "xcms",
         "CAMERA",
         "MSnbase",
         "mzR",
-    ],
-    "funtooNorm": [
-        "IlluminaHumanMethylation450kanno.ilmn12.hg19",
-    ],
-    "GA4GHshiny": [
-        "GA4GHclient",
     ],
     "GeneStructureTools": [
         "Gviz",
@@ -215,9 +168,6 @@
     ],
     "GenomicOZone": [
         "ggbio",
-    ],
-    "GUIDEseq": [
-        "ChIPpeakAnno",
     ],
     "HiCDCPlus": [
         "GenomicInteractions",
@@ -229,10 +179,6 @@
     "iCheck": [
         "lumi",
         "methylumi",
-        "FDb.InfiniumMethylation.hg19",
-    ],
-    "ideal": [
-        "goseq",
     ],
     "intansv": [
         "ggbio",
@@ -243,9 +189,6 @@
         "MSnbase",
         "mzR",
     ],
-    "ldblock": [
-        "EnsDb.Hsapiens.v75",
-    ],
     "LOBSTAHS": [
         "xcms",
         "CAMERA",
@@ -254,7 +197,6 @@
     ],
     "lumi": [
         "methylumi",
-        "FDb.InfiniumMethylation.hg19",
     ],
     "M3Drop": [
         "reldist",
@@ -263,7 +205,6 @@
     "MAGAR": [
         "RnBeads",
         "methylumi",
-        "FDb.InfiniumMethylation.hg19",
     ],
     "MAIT": [
         "CAMERA",
@@ -280,28 +221,18 @@
     "MEAL": [
         "Gviz",
         "missMethyl",
-        "IlluminaHumanMethylation450kanno.ilmn12.hg19",
         "IlluminaHumanMethylationEPICanno.ilm10b4.hg19",
         "methylumi",
-        "FDb.InfiniumMethylation.hg19",
     ],
     "MEAT": [
         "wateRmelon",
         "methylumi",
         "lumi",
-        "IlluminaHumanMethylation450kanno.ilmn12.hg19",
-        "FDb.InfiniumMethylation.hg19",
     ],
     "Metab": [
         "xcms",
         "MSnbase",
         "mzR",
-    ],
-    "MetaboSignal": [
-        "EnsDb.Hsapiens.v75",
-    ],
-    "metagene": [
-        "EnsDb.Hsapiens.v86",
     ],
     "metaMS": [
         "CAMERA",
@@ -311,7 +242,6 @@
     ],
     "metavizr": [
         "epivizr",
-        "epivizrData",
         "epivizrStandalone",
     ],
     "MetCirc": [
@@ -320,31 +250,22 @@
     ],
     "methylCC": [
         "FlowSorted.Blood.450k",
-        "IlluminaHumanMethylation450kanno.ilmn12.hg19",
     ],
     "methylGSA": [
         "missMethyl",
-        "IlluminaHumanMethylation450kanno.ilmn12.hg19",
         "IlluminaHumanMethylationEPICanno.ilm10b4.hg19",
         "methylumi",
-        "FDb.InfiniumMethylation.hg19",
     ],
     "methylPipe": [
         "Gviz",
     ],
-    "methylumi": [
-        "FDb.InfiniumMethylation.hg19",
-    ],
     "MineICA": [
         "lumi",
         "methylumi",
-        "FDb.InfiniumMethylation.hg19",
     ],
     "missMethyl": [
-        "IlluminaHumanMethylation450kanno.ilmn12.hg19",
         "IlluminaHumanMethylationEPICanno.ilm10b4.hg19",
         "methylumi",
-        "FDb.InfiniumMethylation.hg19",
     ],
     "MMAPPR2": [
         "gmapR",
@@ -394,7 +315,6 @@
     "NADfinder": [
         "trackViewer",
         "ATACseqQC",
-        "ChIPpeakAnno",
         "Gviz",
     ],
     "ncGTW": [
@@ -427,9 +347,6 @@
         "xcms",
         "MSnbase",
         "mzR",
-    ],
-    "profileplyr": [
-        "ChIPseeker",
     ],
     "pRoloc": [
         "MSnbase",
@@ -471,9 +388,6 @@
     "recount": [
         "derfinder",
     ],
-    "REDseq": [
-        "ChIPpeakAnno",
-    ],
     "regionReport": [
         "derfinder",
     ],
@@ -482,9 +396,6 @@
     ],
     "ReportingTools": [
         "ggbio",
-    ],
-    "rgsepd": [
-        "goseq",
     ],
     "RiboCrypt": [
         "ORFik",
@@ -532,7 +443,6 @@
     ],
     "RnBeads": [
         "methylumi",
-        "FDb.InfiniumMethylation.hg19",
     ],
     "scMerge": [
         "M3Drop",
@@ -544,17 +454,12 @@
     ],
     "scTreeViz": [
         "epivizr",
-        "epivizrData",
-    ],
-    "segmenter": [
-        "ChIPseeker",
     ],
     "SIMAT": [
         "mzR",
     ],
     "singleCellTK": [
         "scMerge",
-        "scRNAseq",
         "M3Drop",
         "reldist",
         "densEstBayes",
@@ -565,12 +470,7 @@
     "skewr": [
         "methylumi",
         "wateRmelon",
-        "FDb.InfiniumMethylation.hg19",
         "lumi",
-        "IlluminaHumanMethylation450kanno.ilmn12.hg19",
-    ],
-    "SMITE": [
-        "goseq",
     ],
     "SomaticSignatures": [
         "ggbio",
@@ -607,20 +507,13 @@
     ],
     "uncoverappLib": [
         "Gviz",
-        "EnsDb.Hsapiens.v75",
-        "EnsDb.Hsapiens.v86",
     ],
     "VariantFiltering": [
         "Gviz",
     ],
-    "vulcan": [
-        "ChIPpeakAnno",
-    ],
     "wateRmelon": [
         "methylumi",
         "lumi",
-        "IlluminaHumanMethylation450kanno.ilmn12.hg19",
-        "FDb.InfiniumMethylation.hg19",
     ],
     "xcms": [
         "MSnbase",
@@ -632,9 +525,6 @@
     "YAPSA": [
         "SomaticSignatures",
         "ggbio",
-    ],
-    "yarn": [
-        "quantro",
     ],
     "GenomicState": [
         "derfinder",
