@@ -388,7 +388,6 @@
         "rtracklayer",
     ],
     "BASiCS": [
-        "ggExtra",
         "scran",
         "scuttle",
         "BiocSingular",
@@ -418,9 +417,6 @@
         "GenomicFeatures",
         "biomaRt",
         "GenomicAlignments",
-    ],
-    "beadarraySNP": [
-        "quantsmooth",
     ],
     "BEAT": [
         "ShortRead",
@@ -1210,7 +1206,6 @@
         "BSgenome",
         "biovizBase",
         "GenomicAlignments",
-        "densityClust",
         "Hmisc",
         "VariantAnnotation",
     ],
@@ -1220,7 +1215,6 @@
     "circRNAprofiler": [
         "rtracklayer",
         "DESeq2",
-        "universalmotif",
         "AnnotationHub",
         "BSgenome.Hsapiens.UCSC.hg19",
         "gwascat",
@@ -1404,9 +1398,6 @@
         "biovizBase",
         "Hmisc",
         "VariantAnnotation",
-    ],
-    "ComPrAn": [
-        "rio",
     ],
     "conclus": [
         "factoextra",
@@ -1620,7 +1611,6 @@
     "ctgGEM": [
         "monocle",
         "TSCAN",
-        "densityClust",
         "TrajectoryUtils",
     ],
     "cTRAP": [
@@ -1765,7 +1755,6 @@
         "Hmisc",
         "FactoMineR",
         "caret",
-        "plsVarSel",
         "arm",
         "recipes",
         "genefilter",
@@ -1803,7 +1792,6 @@
         "ggraph",
         "ggtree",
         "rstatix",
-        "ggformula",
     ],
     "dasper": [
         "GenomicFeatures",
@@ -1876,7 +1864,6 @@
     ],
     "deconvR": [
         "methylKit",
-        "rsq",
         "rtracklayer",
         "GenomicAlignments",
     ],
@@ -1917,9 +1904,6 @@
         "GenomicAlignments",
         "rtracklayer",
         "biomaRt",
-    ],
-    "DEGraph": [
-        "NCIgraph",
     ],
     "DEGreport": [
         "DESeq2",
@@ -2085,9 +2069,6 @@
         "Seurat",
         "scran",
         "scuttle",
-    ],
-    "DiscoRhythm": [
-        "ggExtra",
     ],
     "distinct": [
         "scater",
@@ -2891,7 +2872,6 @@
         "Hmisc",
         "FactoMineR",
         "caret",
-        "plsVarSel",
         "arm",
         "recipes",
         "genefilter",
@@ -2993,7 +2973,6 @@
     "GENESIS": [
         "GWASTools",
         "SeqVarTools",
-        "quantsmooth",
     ],
     "GeneStructureTools": [
         "BSgenome.Mmusculus.UCSC.mm10",
@@ -3376,13 +3355,9 @@
         "BSgenome",
         "GenomicAlignments",
     ],
-    "GWASTools": [
-        "quantsmooth",
-    ],
     "gwasurvivr": [
         "GWASTools",
         "VariantAnnotation",
-        "quantsmooth",
         "rtracklayer",
         "BSgenome",
         "GenomicFeatures",
@@ -3817,7 +3792,6 @@
     ],
     "LinkHD": [
         "ggpubr",
-        "rio",
         "MultiAssayExperiment",
         "rstatix",
         "car",
@@ -3883,7 +3857,6 @@
     "Maaslin2": [
         "car",
         "lmerTest",
-        "glmmTMB",
         "pbkrtest",
     ],
     "macat": [
@@ -3952,7 +3925,6 @@
         "MSnbase",
         "mzR",
         "MsFeatures",
-        "questionr",
         "ipred",
         "prodlim",
     ],
@@ -3995,7 +3967,6 @@
     "mBPCR": [
         "oligoClasses",
         "GWASTools",
-        "quantsmooth",
     ],
     "MBQN": [
         "rpx",
@@ -4089,9 +4060,6 @@
     ],
     "Melissa": [
         "BPRMeth",
-    ],
-    "memes": [
-        "universalmotif",
     ],
     "meshes": [
         "DOSE",
@@ -4625,7 +4593,6 @@
         "Maaslin2",
         "car",
         "lmerTest",
-        "glmmTMB",
         "pbkrtest",
     ],
     "mnem": [
@@ -4657,9 +4624,6 @@
         "GenomicAlignments",
         "annotate",
         "GO.db",
-    ],
-    "monocle": [
-        "densityClust",
     ],
     "MoonlightR": [
         "clusterProfiler",
@@ -4786,13 +4750,11 @@
         "lmerTest",
     ],
     "MSstatsQC": [
-        "ggExtra",
         "MSnbase",
         "mzR",
     ],
     "MSstatsQCgui": [
         "MSstatsQC",
-        "ggExtra",
         "MSnbase",
         "mzR",
     ],
@@ -4887,7 +4849,6 @@
     ],
     "muscat": [
         "DESeq2",
-        "glmmTMB",
         "lmerTest",
         "scater",
         "scuttle",
@@ -5408,7 +5369,6 @@
         "destiny",
         "Seurat",
         "VIM",
-        "densityClust",
         "car",
         "pbkrtest",
     ],
@@ -5731,7 +5691,6 @@
         "ggraph",
         "ggtree",
         "rstatix",
-        "ggformula",
     ],
     "ProteoDisco": [
         "GenomicFeatures",
@@ -6914,7 +6873,6 @@
     ],
     "SIM": [
         "globaltest",
-        "quantsmooth",
         "annotate",
     ],
     "SIMAT": [
@@ -7238,7 +7196,6 @@
     ],
     "ssPATHS": [
         "MESS",
-        "ggformula",
     ],
     "STAN": [
         "Gviz",
@@ -7802,7 +7759,6 @@
     ],
     "uSORT": [
         "monocle",
-        "densityClust",
     ],
     "VAExprs": [
         "keras",
@@ -8392,7 +8348,6 @@
     ],
     "cp4p": [
         "MESS",
-        "ggformula",
     ],
     "imp4p": [
         "missMDA",
@@ -8403,9 +8358,6 @@
     "DAPARdata": [
         "MSnbase",
         "mzR",
-    ],
-    "MESS": [
-        "ggformula",
     ],
     "missMDA": [
         "FactoMineR",
@@ -8501,10 +8453,6 @@
     ],
     "agricolae": [
         "klaR",
-        "questionr",
-    ],
-    "klaR": [
-        "questionr",
     ],
     "SmartSVA": [
         "sva",
