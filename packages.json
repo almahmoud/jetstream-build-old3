@@ -4,12 +4,10 @@
     ],
     "affycoretools": [
         "ReportingTools",
-        "ggbio",
     ],
     "AgiMicroRna": [
         "affycoretools",
         "ReportingTools",
-        "ggbio",
     ],
     "arrayMvout": [
         "lumi",
@@ -29,16 +27,9 @@
     "brainflowprobes": [
         "derfinderPlot",
         "GenomicState",
-        "ggbio",
-    ],
-    "CAFE": [
-        "ggbio",
     ],
     "CAGEfightR": [
         "GenomicInteractions",
-    ],
-    "cageminer": [
-        "ggbio",
     ],
     "CAMERA": [
         "xcms",
@@ -79,9 +70,6 @@
         "MSnbase",
         "mzR",
     ],
-    "crisprseekplus": [
-        "GUIDEseq",
-    ],
     "DAPAR": [
         "MSnbase",
         "DAPARdata",
@@ -91,18 +79,12 @@
         "MSnbase",
         "mzR",
     ],
-    "derfinderPlot": [
-        "ggbio",
-    ],
     "DIAlignR": [
         "mzR",
     ],
     "DMRcate": [
         "missMethyl",
         "IlluminaHumanMethylationEPICanno.ilm10b4.hg19",
-    ],
-    "epivizrStandalone": [
-        "epivizr",
     ],
     "ffpe": [
         "lumi",
@@ -113,17 +95,11 @@
         "MSnbase",
         "mzR",
     ],
-    "GenomicOZone": [
-        "ggbio",
-    ],
     "HiCDCPlus": [
         "GenomicInteractions",
     ],
     "iCheck": [
         "lumi",
-    ],
-    "intansv": [
-        "ggbio",
     ],
     "IPO": [
         "xcms",
@@ -170,7 +146,6 @@
         "mzR",
     ],
     "metavizr": [
-        "epivizr",
         "epivizrStandalone",
     ],
     "MetCirc": [
@@ -189,9 +164,6 @@
     ],
     "missMethyl": [
         "IlluminaHumanMethylationEPICanno.ilm10b4.hg19",
-    ],
-    "msgbsR": [
-        "ggbio",
     ],
     "MSGFgui": [
         "mzR",
@@ -228,7 +200,6 @@
     ],
     "NADfinder": [
         "trackViewer",
-        "ATACseqQC",
     ],
     "ncGTW": [
         "xcms",
@@ -282,21 +253,12 @@
         "MSnbase",
         "mzR",
     ],
-    "R3CPET": [
-        "ggbio",
-    ],
-    "ReportingTools": [
-        "ggbio",
-    ],
     "RiboCrypt": [
         "ORFik",
     ],
     "RiboDiPA": [
         "reldist",
         "densEstBayes",
-    ],
-    "RiboProfiling": [
-        "ggbio",
     ],
     "Risa": [
         "xcms",
@@ -327,12 +289,6 @@
         "reldist",
         "densEstBayes",
     ],
-    "scruff": [
-        "ggbio",
-    ],
-    "scTreeViz": [
-        "epivizr",
-    ],
     "SIMAT": [
         "mzR",
     ],
@@ -345,9 +301,6 @@
     "skewr": [
         "wateRmelon",
         "lumi",
-    ],
-    "SomaticSignatures": [
-        "ggbio",
     ],
     "spatzie": [
         "GenomicInteractions",
@@ -374,7 +327,6 @@
     ],
     "YAPSA": [
         "SomaticSignatures",
-        "ggbio",
     ],
     "faahKO": [
         "xcms",
