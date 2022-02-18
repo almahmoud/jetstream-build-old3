@@ -2,18 +2,9 @@
     "adductomicsR": [
         "mzR",
     ],
-    "AgiMicroRna": [
-        "affycoretools",
-    ],
     "Autotuner": [
         "MSnbase",
         "mzR",
-    ],
-    "benchdamic": [
-        "ffpe",
-    ],
-    "bigmelon": [
-        "wateRmelon",
     ],
     "CAMERA": [
         "xcms",
@@ -23,7 +14,6 @@
     "ChAMP": [
         "DMRcate",
         "IlluminaHumanMethylationEPICanno.ilm10b4.hg19",
-        "wateRmelon",
         "missMethyl",
     ],
     "cliqueMS": [
@@ -91,9 +81,6 @@
     "MEAL": [
         "missMethyl",
         "IlluminaHumanMethylationEPICanno.ilm10b4.hg19",
-    ],
-    "MEAT": [
-        "wateRmelon",
     ],
     "Metab": [
         "xcms",
@@ -234,9 +221,6 @@
         "M3Drop",
         "reldist",
         "densEstBayes",
-    ],
-    "skewr": [
-        "wateRmelon",
     ],
     "TargetDecoy": [
         "mzR",
