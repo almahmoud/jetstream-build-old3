@@ -55,9 +55,8 @@ if [ -s lists/cleanup$UNIQUE ]
 then
     sed -i "/        \"$(cat lists/cleanup$UNIQUE | sed 's/\./\\\./' | awk '{print $1"\\"}' | paste -sd'|' - | awk '{print "\\("$0")"}')\"\(,\)\{0,1\}/d" packages.json &&\
     sed -i '/^$/d' packages.json &&\
-    sed -i ':a;N;$!ba;s/\[\n    \]/\[ \]/g' packages.json &&\
-    cat lists/cleanup$UNIQUE >> $built;
-    cat lists/tmpbuildlist$UNIQUE | xargs kubectl delete -n $namespace job;
+    sed -i ':a;N;$!ba;s/\[\n    \]/\[ \]/g' packages.json;
+    bash cleanup_list.sh -n $namespace -i lists/cleanup$UNIQUE -o $built &
 fi
 
 rm lists/tmpbuildlist$UNIQUE;
@@ -66,8 +65,12 @@ echo "failure deletions:"
 
 kubectl get jobs -n $namespace -o custom-columns=':metadata.name,:status.conditions[0].type' | grep -w Failed | awk '{print $1}' > lists/tmpexfailist$UNIQUE &&\
     grep -q '[^[:space:]]' < "lists/tmpexfailist$UNIQUE" &&\
-    cat lists/tmpexfailist$UNIQUE | xargs -i sh -c "grep -ir {} manifests | gawk -F'/' '{print \$2}'" > lists/tmpfld$UNIQUE && cat lists/tmpfld$UNIQUE >> $failed &&\
-    cat lists/tmpexfailist$UNIQUE | xargs -i sh -c "kubectl logs -n $namespace job/{} > $logs/{}.log; kubectl get job/{} -n $namespace -o yaml > $logs/{}.yaml && xargs kubectl delete -n $namespace job;"
+    cat lists/tmpexfailist$UNIQUE | xargs -i sh -c "grep -ir {} manifests | gawk -F'/' '{print \$2}'" > lists/tmpfld$UNIQUE
+
+if [ -s lists/tmpfld$UNIQUE ]
+then
+    bash cleanup_list.sh -n $namespace -i lists/tmpfld$UNIQUE -o $failed &
+fi
 
 rm lists/tmpexfailist$UNIQUE
 
