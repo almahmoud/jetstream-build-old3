@@ -27,7 +27,7 @@ if [ -z "$outputlist" ];
     exit;
 fi
 
-    cat $inputlist | xargs -i sh -c "job_name=\$(echo {} | tr -cd '[:alnum:]' | tr '[:upper:]' '[:lower:]')-build; kubectl get -n $namespace -o yaml job/\$job_name > manifests/{}/job.yaml && kubectl logs -n $namespace job/\$job_name > manifests/{}/log && kubectl delete -n $namespace job/\$pkg_name" &&\
+    cat $inputlist | xargs -i sh -c "job_name=\$(echo {} | tr -cd '[:alnum:]' | tr '[:upper:]' '[:lower:]')-build; kubectl get -n $namespace -o yaml job/\$job_name > manifests/{}/job.yaml && kubectl logs -n $namespace job/\$job_name > manifests/{}/log && kubectl delete -n $namespace job/\$job_name";
     cat $inputlist >> $outputlist;
 fi
 

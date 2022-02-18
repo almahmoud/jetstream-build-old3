@@ -76,11 +76,6 @@ rm lists/tmpexfailist$UNIQUE
 
 export WORKERS=$(kubectl get nodes | grep $(kubectl get nodes | grep etcd | awk '{print $1}')- | awk '{print "\""$1"\""}' | paste -sd, -)
 
-
-export TMPDISPATCH=$(echo "lists/dispatch$(date '+%s')");
-export TMPMANIFEST=$(echo "lists/manifests$(date '+%s')");
-
-
 function dispatch_job {
     if [ ! -f "manifests/$pkg/$pkg.yaml" ]
     then
@@ -91,25 +86,30 @@ function dispatch_job {
                   s/LIBRARIESCLAIM/$claim/g
                   s/NAMESPACE/$namespace/g
                   s/WORKERNODES/$WORKERS/g""" job-template.yaml > manifests/$pkg/$lowerpkgname-build.yaml
-        cat manifests/$pkg/$lowerpkgname-build.yaml >> $TMPMANIFEST;
+        cat manifests/$pkg/$lowerpkgname-build.yaml >> lists/manifest$UNIQUE;
         echo "Created manifest: $pkg";
     fi
 }
 
-grep -Pzo "(?s)\s*\"\N*\":\s*\[\s*\]" packages.json | awk -F'"' '{print $2}' | grep -v '^$' > $TMPDISPATCH;
+grep -Pzo "(?s)\s*\"\N*\":\s*\[\s*\]" packages.json | awk -F'"' '{print $2}' | grep -v '^$' > lists/dispatch$UNIQUE;
 
 
-if [ ! -s $TMPDISPATCH ]
+
+if [ ! -s lists/dispatch$UNIQUE ]
 then
-    rm $TMPDISPATCH;
+    rm lists/dispatch$UNIQUE;
 else
+    cat packages.json | sort | uniq -c > weights &&\
+    cat lists/dispatch$UNIQUE | xargs -i sh -c "grep -wc '        \"{}\"' weights | awk '{print \$1\" {}\"}'" | sort -nr > lists/newdispatch$UNIQUE &&\
+    cat lists/newdispatch$UNIQUE | awk '{print $2}' > lists/dispatch$UNIQUE &&\
+    rm lists/newdispatch$UNIQUE;
     while IFS= read -r pkg; do
         dispatch_job;
-    done < $TMPDISPATCH &&\
-    kubectl apply -f $TMPMANIFEST &&\
+    done < lists/dispatch$UNIQUE &&\
+    kubectl apply -f lists/manifest$UNIQUE &&\
     sed -i '/^$/d' packages.json &&\
     sed -i ':a;N;$!ba;s/\[\n    \]/\[ \]/g' packages.json &&\
-    sed -i "/    \"$(cat $TMPDISPATCH | sed 's/\./\\\./' | awk '{print $1"\\"}' | paste -sd'|' - | awk '{print "\\("$0")"}')\"\: \[ \]\(,\)\{0,1\}/d" packages.json
+    sed -i "/    \"$(cat lists/dispatch$UNIQUE | sed 's/\./\\\./' | awk '{print $1"\\"}' | paste -sd'|' - | awk '{print "\\("$0")"}')\"\: \[ \]\(,\)\{0,1\}/d" packages.json
 fi
 
 
