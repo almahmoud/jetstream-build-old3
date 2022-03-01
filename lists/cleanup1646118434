@@ -7,6 +7,7 @@ acde
 ACME
 ada
 additivityTests
+ade4
 ADGofTest
 admisc
 affxparser
@@ -167,6 +168,7 @@ countrycode
 cpp11
 crayon
 credentials
+crmn
 crul
 CSSP
 cubature
@@ -189,6 +191,7 @@ dgof
 diagram
 dichromat
 diffGeneAnalysis
+DiffLogo
 diffobj
 digest
 diptest
@@ -253,6 +256,7 @@ fastICA
 fastmatch
 fdrame
 fdrtool
+ff
 fftw
 fftwtools
 filehash
@@ -379,6 +383,7 @@ iChip
 iClusterPlus
 IDPmisc
 idr
+igraph
 Illumina450ProbeVariants.db
 IMPCdata
 import
@@ -439,6 +444,7 @@ limmaGUI
 limSolve
 linprog
 listenv
+lmdme
 lmodel2
 lmom
 Lmoments
@@ -674,6 +680,7 @@ randomForest
 randomizr
 randPack
 randtests
+ranger
 RankProd
 RApiSerialize
 rappdirs
