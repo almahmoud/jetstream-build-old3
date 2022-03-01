@@ -56,8 +56,10 @@ Biobase
 BiocGenerics
 BiocManager
 BiocVersion
+bit
 bitops
 bladderbatch
+bmp
 bnlearn
 boot
 bootstrap
@@ -94,6 +96,7 @@ clusterCrit
 clusterRepro
 ClusterSignificance
 clusterStab
+CMA
 cMAP
 cMap2data
 CNAnorm
@@ -114,12 +117,14 @@ corpcor
 corrplot
 COSNet
 countrycode
+cpp11
 crayon
 CSSP
 Cubist
 daMA
 DBI
 dbscan
+ddCt
 deldir
 DEoptimR
 deSolve
@@ -260,6 +265,7 @@ here
 hexbin
 HGNChelper
 HIBAG
+HiddenMarkov
 highr
 HilbertVis
 hmdbQuery
@@ -276,6 +282,7 @@ iC10TrainingData
 ica
 iChip
 iClusterPlus
+IDPmisc
 idr
 Illumina450ProbeVariants.db
 IMPCdata
@@ -298,6 +305,7 @@ ITALICSData
 iterators
 itertools
 JASPAR2018
+jpeg
 jsonlite
 KEGGandMetacoreDzPathwaysGEO
 KEGGdzPathwaysGEO
@@ -337,6 +345,7 @@ loo
 LowMACAAnnotation
 LPE
 LPEadj
+lpSolve
 lpSolveAPI
 LSD
 lsr
@@ -387,6 +396,7 @@ minqa
 miRBaseConverter
 miRcompData
 miRNApath
+mitools
 mnormt
 modeltools
 moments
@@ -470,6 +480,7 @@ polylabelr
 polynom
 poorman
 ppcor
+prabclus
 pracma
 praise
 praznik
@@ -530,6 +541,7 @@ registry
 relimp
 rematch
 remotes
+renv
 reportr
 reshape
 reshape2
@@ -607,6 +619,7 @@ settings
 sfsmisc
 shades
 shape
+signal
 sigPathway
 simpIntLists
 sizepower
@@ -637,6 +650,7 @@ SQUADD
 SQUAREM
 squash
 sSeq
+ssize
 stable
 stabledist
 stabs
@@ -715,3 +729,4 @@ yulab.utils
 zeallot
 zip
 zlibbioc
+zoo

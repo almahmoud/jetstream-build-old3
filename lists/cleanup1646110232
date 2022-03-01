@@ -56,6 +56,7 @@ Biobase
 BiocGenerics
 BiocManager
 BiocVersion
+bit
 bitops
 bladderbatch
 bnlearn
@@ -276,6 +277,7 @@ iC10TrainingData
 ica
 iChip
 iClusterPlus
+IDPmisc
 idr
 Illumina450ProbeVariants.db
 IMPCdata
@@ -337,6 +339,7 @@ loo
 LowMACAAnnotation
 LPE
 LPEadj
+lpSolve
 lpSolveAPI
 LSD
 lsr
@@ -530,6 +533,7 @@ registry
 relimp
 rematch
 remotes
+renv
 reportr
 reshape
 reshape2
