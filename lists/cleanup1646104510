@@ -57,6 +57,7 @@ commonmark
 config
 CONSTANd
 coop
+corpcor
 corrplot
 COSNet
 countrycode
@@ -80,12 +81,15 @@ DynDoc
 ellipse
 EmpiricalBrownsMethod
 entropy
+EntropyExplorer
 estimability
 etrunct
 evaluate
 exactRankTests
 fansi
+farver
 fastcluster
+fastICA
 fastmatch
 fdrame
 fdrtool
@@ -110,6 +114,7 @@ futile.options
 gaia
 gap
 gcspikelite
+genalg
 genoCN
 GenSA
 GFA
@@ -122,6 +127,7 @@ gmp
 googleVis
 gpls
 gradDescent
+GraphAlignment
 gridBase
 grr
 GSA
@@ -204,6 +210,7 @@ mgsub
 microbenchmark
 mime
 minpack.lm
+miRBaseConverter
 miRcompData
 miRNApath
 mnormt
@@ -318,6 +325,7 @@ Rsolnp
 rstudioapi
 Rttf2pt1
 RUnit
+R.utils
 Rwave
 sagenhaft
 SamSPECTRAL
@@ -333,6 +341,7 @@ settings
 sfsmisc
 shades
 shape
+sigPathway
 sizepower
 slam
 sm
