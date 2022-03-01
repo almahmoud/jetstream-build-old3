@@ -22,7 +22,9 @@ alluvial-build
 als-build
 amap-build
 amountain-build
+aneufinderdata-build
 aod-build
+aricode-build
 aromalight-build
 arrayhelpers-build
 arrayquality-build
@@ -79,6 +81,7 @@ bit-build
 bit64-build
 bitops-build
 bladderbatch-build
+blockmodeling-build
 bmp-build
 bnlearn-build
 boot-build
@@ -150,6 +153,7 @@ cosnet-build
 countrycode-build
 cpp11-build
 crayon-build
+credentials-build
 cssp-build
 cubature-build
 cubist-build
@@ -172,6 +176,7 @@ diffobj-build
 digest-build
 diptest-build
 direxpiry-build
+dirichletmultinomial-build
 dirmult-build
 discriminer-build
 distances-build
@@ -187,6 +192,7 @@ dta-build
 dtangle-build
 dtt-build
 dtw-build
+dunntest-build
 dyebias-build
 dynamictreecut-build
 dyndoc-build
@@ -211,7 +217,9 @@ etrunct-build
 eulerr-build
 evaluate-build
 evd-build
+evmix-build
 exactranktests-build
+expm-build
 extradistr-build
 fabia-build
 factdesign-build
@@ -261,6 +269,7 @@ gdata-build
 geigen-build
 genalg-build
 genarise-build
+geneclassifiers-build
 genenet-build
 generecommender-build
 generics-build
@@ -312,6 +321,7 @@ hash-build
 hdinterval-build
 hdtd-build
 heatmap3-build
+heatplus-build
 help-build
 hem-build
 here-build
@@ -351,6 +361,7 @@ intervals-build
 intrinsicdimension-build
 invgamma-build
 iranges-build
+irlba-build
 irr-build
 isa2-build
 iseq-build
@@ -389,6 +400,7 @@ leaps-build
 lfa-build
 liblinear-build
 limma-build
+limmagui-build
 limsolve-build
 listenv-build
 lmodel2-build
@@ -477,6 +489,7 @@ msgps-build
 multcompview-build
 multicool-build
 multimed-build
+multiscan-build
 munsell-build
 mustat-build
 mvcclass-build
@@ -495,7 +508,9 @@ nnet-build
 nnlasso-build
 nnls-build
 nnnorm-build
+noiseq-build
 nor1mix-build
+norm-build
 nortest-build
 nozzler1-build
 nsga2r-build
@@ -504,6 +519,7 @@ nucleosim-build
 nucpos-build
 numbers-build
 numderiv-build
+nupop-build
 objectsignals-build
 occugene-build
 ontologyindex-build
@@ -513,6 +529,7 @@ operatortools-build
 optextras-build
 optimalflowdata-build
 optimx-build
+optparse-build
 orcme-build
 ore-build
 orgmassspecr-build
@@ -555,6 +572,7 @@ polychrome-build
 polyclip-build
 polylabelr-build
 polynom-build
+polynomf-build
 poorman-build
 ppcor-build
 prabclus-build
@@ -591,6 +609,7 @@ qpdf-build
 qtl-build
 quadprog-build
 r2html-build
+r2winbugs-build
 r6-build
 rama-build
 randomforest-build
@@ -641,6 +660,7 @@ rgraph2js-build
 rgsea-build
 rhpcblasctl-build
 rhtslib-build
+rhuge-build
 ritandata-build
 rjava-build
 rjson-build
@@ -757,6 +777,7 @@ stabledist-build
 stabs-build
 statmod-build
 stemhypoxia-build
+stepnorm-build
 stopwords-build
 strawr-build
 stringdist-build
@@ -794,6 +815,7 @@ tmvnsim-build
 tokenizers-build
 travel-build
 triebeard-build
+truncdist-build
 truncnorm-build
 trust-build
 tsne-build
@@ -802,12 +824,14 @@ tweenr-build
 twilight-build
 tximport-build
 typeinfo-build
+tzdb-build
 uchardet-build
 undo-build
 uniqtag-build
 units-build
 utf8-build
 uuid-build
+v8-build
 vam-build
 varhandle-build
 vbmp-build
@@ -831,6 +855,7 @@ wrench-build
 writexl-build
 writexls-build
 xfun-build
+xgboost-build
 xmapbridge-build
 xml-build
 xml2-build

@@ -22,7 +22,9 @@ alluvial
 ALS
 amap
 AMOUNTAIN
+AneuFinderData
 aod
+aricode
 aroma.light
 arrayhelpers
 arrayQuality
@@ -79,6 +81,7 @@ bit
 bit64
 bitops
 bladderbatch
+blockmodeling
 bmp
 bnlearn
 boot
@@ -150,6 +153,7 @@ COSNet
 countrycode
 cpp11
 crayon
+credentials
 CSSP
 cubature
 Cubist
@@ -172,6 +176,7 @@ diffobj
 digest
 diptest
 dir.expiry
+DirichletMultinomial
 dirmult
 DiscriMiner
 distances
@@ -187,6 +192,7 @@ DTA
 dtangle
 dtt
 dtw
+dunn.test
 dyebias
 dynamicTreeCut
 DynDoc
@@ -211,7 +217,9 @@ etrunct
 eulerr
 evaluate
 evd
+evmix
 exactRankTests
+expm
 extraDistr
 fabia
 factDesign
@@ -312,6 +320,7 @@ hash
 HDInterval
 HDTD
 heatmap3
+Heatplus
 HELP
 HEM
 here
@@ -351,6 +360,7 @@ intervals
 intrinsicDimension
 invgamma
 IRanges
+irlba
 irr
 isa2
 iSeq
@@ -389,6 +399,7 @@ leaps
 lfa
 LiblineaR
 limma
+limmaGUI
 limSolve
 listenv
 lmodel2
@@ -477,6 +488,7 @@ msgps
 multcompView
 multicool
 MultiMed
+multiscan
 munsell
 muStat
 MVCClass
@@ -496,6 +508,7 @@ nnlasso
 nnls
 nnNorm
 nor1mix
+norm
 nortest
 Nozzle.R1
 nsga2R
@@ -504,6 +517,7 @@ nucleoSim
 nuCpos
 numbers
 numDeriv
+NuPoP
 objectSignals
 occugene
 ontologyIndex
@@ -513,6 +527,7 @@ operator.tools
 optextras
 optimalFlowData
 optimx
+optparse
 ORCME
 ore
 OrgMassSpecR
@@ -555,6 +570,7 @@ Polychrome
 polyclip
 polylabelr
 polynom
+PolynomF
 poorman
 ppcor
 prabclus
@@ -591,6 +607,7 @@ qpdf
 qtl
 quadprog
 R2HTML
+R2WinBUGS
 R6
 rama
 randomForest
@@ -641,6 +658,7 @@ RGraph2js
 RGSEA
 RhpcBLASctl
 Rhtslib
+R.huge
 RITANdata
 rJava
 rjson
@@ -757,6 +775,7 @@ stabledist
 stabs
 statmod
 stemHypoxia
+stepNorm
 stopwords
 strawr
 stringdist
@@ -802,12 +821,14 @@ tweenr
 twilight
 tximport
 TypeInfo
+tzdb
 uchardet
 UNDO
 uniqtag
 units
 utf8
 uuid
+V8
 VAM
 varhandle
 vbmp
@@ -831,6 +852,7 @@ Wrench
 writexl
 WriteXLS
 xfun
+xgboost
 xmapbridge
 XML
 xml2
