@@ -24,6 +24,7 @@ amap
 AMOUNTAIN
 AneuFinderData
 aod
+argparse
 aricode
 aroma.light
 arrayhelpers
@@ -166,6 +167,7 @@ Cubist
 curl
 daMA
 data.table
+data.tree
 DBI
 dbscan
 ddCt
@@ -204,6 +206,7 @@ dunn.test
 dyebias
 dynamicTreeCut
 DynDoc
+earth
 easyPubMed
 ecolitk
 ecp
@@ -212,6 +215,7 @@ EGSEAdata
 einsum
 elitism
 ellipse
+ellipsis
 emdist
 EmpiricalBrownsMethod
 EMT
@@ -278,6 +282,7 @@ gcatest
 GCSFilesystem
 gcspikelite
 gdata
+gdsfmt
 geigen
 genalg
 genArise
@@ -502,6 +507,7 @@ mnormt
 modeltools
 moments
 MPFE
+mpmi
 mppa
 mQTL
 msgps
@@ -650,6 +656,7 @@ RBioinf
 RBM
 Rbowtie
 R.cache
+Rcapture
 RCASPAR
 rcellminerData
 Rcgmin
@@ -775,6 +782,7 @@ shape
 sigclust
 signal
 sigPathway
+similaRpeak
 simpIntLists
 sitmo
 sizepower
