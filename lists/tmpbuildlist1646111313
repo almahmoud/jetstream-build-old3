@@ -20,6 +20,7 @@ amap-build
 aod-build
 aromalight-build
 arrayhelpers-build
+arsenal-build
 asafe-build
 aseb-build
 ash-build
@@ -112,6 +113,7 @@ cogps-build
 cohcapanno-build
 colorramps-build
 colorspace-build
+colortools-build
 combinat-build
 combinepvalue-build
 commonmark-build
@@ -144,6 +146,7 @@ diagram-build
 dichromat-build
 diffgeneanalysis-build
 diffobj-build
+digest-build
 direxpiry-build
 dirmult-build
 discriminer-build
@@ -369,6 +372,7 @@ lsr-build
 lungcanceracvssccgeo-build
 lymphoseqdb-build
 maanova-build
+macorrplot-build
 magic-build
 magrittr-build
 maldiquant-build
@@ -592,8 +596,10 @@ rnaseqpower-build
 rnomni-build
 robustbase-build
 robustrankaggreg-build
+roc-build
 rocit-build
 roi-build
+roipluginlpsolve-build
 roo-build
 roptim-build
 rots-build

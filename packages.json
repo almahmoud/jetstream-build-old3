@@ -11499,7 +11499,6 @@
         "biomaRt",
         "Gviz",
         "psych",
-        "colortools",
         "gridExtra",
         "rtracklayer",
         "GenomicRanges",
@@ -24896,7 +24895,6 @@
         "ggiraph",
         "ggthemes",
         "pheatmap",
-        "fit.models",
         "rrcov",
         "callr",
         "desc",
@@ -28771,7 +28769,6 @@
         "seriation",
         "webshot",
         "egg",
-        "lpsymphony",
         "NMF",
         "threejs",
         "biomaRt",
@@ -28983,9 +28980,6 @@
         "tibble",
         "tidyselect",
         "pillar",
-    ],
-    "IHW": [
-        "lpsymphony",
     ],
     "ILoReg": [
         "foreach",
@@ -32261,7 +32255,6 @@
         "pcaPP",
         "edgeR",
         "metagenomeSeq",
-        "lpsymphony",
         "car",
         "dplyr",
         "vegan",
@@ -38240,7 +38233,6 @@
         "pcaPP",
         "edgeR",
         "metagenomeSeq",
-        "lpsymphony",
         "car",
         "vegan",
         "chemometrics",
@@ -75854,7 +75846,6 @@
         "purrr"
     ],
     "robust": [
-        "fit.models",
         "rrcov",
         "mvtnorm",
         "pcaPP"
