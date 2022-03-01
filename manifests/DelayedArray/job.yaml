@@ -1,0 +1,163 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"batch/v1","kind":"Job","metadata":{"annotations":{},"name":"delayedarray-build","namespace":"newbuild"},"spec":{"backoffLimit":4,"template":{"spec":{"affinity":{"nodeAffinity":{"requiredDuringSchedulingIgnoredDuringExecution":{"nodeSelectorTerms":[{"matchExpressions":[{"key":"kubernetes.io/hostname","operator":"In","values":["am-scalable-k8s-5872ef","am-scalable-k8s-7b5e61"]}]}]}}},"containers":[{"args":["cp -r /usr/local/lib/R/site-library/DelayedArray /mnt/libs/R/DelayedArray \u0026\u0026 cd /home/rstudio \u0026\u0026 ls | grep \"DelayedArray\" | xargs -i cp ./{} /mnt/libs/R/{}"],"command":["/bin/bash","-c"],"image":"bioconductor/bioconductor_docker:RELEASE_3_14","name":"nfs-copy","resources":{"requests":{"cpu":"100m","memory":"100Mi"}},"volumeMounts":[{"mountPath":"/mnt/libs/R","name":"libraries"},{"mountPath":"/usr/local/lib/R/site-library","name":"tmplibrary"},{"mountPath":"/home/rstudio","name":"tmphome"}]},{"args":["cp /mnt/libs/R/.rclone.conf ~/.rclone.conf \u0026\u0026 rclone copyto /usr/local/lib/R/site-library/DelayedArray osn:bir190004-bucket01/libraries/RELEASE_3_14/container/DelayedArray -v \u0026\u0026 cd /home/rstudio \u0026\u0026 ls | grep \"DelayedArray\" | xargs -i rclone copyto ./{} osn:bir190004-bucket01/packages/RELEASE_3_14/container/{} -v"],"command":["/bin/sh","-c"],"image":"rclone/rclone:latest","name":"rclone-copy","resources":{"requests":{"cpu":"100m","memory":"100Mi"}},"volumeMounts":[{"mountPath":"/mnt/libs/R","name":"libraries"},{"mountPath":"/usr/local/lib/R/site-library","name":"tmplibrary"},{"mountPath":"/home/rstudio","name":"tmphome"}]},{"args":["cp /mnt/libs/R/.rclone.conf ~/.rclone.conf \u0026\u0026 rclone copyto /usr/local/lib/R/site-library/DelayedArray iujs:js-builder/libraries/RELEASE_3_14/container/DelayedArray -v \u0026\u0026 cd /home/rstudio \u0026\u0026 ls | grep \"DelayedArray\" | xargs -i rclone copyto ./{} iujs:js-builder/packages/RELEASE_3_14/container/{} -v"],"command":["/bin/sh","-c"],"image":"rclone/rclone:latest","name":"iu-swift-copy","resources":{"requests":{"cpu":"100m","memory":"100Mi"}},"volumeMounts":[{"mountPath":"/mnt/libs/R","name":"libraries"},{"mountPath":"/usr/local/lib/R/site-library","name":"tmplibrary"},{"mountPath":"/home/rstudio","name":"tmphome"}]}],"initContainers":[{"args":["su rstudio \u0026\u0026 cd /home/rstudio \u0026\u0026 Rscript -e 'p \u003c- .libPaths(); p \u003c- c(p[2], p[-2]); .libPaths(p); if(BiocManager::install(\"DelayedArray\", INSTALL_opts = \"--build\", update = FALSE, quiet = TRUE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'"],"command":["/bin/bash","-c"],"env":[{"name":"R_LIBS_USER","value":"/mnt/libs/R"}],"image":"bioconductor/bioconductor_docker:RELEASE_3_14","name":"build","resources":{"requests":{"cpu":"1000m","memory":"1.5Gi"}},"volumeMounts":[{"mountPath":"/mnt/libs/R","name":"libraries"},{"mountPath":"/usr/local/lib/R/site-library","name":"tmplibrary"},{"mountPath":"/home/rstudio","name":"tmphome"}]}],"restartPolicy":"OnFailure","securityContext":{"fsGroup":1000,"runAsUser":0},"volumes":[{"name":"libraries","persistentVolumeClaim":{"claimName":"rstudio-r-libraries-pvc"}},{"emptyDir":{},"name":"tmplibrary"},{"emptyDir":{},"name":"tmphome"}]}}}}
+  creationTimestamp: "2022-03-01T04:54:28Z"
+  labels:
+    controller-uid: 2301dadf-4b43-4ef4-83b0-25f1ae13ab73
+    job-name: delayedarray-build
+  name: delayedarray-build
+  namespace: newbuild
+  resourceVersion: "31888958"
+  selfLink: /apis/batch/v1/namespaces/newbuild/jobs/delayedarray-build
+  uid: 2301dadf-4b43-4ef4-83b0-25f1ae13ab73
+spec:
+  backoffLimit: 4
+  completions: 1
+  parallelism: 1
+  selector:
+    matchLabels:
+      controller-uid: 2301dadf-4b43-4ef4-83b0-25f1ae13ab73
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        controller-uid: 2301dadf-4b43-4ef4-83b0-25f1ae13ab73
+        job-name: delayedarray-build
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: kubernetes.io/hostname
+                operator: In
+                values:
+                - am-scalable-k8s-5872ef
+                - am-scalable-k8s-7b5e61
+      containers:
+      - args:
+        - cp -r /usr/local/lib/R/site-library/DelayedArray /mnt/libs/R/DelayedArray
+          && cd /home/rstudio && ls | grep "DelayedArray" | xargs -i cp ./{} /mnt/libs/R/{}
+        command:
+        - /bin/bash
+        - -c
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        imagePullPolicy: IfNotPresent
+        name: nfs-copy
+        resources:
+          requests:
+            cpu: 100m
+            memory: 100Mi
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /mnt/libs/R
+          name: libraries
+        - mountPath: /usr/local/lib/R/site-library
+          name: tmplibrary
+        - mountPath: /home/rstudio
+          name: tmphome
+      - args:
+        - cp /mnt/libs/R/.rclone.conf ~/.rclone.conf && rclone copyto /usr/local/lib/R/site-library/DelayedArray
+          osn:bir190004-bucket01/libraries/RELEASE_3_14/container/DelayedArray -v
+          && cd /home/rstudio && ls | grep "DelayedArray" | xargs -i rclone copyto
+          ./{} osn:bir190004-bucket01/packages/RELEASE_3_14/container/{} -v
+        command:
+        - /bin/sh
+        - -c
+        image: rclone/rclone:latest
+        imagePullPolicy: Always
+        name: rclone-copy
+        resources:
+          requests:
+            cpu: 100m
+            memory: 100Mi
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /mnt/libs/R
+          name: libraries
+        - mountPath: /usr/local/lib/R/site-library
+          name: tmplibrary
+        - mountPath: /home/rstudio
+          name: tmphome
+      - args:
+        - cp /mnt/libs/R/.rclone.conf ~/.rclone.conf && rclone copyto /usr/local/lib/R/site-library/DelayedArray
+          iujs:js-builder/libraries/RELEASE_3_14/container/DelayedArray -v && cd /home/rstudio
+          && ls | grep "DelayedArray" | xargs -i rclone copyto ./{} iujs:js-builder/packages/RELEASE_3_14/container/{}
+          -v
+        command:
+        - /bin/sh
+        - -c
+        image: rclone/rclone:latest
+        imagePullPolicy: Always
+        name: iu-swift-copy
+        resources:
+          requests:
+            cpu: 100m
+            memory: 100Mi
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /mnt/libs/R
+          name: libraries
+        - mountPath: /usr/local/lib/R/site-library
+          name: tmplibrary
+        - mountPath: /home/rstudio
+          name: tmphome
+      dnsPolicy: ClusterFirst
+      initContainers:
+      - args:
+        - su rstudio && cd /home/rstudio && Rscript -e 'p <- .libPaths(); p <- c(p[2],
+          p[-2]); .libPaths(p); if(BiocManager::install("DelayedArray", INSTALL_opts
+          = "--build", update = FALSE, quiet = TRUE, force = TRUE, keep_outputs =
+          TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status =
+          1)'
+        command:
+        - /bin/bash
+        - -c
+        env:
+        - name: R_LIBS_USER
+          value: /mnt/libs/R
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        imagePullPolicy: IfNotPresent
+        name: build
+        resources:
+          requests:
+            cpu: "1"
+            memory: 1536Mi
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /mnt/libs/R
+          name: libraries
+        - mountPath: /usr/local/lib/R/site-library
+          name: tmplibrary
+        - mountPath: /home/rstudio
+          name: tmphome
+      restartPolicy: OnFailure
+      schedulerName: default-scheduler
+      securityContext:
+        fsGroup: 1000
+        runAsUser: 0
+      terminationGracePeriodSeconds: 30
+      volumes:
+      - name: libraries
+        persistentVolumeClaim:
+          claimName: rstudio-r-libraries-pvc
+      - emptyDir: {}
+        name: tmplibrary
+      - emptyDir: {}
+        name: tmphome
+status:
+  completionTime: "2022-03-01T06:23:21Z"
+  conditions:
+  - lastProbeTime: "2022-03-01T06:23:21Z"
+    lastTransitionTime: "2022-03-01T06:23:21Z"
+    status: "True"
+    type: Complete
+  startTime: "2022-03-01T04:54:28Z"
+  succeeded: 1
