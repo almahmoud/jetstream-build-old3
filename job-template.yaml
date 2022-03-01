@@ -15,7 +15,7 @@ spec:
                 operator: "In"
                 values: [WORKERNODES]
       securityContext:
-        runAsUser: 1000
+        runAsUser: 0
         fsGroup: 1000
       volumes:
         - name: libraries
@@ -33,7 +33,7 @@ spec:
           - /bin/bash
           - -c
         args:
-          - cd /home/rstudio && Rscript -e 'p <- .libPaths(); p <- c(p[2], p[-2]); .libPaths(p); if(BiocManager::install("PACKAGENAME", INSTALL_opts = "--build", update = FALSE, quiet = TRUE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+          - su rstudio && cd /home/rstudio && Rscript -e 'p <- .libPaths(); p <- c(p[2], p[-2]); .libPaths(p); if(BiocManager::install("PACKAGENAME", INSTALL_opts = "--build", update = FALSE, quiet = TRUE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
         env:
           - name: R_LIBS_USER
             value: "/mnt/libs/R"
@@ -58,7 +58,7 @@ spec:
           - /bin/bash
           - -c
         args:
-          - cp -r /usr/local/lib/R/site-library/PACKAGENAME /mnt/libs/R/PACKAGENAME && cp /home/rstudio/PACKAGENAME* /mnt/libs/R/
+          - cp -r /usr/local/lib/R/site-library/PACKAGENAME /mnt/libs/R/PACKAGENAME && cd /home/rstudio && ls | grep "PACKAGENAME" | xargs -i cp ./{} /mnt/libs/R/{}
         volumeMounts:
           - name: libraries
             mountPath: "/mnt/libs/R"
@@ -76,7 +76,25 @@ spec:
           - /bin/sh
           - -c
         args:
-          - cp /mnt/libs/R/.rclone.conf ~/.rclone.conf && rclone copyto /usr/local/lib/R/site-library/PACKAGENAME osn:bir190004-bucket01/libraries/RELEASE_3_14/container/PACKAGENAME -v && cd /home/rstudio && ls | grep "PACKAGENAME" | xargs -i rclone copyto ./{} osn:/bir190004-bucket01/packages/RELEASE_3_14/container/{} -v
+          - cp /mnt/libs/R/.rclone.conf ~/.rclone.conf && rclone copyto /usr/local/lib/R/site-library/PACKAGENAME osn:bir190004-bucket01/libraries/RELEASE_3_14/container/PACKAGENAME -v && cd /home/rstudio && ls | grep "PACKAGENAME" | xargs -i rclone copyto ./{} osn:bir190004-bucket01/packages/RELEASE_3_14/container/{} -v
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+      - name: iu-swift-copy
+        image: rclone/rclone:latest
+        command:
+          - /bin/sh
+          - -c
+        args:
+          - cp /mnt/libs/R/.rclone.conf ~/.rclone.conf && rclone copyto /usr/local/lib/R/site-library/PACKAGENAME iujs:js-builder/libraries/RELEASE_3_14/container/PACKAGENAME -v && cd /home/rstudio && ls | grep "PACKAGENAME" | xargs -i rclone copyto ./{} iujs:js-builder/packages/RELEASE_3_14/container/{} -v
         volumeMounts:
           - name: libraries
             mountPath: "/mnt/libs/R"
