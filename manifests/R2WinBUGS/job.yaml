@@ -1,0 +1,163 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"batch/v1","kind":"Job","metadata":{"annotations":{},"name":"r2winbugs-build","namespace":"newbuild"},"spec":{"backoffLimit":4,"template":{"spec":{"affinity":{"nodeAffinity":{"requiredDuringSchedulingIgnoredDuringExecution":{"nodeSelectorTerms":[{"matchExpressions":[{"key":"kubernetes.io/hostname","operator":"In","values":["am-scalable-k8s-5872ef","am-scalable-k8s-7b5e61"]}]}]}}},"containers":[{"args":["cp -r /usr/local/lib/R/site-library/R2WinBUGS /mnt/libs/R/R2WinBUGS \u0026\u0026 cd /home/rstudio \u0026\u0026 ls | grep \"R2WinBUGS\" | xargs -i cp ./{} /mnt/libs/R/{}"],"command":["/bin/bash","-c"],"image":"bioconductor/bioconductor_docker:RELEASE_3_14","name":"nfs-copy","resources":{"requests":{"cpu":"100m","memory":"100Mi"}},"volumeMounts":[{"mountPath":"/mnt/libs/R","name":"libraries"},{"mountPath":"/usr/local/lib/R/site-library","name":"tmplibrary"},{"mountPath":"/home/rstudio","name":"tmphome"}]},{"args":["cp /mnt/libs/R/.rclone.conf ~/.rclone.conf \u0026\u0026 rclone copyto /usr/local/lib/R/site-library/R2WinBUGS osn:bir190004-bucket01/libraries/RELEASE_3_14/container/R2WinBUGS -v \u0026\u0026 cd /home/rstudio \u0026\u0026 ls | grep \"R2WinBUGS\" | xargs -i rclone copyto ./{} osn:bir190004-bucket01/packages/RELEASE_3_14/container/{} -v"],"command":["/bin/sh","-c"],"image":"rclone/rclone:latest","name":"rclone-copy","resources":{"requests":{"cpu":"100m","memory":"100Mi"}},"volumeMounts":[{"mountPath":"/mnt/libs/R","name":"libraries"},{"mountPath":"/usr/local/lib/R/site-library","name":"tmplibrary"},{"mountPath":"/home/rstudio","name":"tmphome"}]},{"args":["cp /mnt/libs/R/.rclone.conf ~/.rclone.conf \u0026\u0026 rclone copyto /usr/local/lib/R/site-library/R2WinBUGS iujs:js-builder/libraries/RELEASE_3_14/container/R2WinBUGS -v \u0026\u0026 cd /home/rstudio \u0026\u0026 ls | grep \"R2WinBUGS\" | xargs -i rclone copyto ./{} iujs:js-builder/packages/RELEASE_3_14/container/{} -v"],"command":["/bin/sh","-c"],"image":"rclone/rclone:latest","name":"iu-swift-copy","resources":{"requests":{"cpu":"100m","memory":"100Mi"}},"volumeMounts":[{"mountPath":"/mnt/libs/R","name":"libraries"},{"mountPath":"/usr/local/lib/R/site-library","name":"tmplibrary"},{"mountPath":"/home/rstudio","name":"tmphome"}]}],"initContainers":[{"args":["su rstudio \u0026\u0026 cd /home/rstudio \u0026\u0026 Rscript -e 'p \u003c- .libPaths(); p \u003c- c(p[2], p[-2]); .libPaths(p); if(BiocManager::install(\"R2WinBUGS\", INSTALL_opts = \"--build\", update = FALSE, quiet = TRUE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'"],"command":["/bin/bash","-c"],"env":[{"name":"R_LIBS_USER","value":"/mnt/libs/R"}],"image":"bioconductor/bioconductor_docker:RELEASE_3_14","name":"build","resources":{"requests":{"cpu":"1000m","memory":"1.5Gi"}},"volumeMounts":[{"mountPath":"/mnt/libs/R","name":"libraries"},{"mountPath":"/usr/local/lib/R/site-library","name":"tmplibrary"},{"mountPath":"/home/rstudio","name":"tmphome"}]}],"restartPolicy":"OnFailure","securityContext":{"fsGroup":1000,"runAsUser":0},"volumes":[{"name":"libraries","persistentVolumeClaim":{"claimName":"rstudio-r-libraries-pvc"}},{"emptyDir":{},"name":"tmplibrary"},{"emptyDir":{},"name":"tmphome"}]}}}}
+  creationTimestamp: "2022-03-01T04:54:47Z"
+  labels:
+    controller-uid: ba2256c2-0620-481a-9496-ca792f931a37
+    job-name: r2winbugs-build
+  name: r2winbugs-build
+  namespace: newbuild
+  resourceVersion: "31873696"
+  selfLink: /apis/batch/v1/namespaces/newbuild/jobs/r2winbugs-build
+  uid: ba2256c2-0620-481a-9496-ca792f931a37
+spec:
+  backoffLimit: 4
+  completions: 1
+  parallelism: 1
+  selector:
+    matchLabels:
+      controller-uid: ba2256c2-0620-481a-9496-ca792f931a37
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        controller-uid: ba2256c2-0620-481a-9496-ca792f931a37
+        job-name: r2winbugs-build
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: kubernetes.io/hostname
+                operator: In
+                values:
+                - am-scalable-k8s-5872ef
+                - am-scalable-k8s-7b5e61
+      containers:
+      - args:
+        - cp -r /usr/local/lib/R/site-library/R2WinBUGS /mnt/libs/R/R2WinBUGS && cd
+          /home/rstudio && ls | grep "R2WinBUGS" | xargs -i cp ./{} /mnt/libs/R/{}
+        command:
+        - /bin/bash
+        - -c
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        imagePullPolicy: IfNotPresent
+        name: nfs-copy
+        resources:
+          requests:
+            cpu: 100m
+            memory: 100Mi
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /mnt/libs/R
+          name: libraries
+        - mountPath: /usr/local/lib/R/site-library
+          name: tmplibrary
+        - mountPath: /home/rstudio
+          name: tmphome
+      - args:
+        - cp /mnt/libs/R/.rclone.conf ~/.rclone.conf && rclone copyto /usr/local/lib/R/site-library/R2WinBUGS
+          osn:bir190004-bucket01/libraries/RELEASE_3_14/container/R2WinBUGS -v &&
+          cd /home/rstudio && ls | grep "R2WinBUGS" | xargs -i rclone copyto ./{}
+          osn:bir190004-bucket01/packages/RELEASE_3_14/container/{} -v
+        command:
+        - /bin/sh
+        - -c
+        image: rclone/rclone:latest
+        imagePullPolicy: Always
+        name: rclone-copy
+        resources:
+          requests:
+            cpu: 100m
+            memory: 100Mi
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /mnt/libs/R
+          name: libraries
+        - mountPath: /usr/local/lib/R/site-library
+          name: tmplibrary
+        - mountPath: /home/rstudio
+          name: tmphome
+      - args:
+        - cp /mnt/libs/R/.rclone.conf ~/.rclone.conf && rclone copyto /usr/local/lib/R/site-library/R2WinBUGS
+          iujs:js-builder/libraries/RELEASE_3_14/container/R2WinBUGS -v && cd /home/rstudio
+          && ls | grep "R2WinBUGS" | xargs -i rclone copyto ./{} iujs:js-builder/packages/RELEASE_3_14/container/{}
+          -v
+        command:
+        - /bin/sh
+        - -c
+        image: rclone/rclone:latest
+        imagePullPolicy: Always
+        name: iu-swift-copy
+        resources:
+          requests:
+            cpu: 100m
+            memory: 100Mi
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /mnt/libs/R
+          name: libraries
+        - mountPath: /usr/local/lib/R/site-library
+          name: tmplibrary
+        - mountPath: /home/rstudio
+          name: tmphome
+      dnsPolicy: ClusterFirst
+      initContainers:
+      - args:
+        - su rstudio && cd /home/rstudio && Rscript -e 'p <- .libPaths(); p <- c(p[2],
+          p[-2]); .libPaths(p); if(BiocManager::install("R2WinBUGS", INSTALL_opts
+          = "--build", update = FALSE, quiet = TRUE, force = TRUE, keep_outputs =
+          TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status =
+          1)'
+        command:
+        - /bin/bash
+        - -c
+        env:
+        - name: R_LIBS_USER
+          value: /mnt/libs/R
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        imagePullPolicy: IfNotPresent
+        name: build
+        resources:
+          requests:
+            cpu: "1"
+            memory: 1536Mi
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /mnt/libs/R
+          name: libraries
+        - mountPath: /usr/local/lib/R/site-library
+          name: tmplibrary
+        - mountPath: /home/rstudio
+          name: tmphome
+      restartPolicy: OnFailure
+      schedulerName: default-scheduler
+      securityContext:
+        fsGroup: 1000
+        runAsUser: 0
+      terminationGracePeriodSeconds: 30
+      volumes:
+      - name: libraries
+        persistentVolumeClaim:
+          claimName: rstudio-r-libraries-pvc
+      - emptyDir: {}
+        name: tmplibrary
+      - emptyDir: {}
+        name: tmphome
+status:
+  completionTime: "2022-03-01T05:52:19Z"
+  conditions:
+  - lastProbeTime: "2022-03-01T05:52:19Z"
+    lastTransitionTime: "2022-03-01T05:52:19Z"
+    status: "True"
+    type: Complete
+  startTime: "2022-03-01T04:54:47Z"
+  succeeded: 1
