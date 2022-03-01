@@ -223,6 +223,7 @@ evmix
 exactRankTests
 expm
 extraDistr
+extrafontdb
 fabia
 factDesign
 fansi
@@ -741,6 +742,7 @@ seqTools
 sets
 settings
 sfsmisc
+sgeostat
 shades
 shape
 sigclust
@@ -765,6 +767,7 @@ sonicLength
 sourcetools
 spam
 SPARQL
+sparsebnUtils
 SparseM
 SPAtest
 spatial
