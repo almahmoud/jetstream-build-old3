@@ -2290,7 +2290,6 @@
     "banocc": [
         "rstan",
         "mvtnorm",
-        "StanHeaders",
         "ggplot2",
         "inline",
         "gridExtra",
@@ -3963,7 +3962,6 @@
         "pillar",
         "tidyselect",
     ],
-    "BiRewire": [ ],
     "biscuiteer": [
         "biscuiteerData",
         "bsseq",
@@ -5310,7 +5308,6 @@
         "fastmap",
         "GenomeInfoDbData",
     ],
-    "CausalR": [ ],
     "cbaf": [
         "BiocFileCache",
         "cgdsr",
@@ -10612,7 +10609,6 @@
         "waldo",
         "GenomeInfoDbData",
     ],
-    "DART": [ ],
     "dasper": [
         "basilisk",
         "BiocFileCache",
@@ -15574,7 +15570,6 @@
         "cachem",
         "fastmap"
     ],
-    "FGNet": [ ],
     "fgsea": [
         "BiocParallel",
         "ggplot2",
@@ -17905,7 +17900,6 @@
         "rPref",
         "GenomeInfoDb",
         "dplyr",
-        "StanHeaders",
         "ggplot2",
         "inline",
         "gridExtra",
@@ -19247,7 +19241,6 @@
         "glmnet",
         "mvtnorm",
     ],
-    "GSAR": [ ],
     "GSCA": [
         "shiny",
         "gplots",
@@ -20798,7 +20791,6 @@
     ],
     "IgGeneUsage": [
         "SummarizedExperiment",
-        "StanHeaders",
         "rstan",
         "ggplot2",
         "inline",
@@ -23105,7 +23097,6 @@
         "densEstBayes",
         "rstan",
         "BH",
-        "StanHeaders",
         "scales",
         "tibble",
         "htmlwidgets",
@@ -29976,7 +29967,6 @@
         "BH",
         "pillar",
     ],
-    "netbiov": [ ],
     "netboost": [
         "WGCNA",
         "Hmisc",
@@ -30144,7 +30134,6 @@
         "vroom",
         "progress",
     ],
-    "NetPathMiner": [ ],
     "netprioR": [
         "dplyr",
         "sparseMVN",
@@ -31946,7 +31935,6 @@
         "futile.logger",
         "BH",
     ],
-    "Path2PPI": [ ],
     "PathoStat": [
         "scales",
         "ggplot2",
@@ -33644,7 +33632,6 @@
         "edgeR",
         "benchmarkme",
         "BH",
-        "StanHeaders",
         "benchmarkmeData",
         "tidyselect",
         "pillar",
@@ -36569,7 +36556,6 @@
         "fastmap",
         "tidyselect",
     ],
-    "RedeR": [ ],
     "REDseq": [
         "BSgenome.Celegans.UCSC.ce2",
         "multtest",
@@ -37409,7 +37395,6 @@
         "blob",
         "tidyselect",
         "rstan",
-        "StanHeaders",
         "pillar",
         "annotate",
         "survival",
@@ -39270,7 +39255,6 @@
         "jquerylib",
         "GenomeInfoDbData",
     ],
-    "SANTA": [ ],
     "sarks": [
         "Biostrings",
         "cluster",
@@ -40367,7 +40351,6 @@
         "htmltools",
         "densEstBayes",
         "rstan",
-        "StanHeaders",
         "htmlwidgets",
         "fastmap",
         "pillar",
@@ -42446,7 +42429,6 @@
         "restfulr",
         "quantreg",
         "rstan",
-        "StanHeaders",
         "MatrixModels",
         "inline",
         "pkgbuild",
@@ -49134,7 +49116,6 @@
         "htmltools",
         "fastmap"
     ],
-    "ffbase": [ ],
     "strucchange": [
         "sandwich",
     ],
@@ -49495,7 +49476,6 @@
         "sass",
         "jquerylib",
     ],
-    "seqinr": [ ],
     "readxl": [
         "cellranger",
         "tibble",
@@ -50248,7 +50228,6 @@
         "rematch2"
     ],
     "rstan": [
-        "StanHeaders",
         "ggplot2",
         "inline",
         "gridExtra",
@@ -50730,7 +50709,6 @@
         "htmltools",
         "fastmap",
     ],
-    "influenceR": [ ],
     "DO.db": [
         "AnnotationDbi",
         "RSQLite",
@@ -50820,7 +50798,6 @@
         "pillar",
         "tidyselect",
     ],
-    "graphlayouts": [ ],
     "ggfun": [
         "ggplot2",
         "mgcv",
@@ -51157,7 +51134,6 @@
         "scales",
         "cluster",
     ],
-    "BoolNet": [ ],
     "pcalg": [
         "RBGL",
         "ggm",
@@ -51166,7 +51142,6 @@
         "BH",
         "cluster",
     ],
-    "ggm": [ ],
     "GenomicState": [
         "AnnotationHub",
         "GenomicFeatures",
@@ -51317,7 +51292,6 @@
     "bc3net": [
         "c3net",
     ],
-    "c3net": [ ],
     "sqldf": [
         "RSQLite",
         "blob",
@@ -52772,7 +52746,6 @@
         "htmltools",
         "fastmap",
     ],
-    "kknn": [ ],
     "arm": [
         "lme4",
         "nloptr",
@@ -53271,7 +53244,6 @@
     "swamp": [
         "gplots",
     ],
-    "bnstruct": [ ],
     "phangorn": [
         "ape",
     ],
@@ -53793,7 +53765,6 @@
         "mgcv",
         "scales",
     ],
-    "discretecdAlgorithm": [ ],
     "gRain": [
         "gRbase",
         "RBGL",
@@ -54180,7 +54151,6 @@
         "densEstBayes",
         "rstan",
         "BH",
-        "StanHeaders",
         "survival",
         "ggplot2",
         "cluster",
@@ -54201,7 +54171,6 @@
     "densEstBayes": [
         "rstan",
         "BH",
-        "StanHeaders",
         "ggplot2",
         "inline",
         "gridExtra",
@@ -54288,7 +54257,6 @@
     "bigparallelr": [
         "flock",
     ],
-    "rmio": [ ],
     "plsgenomics": [
         "fields",
         "viridis",
@@ -54685,7 +54653,6 @@
         "fastmap",
         "GenomeInfoDbData",
     ],
-    "linkcomm": [ ],
     "s4vd": [
         "biclust",
         "tidyr",
@@ -54954,7 +54921,6 @@
     "VarfromPDB": [
         "RISmed",
     ],
-    "huge": [ ],
     "ICSNP": [
         "mvtnorm",
         "ICS",
@@ -55205,8 +55171,6 @@
     "circular": [
         "mvtnorm"
     ],
-    "genlasso": [ ],
-    "diffusr": [ ],
     "opencpu": [
         "httpuv",
     ],
