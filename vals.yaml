@@ -1,0 +1,37 @@
+extraEnv:
+- name: PASSWORD
+  value: spicychange
+image:
+  pullPolicy: Always
+  repository: bioconductor/bioconductor_docker
+  tag: RELEASE_3_14
+ingress:
+  enabled: false
+libraries:
+  persistence:
+    enabled: true
+    separateClaim:
+      accessMode: ReadOnlyMany
+      enabled: true
+      mountPath: /home/rstudio/persisted-library/R
+      name: osn-libraries-pvc
+      size: 10Gi
+      storageClass: csi-s3
+mutableConfigs:
+- contents: |
+    {{- if .Values.libraries.persistence.separateClaim.enabled }}
+    R_LIBS={{ .Values.libraries.persistence.separateClaim.mountPath }}/RELEASE_3_14/container
+    {{- else }}
+    R_LIBS={{.Values.persistence.mountPath}}/persisted-library/R
+    {{- end }}
+  fileName: .Renviron
+  subPath: ""
+persistence:
+  accessMode: ReadWriteMany
+  enabled: true
+  mountPath: /home/rstudio
+  name: rstudio-pvc
+  size: 1Gi
+  storageClass: nfs
+service:
+  type: NodePort
