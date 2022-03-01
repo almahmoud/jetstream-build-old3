@@ -3129,7 +3129,6 @@
         "scales",
         "SummarizedExperiment",
         "tidyr",
-        "assertive.numbers",
         "assertive.strings",
         "assertive.datetimes",
         "assertive.files",
@@ -4171,7 +4170,6 @@
         "nlme",
         "rhdf5",
         "XVector",
-        "ROI",
         "ROI.plugin.lpsolve",
         "pkgload",
         "lifecycle",
@@ -8309,7 +8307,6 @@
         "tibble",
         "RcppProgress",
         "assertive.files",
-        "assertive.numbers",
         "magick",
         "lifecycle",
         "R6",
@@ -14874,7 +14871,6 @@
         "e1071",
         "tkWidgets",
         "class",
-        "widgetTools",
     ],
     "cydar": [
         "SingleCellExperiment",
@@ -15905,7 +15901,6 @@
         "memoise",
         "plogr",
         "selectr",
-        "widgetTools",
         "ggfun",
         "ggplotify",
         "patchwork",
@@ -20244,7 +20239,6 @@
         "GSVA",
         "globaltest",
         "edgeR",
-        "HTMLUtils",
         "gplots",
         "ggplot2",
         "safe",
@@ -25089,7 +25083,6 @@
         "VennDiagram",
         "pamr",
         "foreach",
-        "sSeq",
         "GenomicRanges",
         "Matrix",
         "GenomeInfoDb",
@@ -39140,7 +39133,6 @@
         "e1071",
         "tkWidgets",
         "class",
-        "widgetTools",
     ],
     "MGFM": [
         "AnnotationDbi",
@@ -41233,7 +41225,6 @@
         "edgeR",
         "SummarizedExperiment",
         "foreach",
-        "sSeq",
         "e1071",
         "ModelMetrics",
         "nlme",
@@ -43469,7 +43460,6 @@
         "rtracklayer",
         "tidyr",
         "tidyselect",
-        "assertive.numbers",
         "assertive.strings",
         "assertive.datetimes",
         "assertive.files",
@@ -46458,7 +46448,6 @@
     "OLINgui": [
         "OLIN",
         "tkWidgets",
-        "widgetTools",
         "locfit",
     ],
     "OmaDB": [
@@ -52366,7 +52355,6 @@
         "memoise",
         "plogr",
         "selectr",
-        "widgetTools",
         "ggfun",
         "ggplotify",
         "patchwork",
@@ -64106,7 +64094,6 @@
         "reldist",
         "Hmisc",
         "assertive.files",
-        "assertive.numbers",
         "magick",
         "mvtnorm",
         "multcomp",
@@ -69349,7 +69336,6 @@
         "bslib",
         "cachem",
         "DelayedArray",
-        "widgetTools",
         "ggfun",
         "ggplotify",
         "patchwork",
@@ -69525,9 +69511,6 @@
         "cachem",
         "hms",
         "fastmap",
-    ],
-    "tkWidgets": [
-        "widgetTools",
     ],
     "tLOH": [
         "scales",
@@ -76203,7 +76186,6 @@
         "Matrix",
     ],
     "assertive": [
-        "assertive.numbers",
         "assertive.strings",
         "assertive.datetimes",
         "assertive.files",
@@ -76212,9 +76194,6 @@
         "assertive.data.us",
         "assertive.code",
         "knitr",
-    ],
-    "assertive.files": [
-        "assertive.numbers"
     ],
     "assertive.data": [
         "assertive.strings",
@@ -76577,7 +76556,6 @@
         "detectseparation",
         "scales",
         "phyloseq",
-        "ROI",
         "ROI.plugin.lpsolve",
         "pkgload",
         "lifecycle",
@@ -76694,7 +76672,6 @@
         "Rvmmin",
     ],
     "detectseparation": [
-        "ROI",
         "ROI.plugin.lpsolve",
         "pkgload",
         "desc",
@@ -76789,9 +76766,6 @@
     ],
     "softImpute": [
         "Matrix",
-    ],
-    "ROI.plugin.lpsolve": [
-        "ROI",
     ],
     "spatstat.data": [
         "Matrix",
@@ -78436,7 +78410,6 @@
     ],
     "multipanelfigure": [
         "assertive.files",
-        "assertive.numbers",
         "ggplot2",
         "gtable",
         "magick",
