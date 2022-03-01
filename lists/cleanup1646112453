@@ -26,6 +26,7 @@ arrayhelpers
 arsenal
 ASAFE
 ASEB
+ASGSCA
 ash
 askpass
 assertive.base
@@ -543,6 +544,7 @@ preseqR
 prettyunits
 princurve
 profileModel
+profileScoreDist
 proftools
 proj4
 proteinProfiles
@@ -561,12 +563,14 @@ pvclust
 pwr
 qap
 qdapRegex
+qpdf
 qtl
 quadprog
 R2HTML
 rama
 randomForest
 randomizr
+randPack
 randtests
 RankProd
 RApiSerialize
@@ -588,6 +592,7 @@ RcppDE
 RcppDist
 RcppGSL
 RcppParallel
+RcppProgress
 RcppRoll
 RcppThread
 RcppTOML
@@ -762,6 +767,7 @@ uniqtag
 units
 utf8
 uuid
+VAM
 varhandle
 vbmp
 vbsr
