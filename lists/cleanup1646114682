@@ -499,6 +499,7 @@ naivebayes
 NanoStringDiff
 NbClust
 ncdf4
+NCmisc
 NeighborNet
 NISTunits
 nleqslv
@@ -655,6 +656,7 @@ rematch
 remotes
 renv
 reportr
+reportROC
 reshape
 reshape2
 RGMQLlib
@@ -715,6 +717,7 @@ Rttf2pt1
 RUnit
 R.utils
 RUVnormalizeData
+Rvmmin
 Rwave
 RWekajars
 s2
@@ -823,6 +826,7 @@ truncdist
 truncnorm
 trust
 tsne
+tspair
 tweedie
 tweenr
 twilight
@@ -833,6 +837,7 @@ uchardet
 UNDO
 uniqtag
 units
+urltools
 utf8
 uuid
 V8
