@@ -5296,7 +5296,6 @@
         "gtable",
         "scales",
         "class",
-        "plotmo",
         "GenomeInfoDb",
         "XVector",
         "mgcv",
@@ -30113,7 +30112,6 @@
         "htmltools",
         "jquerylib",
         "class",
-        "plotmo",
         "GenomeInfoDbData",
         "MatrixModels",
         "lifecycle",
@@ -63634,9 +63632,6 @@
     ],
     "vcd": [
         "lmtest",
-    ],
-    "earth": [
-        "plotmo",
     ],
     "GenomicState": [
         "AnnotationHub",
