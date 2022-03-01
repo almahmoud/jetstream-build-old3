@@ -1,0 +1,3190 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: xgboost-build
+  namespace: newbuild
+spec:
+  template:
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: "kubernetes.io/hostname"
+                operator: "In"
+                values: ["am-scalable-k8s-5872ef","am-scalable-k8s-7b5e61"]
+      securityContext:
+        runAsUser: 0
+        fsGroup: 1000
+      volumes:
+        - name: libraries
+          persistentVolumeClaim:
+            claimName: rstudio-r-libraries-pvc
+        - name: tmplibrary
+          emptyDir: {}
+        - name: tmphome
+          emptyDir: {}
+      restartPolicy: OnFailure
+      initContainers:
+      - name: build
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - su rstudio && cd /home/rstudio && Rscript -e 'p <- .libPaths(); p <- c(p[2], p[-2]); .libPaths(p); if(BiocManager::install("xgboost", INSTALL_opts = "--build", update = FALSE, quiet = TRUE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+        env:
+          - name: R_LIBS_USER
+            value: "/mnt/libs/R"
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 1.5Gi
+            cpu: 1000m
+          # limits:
+          #   memory: 2Gi
+          #   cpu: 2000m
+      containers:
+      - name: nfs-copy
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - cp -r /usr/local/lib/R/site-library/xgboost /mnt/libs/R/xgboost && cd /home/rstudio && ls | grep "xgboost" | xargs -i cp ./{} /mnt/libs/R/{}
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+      - name: rclone-copy
+        image: rclone/rclone:latest
+        command:
+          - /bin/sh
+          - -c
+        args:
+          - cp /mnt/libs/R/.rclone.conf ~/.rclone.conf && rclone copyto /usr/local/lib/R/site-library/xgboost osn:bir190004-bucket01/libraries/RELEASE_3_14/container/xgboost -v && cd /home/rstudio && ls | grep "xgboost" | xargs -i rclone copyto ./{} osn:bir190004-bucket01/packages/RELEASE_3_14/container/{} -v
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+      - name: iu-swift-copy
+        image: rclone/rclone:latest
+        command:
+          - /bin/sh
+          - -c
+        args:
+          - cp /mnt/libs/R/.rclone.conf ~/.rclone.conf && rclone copyto /usr/local/lib/R/site-library/xgboost iujs:js-builder/libraries/RELEASE_3_14/container/xgboost -v && cd /home/rstudio && ls | grep "xgboost" | xargs -i rclone copyto ./{} iujs:js-builder/packages/RELEASE_3_14/container/{} -v
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+  backoffLimit: 4
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: textshape-build
+  namespace: newbuild
+spec:
+  template:
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: "kubernetes.io/hostname"
+                operator: "In"
+                values: ["am-scalable-k8s-5872ef","am-scalable-k8s-7b5e61"]
+      securityContext:
+        runAsUser: 0
+        fsGroup: 1000
+      volumes:
+        - name: libraries
+          persistentVolumeClaim:
+            claimName: rstudio-r-libraries-pvc
+        - name: tmplibrary
+          emptyDir: {}
+        - name: tmphome
+          emptyDir: {}
+      restartPolicy: OnFailure
+      initContainers:
+      - name: build
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - su rstudio && cd /home/rstudio && Rscript -e 'p <- .libPaths(); p <- c(p[2], p[-2]); .libPaths(p); if(BiocManager::install("textshape", INSTALL_opts = "--build", update = FALSE, quiet = TRUE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+        env:
+          - name: R_LIBS_USER
+            value: "/mnt/libs/R"
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 1.5Gi
+            cpu: 1000m
+          # limits:
+          #   memory: 2Gi
+          #   cpu: 2000m
+      containers:
+      - name: nfs-copy
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - cp -r /usr/local/lib/R/site-library/textshape /mnt/libs/R/textshape && cd /home/rstudio && ls | grep "textshape" | xargs -i cp ./{} /mnt/libs/R/{}
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+      - name: rclone-copy
+        image: rclone/rclone:latest
+        command:
+          - /bin/sh
+          - -c
+        args:
+          - cp /mnt/libs/R/.rclone.conf ~/.rclone.conf && rclone copyto /usr/local/lib/R/site-library/textshape osn:bir190004-bucket01/libraries/RELEASE_3_14/container/textshape -v && cd /home/rstudio && ls | grep "textshape" | xargs -i rclone copyto ./{} osn:bir190004-bucket01/packages/RELEASE_3_14/container/{} -v
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+      - name: iu-swift-copy
+        image: rclone/rclone:latest
+        command:
+          - /bin/sh
+          - -c
+        args:
+          - cp /mnt/libs/R/.rclone.conf ~/.rclone.conf && rclone copyto /usr/local/lib/R/site-library/textshape iujs:js-builder/libraries/RELEASE_3_14/container/textshape -v && cd /home/rstudio && ls | grep "textshape" | xargs -i rclone copyto ./{} iujs:js-builder/packages/RELEASE_3_14/container/{} -v
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+  backoffLimit: 4
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: splitstackshape-build
+  namespace: newbuild
+spec:
+  template:
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: "kubernetes.io/hostname"
+                operator: "In"
+                values: ["am-scalable-k8s-5872ef","am-scalable-k8s-7b5e61"]
+      securityContext:
+        runAsUser: 0
+        fsGroup: 1000
+      volumes:
+        - name: libraries
+          persistentVolumeClaim:
+            claimName: rstudio-r-libraries-pvc
+        - name: tmplibrary
+          emptyDir: {}
+        - name: tmphome
+          emptyDir: {}
+      restartPolicy: OnFailure
+      initContainers:
+      - name: build
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - su rstudio && cd /home/rstudio && Rscript -e 'p <- .libPaths(); p <- c(p[2], p[-2]); .libPaths(p); if(BiocManager::install("splitstackshape", INSTALL_opts = "--build", update = FALSE, quiet = TRUE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+        env:
+          - name: R_LIBS_USER
+            value: "/mnt/libs/R"
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 1.5Gi
+            cpu: 1000m
+          # limits:
+          #   memory: 2Gi
+          #   cpu: 2000m
+      containers:
+      - name: nfs-copy
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - cp -r /usr/local/lib/R/site-library/splitstackshape /mnt/libs/R/splitstackshape && cd /home/rstudio && ls | grep "splitstackshape" | xargs -i cp ./{} /mnt/libs/R/{}
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+      - name: rclone-copy
+        image: rclone/rclone:latest
+        command:
+          - /bin/sh
+          - -c
+        args:
+          - cp /mnt/libs/R/.rclone.conf ~/.rclone.conf && rclone copyto /usr/local/lib/R/site-library/splitstackshape osn:bir190004-bucket01/libraries/RELEASE_3_14/container/splitstackshape -v && cd /home/rstudio && ls | grep "splitstackshape" | xargs -i rclone copyto ./{} osn:bir190004-bucket01/packages/RELEASE_3_14/container/{} -v
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+      - name: iu-swift-copy
+        image: rclone/rclone:latest
+        command:
+          - /bin/sh
+          - -c
+        args:
+          - cp /mnt/libs/R/.rclone.conf ~/.rclone.conf && rclone copyto /usr/local/lib/R/site-library/splitstackshape iujs:js-builder/libraries/RELEASE_3_14/container/splitstackshape -v && cd /home/rstudio && ls | grep "splitstackshape" | xargs -i rclone copyto ./{} iujs:js-builder/packages/RELEASE_3_14/container/{} -v
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+  backoffLimit: 4
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: rlist-build
+  namespace: newbuild
+spec:
+  template:
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: "kubernetes.io/hostname"
+                operator: "In"
+                values: ["am-scalable-k8s-5872ef","am-scalable-k8s-7b5e61"]
+      securityContext:
+        runAsUser: 0
+        fsGroup: 1000
+      volumes:
+        - name: libraries
+          persistentVolumeClaim:
+            claimName: rstudio-r-libraries-pvc
+        - name: tmplibrary
+          emptyDir: {}
+        - name: tmphome
+          emptyDir: {}
+      restartPolicy: OnFailure
+      initContainers:
+      - name: build
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - su rstudio && cd /home/rstudio && Rscript -e 'p <- .libPaths(); p <- c(p[2], p[-2]); .libPaths(p); if(BiocManager::install("rlist", INSTALL_opts = "--build", update = FALSE, quiet = TRUE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+        env:
+          - name: R_LIBS_USER
+            value: "/mnt/libs/R"
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 1.5Gi
+            cpu: 1000m
+          # limits:
+          #   memory: 2Gi
+          #   cpu: 2000m
+      containers:
+      - name: nfs-copy
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - cp -r /usr/local/lib/R/site-library/rlist /mnt/libs/R/rlist && cd /home/rstudio && ls | grep "rlist" | xargs -i cp ./{} /mnt/libs/R/{}
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+      - name: rclone-copy
+        image: rclone/rclone:latest
+        command:
+          - /bin/sh
+          - -c
+        args:
+          - cp /mnt/libs/R/.rclone.conf ~/.rclone.conf && rclone copyto /usr/local/lib/R/site-library/rlist osn:bir190004-bucket01/libraries/RELEASE_3_14/container/rlist -v && cd /home/rstudio && ls | grep "rlist" | xargs -i rclone copyto ./{} osn:bir190004-bucket01/packages/RELEASE_3_14/container/{} -v
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+      - name: iu-swift-copy
+        image: rclone/rclone:latest
+        command:
+          - /bin/sh
+          - -c
+        args:
+          - cp /mnt/libs/R/.rclone.conf ~/.rclone.conf && rclone copyto /usr/local/lib/R/site-library/rlist iujs:js-builder/libraries/RELEASE_3_14/container/rlist -v && cd /home/rstudio && ls | grep "rlist" | xargs -i rclone copyto ./{} iujs:js-builder/packages/RELEASE_3_14/container/{} -v
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+  backoffLimit: 4
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: rbiopaxparser-build
+  namespace: newbuild
+spec:
+  template:
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: "kubernetes.io/hostname"
+                operator: "In"
+                values: ["am-scalable-k8s-5872ef","am-scalable-k8s-7b5e61"]
+      securityContext:
+        runAsUser: 0
+        fsGroup: 1000
+      volumes:
+        - name: libraries
+          persistentVolumeClaim:
+            claimName: rstudio-r-libraries-pvc
+        - name: tmplibrary
+          emptyDir: {}
+        - name: tmphome
+          emptyDir: {}
+      restartPolicy: OnFailure
+      initContainers:
+      - name: build
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - su rstudio && cd /home/rstudio && Rscript -e 'p <- .libPaths(); p <- c(p[2], p[-2]); .libPaths(p); if(BiocManager::install("rBiopaxParser", INSTALL_opts = "--build", update = FALSE, quiet = TRUE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+        env:
+          - name: R_LIBS_USER
+            value: "/mnt/libs/R"
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 1.5Gi
+            cpu: 1000m
+          # limits:
+          #   memory: 2Gi
+          #   cpu: 2000m
+      containers:
+      - name: nfs-copy
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - cp -r /usr/local/lib/R/site-library/rBiopaxParser /mnt/libs/R/rBiopaxParser && cd /home/rstudio && ls | grep "rBiopaxParser" | xargs -i cp ./{} /mnt/libs/R/{}
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+      - name: rclone-copy
+        image: rclone/rclone:latest
+        command:
+          - /bin/sh
+          - -c
+        args:
+          - cp /mnt/libs/R/.rclone.conf ~/.rclone.conf && rclone copyto /usr/local/lib/R/site-library/rBiopaxParser osn:bir190004-bucket01/libraries/RELEASE_3_14/container/rBiopaxParser -v && cd /home/rstudio && ls | grep "rBiopaxParser" | xargs -i rclone copyto ./{} osn:bir190004-bucket01/packages/RELEASE_3_14/container/{} -v
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+      - name: iu-swift-copy
+        image: rclone/rclone:latest
+        command:
+          - /bin/sh
+          - -c
+        args:
+          - cp /mnt/libs/R/.rclone.conf ~/.rclone.conf && rclone copyto /usr/local/lib/R/site-library/rBiopaxParser iujs:js-builder/libraries/RELEASE_3_14/container/rBiopaxParser -v && cd /home/rstudio && ls | grep "rBiopaxParser" | xargs -i rclone copyto ./{} iujs:js-builder/packages/RELEASE_3_14/container/{} -v
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+  backoffLimit: 4
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: qualv-build
+  namespace: newbuild
+spec:
+  template:
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: "kubernetes.io/hostname"
+                operator: "In"
+                values: ["am-scalable-k8s-5872ef","am-scalable-k8s-7b5e61"]
+      securityContext:
+        runAsUser: 0
+        fsGroup: 1000
+      volumes:
+        - name: libraries
+          persistentVolumeClaim:
+            claimName: rstudio-r-libraries-pvc
+        - name: tmplibrary
+          emptyDir: {}
+        - name: tmphome
+          emptyDir: {}
+      restartPolicy: OnFailure
+      initContainers:
+      - name: build
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - su rstudio && cd /home/rstudio && Rscript -e 'p <- .libPaths(); p <- c(p[2], p[-2]); .libPaths(p); if(BiocManager::install("qualV", INSTALL_opts = "--build", update = FALSE, quiet = TRUE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+        env:
+          - name: R_LIBS_USER
+            value: "/mnt/libs/R"
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 1.5Gi
+            cpu: 1000m
+          # limits:
+          #   memory: 2Gi
+          #   cpu: 2000m
+      containers:
+      - name: nfs-copy
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - cp -r /usr/local/lib/R/site-library/qualV /mnt/libs/R/qualV && cd /home/rstudio && ls | grep "qualV" | xargs -i cp ./{} /mnt/libs/R/{}
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+      - name: rclone-copy
+        image: rclone/rclone:latest
+        command:
+          - /bin/sh
+          - -c
+        args:
+          - cp /mnt/libs/R/.rclone.conf ~/.rclone.conf && rclone copyto /usr/local/lib/R/site-library/qualV osn:bir190004-bucket01/libraries/RELEASE_3_14/container/qualV -v && cd /home/rstudio && ls | grep "qualV" | xargs -i rclone copyto ./{} osn:bir190004-bucket01/packages/RELEASE_3_14/container/{} -v
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+      - name: iu-swift-copy
+        image: rclone/rclone:latest
+        command:
+          - /bin/sh
+          - -c
+        args:
+          - cp /mnt/libs/R/.rclone.conf ~/.rclone.conf && rclone copyto /usr/local/lib/R/site-library/qualV iujs:js-builder/libraries/RELEASE_3_14/container/qualV -v && cd /home/rstudio && ls | grep "qualV" | xargs -i rclone copyto ./{} iujs:js-builder/packages/RELEASE_3_14/container/{} -v
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+  backoffLimit: 4
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: qdaptools-build
+  namespace: newbuild
+spec:
+  template:
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: "kubernetes.io/hostname"
+                operator: "In"
+                values: ["am-scalable-k8s-5872ef","am-scalable-k8s-7b5e61"]
+      securityContext:
+        runAsUser: 0
+        fsGroup: 1000
+      volumes:
+        - name: libraries
+          persistentVolumeClaim:
+            claimName: rstudio-r-libraries-pvc
+        - name: tmplibrary
+          emptyDir: {}
+        - name: tmphome
+          emptyDir: {}
+      restartPolicy: OnFailure
+      initContainers:
+      - name: build
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - su rstudio && cd /home/rstudio && Rscript -e 'p <- .libPaths(); p <- c(p[2], p[-2]); .libPaths(p); if(BiocManager::install("qdapTools", INSTALL_opts = "--build", update = FALSE, quiet = TRUE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+        env:
+          - name: R_LIBS_USER
+            value: "/mnt/libs/R"
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 1.5Gi
+            cpu: 1000m
+          # limits:
+          #   memory: 2Gi
+          #   cpu: 2000m
+      containers:
+      - name: nfs-copy
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - cp -r /usr/local/lib/R/site-library/qdapTools /mnt/libs/R/qdapTools && cd /home/rstudio && ls | grep "qdapTools" | xargs -i cp ./{} /mnt/libs/R/{}
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+      - name: rclone-copy
+        image: rclone/rclone:latest
+        command:
+          - /bin/sh
+          - -c
+        args:
+          - cp /mnt/libs/R/.rclone.conf ~/.rclone.conf && rclone copyto /usr/local/lib/R/site-library/qdapTools osn:bir190004-bucket01/libraries/RELEASE_3_14/container/qdapTools -v && cd /home/rstudio && ls | grep "qdapTools" | xargs -i rclone copyto ./{} osn:bir190004-bucket01/packages/RELEASE_3_14/container/{} -v
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+      - name: iu-swift-copy
+        image: rclone/rclone:latest
+        command:
+          - /bin/sh
+          - -c
+        args:
+          - cp /mnt/libs/R/.rclone.conf ~/.rclone.conf && rclone copyto /usr/local/lib/R/site-library/qdapTools iujs:js-builder/libraries/RELEASE_3_14/container/qdapTools -v && cd /home/rstudio && ls | grep "qdapTools" | xargs -i rclone copyto ./{} iujs:js-builder/packages/RELEASE_3_14/container/{} -v
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+  backoffLimit: 4
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: philentropy-build
+  namespace: newbuild
+spec:
+  template:
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: "kubernetes.io/hostname"
+                operator: "In"
+                values: ["am-scalable-k8s-5872ef","am-scalable-k8s-7b5e61"]
+      securityContext:
+        runAsUser: 0
+        fsGroup: 1000
+      volumes:
+        - name: libraries
+          persistentVolumeClaim:
+            claimName: rstudio-r-libraries-pvc
+        - name: tmplibrary
+          emptyDir: {}
+        - name: tmphome
+          emptyDir: {}
+      restartPolicy: OnFailure
+      initContainers:
+      - name: build
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - su rstudio && cd /home/rstudio && Rscript -e 'p <- .libPaths(); p <- c(p[2], p[-2]); .libPaths(p); if(BiocManager::install("philentropy", INSTALL_opts = "--build", update = FALSE, quiet = TRUE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+        env:
+          - name: R_LIBS_USER
+            value: "/mnt/libs/R"
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 1.5Gi
+            cpu: 1000m
+          # limits:
+          #   memory: 2Gi
+          #   cpu: 2000m
+      containers:
+      - name: nfs-copy
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - cp -r /usr/local/lib/R/site-library/philentropy /mnt/libs/R/philentropy && cd /home/rstudio && ls | grep "philentropy" | xargs -i cp ./{} /mnt/libs/R/{}
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+      - name: rclone-copy
+        image: rclone/rclone:latest
+        command:
+          - /bin/sh
+          - -c
+        args:
+          - cp /mnt/libs/R/.rclone.conf ~/.rclone.conf && rclone copyto /usr/local/lib/R/site-library/philentropy osn:bir190004-bucket01/libraries/RELEASE_3_14/container/philentropy -v && cd /home/rstudio && ls | grep "philentropy" | xargs -i rclone copyto ./{} osn:bir190004-bucket01/packages/RELEASE_3_14/container/{} -v
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+      - name: iu-swift-copy
+        image: rclone/rclone:latest
+        command:
+          - /bin/sh
+          - -c
+        args:
+          - cp /mnt/libs/R/.rclone.conf ~/.rclone.conf && rclone copyto /usr/local/lib/R/site-library/philentropy iujs:js-builder/libraries/RELEASE_3_14/container/philentropy -v && cd /home/rstudio && ls | grep "philentropy" | xargs -i rclone copyto ./{} iujs:js-builder/packages/RELEASE_3_14/container/{} -v
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+  backoffLimit: 4
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: nanotime-build
+  namespace: newbuild
+spec:
+  template:
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: "kubernetes.io/hostname"
+                operator: "In"
+                values: ["am-scalable-k8s-5872ef","am-scalable-k8s-7b5e61"]
+      securityContext:
+        runAsUser: 0
+        fsGroup: 1000
+      volumes:
+        - name: libraries
+          persistentVolumeClaim:
+            claimName: rstudio-r-libraries-pvc
+        - name: tmplibrary
+          emptyDir: {}
+        - name: tmphome
+          emptyDir: {}
+      restartPolicy: OnFailure
+      initContainers:
+      - name: build
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - su rstudio && cd /home/rstudio && Rscript -e 'p <- .libPaths(); p <- c(p[2], p[-2]); .libPaths(p); if(BiocManager::install("nanotime", INSTALL_opts = "--build", update = FALSE, quiet = TRUE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+        env:
+          - name: R_LIBS_USER
+            value: "/mnt/libs/R"
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 1.5Gi
+            cpu: 1000m
+          # limits:
+          #   memory: 2Gi
+          #   cpu: 2000m
+      containers:
+      - name: nfs-copy
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - cp -r /usr/local/lib/R/site-library/nanotime /mnt/libs/R/nanotime && cd /home/rstudio && ls | grep "nanotime" | xargs -i cp ./{} /mnt/libs/R/{}
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+      - name: rclone-copy
+        image: rclone/rclone:latest
+        command:
+          - /bin/sh
+          - -c
+        args:
+          - cp /mnt/libs/R/.rclone.conf ~/.rclone.conf && rclone copyto /usr/local/lib/R/site-library/nanotime osn:bir190004-bucket01/libraries/RELEASE_3_14/container/nanotime -v && cd /home/rstudio && ls | grep "nanotime" | xargs -i rclone copyto ./{} osn:bir190004-bucket01/packages/RELEASE_3_14/container/{} -v
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+      - name: iu-swift-copy
+        image: rclone/rclone:latest
+        command:
+          - /bin/sh
+          - -c
+        args:
+          - cp /mnt/libs/R/.rclone.conf ~/.rclone.conf && rclone copyto /usr/local/lib/R/site-library/nanotime iujs:js-builder/libraries/RELEASE_3_14/container/nanotime -v && cd /home/rstudio && ls | grep "nanotime" | xargs -i rclone copyto ./{} iujs:js-builder/packages/RELEASE_3_14/container/{} -v
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+  backoffLimit: 4
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: mpmi-build
+  namespace: newbuild
+spec:
+  template:
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: "kubernetes.io/hostname"
+                operator: "In"
+                values: ["am-scalable-k8s-5872ef","am-scalable-k8s-7b5e61"]
+      securityContext:
+        runAsUser: 0
+        fsGroup: 1000
+      volumes:
+        - name: libraries
+          persistentVolumeClaim:
+            claimName: rstudio-r-libraries-pvc
+        - name: tmplibrary
+          emptyDir: {}
+        - name: tmphome
+          emptyDir: {}
+      restartPolicy: OnFailure
+      initContainers:
+      - name: build
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - su rstudio && cd /home/rstudio && Rscript -e 'p <- .libPaths(); p <- c(p[2], p[-2]); .libPaths(p); if(BiocManager::install("mpmi", INSTALL_opts = "--build", update = FALSE, quiet = TRUE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+        env:
+          - name: R_LIBS_USER
+            value: "/mnt/libs/R"
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 1.5Gi
+            cpu: 1000m
+          # limits:
+          #   memory: 2Gi
+          #   cpu: 2000m
+      containers:
+      - name: nfs-copy
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - cp -r /usr/local/lib/R/site-library/mpmi /mnt/libs/R/mpmi && cd /home/rstudio && ls | grep "mpmi" | xargs -i cp ./{} /mnt/libs/R/{}
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+      - name: rclone-copy
+        image: rclone/rclone:latest
+        command:
+          - /bin/sh
+          - -c
+        args:
+          - cp /mnt/libs/R/.rclone.conf ~/.rclone.conf && rclone copyto /usr/local/lib/R/site-library/mpmi osn:bir190004-bucket01/libraries/RELEASE_3_14/container/mpmi -v && cd /home/rstudio && ls | grep "mpmi" | xargs -i rclone copyto ./{} osn:bir190004-bucket01/packages/RELEASE_3_14/container/{} -v
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+      - name: iu-swift-copy
+        image: rclone/rclone:latest
+        command:
+          - /bin/sh
+          - -c
+        args:
+          - cp /mnt/libs/R/.rclone.conf ~/.rclone.conf && rclone copyto /usr/local/lib/R/site-library/mpmi iujs:js-builder/libraries/RELEASE_3_14/container/mpmi -v && cd /home/rstudio && ls | grep "mpmi" | xargs -i rclone copyto ./{} iujs:js-builder/packages/RELEASE_3_14/container/{} -v
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+  backoffLimit: 4
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: mpm-build
+  namespace: newbuild
+spec:
+  template:
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: "kubernetes.io/hostname"
+                operator: "In"
+                values: ["am-scalable-k8s-5872ef","am-scalable-k8s-7b5e61"]
+      securityContext:
+        runAsUser: 0
+        fsGroup: 1000
+      volumes:
+        - name: libraries
+          persistentVolumeClaim:
+            claimName: rstudio-r-libraries-pvc
+        - name: tmplibrary
+          emptyDir: {}
+        - name: tmphome
+          emptyDir: {}
+      restartPolicy: OnFailure
+      initContainers:
+      - name: build
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - su rstudio && cd /home/rstudio && Rscript -e 'p <- .libPaths(); p <- c(p[2], p[-2]); .libPaths(p); if(BiocManager::install("mpm", INSTALL_opts = "--build", update = FALSE, quiet = TRUE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+        env:
+          - name: R_LIBS_USER
+            value: "/mnt/libs/R"
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 1.5Gi
+            cpu: 1000m
+          # limits:
+          #   memory: 2Gi
+          #   cpu: 2000m
+      containers:
+      - name: nfs-copy
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - cp -r /usr/local/lib/R/site-library/mpm /mnt/libs/R/mpm && cd /home/rstudio && ls | grep "mpm" | xargs -i cp ./{} /mnt/libs/R/{}
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+      - name: rclone-copy
+        image: rclone/rclone:latest
+        command:
+          - /bin/sh
+          - -c
+        args:
+          - cp /mnt/libs/R/.rclone.conf ~/.rclone.conf && rclone copyto /usr/local/lib/R/site-library/mpm osn:bir190004-bucket01/libraries/RELEASE_3_14/container/mpm -v && cd /home/rstudio && ls | grep "mpm" | xargs -i rclone copyto ./{} osn:bir190004-bucket01/packages/RELEASE_3_14/container/{} -v
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+      - name: iu-swift-copy
+        image: rclone/rclone:latest
+        command:
+          - /bin/sh
+          - -c
+        args:
+          - cp /mnt/libs/R/.rclone.conf ~/.rclone.conf && rclone copyto /usr/local/lib/R/site-library/mpm iujs:js-builder/libraries/RELEASE_3_14/container/mpm -v && cd /home/rstudio && ls | grep "mpm" | xargs -i rclone copyto ./{} iujs:js-builder/packages/RELEASE_3_14/container/{} -v
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+  backoffLimit: 4
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: mltools-build
+  namespace: newbuild
+spec:
+  template:
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: "kubernetes.io/hostname"
+                operator: "In"
+                values: ["am-scalable-k8s-5872ef","am-scalable-k8s-7b5e61"]
+      securityContext:
+        runAsUser: 0
+        fsGroup: 1000
+      volumes:
+        - name: libraries
+          persistentVolumeClaim:
+            claimName: rstudio-r-libraries-pvc
+        - name: tmplibrary
+          emptyDir: {}
+        - name: tmphome
+          emptyDir: {}
+      restartPolicy: OnFailure
+      initContainers:
+      - name: build
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - su rstudio && cd /home/rstudio && Rscript -e 'p <- .libPaths(); p <- c(p[2], p[-2]); .libPaths(p); if(BiocManager::install("mltools", INSTALL_opts = "--build", update = FALSE, quiet = TRUE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+        env:
+          - name: R_LIBS_USER
+            value: "/mnt/libs/R"
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 1.5Gi
+            cpu: 1000m
+          # limits:
+          #   memory: 2Gi
+          #   cpu: 2000m
+      containers:
+      - name: nfs-copy
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - cp -r /usr/local/lib/R/site-library/mltools /mnt/libs/R/mltools && cd /home/rstudio && ls | grep "mltools" | xargs -i cp ./{} /mnt/libs/R/{}
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+      - name: rclone-copy
+        image: rclone/rclone:latest
+        command:
+          - /bin/sh
+          - -c
+        args:
+          - cp /mnt/libs/R/.rclone.conf ~/.rclone.conf && rclone copyto /usr/local/lib/R/site-library/mltools osn:bir190004-bucket01/libraries/RELEASE_3_14/container/mltools -v && cd /home/rstudio && ls | grep "mltools" | xargs -i rclone copyto ./{} osn:bir190004-bucket01/packages/RELEASE_3_14/container/{} -v
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+      - name: iu-swift-copy
+        image: rclone/rclone:latest
+        command:
+          - /bin/sh
+          - -c
+        args:
+          - cp /mnt/libs/R/.rclone.conf ~/.rclone.conf && rclone copyto /usr/local/lib/R/site-library/mltools iujs:js-builder/libraries/RELEASE_3_14/container/mltools -v && cd /home/rstudio && ls | grep "mltools" | xargs -i rclone copyto ./{} iujs:js-builder/packages/RELEASE_3_14/container/{} -v
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+  backoffLimit: 4
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: korpus-build
+  namespace: newbuild
+spec:
+  template:
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: "kubernetes.io/hostname"
+                operator: "In"
+                values: ["am-scalable-k8s-5872ef","am-scalable-k8s-7b5e61"]
+      securityContext:
+        runAsUser: 0
+        fsGroup: 1000
+      volumes:
+        - name: libraries
+          persistentVolumeClaim:
+            claimName: rstudio-r-libraries-pvc
+        - name: tmplibrary
+          emptyDir: {}
+        - name: tmphome
+          emptyDir: {}
+      restartPolicy: OnFailure
+      initContainers:
+      - name: build
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - su rstudio && cd /home/rstudio && Rscript -e 'p <- .libPaths(); p <- c(p[2], p[-2]); .libPaths(p); if(BiocManager::install("koRpus", INSTALL_opts = "--build", update = FALSE, quiet = TRUE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+        env:
+          - name: R_LIBS_USER
+            value: "/mnt/libs/R"
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 1.5Gi
+            cpu: 1000m
+          # limits:
+          #   memory: 2Gi
+          #   cpu: 2000m
+      containers:
+      - name: nfs-copy
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - cp -r /usr/local/lib/R/site-library/koRpus /mnt/libs/R/koRpus && cd /home/rstudio && ls | grep "koRpus" | xargs -i cp ./{} /mnt/libs/R/{}
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+      - name: rclone-copy
+        image: rclone/rclone:latest
+        command:
+          - /bin/sh
+          - -c
+        args:
+          - cp /mnt/libs/R/.rclone.conf ~/.rclone.conf && rclone copyto /usr/local/lib/R/site-library/koRpus osn:bir190004-bucket01/libraries/RELEASE_3_14/container/koRpus -v && cd /home/rstudio && ls | grep "koRpus" | xargs -i rclone copyto ./{} osn:bir190004-bucket01/packages/RELEASE_3_14/container/{} -v
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+      - name: iu-swift-copy
+        image: rclone/rclone:latest
+        command:
+          - /bin/sh
+          - -c
+        args:
+          - cp /mnt/libs/R/.rclone.conf ~/.rclone.conf && rclone copyto /usr/local/lib/R/site-library/koRpus iujs:js-builder/libraries/RELEASE_3_14/container/koRpus -v && cd /home/rstudio && ls | grep "koRpus" | xargs -i rclone copyto ./{} iujs:js-builder/packages/RELEASE_3_14/container/{} -v
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+  backoffLimit: 4
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: gplots-build
+  namespace: newbuild
+spec:
+  template:
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: "kubernetes.io/hostname"
+                operator: "In"
+                values: ["am-scalable-k8s-5872ef","am-scalable-k8s-7b5e61"]
+      securityContext:
+        runAsUser: 0
+        fsGroup: 1000
+      volumes:
+        - name: libraries
+          persistentVolumeClaim:
+            claimName: rstudio-r-libraries-pvc
+        - name: tmplibrary
+          emptyDir: {}
+        - name: tmphome
+          emptyDir: {}
+      restartPolicy: OnFailure
+      initContainers:
+      - name: build
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - su rstudio && cd /home/rstudio && Rscript -e 'p <- .libPaths(); p <- c(p[2], p[-2]); .libPaths(p); if(BiocManager::install("gplots", INSTALL_opts = "--build", update = FALSE, quiet = TRUE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+        env:
+          - name: R_LIBS_USER
+            value: "/mnt/libs/R"
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 1.5Gi
+            cpu: 1000m
+          # limits:
+          #   memory: 2Gi
+          #   cpu: 2000m
+      containers:
+      - name: nfs-copy
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - cp -r /usr/local/lib/R/site-library/gplots /mnt/libs/R/gplots && cd /home/rstudio && ls | grep "gplots" | xargs -i cp ./{} /mnt/libs/R/{}
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+      - name: rclone-copy
+        image: rclone/rclone:latest
+        command:
+          - /bin/sh
+          - -c
+        args:
+          - cp /mnt/libs/R/.rclone.conf ~/.rclone.conf && rclone copyto /usr/local/lib/R/site-library/gplots osn:bir190004-bucket01/libraries/RELEASE_3_14/container/gplots -v && cd /home/rstudio && ls | grep "gplots" | xargs -i rclone copyto ./{} osn:bir190004-bucket01/packages/RELEASE_3_14/container/{} -v
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+      - name: iu-swift-copy
+        image: rclone/rclone:latest
+        command:
+          - /bin/sh
+          - -c
+        args:
+          - cp /mnt/libs/R/.rclone.conf ~/.rclone.conf && rclone copyto /usr/local/lib/R/site-library/gplots iujs:js-builder/libraries/RELEASE_3_14/container/gplots -v && cd /home/rstudio && ls | grep "gplots" | xargs -i rclone copyto ./{} iujs:js-builder/packages/RELEASE_3_14/container/{} -v
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+  backoffLimit: 4
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: biodist-build
+  namespace: newbuild
+spec:
+  template:
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: "kubernetes.io/hostname"
+                operator: "In"
+                values: ["am-scalable-k8s-5872ef","am-scalable-k8s-7b5e61"]
+      securityContext:
+        runAsUser: 0
+        fsGroup: 1000
+      volumes:
+        - name: libraries
+          persistentVolumeClaim:
+            claimName: rstudio-r-libraries-pvc
+        - name: tmplibrary
+          emptyDir: {}
+        - name: tmphome
+          emptyDir: {}
+      restartPolicy: OnFailure
+      initContainers:
+      - name: build
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - su rstudio && cd /home/rstudio && Rscript -e 'p <- .libPaths(); p <- c(p[2], p[-2]); .libPaths(p); if(BiocManager::install("bioDist", INSTALL_opts = "--build", update = FALSE, quiet = TRUE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+        env:
+          - name: R_LIBS_USER
+            value: "/mnt/libs/R"
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 1.5Gi
+            cpu: 1000m
+          # limits:
+          #   memory: 2Gi
+          #   cpu: 2000m
+      containers:
+      - name: nfs-copy
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - cp -r /usr/local/lib/R/site-library/bioDist /mnt/libs/R/bioDist && cd /home/rstudio && ls | grep "bioDist" | xargs -i cp ./{} /mnt/libs/R/{}
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+      - name: rclone-copy
+        image: rclone/rclone:latest
+        command:
+          - /bin/sh
+          - -c
+        args:
+          - cp /mnt/libs/R/.rclone.conf ~/.rclone.conf && rclone copyto /usr/local/lib/R/site-library/bioDist osn:bir190004-bucket01/libraries/RELEASE_3_14/container/bioDist -v && cd /home/rstudio && ls | grep "bioDist" | xargs -i rclone copyto ./{} osn:bir190004-bucket01/packages/RELEASE_3_14/container/{} -v
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+      - name: iu-swift-copy
+        image: rclone/rclone:latest
+        command:
+          - /bin/sh
+          - -c
+        args:
+          - cp /mnt/libs/R/.rclone.conf ~/.rclone.conf && rclone copyto /usr/local/lib/R/site-library/bioDist iujs:js-builder/libraries/RELEASE_3_14/container/bioDist -v && cd /home/rstudio && ls | grep "bioDist" | xargs -i rclone copyto ./{} iujs:js-builder/packages/RELEASE_3_14/container/{} -v
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+  backoffLimit: 4
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: alsace-build
+  namespace: newbuild
+spec:
+  template:
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: "kubernetes.io/hostname"
+                operator: "In"
+                values: ["am-scalable-k8s-5872ef","am-scalable-k8s-7b5e61"]
+      securityContext:
+        runAsUser: 0
+        fsGroup: 1000
+      volumes:
+        - name: libraries
+          persistentVolumeClaim:
+            claimName: rstudio-r-libraries-pvc
+        - name: tmplibrary
+          emptyDir: {}
+        - name: tmphome
+          emptyDir: {}
+      restartPolicy: OnFailure
+      initContainers:
+      - name: build
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - su rstudio && cd /home/rstudio && Rscript -e 'p <- .libPaths(); p <- c(p[2], p[-2]); .libPaths(p); if(BiocManager::install("alsace", INSTALL_opts = "--build", update = FALSE, quiet = TRUE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+        env:
+          - name: R_LIBS_USER
+            value: "/mnt/libs/R"
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 1.5Gi
+            cpu: 1000m
+          # limits:
+          #   memory: 2Gi
+          #   cpu: 2000m
+      containers:
+      - name: nfs-copy
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - cp -r /usr/local/lib/R/site-library/alsace /mnt/libs/R/alsace && cd /home/rstudio && ls | grep "alsace" | xargs -i cp ./{} /mnt/libs/R/{}
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+      - name: rclone-copy
+        image: rclone/rclone:latest
+        command:
+          - /bin/sh
+          - -c
+        args:
+          - cp /mnt/libs/R/.rclone.conf ~/.rclone.conf && rclone copyto /usr/local/lib/R/site-library/alsace osn:bir190004-bucket01/libraries/RELEASE_3_14/container/alsace -v && cd /home/rstudio && ls | grep "alsace" | xargs -i rclone copyto ./{} osn:bir190004-bucket01/packages/RELEASE_3_14/container/{} -v
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+      - name: iu-swift-copy
+        image: rclone/rclone:latest
+        command:
+          - /bin/sh
+          - -c
+        args:
+          - cp /mnt/libs/R/.rclone.conf ~/.rclone.conf && rclone copyto /usr/local/lib/R/site-library/alsace iujs:js-builder/libraries/RELEASE_3_14/container/alsace -v && cd /home/rstudio && ls | grep "alsace" | xargs -i rclone copyto ./{} iujs:js-builder/packages/RELEASE_3_14/container/{} -v
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+  backoffLimit: 4
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: modelmetrics-build
+  namespace: newbuild
+spec:
+  template:
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: "kubernetes.io/hostname"
+                operator: "In"
+                values: ["am-scalable-k8s-5872ef","am-scalable-k8s-7b5e61"]
+      securityContext:
+        runAsUser: 0
+        fsGroup: 1000
+      volumes:
+        - name: libraries
+          persistentVolumeClaim:
+            claimName: rstudio-r-libraries-pvc
+        - name: tmplibrary
+          emptyDir: {}
+        - name: tmphome
+          emptyDir: {}
+      restartPolicy: OnFailure
+      initContainers:
+      - name: build
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - su rstudio && cd /home/rstudio && Rscript -e 'p <- .libPaths(); p <- c(p[2], p[-2]); .libPaths(p); if(BiocManager::install("ModelMetrics", INSTALL_opts = "--build", update = FALSE, quiet = TRUE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+        env:
+          - name: R_LIBS_USER
+            value: "/mnt/libs/R"
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 1.5Gi
+            cpu: 1000m
+          # limits:
+          #   memory: 2Gi
+          #   cpu: 2000m
+      containers:
+      - name: nfs-copy
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - cp -r /usr/local/lib/R/site-library/ModelMetrics /mnt/libs/R/ModelMetrics && cd /home/rstudio && ls | grep "ModelMetrics" | xargs -i cp ./{} /mnt/libs/R/{}
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+      - name: rclone-copy
+        image: rclone/rclone:latest
+        command:
+          - /bin/sh
+          - -c
+        args:
+          - cp /mnt/libs/R/.rclone.conf ~/.rclone.conf && rclone copyto /usr/local/lib/R/site-library/ModelMetrics osn:bir190004-bucket01/libraries/RELEASE_3_14/container/ModelMetrics -v && cd /home/rstudio && ls | grep "ModelMetrics" | xargs -i rclone copyto ./{} osn:bir190004-bucket01/packages/RELEASE_3_14/container/{} -v
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+      - name: iu-swift-copy
+        image: rclone/rclone:latest
+        command:
+          - /bin/sh
+          - -c
+        args:
+          - cp /mnt/libs/R/.rclone.conf ~/.rclone.conf && rclone copyto /usr/local/lib/R/site-library/ModelMetrics iujs:js-builder/libraries/RELEASE_3_14/container/ModelMetrics -v && cd /home/rstudio && ls | grep "ModelMetrics" | xargs -i rclone copyto ./{} iujs:js-builder/packages/RELEASE_3_14/container/{} -v
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+  backoffLimit: 4
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: msstatsconvert-build
+  namespace: newbuild
+spec:
+  template:
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: "kubernetes.io/hostname"
+                operator: "In"
+                values: ["am-scalable-k8s-5872ef","am-scalable-k8s-7b5e61"]
+      securityContext:
+        runAsUser: 0
+        fsGroup: 1000
+      volumes:
+        - name: libraries
+          persistentVolumeClaim:
+            claimName: rstudio-r-libraries-pvc
+        - name: tmplibrary
+          emptyDir: {}
+        - name: tmphome
+          emptyDir: {}
+      restartPolicy: OnFailure
+      initContainers:
+      - name: build
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - su rstudio && cd /home/rstudio && Rscript -e 'p <- .libPaths(); p <- c(p[2], p[-2]); .libPaths(p); if(BiocManager::install("MSstatsConvert", INSTALL_opts = "--build", update = FALSE, quiet = TRUE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+        env:
+          - name: R_LIBS_USER
+            value: "/mnt/libs/R"
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 1.5Gi
+            cpu: 1000m
+          # limits:
+          #   memory: 2Gi
+          #   cpu: 2000m
+      containers:
+      - name: nfs-copy
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - cp -r /usr/local/lib/R/site-library/MSstatsConvert /mnt/libs/R/MSstatsConvert && cd /home/rstudio && ls | grep "MSstatsConvert" | xargs -i cp ./{} /mnt/libs/R/{}
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+      - name: rclone-copy
+        image: rclone/rclone:latest
+        command:
+          - /bin/sh
+          - -c
+        args:
+          - cp /mnt/libs/R/.rclone.conf ~/.rclone.conf && rclone copyto /usr/local/lib/R/site-library/MSstatsConvert osn:bir190004-bucket01/libraries/RELEASE_3_14/container/MSstatsConvert -v && cd /home/rstudio && ls | grep "MSstatsConvert" | xargs -i rclone copyto ./{} osn:bir190004-bucket01/packages/RELEASE_3_14/container/{} -v
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+      - name: iu-swift-copy
+        image: rclone/rclone:latest
+        command:
+          - /bin/sh
+          - -c
+        args:
+          - cp /mnt/libs/R/.rclone.conf ~/.rclone.conf && rclone copyto /usr/local/lib/R/site-library/MSstatsConvert iujs:js-builder/libraries/RELEASE_3_14/container/MSstatsConvert -v && cd /home/rstudio && ls | grep "MSstatsConvert" | xargs -i rclone copyto ./{} iujs:js-builder/packages/RELEASE_3_14/container/{} -v
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+  backoffLimit: 4
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: hmmcopy-build
+  namespace: newbuild
+spec:
+  template:
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: "kubernetes.io/hostname"
+                operator: "In"
+                values: ["am-scalable-k8s-5872ef","am-scalable-k8s-7b5e61"]
+      securityContext:
+        runAsUser: 0
+        fsGroup: 1000
+      volumes:
+        - name: libraries
+          persistentVolumeClaim:
+            claimName: rstudio-r-libraries-pvc
+        - name: tmplibrary
+          emptyDir: {}
+        - name: tmphome
+          emptyDir: {}
+      restartPolicy: OnFailure
+      initContainers:
+      - name: build
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - su rstudio && cd /home/rstudio && Rscript -e 'p <- .libPaths(); p <- c(p[2], p[-2]); .libPaths(p); if(BiocManager::install("HMMcopy", INSTALL_opts = "--build", update = FALSE, quiet = TRUE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+        env:
+          - name: R_LIBS_USER
+            value: "/mnt/libs/R"
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 1.5Gi
+            cpu: 1000m
+          # limits:
+          #   memory: 2Gi
+          #   cpu: 2000m
+      containers:
+      - name: nfs-copy
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - cp -r /usr/local/lib/R/site-library/HMMcopy /mnt/libs/R/HMMcopy && cd /home/rstudio && ls | grep "HMMcopy" | xargs -i cp ./{} /mnt/libs/R/{}
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+      - name: rclone-copy
+        image: rclone/rclone:latest
+        command:
+          - /bin/sh
+          - -c
+        args:
+          - cp /mnt/libs/R/.rclone.conf ~/.rclone.conf && rclone copyto /usr/local/lib/R/site-library/HMMcopy osn:bir190004-bucket01/libraries/RELEASE_3_14/container/HMMcopy -v && cd /home/rstudio && ls | grep "HMMcopy" | xargs -i rclone copyto ./{} osn:bir190004-bucket01/packages/RELEASE_3_14/container/{} -v
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+      - name: iu-swift-copy
+        image: rclone/rclone:latest
+        command:
+          - /bin/sh
+          - -c
+        args:
+          - cp /mnt/libs/R/.rclone.conf ~/.rclone.conf && rclone copyto /usr/local/lib/R/site-library/HMMcopy iujs:js-builder/libraries/RELEASE_3_14/container/HMMcopy -v && cd /home/rstudio && ls | grep "HMMcopy" | xargs -i rclone copyto ./{} iujs:js-builder/packages/RELEASE_3_14/container/{} -v
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+  backoffLimit: 4
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: gofkernel-build
+  namespace: newbuild
+spec:
+  template:
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: "kubernetes.io/hostname"
+                operator: "In"
+                values: ["am-scalable-k8s-5872ef","am-scalable-k8s-7b5e61"]
+      securityContext:
+        runAsUser: 0
+        fsGroup: 1000
+      volumes:
+        - name: libraries
+          persistentVolumeClaim:
+            claimName: rstudio-r-libraries-pvc
+        - name: tmplibrary
+          emptyDir: {}
+        - name: tmphome
+          emptyDir: {}
+      restartPolicy: OnFailure
+      initContainers:
+      - name: build
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - su rstudio && cd /home/rstudio && Rscript -e 'p <- .libPaths(); p <- c(p[2], p[-2]); .libPaths(p); if(BiocManager::install("GoFKernel", INSTALL_opts = "--build", update = FALSE, quiet = TRUE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+        env:
+          - name: R_LIBS_USER
+            value: "/mnt/libs/R"
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 1.5Gi
+            cpu: 1000m
+          # limits:
+          #   memory: 2Gi
+          #   cpu: 2000m
+      containers:
+      - name: nfs-copy
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - cp -r /usr/local/lib/R/site-library/GoFKernel /mnt/libs/R/GoFKernel && cd /home/rstudio && ls | grep "GoFKernel" | xargs -i cp ./{} /mnt/libs/R/{}
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+      - name: rclone-copy
+        image: rclone/rclone:latest
+        command:
+          - /bin/sh
+          - -c
+        args:
+          - cp /mnt/libs/R/.rclone.conf ~/.rclone.conf && rclone copyto /usr/local/lib/R/site-library/GoFKernel osn:bir190004-bucket01/libraries/RELEASE_3_14/container/GoFKernel -v && cd /home/rstudio && ls | grep "GoFKernel" | xargs -i rclone copyto ./{} osn:bir190004-bucket01/packages/RELEASE_3_14/container/{} -v
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+      - name: iu-swift-copy
+        image: rclone/rclone:latest
+        command:
+          - /bin/sh
+          - -c
+        args:
+          - cp /mnt/libs/R/.rclone.conf ~/.rclone.conf && rclone copyto /usr/local/lib/R/site-library/GoFKernel iujs:js-builder/libraries/RELEASE_3_14/container/GoFKernel -v && cd /home/rstudio && ls | grep "GoFKernel" | xargs -i rclone copyto ./{} iujs:js-builder/packages/RELEASE_3_14/container/{} -v
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+  backoffLimit: 4
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: genkern-build
+  namespace: newbuild
+spec:
+  template:
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: "kubernetes.io/hostname"
+                operator: "In"
+                values: ["am-scalable-k8s-5872ef","am-scalable-k8s-7b5e61"]
+      securityContext:
+        runAsUser: 0
+        fsGroup: 1000
+      volumes:
+        - name: libraries
+          persistentVolumeClaim:
+            claimName: rstudio-r-libraries-pvc
+        - name: tmplibrary
+          emptyDir: {}
+        - name: tmphome
+          emptyDir: {}
+      restartPolicy: OnFailure
+      initContainers:
+      - name: build
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - su rstudio && cd /home/rstudio && Rscript -e 'p <- .libPaths(); p <- c(p[2], p[-2]); .libPaths(p); if(BiocManager::install("GenKern", INSTALL_opts = "--build", update = FALSE, quiet = TRUE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+        env:
+          - name: R_LIBS_USER
+            value: "/mnt/libs/R"
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 1.5Gi
+            cpu: 1000m
+          # limits:
+          #   memory: 2Gi
+          #   cpu: 2000m
+      containers:
+      - name: nfs-copy
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - cp -r /usr/local/lib/R/site-library/GenKern /mnt/libs/R/GenKern && cd /home/rstudio && ls | grep "GenKern" | xargs -i cp ./{} /mnt/libs/R/{}
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+      - name: rclone-copy
+        image: rclone/rclone:latest
+        command:
+          - /bin/sh
+          - -c
+        args:
+          - cp /mnt/libs/R/.rclone.conf ~/.rclone.conf && rclone copyto /usr/local/lib/R/site-library/GenKern osn:bir190004-bucket01/libraries/RELEASE_3_14/container/GenKern -v && cd /home/rstudio && ls | grep "GenKern" | xargs -i rclone copyto ./{} osn:bir190004-bucket01/packages/RELEASE_3_14/container/{} -v
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+      - name: iu-swift-copy
+        image: rclone/rclone:latest
+        command:
+          - /bin/sh
+          - -c
+        args:
+          - cp /mnt/libs/R/.rclone.conf ~/.rclone.conf && rclone copyto /usr/local/lib/R/site-library/GenKern iujs:js-builder/libraries/RELEASE_3_14/container/GenKern -v && cd /home/rstudio && ls | grep "GenKern" | xargs -i rclone copyto ./{} iujs:js-builder/packages/RELEASE_3_14/container/{} -v
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+  backoffLimit: 4
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: catencoders-build
+  namespace: newbuild
+spec:
+  template:
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: "kubernetes.io/hostname"
+                operator: "In"
+                values: ["am-scalable-k8s-5872ef","am-scalable-k8s-7b5e61"]
+      securityContext:
+        runAsUser: 0
+        fsGroup: 1000
+      volumes:
+        - name: libraries
+          persistentVolumeClaim:
+            claimName: rstudio-r-libraries-pvc
+        - name: tmplibrary
+          emptyDir: {}
+        - name: tmphome
+          emptyDir: {}
+      restartPolicy: OnFailure
+      initContainers:
+      - name: build
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - su rstudio && cd /home/rstudio && Rscript -e 'p <- .libPaths(); p <- c(p[2], p[-2]); .libPaths(p); if(BiocManager::install("CatEncoders", INSTALL_opts = "--build", update = FALSE, quiet = TRUE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+        env:
+          - name: R_LIBS_USER
+            value: "/mnt/libs/R"
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 1.5Gi
+            cpu: 1000m
+          # limits:
+          #   memory: 2Gi
+          #   cpu: 2000m
+      containers:
+      - name: nfs-copy
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - cp -r /usr/local/lib/R/site-library/CatEncoders /mnt/libs/R/CatEncoders && cd /home/rstudio && ls | grep "CatEncoders" | xargs -i cp ./{} /mnt/libs/R/{}
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+      - name: rclone-copy
+        image: rclone/rclone:latest
+        command:
+          - /bin/sh
+          - -c
+        args:
+          - cp /mnt/libs/R/.rclone.conf ~/.rclone.conf && rclone copyto /usr/local/lib/R/site-library/CatEncoders osn:bir190004-bucket01/libraries/RELEASE_3_14/container/CatEncoders -v && cd /home/rstudio && ls | grep "CatEncoders" | xargs -i rclone copyto ./{} osn:bir190004-bucket01/packages/RELEASE_3_14/container/{} -v
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+      - name: iu-swift-copy
+        image: rclone/rclone:latest
+        command:
+          - /bin/sh
+          - -c
+        args:
+          - cp /mnt/libs/R/.rclone.conf ~/.rclone.conf && rclone copyto /usr/local/lib/R/site-library/CatEncoders iujs:js-builder/libraries/RELEASE_3_14/container/CatEncoders -v && cd /home/rstudio && ls | grep "CatEncoders" | xargs -i rclone copyto ./{} iujs:js-builder/packages/RELEASE_3_14/container/{} -v
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+  backoffLimit: 4
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: mircomp-build
+  namespace: newbuild
+spec:
+  template:
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: "kubernetes.io/hostname"
+                operator: "In"
+                values: ["am-scalable-k8s-5872ef","am-scalable-k8s-7b5e61"]
+      securityContext:
+        runAsUser: 0
+        fsGroup: 1000
+      volumes:
+        - name: libraries
+          persistentVolumeClaim:
+            claimName: rstudio-r-libraries-pvc
+        - name: tmplibrary
+          emptyDir: {}
+        - name: tmphome
+          emptyDir: {}
+      restartPolicy: OnFailure
+      initContainers:
+      - name: build
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - su rstudio && cd /home/rstudio && Rscript -e 'p <- .libPaths(); p <- c(p[2], p[-2]); .libPaths(p); if(BiocManager::install("miRcomp", INSTALL_opts = "--build", update = FALSE, quiet = TRUE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+        env:
+          - name: R_LIBS_USER
+            value: "/mnt/libs/R"
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 1.5Gi
+            cpu: 1000m
+          # limits:
+          #   memory: 2Gi
+          #   cpu: 2000m
+      containers:
+      - name: nfs-copy
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - cp -r /usr/local/lib/R/site-library/miRcomp /mnt/libs/R/miRcomp && cd /home/rstudio && ls | grep "miRcomp" | xargs -i cp ./{} /mnt/libs/R/{}
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+      - name: rclone-copy
+        image: rclone/rclone:latest
+        command:
+          - /bin/sh
+          - -c
+        args:
+          - cp /mnt/libs/R/.rclone.conf ~/.rclone.conf && rclone copyto /usr/local/lib/R/site-library/miRcomp osn:bir190004-bucket01/libraries/RELEASE_3_14/container/miRcomp -v && cd /home/rstudio && ls | grep "miRcomp" | xargs -i rclone copyto ./{} osn:bir190004-bucket01/packages/RELEASE_3_14/container/{} -v
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+      - name: iu-swift-copy
+        image: rclone/rclone:latest
+        command:
+          - /bin/sh
+          - -c
+        args:
+          - cp /mnt/libs/R/.rclone.conf ~/.rclone.conf && rclone copyto /usr/local/lib/R/site-library/miRcomp iujs:js-builder/libraries/RELEASE_3_14/container/miRcomp -v && cd /home/rstudio && ls | grep "miRcomp" | xargs -i rclone copyto ./{} iujs:js-builder/packages/RELEASE_3_14/container/{} -v
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+  backoffLimit: 4
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: igc-build
+  namespace: newbuild
+spec:
+  template:
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: "kubernetes.io/hostname"
+                operator: "In"
+                values: ["am-scalable-k8s-5872ef","am-scalable-k8s-7b5e61"]
+      securityContext:
+        runAsUser: 0
+        fsGroup: 1000
+      volumes:
+        - name: libraries
+          persistentVolumeClaim:
+            claimName: rstudio-r-libraries-pvc
+        - name: tmplibrary
+          emptyDir: {}
+        - name: tmphome
+          emptyDir: {}
+      restartPolicy: OnFailure
+      initContainers:
+      - name: build
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - su rstudio && cd /home/rstudio && Rscript -e 'p <- .libPaths(); p <- c(p[2], p[-2]); .libPaths(p); if(BiocManager::install("iGC", INSTALL_opts = "--build", update = FALSE, quiet = TRUE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+        env:
+          - name: R_LIBS_USER
+            value: "/mnt/libs/R"
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 1.5Gi
+            cpu: 1000m
+          # limits:
+          #   memory: 2Gi
+          #   cpu: 2000m
+      containers:
+      - name: nfs-copy
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - cp -r /usr/local/lib/R/site-library/iGC /mnt/libs/R/iGC && cd /home/rstudio && ls | grep "iGC" | xargs -i cp ./{} /mnt/libs/R/{}
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+      - name: rclone-copy
+        image: rclone/rclone:latest
+        command:
+          - /bin/sh
+          - -c
+        args:
+          - cp /mnt/libs/R/.rclone.conf ~/.rclone.conf && rclone copyto /usr/local/lib/R/site-library/iGC osn:bir190004-bucket01/libraries/RELEASE_3_14/container/iGC -v && cd /home/rstudio && ls | grep "iGC" | xargs -i rclone copyto ./{} osn:bir190004-bucket01/packages/RELEASE_3_14/container/{} -v
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+      - name: iu-swift-copy
+        image: rclone/rclone:latest
+        command:
+          - /bin/sh
+          - -c
+        args:
+          - cp /mnt/libs/R/.rclone.conf ~/.rclone.conf && rclone copyto /usr/local/lib/R/site-library/iGC iujs:js-builder/libraries/RELEASE_3_14/container/iGC -v && cd /home/rstudio && ls | grep "iGC" | xargs -i rclone copyto ./{} iujs:js-builder/packages/RELEASE_3_14/container/{} -v
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+  backoffLimit: 4
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: modcon-build
+  namespace: newbuild
+spec:
+  template:
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: "kubernetes.io/hostname"
+                operator: "In"
+                values: ["am-scalable-k8s-5872ef","am-scalable-k8s-7b5e61"]
+      securityContext:
+        runAsUser: 0
+        fsGroup: 1000
+      volumes:
+        - name: libraries
+          persistentVolumeClaim:
+            claimName: rstudio-r-libraries-pvc
+        - name: tmplibrary
+          emptyDir: {}
+        - name: tmphome
+          emptyDir: {}
+      restartPolicy: OnFailure
+      initContainers:
+      - name: build
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - su rstudio && cd /home/rstudio && Rscript -e 'p <- .libPaths(); p <- c(p[2], p[-2]); .libPaths(p); if(BiocManager::install("ModCon", INSTALL_opts = "--build", update = FALSE, quiet = TRUE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+        env:
+          - name: R_LIBS_USER
+            value: "/mnt/libs/R"
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 1.5Gi
+            cpu: 1000m
+          # limits:
+          #   memory: 2Gi
+          #   cpu: 2000m
+      containers:
+      - name: nfs-copy
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - cp -r /usr/local/lib/R/site-library/ModCon /mnt/libs/R/ModCon && cd /home/rstudio && ls | grep "ModCon" | xargs -i cp ./{} /mnt/libs/R/{}
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+      - name: rclone-copy
+        image: rclone/rclone:latest
+        command:
+          - /bin/sh
+          - -c
+        args:
+          - cp /mnt/libs/R/.rclone.conf ~/.rclone.conf && rclone copyto /usr/local/lib/R/site-library/ModCon osn:bir190004-bucket01/libraries/RELEASE_3_14/container/ModCon -v && cd /home/rstudio && ls | grep "ModCon" | xargs -i rclone copyto ./{} osn:bir190004-bucket01/packages/RELEASE_3_14/container/{} -v
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+      - name: iu-swift-copy
+        image: rclone/rclone:latest
+        command:
+          - /bin/sh
+          - -c
+        args:
+          - cp /mnt/libs/R/.rclone.conf ~/.rclone.conf && rclone copyto /usr/local/lib/R/site-library/ModCon iujs:js-builder/libraries/RELEASE_3_14/container/ModCon -v && cd /home/rstudio && ls | grep "ModCon" | xargs -i rclone copyto ./{} iujs:js-builder/packages/RELEASE_3_14/container/{} -v
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+  backoffLimit: 4
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: gsalightning-build
+  namespace: newbuild
+spec:
+  template:
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: "kubernetes.io/hostname"
+                operator: "In"
+                values: ["am-scalable-k8s-5872ef","am-scalable-k8s-7b5e61"]
+      securityContext:
+        runAsUser: 0
+        fsGroup: 1000
+      volumes:
+        - name: libraries
+          persistentVolumeClaim:
+            claimName: rstudio-r-libraries-pvc
+        - name: tmplibrary
+          emptyDir: {}
+        - name: tmphome
+          emptyDir: {}
+      restartPolicy: OnFailure
+      initContainers:
+      - name: build
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - su rstudio && cd /home/rstudio && Rscript -e 'p <- .libPaths(); p <- c(p[2], p[-2]); .libPaths(p); if(BiocManager::install("GSALightning", INSTALL_opts = "--build", update = FALSE, quiet = TRUE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+        env:
+          - name: R_LIBS_USER
+            value: "/mnt/libs/R"
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 1.5Gi
+            cpu: 1000m
+          # limits:
+          #   memory: 2Gi
+          #   cpu: 2000m
+      containers:
+      - name: nfs-copy
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - cp -r /usr/local/lib/R/site-library/GSALightning /mnt/libs/R/GSALightning && cd /home/rstudio && ls | grep "GSALightning" | xargs -i cp ./{} /mnt/libs/R/{}
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+      - name: rclone-copy
+        image: rclone/rclone:latest
+        command:
+          - /bin/sh
+          - -c
+        args:
+          - cp /mnt/libs/R/.rclone.conf ~/.rclone.conf && rclone copyto /usr/local/lib/R/site-library/GSALightning osn:bir190004-bucket01/libraries/RELEASE_3_14/container/GSALightning -v && cd /home/rstudio && ls | grep "GSALightning" | xargs -i rclone copyto ./{} osn:bir190004-bucket01/packages/RELEASE_3_14/container/{} -v
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+      - name: iu-swift-copy
+        image: rclone/rclone:latest
+        command:
+          - /bin/sh
+          - -c
+        args:
+          - cp /mnt/libs/R/.rclone.conf ~/.rclone.conf && rclone copyto /usr/local/lib/R/site-library/GSALightning iujs:js-builder/libraries/RELEASE_3_14/container/GSALightning -v && cd /home/rstudio && ls | grep "GSALightning" | xargs -i rclone copyto ./{} iujs:js-builder/packages/RELEASE_3_14/container/{} -v
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+  backoffLimit: 4
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: fithic-build
+  namespace: newbuild
+spec:
+  template:
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: "kubernetes.io/hostname"
+                operator: "In"
+                values: ["am-scalable-k8s-5872ef","am-scalable-k8s-7b5e61"]
+      securityContext:
+        runAsUser: 0
+        fsGroup: 1000
+      volumes:
+        - name: libraries
+          persistentVolumeClaim:
+            claimName: rstudio-r-libraries-pvc
+        - name: tmplibrary
+          emptyDir: {}
+        - name: tmphome
+          emptyDir: {}
+      restartPolicy: OnFailure
+      initContainers:
+      - name: build
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - su rstudio && cd /home/rstudio && Rscript -e 'p <- .libPaths(); p <- c(p[2], p[-2]); .libPaths(p); if(BiocManager::install("FitHiC", INSTALL_opts = "--build", update = FALSE, quiet = TRUE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+        env:
+          - name: R_LIBS_USER
+            value: "/mnt/libs/R"
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 1.5Gi
+            cpu: 1000m
+          # limits:
+          #   memory: 2Gi
+          #   cpu: 2000m
+      containers:
+      - name: nfs-copy
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - cp -r /usr/local/lib/R/site-library/FitHiC /mnt/libs/R/FitHiC && cd /home/rstudio && ls | grep "FitHiC" | xargs -i cp ./{} /mnt/libs/R/{}
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+      - name: rclone-copy
+        image: rclone/rclone:latest
+        command:
+          - /bin/sh
+          - -c
+        args:
+          - cp /mnt/libs/R/.rclone.conf ~/.rclone.conf && rclone copyto /usr/local/lib/R/site-library/FitHiC osn:bir190004-bucket01/libraries/RELEASE_3_14/container/FitHiC -v && cd /home/rstudio && ls | grep "FitHiC" | xargs -i rclone copyto ./{} osn:bir190004-bucket01/packages/RELEASE_3_14/container/{} -v
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+      - name: iu-swift-copy
+        image: rclone/rclone:latest
+        command:
+          - /bin/sh
+          - -c
+        args:
+          - cp /mnt/libs/R/.rclone.conf ~/.rclone.conf && rclone copyto /usr/local/lib/R/site-library/FitHiC iujs:js-builder/libraries/RELEASE_3_14/container/FitHiC -v && cd /home/rstudio && ls | grep "FitHiC" | xargs -i rclone copyto ./{} iujs:js-builder/packages/RELEASE_3_14/container/{} -v
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+  backoffLimit: 4
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: demand-build
+  namespace: newbuild
+spec:
+  template:
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: "kubernetes.io/hostname"
+                operator: "In"
+                values: ["am-scalable-k8s-5872ef","am-scalable-k8s-7b5e61"]
+      securityContext:
+        runAsUser: 0
+        fsGroup: 1000
+      volumes:
+        - name: libraries
+          persistentVolumeClaim:
+            claimName: rstudio-r-libraries-pvc
+        - name: tmplibrary
+          emptyDir: {}
+        - name: tmphome
+          emptyDir: {}
+      restartPolicy: OnFailure
+      initContainers:
+      - name: build
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - su rstudio && cd /home/rstudio && Rscript -e 'p <- .libPaths(); p <- c(p[2], p[-2]); .libPaths(p); if(BiocManager::install("DeMAND", INSTALL_opts = "--build", update = FALSE, quiet = TRUE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+        env:
+          - name: R_LIBS_USER
+            value: "/mnt/libs/R"
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 1.5Gi
+            cpu: 1000m
+          # limits:
+          #   memory: 2Gi
+          #   cpu: 2000m
+      containers:
+      - name: nfs-copy
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - cp -r /usr/local/lib/R/site-library/DeMAND /mnt/libs/R/DeMAND && cd /home/rstudio && ls | grep "DeMAND" | xargs -i cp ./{} /mnt/libs/R/{}
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+      - name: rclone-copy
+        image: rclone/rclone:latest
+        command:
+          - /bin/sh
+          - -c
+        args:
+          - cp /mnt/libs/R/.rclone.conf ~/.rclone.conf && rclone copyto /usr/local/lib/R/site-library/DeMAND osn:bir190004-bucket01/libraries/RELEASE_3_14/container/DeMAND -v && cd /home/rstudio && ls | grep "DeMAND" | xargs -i rclone copyto ./{} osn:bir190004-bucket01/packages/RELEASE_3_14/container/{} -v
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+      - name: iu-swift-copy
+        image: rclone/rclone:latest
+        command:
+          - /bin/sh
+          - -c
+        args:
+          - cp /mnt/libs/R/.rclone.conf ~/.rclone.conf && rclone copyto /usr/local/lib/R/site-library/DeMAND iujs:js-builder/libraries/RELEASE_3_14/container/DeMAND -v && cd /home/rstudio && ls | grep "DeMAND" | xargs -i rclone copyto ./{} iujs:js-builder/packages/RELEASE_3_14/container/{} -v
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+  backoffLimit: 4
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: bgmix-build
+  namespace: newbuild
+spec:
+  template:
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: "kubernetes.io/hostname"
+                operator: "In"
+                values: ["am-scalable-k8s-5872ef","am-scalable-k8s-7b5e61"]
+      securityContext:
+        runAsUser: 0
+        fsGroup: 1000
+      volumes:
+        - name: libraries
+          persistentVolumeClaim:
+            claimName: rstudio-r-libraries-pvc
+        - name: tmplibrary
+          emptyDir: {}
+        - name: tmphome
+          emptyDir: {}
+      restartPolicy: OnFailure
+      initContainers:
+      - name: build
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - su rstudio && cd /home/rstudio && Rscript -e 'p <- .libPaths(); p <- c(p[2], p[-2]); .libPaths(p); if(BiocManager::install("BGmix", INSTALL_opts = "--build", update = FALSE, quiet = TRUE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+        env:
+          - name: R_LIBS_USER
+            value: "/mnt/libs/R"
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 1.5Gi
+            cpu: 1000m
+          # limits:
+          #   memory: 2Gi
+          #   cpu: 2000m
+      containers:
+      - name: nfs-copy
+        image: bioconductor/bioconductor_docker:RELEASE_3_14
+        command:
+          - /bin/bash
+          - -c
+        args:
+          - cp -r /usr/local/lib/R/site-library/BGmix /mnt/libs/R/BGmix && cd /home/rstudio && ls | grep "BGmix" | xargs -i cp ./{} /mnt/libs/R/{}
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+      - name: rclone-copy
+        image: rclone/rclone:latest
+        command:
+          - /bin/sh
+          - -c
+        args:
+          - cp /mnt/libs/R/.rclone.conf ~/.rclone.conf && rclone copyto /usr/local/lib/R/site-library/BGmix osn:bir190004-bucket01/libraries/RELEASE_3_14/container/BGmix -v && cd /home/rstudio && ls | grep "BGmix" | xargs -i rclone copyto ./{} osn:bir190004-bucket01/packages/RELEASE_3_14/container/{} -v
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+      - name: iu-swift-copy
+        image: rclone/rclone:latest
+        command:
+          - /bin/sh
+          - -c
+        args:
+          - cp /mnt/libs/R/.rclone.conf ~/.rclone.conf && rclone copyto /usr/local/lib/R/site-library/BGmix iujs:js-builder/libraries/RELEASE_3_14/container/BGmix -v && cd /home/rstudio && ls | grep "BGmix" | xargs -i rclone copyto ./{} iujs:js-builder/packages/RELEASE_3_14/container/{} -v
+        volumeMounts:
+          - name: libraries
+            mountPath: "/mnt/libs/R"
+          - name: tmplibrary
+            mountPath: "/usr/local/lib/R/site-library"
+          - name: tmphome
+            mountPath: "/home/rstudio"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 100m
+  backoffLimit: 4
+---
