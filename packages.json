@@ -1,7 +1,6 @@
 {
     "a4": [
         "a4Base",
-        "a4Preproc",
         "a4Classif",
         "a4Core",
         "a4Reporting",
@@ -44,7 +43,6 @@
         "ellipsis",
     ],
     "a4Base": [
-        "a4Preproc",
         "a4Core",
         "annaffy",
         "mpm",
@@ -82,7 +80,6 @@
     ],
     "a4Classif": [
         "a4Core",
-        "a4Preproc",
         "ROCR",
         "pamr",
         "glmnet",
@@ -1225,7 +1222,6 @@
         "knitr",
         "jquerylib",
         "cluster",
-        "mQTL",
         "doSNOW",
         "data.table",
         "foreach",
@@ -6537,7 +6533,6 @@
         "metafor",
         "Matrix",
         "nlme",
-        "KEGGdzPathwaysGEO",
         "AnnotationDbi",
         "foreach",
         "doRNG",
@@ -14401,7 +14396,6 @@
         "BiocFileCache",
         "lpSolve",
         "rmarkdown",
-        "bcellViper",
         "viper",
         "lifecycle",
         "R6",
@@ -20714,7 +20708,6 @@
         "genefilter",
         "locfit",
         "geneplotter",
-        "bcellViper",
         "viper",
         "lifecycle",
         "R6",
@@ -21271,7 +21264,6 @@
         "TFisher",
         "mutoss",
         "qqconf",
-        "KEGGdzPathwaysGEO",
         "foreach",
         "doRNG",
         "hgu133plus2.db",
@@ -30527,7 +30519,6 @@
         "EnrichmentBrowser",
         "ExperimentHub",
         "KEGGandMetacoreDzPathwaysGEO",
-        "KEGGdzPathwaysGEO",
         "RSQLite",
         "KEGGREST",
         "curl",
@@ -31374,9 +31365,6 @@
         "cachem",
         "cli",
         "fastmap"
-    ],
-    "hapFabia": [
-        "fabia",
     ],
     "Harshlight": [
         "affy",
@@ -32535,7 +32523,6 @@
         "lumi",
         "gplots",
         "affy",
-        "GeneSelectMMD",
         "rgl",
         "lmtest",
         "affyio",
@@ -42601,7 +42588,6 @@
         "NMF",
         "biclust",
         "iBBiG",
-        "fabia",
         "BicARE",
         "isa2",
         "s4vd",
@@ -44007,7 +43993,6 @@
     "mosbi": [
         "BH",
         "igraph",
-        "fabia",
         "biclust",
         "isa2",
         "QUBIC",
@@ -50388,7 +50373,6 @@
         "rematch2"
     ],
     "PADOG": [
-        "KEGGdzPathwaysGEO",
         "AnnotationDbi",
         "foreach",
         "doRNG",
@@ -62018,7 +62002,6 @@
         "gridExtra",
         "psych",
         "BiocParallel",
-        "bladderbatch",
         "futile.logger",
         "BH",
         "gtable",
@@ -73010,7 +72993,6 @@
         "cluster",
         "BiocParallel",
         "flexclust",
-        "SPEM",
         "futile.logger",
         "BH",
         "lattice",
@@ -78779,7 +78761,6 @@
     ],
     "speaq": [
         "cluster",
-        "mQTL",
         "doSNOW",
         "data.table",
         "foreach",
@@ -82579,7 +82560,6 @@
         "Matrix",
         "lattice",
     ],
-    "magic": [ ],
     "EnvStats": [
         "ggplot2",
         "nortest",
@@ -84355,7 +84335,6 @@
     ],
     "dorothea": [
         "dplyr",
-        "bcellViper",
         "viper",
         "lifecycle",
         "R6",
