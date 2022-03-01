@@ -141,6 +141,7 @@ colortools
 combinat
 CombinePValue
 commonmark
+compositions
 CompQuadForm
 config
 CONSTANd
@@ -862,6 +863,7 @@ xml2
 XML2R
 xtable
 xts
+XVector
 yaImpute
 yaml
 yeastCC

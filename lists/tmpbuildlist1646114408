@@ -141,6 +141,7 @@ colortools-build
 combinat-build
 combinepvalue-build
 commonmark-build
+compositions-build
 compquadform-build
 config-build
 constand-build
@@ -270,6 +271,7 @@ geigen-build
 genalg-build
 genarise-build
 geneclassifiers-build
+geneexpressionsignature-build
 genenet-build
 generecommender-build
 generics-build
@@ -767,6 +769,7 @@ spikeli-build
 spktools-build
 splines2-build
 splitstackshape-build
+splus2r-build
 squadd-build
 squarem-build
 squash-build
@@ -794,6 +797,7 @@ sylly-build
 syllyen-build
 sys-build
 tagcloud-build
+targetsearch-build
 tcgabiolinksguidata-build
 tcltk2-build
 teachingdemos-build
@@ -862,6 +866,7 @@ xml2-build
 xml2r-build
 xtable-build
 xts-build
+xvector-build
 yaimpute-build
 yaml-build
 yeastcc-build
