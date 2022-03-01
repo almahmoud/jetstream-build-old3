@@ -1,6 +1,5 @@
 name: Dispatch build to Jetstream cluster
 on:
-  push: {}
   workflow_dispatch: {}
 jobs:
   jsbuild:

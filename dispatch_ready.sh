@@ -109,7 +109,8 @@ else
     kubectl apply -f lists/manifest$UNIQUE &&\
     sed -i '/^$/d' packages.json &&\
     sed -i ':a;N;$!ba;s/\[\n    \]/\[ \]/g' packages.json &&\
-    sed -i "/    \"$(cat lists/dispatch$UNIQUE | sed 's/\./\\\./' | awk '{print $1"\\"}' | paste -sd'|' - | awk '{print "\\("$0")"}')\"\: \[ \]\(,\)\{0,1\}/d" packages.json
+    sed -i "/    \"$(cat lists/dispatch$UNIQUE | sed 's/\./\\\./' | awk '{print $1"\\"}' | paste -sd'|' - | awk '{print "\\("$0")"}')\"\: \[ \]\(,\)\{0,1\}/d" packages.json &&\
+    rm lists/dispatch$UNIQUE && rm lists/manifest$UNIQUE
 fi
 
 
