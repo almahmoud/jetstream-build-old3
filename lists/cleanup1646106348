@@ -2,6 +2,7 @@ ABAData
 ada
 admisc
 affxparser
+affycomp
 AhoCorasickTrie
 akmbiclust
 alluvial
@@ -48,6 +49,7 @@ brio
 BufferedMatrix
 BufferedMatrixMethods
 carData
+catdata
 caTools
 ccdata
 CCP
@@ -61,6 +63,7 @@ clipr
 Clonality
 clustComp
 clusterRepro
+cMap2data
 CNAnorm
 codetools
 coGPS
@@ -99,6 +102,8 @@ DriverNet
 DrugVsDiseasedata
 dtw
 DynDoc
+ecp
+einsum
 ellipse
 emdist
 EmpiricalBrownsMethod
@@ -110,7 +115,9 @@ EntropyExplorer
 estimability
 etrunct
 evaluate
+evd
 exactRankTests
+extraDistr
 fansi
 farver
 fastcluster
@@ -179,6 +186,7 @@ HDInterval
 heatmap3
 here
 HGNChelper
+HIBAG
 highr
 howmany
 hpar
@@ -266,6 +274,7 @@ metaCCA
 metaMA
 MGLM
 mgsub
+MiChip
 microbenchmark
 mime
 minet
@@ -411,6 +420,7 @@ RMTstat
 rmutil
 RMySQL
 RNASeqPower
+RNOmni
 robustbase
 RobustRankAggreg
 ROCit
@@ -477,6 +487,7 @@ stabledist
 stabs
 stopwords
 strawr
+stringdist
 stringi
 stringr
 SuppDists
