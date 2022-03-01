@@ -1,6 +1,7 @@
 ABAData
 ada
 affxparser
+AhoCorasickTrie
 akmbiclust
 alluvial
 ALS
@@ -18,6 +19,7 @@ awsMethods
 backports
 beanplot
 BHC
+BiasedUrn
 bigassertr
 biglm
 BiocGenerics
@@ -34,6 +36,7 @@ caTools
 ccdata
 CFAssay
 checkmate
+chron
 cisPath
 clipr
 Clonality
@@ -107,6 +110,7 @@ gridBase
 grr
 GSA
 gsl
+gss
 gtools
 GWASExactHW
 Harman
@@ -214,6 +218,7 @@ pbapply
 pbdZMQ
 pcxnData
 Peptides
+permute
 pgca
 pixmap
 plotrix
@@ -241,8 +246,10 @@ Rcgmin
 RCircos
 Rcpp
 RcppArmadillo
+RcppCCTZ
 RcppDate
 RcppParallel
+RcppThread
 RCurl
 registry
 relimp
@@ -254,6 +261,7 @@ rjson
 RJSONIO
 R.methodsS3
 Rmpi
+RMSNumpress
 RMTstat
 rmutil
 RNASeqPower
@@ -265,6 +273,7 @@ rprojroot
 RProtoBufLib
 RSeqAn
 rsm
+RSNNS
 Rsolnp
 rstudioapi
 Rttf2pt1
